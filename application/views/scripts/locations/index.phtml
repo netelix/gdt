@@ -1,0 +1,50 @@
+
+<? $this->placeholder('sidebar')->captureStart() ?>
+  <?= $this->partial('shared/_sidebar_owner_subscribe.phtml') ?>
+  <? for($i = 0; $i < 3; ++$i): ?>
+    <?= $this->partial('shared/_sidebar_link_list.phtml') ?>
+  <? endfor ?>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#list" data-toggle="tab">Liste</a></li>
+  <li><a href="#map" data-toggle="tab">Carte</a></li>
+</ul>
+
+<div class="text-right" style="margin-top: 1em">
+  <strong style="vertical-align:-0.25em">12345 résultats</strong>
+  <div class="col-sm-2 pull-right">
+    <select class="form-control input-sm">
+      <option>Foo</option>
+      <option>Bar</option>
+    </select>
+  </div>
+</div>
+  
+<hr/>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="list">
+    <ul class="media-list">
+      <? for($i = 0; $i<5; ++$i): ?>
+        <li class="media">
+          <a class="pull-right" href="#">
+            <img class="media-object" src="http://placehold.it/220x136" alt="...">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">Media heading</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at laoreet massa. Nunc hendrerit neque a mi viverra cursus.
+            Vestibulum vulputate est ut libero consequat, aliquam pellentesque tellus tincidunt.</p>
+            <p>
+              <a class="btn btn-default" href="/organizations/show">Voir l'annonce</a>
+              <a class="btn btn-primary" href="/organizations/show">Contacter le propriétaire</a>
+            </p>
+          </div>
+        </li>
+      <? endfor ?>
+    </ul>
+  </div>
+  <div class="tab-pane" id="map">
+    <img src="http://placehold.it/850x400" alt="...">
+  </div>
+</div>

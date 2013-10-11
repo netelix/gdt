@@ -1,0 +1,112 @@
+<? $images = array_map(function($i){
+  return 'http://placehold.it/850x320';
+}, range(0, 10)); ///HACK FIXME
+?>
+<? $this->placeholder('sidebar')->captureStart() ?>
+  <?= $this->partial('organizations/_sidebar_contact_form.phtml') ?>
+  <?= $this->partial('shared/_sidebar_owner_subscribe.phtml') ?>
+  <? for($i = 0; $i < 3; ++$i): ?>
+    <?= $this->partial('shared/_sidebar_link_list.phtml') ?>
+  <? endfor ?>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+
+<? $this->placeholder('page_title')->content = 'La Maison Pia' ?>
+
+<section>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#photos" data-toggle="tab">Photos</a></li>
+    <li><a href="#map" data-toggle="tab">Map</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="photos">
+      <div id="carousel-organization" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <? foreach($images as $i=>$image): ?>
+            <li data-target="#carousel-organization" data-slide-to="<?= $i ?>" class="active"></li>
+          <? endforeach ?>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <? foreach($images as $i=>$image): ?>
+            <div class="item <?= ($i==0)? 'active' : '' ?>">
+              <img src="<?= $image ?>" alt="..." class="img-responsive">
+            </div>
+          <? endforeach ?>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-organization" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-organization" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+      </div>
+    </div>
+    <div class="tab-pane" id="map">
+      <img src="http://placehold.it/850x320" alt="...">
+    </div>
+  </div>
+</section>
+
+<section class="row">
+  <div class="col-md-3">
+    <dl>
+      <dt>Type de propriété</dt>
+      <dd>Maison à la montagne</dd>
+      <dt>Capacité</dt>
+      <dd>2/4 personnes</dd>
+      <dt>Chambres</dt>
+      <dd>2</dd>
+      <dt>Salle de bain</dt>
+      <dd>1</dd>
+      <dt>Table d'hôtes</dt>
+      <dd>Oui</dd>
+      <dt>Prix</dt>
+      <dd>90€ la nuitée</dd>
+      <dt>Durée minimum du séjour</dt>
+      <dd>1 nuit</dd>
+    </dl>
+  </div>
+  <div class="col-md-9"> 
+    <h2>Description</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Curabitur malesuada accumsan dolor a blandit. Aliquam quis accumsan libero. Nunc facilisis enim ac mi tempor, vel venenatis urna ornare. Nullam porta mollis magna, ac venenatis elit laoreet at. Quisque lectus nibh, rutrum non rhoncus nec, hendrerit ac felis. Suspendisse potenti. Aliquam tempus lacus scelerisque nisi ultricies commodo.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    <p>Duis ac porta est, ut egestas quam. Mauris ac eleifend ante, nec vestibulum est. Praesent condimentum porttitor ultricies. Sed sit amet nulla varius, scelerisque diam ut, molestie nibh. Nulla augue ante, tristique ut libero eget, laoreet rutrum eros. Suspendisse at rhoncus lacus, nec porta felis. Duis aliquet, leo tincidunt scelerisque condimentum, neque augue adipiscing erat, id placerat orci justo non arcu. Etiam vel elementum orci. Nam quam dui, volutpat vel sollicitudin ut, eleifend nec dui. Donec et dui mauris. Integer rutrum at massa mollis porta. In hac habitasse platea dictumst. Nulla dui purus, ultrices sit amet neque vel, consequat auctor lacus</p>
+  </div>
+  <div class="col-md-3">
+    <dl>
+      <dt>Type de lit</dt>
+      <dd>Lit simple</dd>
+      <dt>Salle de bain</dt>
+      <dd>1</dd>
+      <dt>Prix</dt>
+      <dd>90€ la nuitée</dd>
+    </dl>
+  </div>
+  <div class="col-md-9"> 
+    <h2>Chambre 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Curabitur malesuada accumsan dolor a blandit. Aliquam quis accumsan libero. Nunc facilisis enim ac mi tempor, vel venenatis urna ornare. Nullam porta mollis magna, ac venenatis elit laoreet at. Quisque lectus nibh, rutrum non rhoncus nec, hendrerit ac felis. Suspendisse potenti. Aliquam tempus lacus scelerisque nisi ultricies commodo.</p>
+  </div>
+  <div class="col-md-3">
+    <dl>
+      <dt>Type de lit</dt>
+      <dd>Lit simple</dd>
+      <dt>Salle de bain</dt>
+      <dd>1</dd>
+      <dt>Prix</dt>
+      <dd>90€ la nuitée</dd>
+    </dl>
+  </div>
+  <div class="col-md-9"> 
+    <h2>Chambre 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Curabitur malesuada accumsan dolor a blandit. Aliquam quis accumsan libero. Nunc facilisis enim ac mi tempor, vel venenatis urna ornare. Nullam porta mollis magna, ac venenatis elit laoreet at. Quisque lectus nibh, rutrum non rhoncus nec, hendrerit ac felis. Suspendisse potenti. Aliquam tempus lacus scelerisque nisi ultricies commodo.</p>
+  </div>
+</section>
+  
