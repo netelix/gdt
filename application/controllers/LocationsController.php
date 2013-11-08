@@ -1,6 +1,6 @@
 <?php
 
-class LocationsController extends Zend_Controller_Action
+class LocationsController extends Uop_Controller_Action
 {
 
     public function init()

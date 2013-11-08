@@ -1,0 +1,3 @@
+[submodule "vendor/uop"]
+	path = vendor/uop
+	url = git@github.com:netelix/uop.git
