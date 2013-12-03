@@ -1,8 +1,8 @@
 <?php
 
-class ErrorController extends Zend_Controller_Action
+class ErrorController extends Uop_Controller_Action
 {
-
+    use Trait_Controller;
     public function errorAction()
     {
         $errors = $this->_getParam('error_handler');
