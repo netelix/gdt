@@ -9,8 +9,10 @@ trait Trait_Controller
 
 	public function manageSearchForm()
 	{
-		if($this->_getParam("error_handler") !== null)
+		if($this->_getParam("error_handler") !== null){
 			return;
+		}
+			
 		$this->view->search_form = $form = App::form("adsSearch", $this->getRequest());
 		if($this->_isSubmittedAndValid($form)){
 			$filters = $form->getFilters();
