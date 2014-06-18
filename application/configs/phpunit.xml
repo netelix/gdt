@@ -1,8 +1,8 @@
 <phpunit bootstrap="../../vendor/uop/bootstrap.php">
     <testsuite name="Application Test Suite">
-        <directory>./vendor/uop/tests/application</directory>
+        <directory>../../vendor/uop/tests/</directory>
     </testsuite>
     <testsuite name="Library Test Suite">
-        <directory>./tests/application</directory>
+        <directory>../../tests</directory>
     </testsuite>
 </phpunit>
