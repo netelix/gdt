@@ -1,0 +1,77 @@
+<? $this->body_class = "home" ?>
+<? $r_loc = App::table("locations")->country("FR"); ?>
+
+<? $this->placeholder("home-slider")->captureStart() ?>
+<? $this->placeholder("home-slider")->captureEnd() ?>
+
+<? $this->headMeta()->appendName("description", __("La sélection des meilleurs tatoueurs de France")) ?>
+
+
+<? $this->placeholder("h1")->captureStart() ?>
+
+  <div class="headline">
+  	<div class="center-wrapper">
+		<h1>La Galerie du Tatouage</h1>
+		<p>
+		<?= __("Visiter, s’inspirer, trouver le tatoueur le plus adapté.");?>
+		</p>
+		<br/>
+		<? $r_loc->link()->a(__("Voir tous les tatoueurs de la galerie"), "btn btn-default") ?>
+		</div>
+  </div>
+<? $this->placeholder("h1")->captureEnd() ?>
+
+<?= $this->partial('shared/_sidebar.phtml') ?>
+<? $this->placeholder('sidebar')->captureStart() ?>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+
+<div class="content">
+	<h2 class="h4"><?= __("Les tatouages qui vous ont tapé dans l’oeil")?></h2>
+	<div class="row" style="padding-left:15px; padding-right:30px; padding-bottom:15px">
+		<? foreach(App::table("images")->selectBestImages()->limit(6)->fetchAll() as $r_img) :?>
+			<?= $this->partial("location/galery-item.phtml", array(
+				"col"=>6, 
+				"img"=>$r_img, 
+				"size"=>"large",
+				"modal"=>false,
+				"hide_buttons"=>true,
+				"meta"=>true));?>
+		<? endforeach;?>
+		<p class="col-md-9">
+			<?= __("Chaque semaine, la Galerie du Tatouage vous propose un classement des tatouages les plus populaires.")?>
+		</p>
+		<?= $r_loc->link()->a(__("Voir tous les tatouages"), "btn btn-default pull-right") ?>
+	</div>
+	<h2 class="h4"><?= __("Les studios par style")?></h2>
+	<div class="row" style="padding-left:15px; padding-right:30px;">
+		<? foreach(App::table("attributes")->tattooStyle() as $r_attr):?>
+			<? $link = $r_loc->link(array("filters"=>array("attr"=>$r_attr->id))); ?>
+			<div class="col-md-2" style="padding-right:0px">
+					<div class="thumbnail">
+						<? 
+							$img = $r_attr->firstImage();
+							$url = isset($img) ? $img->url("small") : "http://placehold.it/173x177";
+						?>
+						<?= $link->jslink("<img src='$url' class='img-responsive'/>"); ?>
+						<?= $link->a(__("Tatouages :style:", array("style"=>$r_attr->name())), "h4"); ?>
+					</div>
+			</div>
+		<? endforeach ?>
+	</div>
+	<h2 class="h4"><?= __("Les tatoueurs près de chez vous")?></h2>
+	<div class="row" style="padding:15px;padding-right: 30px;">
+	<ul class="col-md-4">
+		<? $children = $r_loc->getChildren(); ?>
+		<? $columnize = $this->columnize($children->count(), 2	, '</ul><ul class="col-md-4">');?>
+		<? foreach($children as $row): ?>
+			<li><?= $row->link()->a(__("Les tatoueurs en :region:", array("region"=>$row->name())))?></li>
+			<?= $columnize ?>
+		<? endforeach ?>
+		</ul>
+		<ul>
+			<? foreach($r_loc->getCities(11) as $r_city): ?>
+				<li><?= $row->link()->a(__("Tatoueurs à :name:", array("name"=>$r_city->name())))?></li>
+			<? endforeach; ?>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<?php
+	$org = $this->org;
+	$current = $this->current;	
+	$tabs = array(
+		"edit"=> $this->link(array('id'=>$org->id), 'organization-edit')->fragment("title")->a_("Le salon"),
+		"products"=>$this->link(array('id'=>$org->id), 'organization-edit-products')->fragment("title")->a_("Les tatoueurs"),
+		"photos"=>$this->link(array('id'=>$org->id), 'organization-photos-edit')->fragment("title")->a_("Photos"),
+	);
+	if($this->layout()->logged_user->type == "admin"){
+		$tabs["website"]=$this->link(array('id'=>$org->id), 'minisite-edit')->fragment("title")->a_("Mon site web");
+	}
+?>
+<? $current_class = 'class="active"'; ?>
+<?foreach($tabs as $key=>$content):?>
+	<li <?= $current==$key? $current_class : ''?>>
+		<?= $content ?>
+	</li>
+<?endforeach?>

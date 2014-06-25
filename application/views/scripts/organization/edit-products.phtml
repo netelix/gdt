@@ -1,0 +1,41 @@
+<? 
+	$form = $this->form; 
+	$x = 1;
+?>
+<?= $this->partial("organization/_edit-header.phtml", array("org"=>$this->resource, "current"=>"products")); ?>
+<section>  
+<div class="tab-content">
+<?= $this->formHeader($form); ?>
+	<div class="products">
+    <? foreach($form->getSubforms() as $subform): ?>
+    	<? $product = $subform->product(); ?>
+    	<div class="product-container clearfix">
+    		<nav class="navbar navbar-default" role="navigation">
+ 			    <a class="navbar-brand" href="javascript:void();"><?= isset($product) ? $product->name() : __("Tatoueur n°:num:", array("num"=>$x++))?></a>
+			      <button type="button" class="delete-product btn btn-danger navbar-btn navbar-right" style="margin-right:10px"><?= __("Supprimer")?></button>
+				</nav>
+		  		<?= $subform->renderHiddenElements(array("showErrors"=>false)); ?>
+		      <?= $this->translationFields($subform->getSubform("names")->getSubforms())
+	      	->renderGroups(array("label"=>__("Nom du tatoueur"))); ?>
+	      <?= $this->translationFields($subform->getSubform("descs")->getSubforms())
+	      	->renderGroups(array(
+	          "label"=>__("Présentation du tatoueur"),
+	          "attribs"=>array("rows"=>3))); ?>
+    	</div>
+  	<? endforeach ?>
+  </div>
+<? $this->formFooter()->captureStart(); ?>
+<button type="button" class="add-product btn btn-primar y pull-right"><?= __("Ajouter un tatoueur")?></button>
+<?= $this->formFooter()->captureEnd(); ?>
+
+<?= $this->headScript()->appendFile("/uop/js/helper/jquery.dynamicForm.js"); ?>
+<script language="javascript">
+  $(function(){
+    $('.products').dynamicForm({
+      add_button:$('.add-product'),
+      del_button:$('.delete-product'),
+     	container_selector:'.product-container'
+    });
+  })
+</script>
+</div>

@@ -1,0 +1,73 @@
+<?= $this->partial("organization/_edit-header.phtml", array("org"=>$this->resource, "current"=>"photos")); ?>
+<?
+$r_org = $this->resource;
+$form = $this->form;
+$col_class = $this->sort ? "col-sm-2" : "col-sm-4";
+
+$class=array("class"=>"btn btn-warning navbar-btn");
+$link_edit = $this->sort ? 
+	$r_org->linkEditPhotos(array("mode"=>"default"))->a(__("Modifier les informations des photos"), $class):
+	$r_org->linkEditPhotos(array("mode"=>"sort"))->a(__("Modifier l'ordre des photos"), $class);
+?>
+
+<?= $this->formHeader($form, 
+	array("action"=>$r_org->linkEditPhotos()),
+	array("js"=>"/uop/js/helper/jquery.photoForm.js")
+); ?>
+
+<? if ($this->sort) {?>
+<div class="alert alert-info"><?= __("Faites glisser les photos pour changer l'ordre d'affichage"); ?></div>
+<? } ?>
+	<div class="navbar navbar-default navbar-collapse">
+		<?= $r_org->linkManagePhotos()->a(__("Ajouter des photos"), array(
+			"class"=>"btn btn-primary navbar-btn",
+		))?>
+		<?= $link_edit?>
+		<div class="navbar-right">
+    	<button type="submit" class="btn btn-success navbar-btn">Enregistrer</button>
+    </div>
+	</div>
+	<ul class="row sortable-container list-unstyled photo-edit-list">
+		<? foreach($form->getSubforms() as $subform) : ?>
+			<? $subform->hideLabels(true); ?>
+			<? $r_image = $subform->getImage(); ?>
+			<li class="<?=$col_class?> sortable">
+				<?= $subform->renderHiddenElements(); ?>
+				<div class="<?= !$this->sort ? 'col-xs-12 col-md-6' : ''?>" style="position:relative">
+        	<img src="<?= $r_image->url('small') ?>" class="img-thumbnail" style="margin-bottom:40px"/>
+	        <button 
+	        	data-href="<?=$r_org->linkManagePhotos()?>" 
+	        	data-id="<?=$r_image->id?>"
+	        	type="button" 
+	        	class="btn btn-danger pull-right delete">x</button>
+        </div>
+
+        <div class="col-xs-12 col-md-6 <?= $this->sort ?'hide':''?>">
+          <?= $this->translationFields($subform->getSubform("names")->getSubforms())
+	  	    	->renderGroups(array("label"=>"")); ?>
+	  	    <?= $subform->renderGroups(array(
+	  	    	"ref"
+	  	    ))?>
+	  	    <? foreach($r_image->attributesList("tattoo_style") as $label):?>
+	  	    	<span class="label label-default"><?=$label?></span>
+	  	    <? endforeach ?>
+	  	    <br/>
+	  	    <a href="javascript:void();" data-toggle="collapse" data-target="#img_<?= $r_image->id ?>_styles"><?= __("Gèrer les styles associés...")?></a>
+        </div>
+        <div class="col-xs-12 collapse <?= $this->sort ?'hide':''?>" id="img_<?= $r_image->id ?>_styles">
+  	   	 <?= $subform->renderAttributesCheckboxes("tattoo_style", array("label"=>null, "cols"=>4))?>
+        </div>
+			</li>
+		<? endforeach?>
+	</ul>
+  <div class="clearfix">
+      <button type="submit" class="btn btn-success pull-right">Enregistrer</button>
+  </div>
+</form>
+<script>
+$(function(){
+	$("form").photoForm({
+		"sortable":<?= $this->sort ? "true":"false" ?>
+	});
+});
+</script>

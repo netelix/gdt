@@ -1,0 +1,40 @@
+<?
+$message = $this->message;
+$recipient = $message->recipientUser();
+$sender = $message->user();
+$org = $message->organization();
+$org_link = $org->link()->option("canonical", true)->assemble();
+$org_link = "<a href='$org_link'>$org_link</a>";
+
+?>
+<?= __('Bonjour :who:', array('who' => $recipient->fname)) ?>,
+<br/>
+<br/>
+<? if($message->hasDemand()) :?>
+<?= __("Vous avez reçu un message de :sender_name: à propos de votre studio :property_name:", array(
+  'sender_name' => $sender->name(), 
+  'property_name' => $org_link
+  )) ?>
+<? endif ?>
+<? if($message->hasReview()) :?>
+<?=__("Vous avez reçu un commentaire de :sender_name:, à propos de votre studio :org_link:", array(
+    'sender_name' => $sender->name(),
+    'org_link' => $org_link
+    ))?>
+<? endif ?>
+<br/>
+<br/>
+<? if($recipient->hasAccount()) :?>
+<?=__("Vous pouvez consulter ce message en cliquant ou en copiant le lien suivant dans la barre d'adresse de votre navigateur:")?>
+<?= " <a href='$this->url'>$this->url</a>" ?>
+<? else :?>
+<?=__("Contenu du message :")?>
+<br/>
+<?= $message->content ?>
+<br/>
+<?=__("Pour répondre à cet utilisateur, répondez directement à cet email ou à l'adresse :sender_email:", array(
+    'sender_email' => $sender->email
+  ))?>
+<? endif ?>
+<br/><br/>
+<?= __("Toute l'équipe de la galerie du tatouage vous remercie de votre confiance") ?>

@@ -1,0 +1,23 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  <h4 class="modal-title" id="myModalLabel"><?= $this->img->name() ?>
+  	<?
+		$caption = $this->img->meta();
+	?>
+	<small><?=$caption?></small>
+  </h4>
+  
+</div>
+<div class="modal-body">
+	<div class="thumbnail">
+		<img class="img-responsive" src="<?= $this->img->url("large")?>"/>
+	</div>
+	<div>
+		<?= __("Votez pour ce tatouage en cliquant sur 'J'aime' et en partageant sur Facebook");?>
+    <? $url = $this->link(array("id"=>$this->img->id),"galery-focus")->option("canonical", true)->assemble()?>
+    <br/>
+    <div class="fb-share-button" data-type="button" href="<?= $url ?>" data-href="<?= $url ?>"></div>
+		<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" data-href="<?= $url?>"></div>
+	</div>
+</div>
+

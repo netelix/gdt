@@ -1,0 +1,312 @@
+<?
+  $org = $this->org;
+  $this->breadcrumb()->setLoc($org->location()); 
+  $form_contact = $this->contact_form;
+  $loc = $org->location();
+  $this->body_class = "organization-show";
+  $ad = $org->ad();
+  $images = $org->getAllImages();
+  $products = $org->products();
+  $city = $org->city();
+  
+  foreach($products as $r_product){
+	  $people_names[] = $r_product->name()->__toString();
+  }
+  
+  $last_people_name = array_pop($people_names);
+  $people_names = implode(", ", $people_names).__(" et ").$last_people_name;
+  
+  $this->doctype(Zend_View_Helper_Doctype::XHTML1_RDFA);
+  $this->headMeta()->appendProperty("og:title", $org->name()." - La galerie du tatouage");
+  $desc = __("Depuis leur studio de :loc_name:, :names: vous montrent les :num: photos de leurs derniers tatouages, partagez et votez pour le meilleur", array("names"=>$people_names, "num"=>$images->count(), "loc_name"=>$city->name()));
+  $this->headMeta()->appendProperty("og:description", $desc);
+  $this->headMeta()->appendProperty("og:image", "http://".App::config()->link->domain.$images->getRow(0)->url("orig"));
+  $this->headMeta()->appendProperty("og:url", $org->link()->option("canonical", true)->assemble());
+
+  $this->headMeta()->appendName("description", $desc);
+  $this->headTitle()->set($org->name());
+  $this->headTitle()->append(__("Tatoueur à :name:", array("name"=>$city->name())));
+
+?>
+<? $this->placeholder('sidebar')->captureStart() ?>
+	<div style="position:relative">
+		<div id="contact-affix" data-spy="affix">
+			<div style="margin-left: -15px;
+margin-right: -15px;
+padding: 0 15px;
+background: #ddd;
+padding-bottom: 15px;">
+			  <h4><?= __("Contacter le studio")?></h4>
+			  <h5 class="h3"><?= __("Par téléphone") ?></h5>
+			  <a id="phone-number-toggler" 
+			  	class="btn btn-warning collapse in" 
+			  	data-toggle="collapse" 
+			  	data-target="#phone-number,#phone-number-toggler">
+			  		<?= __("Afficher le numéro")?>
+			  </a>
+	 		  <script>
+				  <?= $this->eventHit($org, "visit");?>
+				</script>
+			  <script>
+				  $("#phone-number-toggler").click(function(){
+					  <?= $this->eventHit($org, "show-phone");?>
+					});
+			  </script>
+				  <p class="well well-sm collapse" id="phone-number"><span class="glyphicon glyphicon-phone"></span><?= $org->phoneNumber() ?></p>
+			  <h5 class="h3"><?= __("Par email") ?></h5>
+		  	<? if($contacted = $this->contact_form->sentTo($org->id)): ?>
+		  	<div class="alert alert-success alert-dismissable">
+				  <?= __("Votre message à bien été envoyé à ce studio. Si vous souhaitez envoyer un autre message, ") ?>
+				  <a href="javascript:void()" class="alert-link" data-target="#contact-form-content" data-toggle="collapse">
+				  	<?= __("cliquez ici")?>
+				  </a>
+		  	</div>
+		  	<? endif ?>
+				<div id="contact-form-content" class="<?= $contacted ? "collapse":""?>">
+				  <p><?=__("Pour contacter le studio, remplissez le formulaire suivant")?></p>
+			  <?= $this->formHeader($this->contact_form) ?>
+			    <? $this->contact_form->hideLabels(true); ?>
+			    <?= $this->contact_form->renderGroups(array(
+			      "fname"=>__("Nom"),
+			      "lname"=>__("Prénom"),
+			      "email"=>__("E-mail")
+			    ));?>
+			    <?= $this->contact_form->renderGroups(array(
+			      "message"=>array(
+			        "label"=>__("Précisez votre demande"),
+			        "attribs"=>array("rows"=>5))
+			    ));?>
+			  <?= $this->formFooter(__("Envoyer")) ?>
+				</div>
+		</div>
+	</div>
+	<script>
+		var width = $('#contact-affix').parent().css("width");
+		var $top = $("#sideBar").offset().top;
+		$('#contact-affix').css("width", width)
+			.data("offset-top", $top);
+	/*	document.write("<style>#contact-affix.affix {margin-top:-"+ $top +"px; top:"+$top+"px;} </style>");*/
+	</script>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+
+<? $this->placeholder("fb")->captureStart() ?>
+<div class="fb">
+  <div class="fb-share-button" data-type="button"></div>
+	<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+</div>
+<? $this->placeholder("fb")->captureEnd() ?>
+
+
+<!-- H1 -->
+<? $this->placeholder("h1")->captureStart() ?>
+	<h1 class="h2">
+		<b><?= $org->name()?></b>
+		<span><?= $this->placeholder("fb") ?></span>
+		<br>
+		<small><?= __("Studio de tatouage à :city:", array("city"=>$org->city()->name()))?></small>
+	</h1>
+<? $this->placeholder("h1")->captureEnd() ?>
+
+<!-- NAVTABS -->
+<? $ph_tabs = $this->placeholder("navtab"); ?>
+<? $ph_tabs->captureStart() ?>
+<ul class="nav nav-tabs">
+	<li class="tab-infos"><a href="#infos"><span class="glyphicon glyphicon-info-sign"></span><?= __("Informations générales") ?></a></li>
+	<li class="tab-photos"><a href="#photos"><span class="glyphicon glyphicon glyphicon-picture"></span><?= __("Photos") ?></a></li>
+	<li class="tab-people"><a href="#people"><span class="glyphicon glyphicon-user"></span><?= __("Tatoueurs") ?></a></li>
+	<li class="tab-map"><a href="#map"><span class="glyphicon glyphicon-time"></span><?= __("Horaires / Localisation") ?></a></li>
+	<li class="tab-reviews"><a href="#reviews"><span class="glyphicon glyphicon-comment"></span><?= __("Avis (:num:)", array("num"=>$ad->meta("num_review"))); ?></a>
+</ul>
+<? $ph_tabs->captureEnd() ?>
+<div class="">
+<!-- CAROUSEL -->
+
+<section id="infos">
+	<?= $ph_tabs ?>
+	<div class="row">
+	  <div class="col-md-8"> 
+	   	<h3 class="h4"><?= __("A propos du studio")?></h3>
+	    <?= $org->description() ?>
+	  </div>
+	  <div class="col-md-4">
+	  	<h3 class="h4"><?= __("Spécialités pratiquées")?></h3>
+	  	<div style="font-size:20px;">
+		  	<? foreach($org->attributes("tattoo_style") as $style): ?>
+		  	<span class="label label-default"><?= $style->name() ?></span>
+		  	<? endforeach ?>
+	  	</div>
+	  	<? $piercings = $org->attributes("piercing_style") ?>
+	  	<? if($piercings->count() > 0):?>
+	  	<h3 class="h4"><?= __("Piercings")?></h3>
+	  	<div style="font-size:20px;">
+		  	<? foreach($piercings as $style): ?>
+		  	<span class="label label-default"><?= $style->name() ?></span>
+		  	<? endforeach ?>
+	  	</div>
+	  	<? endif ?>
+	  </div>
+	</div>
+</section>
+
+<section id="photos">
+	<?= $ph_tabs ?>
+	<?= $this->partial("shared/_carousel.phtml", array("images"=>$images,	"size"=>"large-square")); ?>
+</section>
+
+<section id="people">
+	<?= $ph_tabs ?>
+	<? foreach($products as $r_product):?>
+	<div class="row">    
+	  <div class="col-md-6">
+	  	<? $images = $r_product->images(); ?>
+		  <? if($images->count() > 0): ?>
+		    <?= $this->partial("shared/_carousel.phtml", array("images"=>$r_product->images(),	"size"=>"large-square")); ?>	  
+	  	<? endif ?>
+	  </div>
+	  <div class="col-md-6"> 
+	    <h3 class="h4"><?= $r_product->name() ?></h3>
+	    <?= $r_product->description() ?>
+	    <?= $this->placeholder("fb") ?>
+	  </div>
+	</div>
+	<div class="separator"></div>
+	<? endforeach?>
+</section>
+
+<section id="map">
+	<?= $ph_tabs ?>
+	<div class="row">
+	  <div class="col-md-8">
+		<? $this->headScript()
+			->appendFile("//maps.google.com/maps/api/js?sensor=false");
+		?>
+			<div id="org_gmap" style="background: url(/img/staticmap.png); height:300px; margin-top:15px; text-align:center">
+				<button class="btn btn-default" id="show-map" style="margin-top:130px"><?= __("Voir la localisation")?></button>
+			</div>
+		  <script>
+		    $("#show-map").click(function(){
+			      var map = null;
+			      var myLatlng = new google.maps.LatLng(<?= $loc->lat ?>,<?= $loc->lng ?>);
+						var mapOptions = {
+		          zoom: 10,
+		          center: myLatlng,
+		          mapTypeControl: true,
+		          mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+		          navigationControl: true,
+		          navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+		          mapTypeId: google.maps.MapTypeId.ROADMAP
+						}
+						var map = new google.maps.Map(document.getElementById("org_gmap"), mapOptions);
+						
+						var marker = new google.maps.Marker({
+						    position: myLatlng,
+						});
+						
+						// To add the marker to the map, call setMap();
+						marker.setMap(map);
+			      
+			   });
+		  </script>	
+	  </div>
+	  <div class="col-md-4"> 
+	  	<h4><?= __("Adresse") ?></h4>
+	  	<p><?= $org->name() ?></p>
+  		<p><?= $org->completeAddress("</p><p>") ?></p>
+	  	<h4><?= __("Horaires d'ouverture") ?></h4>
+	  	
+	  	<p>
+	  	<? 
+	  	$days = array();
+	  	foreach(json_decode($org->opening_days()) as $data){
+		  	$hours = explode("_", $data);
+		  	$day = explode("-", $hours[0]);
+		  	$days[$day[0]][] = __("de :open: à :close:", array("open"=>$hours[1], "close"=>$hours[2]));
+	  	}
+	  	?>
+	  	<dl class="opening">
+	  	<? $date = new Zend_Date() ?>
+	  	<? foreach($days as $day=>$times): ?>
+	  	  <dt><?= ucfirst($date->set($day+1, Zend_Date::WEEKDAY_DIGIT)->get(Zend_Date::WEEKDAY));?></dt>
+	  	  <? foreach($times as $time): ?>
+	 			  <dd><?= $time?></dd>
+	 			<? endforeach ?>
+	  	<? endforeach; ?>
+	  	</dl>
+	  	</p>
+	  </div>
+	</div>
+</section>
+
+
+<section id="reviews">
+	<?= $ph_tabs ?>
+	<div class="row">
+		<div class="col-md-6">
+	  	<div class="well">
+		    <div class="row">
+ 		      <label class="col-xs-6 text-center"><b><?= __("Note globale, basée sur :num: avis", array("num"=>$ad->meta("num_review"))) ?></b></label>
+		      <span class="col-xs-6" style="margin-top;15px"><?= $this->starRate("moyenne_globale", $ad->avg_rating); ?></span>
+		    </div>
+			  <? foreach ($rates = $org->calcReviewCriteriaAverage() as $criteria): ?>  	
+			  	<? 
+			  		$r_criteria = App::table("attributes")->find($criteria['id'])->current(); 
+			  		$label = $r_criteria->name(); 
+			  	?>
+	    		<div class="row">
+	          <? $method = $r_criteria->key; ?>
+	    			<label class="col-xs-6"><?= $label ?></label>
+	    			<span class="col-xs-6"><?= $this->starRate("rating_global_".$criteria['id'], $criteria['avg']); ?></span>
+	    		</div>
+			  <? endforeach ?>
+ 	  	</div>
+		</div>
+		<div>
+			<h3><?= __("Vous connaissez ce studio ?")?></h3>
+			<p><?=__("Partagez votre experience avec les autres internautes")?></p>
+			<a class="btn btn-default" href="#form-review"><?=__("Laisser un avis");?></a>
+		</div>
+	</div>
+	<div class="separator"></div>
+  <ul>
+    <? foreach($this->reviews_data as $review): ?>
+    <li class="review">
+    <?= $this->partial("shared/_review.phtml", array("review"=>$review)); ?>
+    </li>
+  <? endforeach ?>
+  </ul>
+  <h4><?= __("Donnez votre avis")?></h4>
+	<div class="row" id="form-review">
+  <? $form_review = $this->form_review ?>
+  <?= $this->formHeader($form_review, array("action"=>"#form-review")) ?>
+    <div class="col-md-6">
+    	<label><?= __("Notes par catégorie")?></label>
+       <div class="criteria">	
+	     <? foreach ($form_review->getCriteria() as $r_criteria): ?>
+	        <div class="row">
+	          <label class="col-xs-6">
+	            <?= $r_criteria->name(); ?>
+	          </label>
+	          <span class="col-xs-6">
+	            <?= $form_review->renderGroups(array($r_criteria->key)) ?>
+	          </span>
+	        </div>
+	    <? endforeach; ?>
+      </div>
+    <?= $form_review->renderGroups(array(
+      "name"=>__("Votre avis en une phrase"),
+      "description"=>array(
+        "label"=>__("Commentaire"),
+        "attribs"=>array("rows"=>3))));?>
+    </div>
+    <div class="col-md-6">
+    <?= $form_review->renderGroups(array(
+      "lname"=>__("Votre nom"),
+      "fname"=>__("Votre prénom"),
+      "email"=>__("Votre adresse email"),
+      "website"=>array("group_class"=>"hide"))) ?>
+      <button type="submit" class="btn btn-success"><?=__("Commenter")?></button>
+     </div>
+    </form>
+  </div>
+</section>
+</div>

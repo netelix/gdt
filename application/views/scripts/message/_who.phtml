@@ -1,0 +1,9 @@
+<? 
+if((!empty($this->org)) && $img = $this->org->firstImage() && $this->user->id == $this->org->id){
+	$img = $this->org->firstImage()->url('small');
+} else {
+	$img = '/uop/images/default_user_photo.png';
+}?>
+
+<img class="thumbnail center-block" src="<?= $img ?>" alt="" width="100" />
+<p class="text-center"><?= $this->label ?></p>

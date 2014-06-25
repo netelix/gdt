@@ -1,0 +1,178 @@
+<? 
+	$noindex = ($this->count_exact == 0) ||
+		(isset($this->current_filters["attr"]) && count($this->current_filters["attr"]) > 1);
+?>
+<? if($noindex) $this->headMeta()->appendName("robots", "noindex,follow") ?>
+
+<? $this->body_class='location-show' ?>
+<? $this->placeholder('sidebar')->captureStart() ?>
+	<h2 class="h4"><?= __("Rechercher un tatoueur")?></h2>
+	<?= $this->formHeader($this->search_form)?>
+		<div class="row">
+			<div class="col-md-8">
+				<label class="bold" for="loc_name"><?= __("Lieu (ville, département...)") ?></label>
+				<?= $this->search_form->renderGroups(array(
+				  "loc_name"=>array(
+				    "label"=>__("Ville, Département...")
+				  )));?>
+			</div>
+			<div class="col-md-4">
+				<div class="form-group">
+					<label class="bold">&nbsp;</label>
+					<button type="submit" class="btn btn-success btn-block"><?=__("Rechercher")?></button>
+				</div>
+			</div>
+		</div>
+		<label class="bold" for="loc_name"><?= __("Filtrer par styles") ?></label>
+		<div class="row checkbox-filters">
+		<? foreach($this->filters as $key=>$filter_data): ?>
+			<? foreach($filter_data["rowset"] as $r_attr):?>
+				<div class="col-md-4 col-sm-6">
+					<?= $this->linkFilter($this->current_filters, $r_attr); ?>
+				</div>
+			<? endforeach ?>
+		<? endforeach ?>
+		</div>
+	</form>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+<?= $this->partial("shared/_sidebar.phtml", array("joinus"=>true)) ?>
+<? $this->placeholder('sidebar')->captureStart() ?>
+  <?= $this->linkList()->title(__("Recherches similaires"), "h4")->rs($this->brothers); ?>
+  <?= $this->linkList()->title(__("Recherches populaires"), "h4")->rs($this->cities); ?>
+  <?= $this->linkList()->title(__("Affinez votre recherche"), "h4")->rs($this->children); ?>
+  <? $this->linkList()->title(__("Ils viennent de nous rejoindre"), "h4")->rs($this->lastAds); ?>
+  <?= $this->linkList()->title(__("Les villes de :name:", array("name"=>$this->location->name())), "h4")->rs($this->cities_index); ?>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+
+<?
+  $page = $this->ads->getCurrentPageNumber();
+  $bc = $this->breadcrumb()->setLoc($this->location); 
+  if($page > 1){
+    $bc->append(__("Page :num:", array("page"=>$page)));
+  }
+?>
+
+<? 
+	$page_label = "";
+	$attr_names = $this->filtersLabel();
+
+	if(!empty($attr_names) || $page >1){
+		$page_label = " - ";
+	}
+	$page_label .= $attr_names;
+	if($page > 1){
+		$page_label.= " ".__("page :num:", array("num"=>$page));
+	}
+?>
+
+<? 
+	$loc_name = $this->location->name();
+	$style = !empty($attr_names) ? __(' style :style:', array("style"=>$attr_names)) : "";
+	$meta_desc = __("Retrouvez les meilleurs tatoueurs de :name::style:. Regardez et évaluez leur travail. Découvrez les évaluations des studios de tatouage faites par les internautes. 
+", array("style"=>$style, "name"=>$loc_name));
+		
+	$this->headTitle()
+		->set(__("Tous les tatoueurs:style: de :name:", array("style"=>$style, "name"=>$loc_name)));
+		
+	if($page > 1){
+		$meta_desc .= " - page $page";
+		$this->headTitle()->append("page $page");
+	}
+	$this->headMeta()
+		->appendName("description", $meta_desc);
+?>
+
+	<? $this->placeholder("h1")->captureStart() ?>
+		<h1 class="h2"><?= __("Les studios de tatouages <b>:loc:</b>", array("loc"=>$this->location->inName()))?>
+		<small><?= $page_label?></small></h1>
+ 	<? $this->placeholder("h1")->captureEnd() ?>
+ 		<div class="result-header clearfix">
+			<div class="h4"><?=__(":num: studios trouvés", array("num"=>$this->count_exact+$this->count_around))?></div>
+						<?= $this->ads; ?> 
+
+ 		</div>
+
+			<? foreach($this->ads as $r_ad): ?>
+			<?
+		    $images = $r_ad->images();
+	      $image = $images[0];
+	      $org_name = $r_ad->meta('loc_name');
+		    $org_desc = $r_ad->meta('short_desc'); 
+		    $city_name = $r_ad->meta("city_name");
+		    $city_link = $r_ad->meta("city_link");
+		    $link = $r_ad->link();
+	    ?>
+	    <div class="org-preview clearfix">
+	    	<div class="row">
+				<div class="col-md-4 event">
+		      <div class="thumbnail">
+		      	<? $this->placeholder("link")->captureStart("SET"); ?>
+		      	<? if (isset($image)) :?>
+		      	<img src="<?=$image->url(Model_DbTable_Row_Image::LARGE_SQUARE)?>" class="img-responsive" />
+		      	<? endif; ?>
+		      	<? $this->placeholder("link")->captureEnd()?>
+		      	<?= $link->a($this->placeholder("link")); ?>
+			      <? $nb_image = $r_ad->meta('num_image'); ?>
+		      <p class="text-center"><?=$link->a(__('Voir les :num: tatouages <br>réalisés dans ce salon', array('num' => $nb_image))); ?></p>
+	
+		      </div>
+				</div>
+				<div class="col-md-8 event event-wide last">
+					<h3 class="h3 bold"><?= $r_ad->link()->a()?>
+						<p class="small">
+							<a href='<?= $city_link?>'><?= __("Tatoueur à :city:", array("city"=>$city_name)) ?></a>
+		        <?= !empty($r_ad->distance) ? "(".number_format($r_ad->distance, 1)."km)":""; ?>			
+		        </p>
+						<span class="pull-right reviews"><?=$this->starRate("avg_rating".$r_ad->org_id, $r_ad->avg_rating);?>
+							<?= $link
+	          		->option("fragment", "guestbook") 
+	          		->a( __("(:num: avis)", array("num"=>$r_ad->meta("num_review"))), "text-center") ?>
+						</span>
+					</h3>
+		      <div class="imgs-preview">
+		      <? unset($images[0]); ?>
+		      <? if(!empty($images)):?>
+		      	<? foreach($images as $x=>$r_image): ?>
+		      	<? if($x>12) break;?>
+			       	<?= $link->a("<img src='".$r_image->url(Model_DbTable_Row_Image::MINI)."'/>") ?>
+		      	<? endforeach ?>
+			    <? endif ?>
+		      </div>
+			    <div class="row" >
+						<div class="col-md-6">
+							<p>
+								<b><?= __("Styles:") ?></b> <? foreach($r_ad->meta("style") as $style): ?>
+									<span class="label label-default"><?=$style?></span>
+								<? endforeach; ?>
+							</p>
+							<? if($r_ad->meta("piercing")): ?>
+							<p>
+								<b><?= __("Piercings:") ?></b> <?= __("Oui") ?>
+							</p>
+							<? endif ?>
+						</div>
+						<div class="col-md-6">
+							<p>
+								<b><?= __("Tatoueurs:") ?></b> <? foreach($r_ad->meta("product_names") as $name): ?>
+									<span class="label label-default"><?=$name?></span>
+								<? endforeach; ?>
+							</p>
+						</div>
+					</div>
+					<div class="row">
+				    <p class="col-md-12" style="margin-bottom: 15px;">
+				    	<?= $org_desc ?>
+						</p>
+					</div>
+				</div>
+				<div class="text-right buttons">
+					<?= $link->a(__("En savoir plus"), "btn btn-warning") ?>
+				</div>
+	    </div>
+    </div>
+
+		<? endforeach ?>
+		<div style="margin-top:10px;">
+			<?= $this->ads; ?> 
+		</div>
+		<div style="height:200px;">&nbsp;</div>

@@ -1,0 +1,10 @@
+<?= $this->formHeader($this->form, array(), 
+			array("showMessages"=>false)) ?>
+	<?= $this->form->renderGroups(array(
+		"message_content"=>array(
+			"label"=>__("Votre réponse"),
+			"attribs"=>array("rows"=>5)
+		)));
+	?>
+<?= $this->formFooter(__("Envoyer le message")) ?>
+

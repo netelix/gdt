@@ -1,0 +1,42 @@
+<? 
+	$name = $this->org->name();
+	$name = !empty($name) ? $name : $this->org->id;
+	$org = $this->org;
+	$complete = $org->isComplete();
+	$cat_labels = array(
+		"products"=>$org->linkEdit()->a(__("Les tatoueurs"), "alert-link"),
+		"organization"=>$org->linkEditProducts()->a(__("Le studio"),  "alert-link"),
+		"images"=>$org->linkEditPhotos()->a(__("Les photos"),  "alert-link"),
+	);
+	$this->layout()->body_class = 'bo';
+
+?>
+<? $this->placeholder("h1")->captureStart() ?>
+	<h1 class="h2"><b><?= $name?></b>
+	<? if($org->isPublished()): ?>
+		<?= $org->linkPublish()->a(__("Mettre hors ligne"), array("class"=>"btn btn-danger pull-right")); ?>
+		<?= $org->link()->a(__("Voir"), array("class"=>"btn btn-default pull-right")); ?>
+	<? elseif($complete):?>
+		<?= $org->linkPublish()->a(__("Mettre en ligne"), array("class"=>"btn btn-success pull-right")); ?>
+	<? endif ?>
+	</h1>
+
+<? if( !$complete ): ?>
+	<div class="alert alert-warning text-left">
+		<h3 class="h4"><?= __("Pour publier votre annonce, veuillez vérifier les informations suivantes :")?></h3>
+		<ul class="list-style">
+			<? foreach($org->getUncompletedReasons() as $cat=>$reasons):?>
+				<? foreach($reasons as $reason): ?>
+					<li><b><?= $cat_labels[$cat] ?> :</b> <?= $reason ?></li>
+				<? endforeach ?>
+			<? endforeach ?>
+		</ul>
+	</div>
+<? endif ?>
+<? $this->placeholder("h1")->captureEnd() ?>
+<div class="row">
+	<ul class="nav nav-tabs organization">
+		<?= $this->partial("organization/_tabs-items.phtml", array("org"=>$this->org, "current"=>$this->current)); ?>
+	</ul>
+</div>
+<br/>

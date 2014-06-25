@@ -45,7 +45,7 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 				$values["styles"][$lang][] = $r_attr->name(null, array("lang"=>$lang));
 			}
 		}
-		foreach($this->getAllImages(10) as $r_img){
+		foreach($this->getAllImages(11) as $r_img){
 			$values["images"][] = $r_img->toArray();		
 		}
 		$values["piercing"] = count($this->attributesList("piercing_style")) > 0;
@@ -53,6 +53,22 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 			$values["product_names"][] = $r_product->name()->__toString();
 		}
 		return $values;
+  }
+  
+  public function publish($opts=array())
+  {
+	  parent::publish($opts);
+	  foreach($this->location()->hierarchy() as $r_loc){
+	  	$r_loc->setReadOnly(false);
+		  if($r_loc->indexed == 0){
+		  	$r_loc->setReadOnly(false);
+			  $r_loc->indexed = 1;
+			  if($r_loc->type == 'city'){
+				  $r_loc->score = $r_loc->population + 1;
+			  }
+			  $r_loc->save();
+		  }
+	  }
   }
   
   protected function _requiredProductProperties($options=array())

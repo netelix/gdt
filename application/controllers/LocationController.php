@@ -20,6 +20,15 @@ class LocationController extends Uop_Controller_Location
 		$loc = App::table("locations")->fetchRow();
 		if($img_id = $this->getParam("id")){
 			$this->view->img =  $img = App::table("images")->find($img_id)->current();
+			$pager_link = Link::factory(array(), "galery");
+		} else {
+			$pager_link = null;
+		}
+
+		if($this->_isAjax()){
+      $this->_helper->layout->disableLayout();
+			$this->render("galery-focus");
+			return;
 		}
 
 		$filters = $this->_loadFilters();
@@ -51,13 +60,7 @@ class LocationController extends Uop_Controller_Location
 			}
 		}
 		$this->view->filters = $checkboxes;
-		$id = App::table("attributes")->findByKey("shares")->id;
-		$select = App::table("images")->select()
-			->from("images")
-			->setIntegrityCheck(false)
-			->join("ads", "ads.org_id = images.org_id", array())
-			->joinLeft("attr_map", "attr_id = $id AND attr_map.ref_id=images.id AND attr_map.ref_type='images'", array())
-			->order("value DESC");
+		$select = App::table("images")->selectBestImages();
 		
 		foreach($current_filters as $name=>$value){
       if(!isset($value)){
@@ -72,14 +75,7 @@ class LocationController extends Uop_Controller_Location
 			  $select->where("images.id IN (SELECT ref_id from attr_map WHERE ref_type='images' AND attr_id IN (?))",$value);
 			}
     }
-		
-		if($this->_isAjax()){
-      $this->_helper->layout->disableLayout();
-			$this->render("galery-focus");
-			return;
-		}
-		
-		$this->view->images = $this->_paginator($select, 44);
+		$this->view->images = $this->_paginator($select, 16, $pager_link);
 	}
 }
 

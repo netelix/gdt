@@ -1,0 +1,74 @@
+	<?
+	$this->user = $user = $this->user()->loggedUser();
+	$other_user = $this->other_user;
+	$message = $this->message;
+	$this->org = $org = $message->organization();
+?>
+
+<?= $this->partial("user/_tabs.phtml", array("current"=>'user/messages')); ?>
+<?
+$title = __("Conversation avec :other_user_name:", array(
+  'other_user_name' => $other_user->name()
+));
+if($message->hasDemand()){
+	$title = __("Demande de réservation");
+}
+if($message->hasReview()){
+  $title = __("Commentaire de :other_user_name:", array(
+    'other_user_name' => $other_user->name()
+  ));
+}?>
+<div id="message-show" class="row">
+	<div class="col-md-9">		 
+		<table class="table table-striped">			
+		  <? if($message->hasDemand()): ?>
+		  <thead>
+       	<th colspan="2">
+		  	<?= $this->partial("message/_demand-header.phtml", array("org"=>$org, "message"=>$message)); ?>
+       	</th>
+		  </thead>
+      <? endif ?>
+		 
+		  
+		  <? if($message->hasReview()): ?>
+		  	<!-- REVIEW -->
+				<? $review = $message->findRef() ?>
+			  <thead>
+	       	<th colspan="2">
+						<h3 class="h3"><?= __("Commentaire de :user:", array("user"=>$review->user()->name())) ?><small><a href="<?= $this->link(array('id'=>$org->id), 'organization-show') ?>"><?= $org->name() ?></a></small></h3>
+					</th>
+			  </thead>
+
+				<tr class="review_read">
+					<td colspan="2">
+				<?= $this->partial("shared/_review_content.phtml", array("review"=>$review)); ?>
+				<?= $review->organization()
+					->link()
+					->fragment("review".$review->id)
+					->a_("Voir le commentaire", array("class"=>"btn btn-default fr")); ?>
+
+					</td>
+				</tr>
+		  <? else: ?>
+		  	<!-- MESSAGES -->
+				<? foreach($this->messagesList as $x=>$r_msg): ?>
+					<? $user_org = $r_msg->user_id == $org->user_id ? $org : null; ?>
+					<? $class = $x%2==0 ? "alt" : ""; ?>
+					<?= $this->partial('message/_message.phtml', array(
+						"message"=>$r_msg, 
+						"org"=>$user_org, 
+						"class"=>$class
+						)) ?>
+				<? endforeach ?>
+			<? endif ?>
+			<!-- ANSWER FORM -->
+			<? if($message->hasDemand()) : ?>
+				<? $this->x = $x; ?>
+				<?= $this->partial("message/_answer.phtml", $this) ?>
+			<? endif ?>
+		</table>
+	</div>
+	<div class="col-md-3">
+		<?= $this->link(array(),'user/messages', array('user_admin'=>1))->a(__("Retour à la liste des messages"), "btn btn-default")?>
+	</div>
+</div>

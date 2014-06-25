@@ -1,0 +1,6 @@
+<? $class = ++$this->x%2==0 ? "alt" : ""; ?>
+<?= $this->partial('message/_message.phtml', array(
+	'content' => $this->partial('message/_form.phtml', array('form'=>$this->form)),
+	'org'=>$this->org,
+	"class"=>$class,
+	"user"=>$this->user()->loggedUser())) ?>

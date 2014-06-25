@@ -1,0 +1,15 @@
+<?= $this->partial("shared/_sidebar.phtml", array("joinus"=>true)) ?>
+
+<?
+$form = $this->form;
+?>
+<h2 class="title-2 h4"><?= __("Identifiez vous pour accèder à votre espace personel")?></h2>
+<div style="padding:15px">
+<?= $this->formHeader($form); ?>
+	<?= $form->renderGroups(array(
+		"email"=>__("Adresse email"),
+		"password"=>__("Mot de passe")));?>	
+<? $footer = $this->formFooter(__("Valider"))->captureStart();?>
+<?= $this->link(array(), "user/password-lost")->a("J'ai oublié mon mot de passe...", array("class"=>"pull-left"));?>
+<?= $footer->captureEnd() ?>
+</div>

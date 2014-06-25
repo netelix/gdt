@@ -1,0 +1,109 @@
+<?
+	$have_filter = (isset($this->current_filters["attr"]) && count($this->current_filters["attr"]) >= 1);
+	$noindex = (isset($this->current_filters["attr"]) && count($this->current_filters["attr"]) > 1);
+	
+	if($noindex) $this->headMeta()->appendName("robots", "noindex,follow");
+?>
+<? $this->body_class = "galery" ?>
+<? $this->placeholder('sidebar')->captureStart() ?>
+	<h2 class="h4"><?= __("Filtrer par styles") ?></h2>
+	<div class="row checkbox-filters">
+	<? foreach($this->filters as $link): ?>
+		<div class="col-md-4">
+			<? $link->option("jslink", $have_filter); ?>
+			<label><?= $link->a()?></label>
+		</div>
+	<? endforeach ?>
+	</div>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+<? $this->partial("shared/_sidebar.phtml"); ?>
+<? $focus = !empty($this->img); ?>
+<?
+  $page = $this->images->getCurrentPageNumber();
+  $bc = $this->breadcrumb(); 
+  if($page > 1){
+    $bc->append(__("Page :num:", array("page"=>$page)));
+  }
+?>
+<? $this->placeholder("h1")->captureStart() ?>
+<? 
+	$page_label = "";
+	$attr_names = $this->filtersLabel();
+
+	if(!empty($attr_names) || $page >1){
+		$page_label = " - ";
+	}
+	$page_label .= $attr_names;
+	if($page > 1){
+		$page_label.= " ".__("page :num:", array("num"=>$page));
+	}
+	
+?>
+
+	<? 
+		$style = !empty($attr_names) ? __(' de style :style:', array("style"=>$attr_names)) : "";
+		$meta_desc = __("Retrouvez les meilleurs tatouages:style: notés par les internautes. Et trouvez des idées pour votre prochain tatouage.", array("style"=>$style));
+			
+		$this->headTitle()
+			->set(__("Les meilleurs tatouages:style:", array("style"=>$style)));
+			
+		if($page > 1){
+			$meta_desc .= " - page $page";
+			$this->headTitle()->append("page $page");
+		}
+		$this->headMeta()
+			->appendName("description", $meta_desc);
+	?>
+
+	<h1 class="h2"><?= __("Les <b>tatouages</b> de la galerie")?><small><?= $page_label?></small></h1>
+<? $this->placeholder("h1")->captureEnd() ?>
+ 		<div class="clearfix result-header">
+ 			<h2 class="h4">
+ 				<? $count = $this->images->getTotalItemCount()?>
+ 				<?= $count > 0 ? __("Déambulez parmis les :num: tatouages:style: de la galerie", array("num"=>$count, "style"=>$style)): __("Auncun tatouage:style: trouvé", array("num"=>$count, "style"=>$style));
+	 				
+ 				?></h2>
+			<?= $this->images; ?> 
+    </div>
+    <div class="row" style="padding-right:15px; padding-top:15px; margin-top:-15px;">
+    <? foreach($this->images as $r_img): ?>
+    	<?= $this->partial("location/galery-item.phtml", array("img"=>$r_img)); ?>
+    <? endforeach; ?>
+    </div>
+		<div style="margin-top:10px;">
+			<?= $this->images; ?> 
+		</div>
+		<div style="height:200px;">&nbsp;</div>
+			<div class="modal fade" id="focus-container" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		    	<? if($focus): ?>
+		    		<?= $this->partial("location/galery-focus.phtml", array("img"=>$this->img)); ?>
+		    	<? endif ?>
+		    </div>
+		  </div>
+		  <? if($focus):?>
+		  <script>
+			  $('#focus-container').modal();
+			</script>
+			<?
+			  $this->doctype(Zend_View_Helper_Doctype::XHTML1_RDFA);
+			  $this->headMeta()->appendProperty("og:title", $this->img->name()." - La galerie du tatouage");
+			  $this->headMeta()->appendProperty("og:description", strip_tags($this->img->meta()));
+			  $this->headMeta()->appendProperty("og:image", "http://".App::config()->link->domain.$this->img->url("orig"));
+ 			  $this->headMeta()->appendProperty("og:type", "website");
+			  $this->headMeta()->appendProperty("og:url", $this->link(array("id"=>$this->img->id),"galery-focus")->option("canonical", true)->assemble());
+			  $this->headMeta()->setName("description",  $this->img->name());
+			  $this->headTitle()->set($this->img->name()." - ".$this->img->org()->name());
+			 ?>
+		  <? endif ?>
+		</div>
+<script>
+$(".show-focus").click(function(){
+	$("#focus-container .modal-content").load(this.href, function(){
+		$('#focus-container').modal();
+    FB.XFBML.parse(); 
+	});
+	return false;
+});
+</script>

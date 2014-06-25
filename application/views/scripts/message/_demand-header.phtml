@@ -1,0 +1,8 @@
+<?
+$message = $this->message;
+$org = $this->org;
+?>
+<? $demand = $message->findRef() ?>
+<div>
+	<p class="h3"><?= $this->partial("message/_demand-summary.phtml", array("demand"=>$demand)); ?><small><a href="<?= $this->link(array('id'=>$org->id), 'organization-show') ?>"><?= $org->name() ?></a></small></p>
+</div>		

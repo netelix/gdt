@@ -1,0 +1,19 @@
+<? $this->placeholder('sidebar')->captureStart() ?>
+  <form role="form" method="POST" class="clearfix">
+		<h2 class="h4"><?=__("Rejoignez-nous")?></h2>
+		<?= $this->form->hideLabels(true)
+			->renderGroups(array(
+				"fname"=>__("Prénom"),
+				"lname"=>__("Nom"),
+				"email"=>__("Email"),
+		)); ?>
+		<?= $this->form->renderInputGroups(array(
+				"prefix",
+				"number"=>array("label"=>__("Téléphone"))))?>
+		<?= $this->form->renderHiddenElements(); ?>
+		<input type="submit" class="btn btn-success pull-right" value="Valider"/>
+	</form>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+<?= $this->partial("shared/_sidebar.phtml", array("joinus"=>true)) ?>
+
+<img src="http://placehold.it/850x320" alt="..." class="img-responsive">

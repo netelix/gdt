@@ -1,0 +1,128 @@
+<?= $this->partial("user/_tabs.phtml", array("current"=>'user/edit')); ?>
+<div class="row">
+	<?=$this->formHeader($this->form_infos, array("class"=>"col-md-6"))?>
+		<?= $this->form_infos->renderGroups(array(
+			"email"=>__("Adresse e-mail"),
+			"company"=>__("Société")))?>
+		<div class="row">
+		<?= $this->form_infos->renderGroups(array(
+			"fname"=>array(
+				"group_class"=>"col-md-6",
+				"label"=>__("Prenom")),
+			"lname"=>array(
+				"group_class"=>"col-md-6",
+				"label"=>__("Nom"))))
+		?>
+		</div>
+		<?= $this->form_infos->renderGroups(array(
+			"address"=>__("Adresse"),
+			"address2"=>__("Adresse (suite)")))?>
+		<div class="row">
+		<?= $this->form_infos->renderGroups(array(
+			"postcode"=>array(
+				"group_class"=>"col-md-6",
+				"label"=>__("Code postal")),
+			"city"=>array(
+				"group_class"=>"col-md-6",
+				"label"=>__("Ville")),
+			"siret"=>array(
+				"group_class"=>"col-md-12",
+				"label"=>__("Numéro SIRET"))));?>
+		</div>
+		<div class="phones">
+			<div>
+			<? foreach($this->form_infos->getSubform("phones")->getSubforms() as $phone_form): ?>
+				<div class="phone-container">
+				<? 
+					$r_phone = $phone_form->entity();
+					$favorite_class = isset($r_phone) && $r_phone->favorite ? "checked='checked'":""; 
+				?>
+				<?= $phone_form->renderHiddenElements(); ?>		      
+				<?= $phone_form->renderInputGroups(array(
+								"prefix",
+								"number",
+								"type",
+								"__HTML__"=>"<span class='input-group-addon'>
+									<input type='radio' name='user[phones][favorite]' value='".$phone_form->getName()."' $favorite_class />
+								</span>",
+								"delete"=>array(
+									"class"=>"btn btn-danger delete",
+									"label"=>"x")))?>
+				</div>
+			<? endforeach ?>
+			   <? $this->headScript()->appendFile("/uop/js/helper/jquery.dynamicForm.js"); ?>
+	    <script type="text/javascript">
+	    $(function(){ 
+		    $('.phones').each(function(){
+		      $(this).dynamicForm({
+		        add_button:$(this).find('.add-phone'),
+		        del_button:$('.phone-container .delete'),
+		        container_selector:'.phone-container',
+		        onItemShown:function(){},
+		        onItemHidden:function(){},
+		        minimum_shown:1
+		      });
+		    });
+		   });
+	    </script>
+			</div>
+   		<button type="button" class="btn btn-default add-phone"><?=__("Ajouter un numéro")?></button> 
+		</div>
+
+		<?= $this->formFooter(__("Enregistrer")); ?>
+		
+	<?=$this->formHeader($this->form_password, array("class"=>"col-md-6"))?>
+	<? if(!empty($this->user->tmp_password)): ?>
+    <div class="form-group">
+      <label for="tmp_password"><?= __("Mot de passe temporaire")?></label>
+      <input type="text" id="tmp_password" class="form-control" placeholder="<?= __("Mot de passe temporaire")?>" value="<?= $this->user->tmp_password?>" disabled>
+    </div>
+  <? endif ?>
+	<?= $this->form_password->renderGroups(array(
+		"current_password"=>__("Mot de passe actuel"),
+		"password"=>__("Nouveau mot de passe"),
+		"password_confirmation"=>__("Retapez le mot de passe")));?>
+	<?= $this->formFooter(__("Enregistrer")); ?>
+</div>
+<? if($this->user()->admin()): ?>
+	<table class="table" id="crm">
+		<thead>
+			<tr>
+				<th style="width:200px"><?= __("Date")?></th>
+				<th><?= __("Détail")?></th>
+			</tr>
+		</thead>	
+
+		<tr>
+			<td><?= __("Aujourd'hui")?></td>
+			<td>
+				<?=$this->formHeader($this->form_crm , array("action"=>"#crm"))?>
+				<div class="row">
+					<?= $this->form_crm->renderGroups(array(
+						"seller"=>array(
+							"group_class"=>"col-md-6",
+							"label"=>__("Interlocuteur")),
+						"title"=>array(
+							"group_class"=>"col-md-6",
+							"label"=>__("Sujet")),
+						));?>
+				</div>
+				<div class="row">
+					<?= $this->form_crm->renderGroups(array(
+						"content"=>array(
+							"group_class"=>"col-md-12",
+							 "attribs"=>array("rows"=>5),
+							"label"=>__("Détails"))));?>
+				</div>
+				<button type="submit" class="btn btn-success pull-right" action="<?= $this->link(array())?>#crm"><?= __("Enregistrer") ?></button>
+			</td>
+		</tr>
+
+	<? foreach($this->user->events("crm") as $r_event): ?>
+		<tr>
+			<td><?= $r_event->zendDate()->get(Zend_Date::DATES);?></td>
+			<td><?= nl2br($r_event->text) ?></td>
+		</tr>
+	<? endforeach; ?>
+	</table>
+<? endif ?>

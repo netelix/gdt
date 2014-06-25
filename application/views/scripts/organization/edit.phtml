@@ -1,0 +1,98 @@
+
+  <?= $this->partial("organization/_edit-header.phtml", array("org"=>$this->resource, "current"=>"edit")); ?>
+  <section>  
+  <div class="tab-content">
+    <?= $this->formHeader($this->form)?>
+      <? if($password_form = $this->form->getSubform("password_form")):?>
+        <?= $password_form->renderGroups(array(
+          "password"=>__("Mot de passe"),
+          "password_confirmation"=>__("Confirmation de mot de passe"),
+          ));?>
+      <? endif; ?>
+      <h3><?=__("Informations de localisation")?></h3>
+      <div class="row">
+      	<div class="col-md-6">
+ 	  		<?= $this->form->renderGroups(array(
+	  			"address"=>__("Adresse"),
+	  			"address2"=>__("Adresse (suite)"),
+	  			"postcode"=>__("Code postal"),
+	  			"city_name"=>__("Ville"),
+	  		)) ?>
+      	</div>
+      	<div class="col-md-6">
+		  		<div class="form-group" style="height:300px; margin-top:20px"><div id="form-map" style="width: 100%; height: 100%"></div></div>
+      	</div>
+      </div>
+
+  		<?= $this->gmap("#form-map")
+  			->draggableMarker("input[name=lat]","input[name=lng]")
+  			->autosuggest("input[name=city_name]")
+  			->render() ?>
+      <h3><?=__("A propos du salon")?></h3>
+      <?= $this->translationFields($this->form->getSubform("names")->getSubforms())
+      	->renderGroups(array("label"=>__("Nom du salon de tatouage"))); ?>
+      <?= $this->translationFields($this->form->getSubform("descs")->getSubforms())
+      	->renderGroups(array(
+          "label"=>__("Description du salon de tatouage"),
+          "attribs"=>array("rows"=>3))); ?>
+      <?= $this->translationFields($this->form->getSubform("short_descs")->getSubforms())
+        ->renderGroups(array(	
+          "label"=>__("Description en une phrase, pour les résultats de recherche"),
+          "attribs"=>array("rows"=>2))); ?>
+
+      <?= $this->form->renderAttributesCheckboxes("tattoo_style", "<h3>".__("Styles pratiqués")."</h3>")?>
+      <?= $this->form->renderAttributesCheckboxes("piercing_style", "<h3>".__("Pratique de piercings")."</h3>")?>
+
+      <?// $this->form->renderAttributesCheckboxes("filter2", __("Filtre 2"))?>
+      <?= $this->form->renderGroups(array(
+        //  "filter1"=>__("Filtre 1"),
+          "website"=>__("Site internet"),
+      ))?>
+      <h3><?=__("Horaires d'ouverture")?></h3>
+      <div id="openings">
+      	<div>
+	      <? foreach($this->form->getSubform("openings")->getSubforms() as $opening_form):?>
+	        <div class="form-inline opening">
+	        <?= $opening_form->renderHiddenElements() ?>
+	      	<?= $opening_form->renderGroups(array(
+	      		"day",
+	      		"open",
+	      		"close",
+	      	));?>
+	      	<input type="hidden" name="value"><!--This allow dynamic form to close-->
+	      	<span class="form-group">
+		      	<a class="btn btn-danger delete-opening" style="margin-top:24px" href="#">x</a>
+	      	</span>
+	 	      </div>
+	      <? endforeach; ?>
+      	</div>
+     	 	<a class="add-opening btn btn-default" style="margin-top:24px" href="javascript:void(0);"><?=__("Ajouter un horaire")?></a>
+      </div>
+    <?=$this->formFooter();?>
+  </div>
+  <?= $this->headScript()->appendFile("/uop/js/helper/jquery.dynamicForm.js"); ?>
+	<script language="javascript">
+	  $(function(){
+	    $('#openings').dynamicForm({
+	      add_button:$('.add-opening'),
+	      del_button:$('.delete-opening'),
+	     	container_selector:'.opening',
+	     	minimum_shown:1,
+	     	onItemShown:function(el){
+		     	var ref = $(".opening:visible").not(el).last();
+		     	// set next day on opening
+		     	// lastday 
+		     	var nextday = ref.find("select[name*=day] option:selected").next().val();
+		     	el.find("select[name*=day]").val(nextday).trigger("change");
+
+		     	var open = ref.find("select[name*='[open]']").val();
+		     	el.find("select[name*='[open]']").val(open).trigger("change");
+
+		     	var close = ref.find("select[name*=close]").val();
+		     	el.find("select[name*=close]").val(close).trigger("change");
+	     	}
+		  	});
+			});
+
+	</script>
+ </section>

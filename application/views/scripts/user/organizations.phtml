@@ -1,0 +1,31 @@
+<? $this->body_class = 'bo'; ?>
+<? if($this->logged_admin): ?>
+	<?= $this->partial("user/_form_add_org.phtml", $this); ?>
+<? endif?>
+<ul class="media-list">
+<? foreach($this->organizations as $org):
+    $url = $this->link(array('id'=>$org->id), 'organization-edit');
+    $r_image = $org->getAllImages(1)->current() ?>
+    <li class="media">
+      <div class="pull-left">
+        <? if($r_image):?>
+          <img src="<?= $r_image->url('small') ?>" class="media-object"/>
+        <? else: ?>
+          <img src="http://placehold.it/173x177" class="media-object"/>
+        <? endif?>
+      </div>
+      <div class="media-body">
+        <h2 class="media-heading"><?=$org->name()?></h2>
+        <p><?= htmlspecialchars($org->shortDesc()) ?></p>       
+        <form action="<?= $org->linkPublish() ?>" method="POST" class="">
+          <?= $org->linkEdit()->a(__("Gérer l'annonce"), array("class"=>"btn btn-warning")) ?>
+          <? if($org->isPublished()): ?>
+            <button type="submit" class="btn btn-danger" name="unpublish"><?=__("Dépublier")?></button>
+          <? elseif($org->isComplete()): ?>
+            <button type="submit" class="btn btn-success" name="publish"><?=__("Publier")?></button>
+          <? endif ?>
+        </form>
+      </div>       
+    </li>
+<? endforeach ?>
+</ul>

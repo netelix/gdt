@@ -6,17 +6,14 @@
 <!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
 		<head>
 			<meta charset="utf-8">
-			<title>MUSICFLOW Template html/css</title>
+			<? $this->headTitle()->append("La Galerie du Tatouage") ?>
+			<?= $this->headTitle() ?>
+			<?= $this->headMeta()?>
+
 			<!-- Mobile viewport optimized: h5bp.com/viewport -->
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 			<meta name="format-detection" content="telephone=no">
 			<!-- Style Sheet>
-			<link rel="stylesheet" type="text/css" href="css/camera.css" media="screen">
-			<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" media="screen">
-			<link rel="stylesheet" type="text/css" href="css/jquery.fullwidthAudioPlayer.css" media="screen">
-			<link rel="stylesheet" type="text/css" href="css/jquery.fullwidthAudioPlayer-responsive.css" media="screen">
-			<link rel="stylesheet" type="text/css" href="css/style.css" media="screen"-->
-			<?= $this->headMeta() ?>
 			<? $this->headLink()->appendStylesheet("/theme/css/style.css")
 					->appendStylesheet("/theme/css/skin/scheme1.css"); ?>
 
@@ -37,8 +34,6 @@
         ->appendStylesheet('/uop/bootstrap-lightbox/bootstrap-lightbox.css')
 	      ->appendStylesheet("/css/global.less") ?>
 			    
-		    <!--script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-		    <script>window.jQuery.ui || document.write('<script src="/js/jquery-ui-1.10.4/jquery-ui.min.js"><\/script>')</script-->
 		    <?= $this->headScript()
 		  		->prependFile('/uop/js/modernizr-2.7.1-custom/modernizr.min.js')
           ->appendFile('/uop/js/encryptedlink.js')
@@ -59,14 +54,16 @@
 		  <script>
 	      $(function(){
 	        $('.selectpicker').selectpicker();
-	        $("img.lazy").lazyload();
+					$(".checkbox-filters input[type=checkbox]").click(function(){
+						document.location = $(this).parent("a").attr("href");
+					});
 	      })
 	    </script>
 
 		</head>		
 		<!-- BODY -->
 		
-		<body id="body" class="<?=$this->body_class?>" style="<?=$this->body_style?>">
+		<body id="body" class="<?=$this->body_class?>">
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
@@ -78,8 +75,31 @@
 			<div class="top-wrapper-mask clearfix">	
 
 			<!-- HEADER -->
-			<?= $this->partial("admin/navbar.phtml"); ?>
+			
+			<div id="carousel-top" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			 		
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <img src="/img/slide1.jpg" alt="...">
+			      <div class="carousel-caption">
+			      </div>
+			    </div>
+			  </div>
+			
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-top" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-top" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			  </a>
+		  </div>
+
+
 			<header class="top-wrapper small-wrapper clearfix hidden-print" style="z-index:1">
+					<?= $this->partial("admin/navbar.phtml"); ?>
 					<div class="center-wrapper">
 						<div class="top-content-position">
 							<div class="top-content skin-font-color3">
@@ -87,7 +107,7 @@
 									
 									<!-- Logo  -->
 								
-									<span class="logo"><?= Link::home()->a("LA<b>GALERIE</b>DU<b>TATOUAGE</b>") ?>	
+									<span class="logo"><img src="/img/logo.png"/><?= Link::home()->a("LA<b>GALERIE</b>DU<b>TATOUAGE</b>") ?>	
 									<div class="fb-like" 
 										data-layout="button_count" 
 										data-action="like" 
@@ -132,20 +152,7 @@
 									<!-- /Main menu  -->
 									
 									<!-- Mobile menu -->
-									
-									<span class="mobile-button icon font-size-46px skin-color-hover1">i</span>
-									<ul class="mobile-menu regular">
-										<li class="skin-background-color4 skin-background-hover1"><a class="skin-font-color3" href="index.html">home</a></li>
-										<li class="skin-background-color4 skin-background-hover1"><a class="skin-font-color3" href="news_list_1.html">news</a></li>
-										<li class="skin-background-color4 skin-background-hover1"><a class="skin-font-color3" href="events_list_1.html">events</a></li>
-										<li class="skin-background-color4 skin-background-hover1"><a class="skin-font-color3" href="gallery_list_version_1.html">gallery</a></li>
-										<li class="skin-background-color4 skin-background-hover1"><a class="skin-font-color3" href="video_list_version_1.html">videos</a></li>
-										<li class="skin-background-color4 skin-background-hover1"><a class="skin-font-color3" href="album_list_version_1.html">albums</a></li>
-										<li class="skin-background-color4 skin-background-hover1"><a class="skin-font-color3" href="shop_home.html">shop</a></li>
-										<li class="skin-background-color4 skin-background-hover1"><a class="skin-font-color3" href="contact_page.html">contact</a></li>
-										<li class="skin-background-color4 skin-background-hover1"><a class="skin-font-color3" href="index.html">buy template</a></li>
-									</ul>
-									
+																		
 									<!-- /Mobile menu  -->
 									
 								</div>
@@ -174,13 +181,6 @@
 										</form>
 									</div>
 									<? endif ?>
-									<!--ul class="social">
-										<li class="skin-background-color1 skin-background-hover3" ><a href="#"><img src="/theme/images/social/facebook.png" alt="social"></a></li>
-										<li class="skin-background-color1 skin-background-hover3" ><a href="#"><img src="/theme/images/social/twitter.png" alt="social"></a></li>
-										<li class="skin-background-color1 skin-background-hover3" ><a href="#"><img src="/theme/images/social/googleplus.png" alt="social"></a></li>
-										<li class="skin-background-color1 skin-background-hover3" ><a href="#"><img src="/theme/images/social/lastfm.png" alt="social"></a></li>
-										<li class="skin-background-color1 skin-background-hover3" ><a href="#"><img src="/theme/images/social/dribbble.png" alt="social"></a></li>
-									</ul>
 									
 									<!-- /Social  -->
 									
@@ -199,34 +199,34 @@
 			</header>
 			
 			<!-- /HEADER -->
-
-			<div class="center-wrapper main-content-wrapper">
-			
-				<!-- MAIN CONTENT -->
-
-					<!-- events -->
-				
-				<div class="main-content">
-
-				  <div class="row" style="margin-top: -9px; position:relative; background:#EEE">
-				    <? $sidebar = trim($this->placeholder('sidebar'))?>
-				    <? $col = !empty($sidebar) ? "col-sm-8" : "col-sm-12" ?>
-				    
-				    <div class="<?=$col?>" style="background-color:#FFF">
-				    	<?= $this->flashMessages() ?>
-				      <?= $this->layout()->content ?>
-				    </div>
-				    <? if(!empty($sidebar)): ?>
-				    <div class="col-sm-4 hidden-xs" id="sideBar">
-				      <?= $sidebar?>
-				    </div>
-				    <? endif ?>
-				  </div>
-				  <div class="clearfix row" style="height:15px;background: #FFF;"></div>
-				</div>
-				<!-- /MAIN CONTENT -->
-			</div>				
-				
+			<div class="background">
+				<div class="background-inner">
+					<div class="center-wrapper main-content-wrapper">
+					
+						<!-- MAIN CONTENT -->
+		
+							<!-- events -->
+						<div class="main-content">
+		
+						  <div class="row" style="position:relative;background: #FFF;margin-top: 15px;">
+						    <? $sidebar = trim($this->placeholder('sidebar'))?>
+						    <? $col = !empty($sidebar) ? "col-sm-8" : "col-sm-12" ?>
+						    
+						    <div class="<?=$col?> content-col">
+						    	<?= $this->flashMessages() ?>
+						      <?= $this->layout()->content ?>
+						    </div>
+						    <? if(!empty($sidebar)): ?>
+						    <div class="col-sm-4 hidden-xs" id="sideBar">
+						      <?= $sidebar?>
+						    </div>
+						    <? endif ?>
+						  </div>
+						</div>
+						<!-- /MAIN CONTENT -->
+					</div>		
+				</div>		
+			</div>		
 			<!-- BOTTOM -->
 				
 			<div class="bottom skin-background-color2 hidden-print">
@@ -234,31 +234,26 @@
 				
 					<!-- Bottom widget place #1 -->
 				
-					<div class="one-fourth regular">
-						<h2 class="skin-font-color3">Contact <span class="bold">us</span></h2>
-						<p>
-						Ellentesque eget mi nulla, ut ultrices enim. Etiam id erat bibendum metus tristique 
-						vestibulum sit amet ac mauris. Suspendisse eget nibh lectus.
-						</p>
-						<ul>
-							<li><span class="skin-font-color1">Address:</span> New york</li>
-							<li><span class="skin-font-color1">Email:</span> info@gozawi.com</li>
-							<li><span class="skin-font-color1">Phone:</span> +12 323 242 423</li>
-						</ul>
+					<div class="one-third regular">
+						<h2 class="skin-font-color3"><span class="bold">Social</span></h2>
+							<ul class="social">
+								<li><a href="https://www.facebook.com/galeriedutatouage"><img src="/theme/images/social/facebook.png" alt="social">Facebook</a></li>
+								<li><a href="https://twitter.com/GalerieTatouage​"><img src="/theme/images/social/twitter.png" alt="social">Twitter</a></li>
+								<li><a href="https://plus.google.com/u/0/b/105612669225859415976/105612669225859415976/posts"><img src="/theme/images/social/googleplus.png" alt="social">Google+</a></li>
+							</ul>
 					</div>
 					
 					<!-- Bottom widget place /#1 -->
 					
 					<!-- Bottom widget place #2 -->
 					
-					<div class="one-fourth widget-bottom-latest-posts regular">
-						<h2 class="skin-font-color3">Latest <span class="bold">posts</span></h2>
+					<div class="one-third widget-bottom-latest-posts regular">
+						<h2 class="skin-font-color3"> <span class="bold">Informations</span></h2>
 						<ul>
-							<li><a href="#" class="skin-font-color10 skin-color-hover1">Electronic music</a></li>
-							<li><a href="#" class="skin-font-color10 skin-color-hover1">Behind the stage</a></li>
-							<li><a href="#" class="skin-font-color10 skin-color-hover1">Rock party in Warsaw</a></li>
-							<li><a href="#" class="skin-font-color10 skin-color-hover1">Dubstep music in Norway</a></li>
-							<li><a href="#" class="skin-font-color10 skin-color-hover1">Place for new album promo</a></li>
+							<li><?= Link::factory(array("page"=>"contact"), "static")->a("Contact")?></li>
+							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Mentions légales")?></li>
+							<li><?= Link::factory(array("page"=>"cgv"), "static")->a("Conditions d'utilisation")?></li>
+							<li><?= Link::factory(array("page"=>"cgv"), "static")->a("Conditions de vente")?></li>
 						</ul>
 					</div>
 					
@@ -266,31 +261,18 @@
 					
 					<!-- Bottom widget place #3 -->
 					
-					<div class="one-fourth widget-bottom-tags regular">
-						<h2 class="skin-font-color3">Tag <span class="bold">cloud</span></h2>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">car show</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">electronic music</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">party</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">promo albums</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">summer rock</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">festival</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">stage</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">dubstep</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">city</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">tickets</a>
-						<a href="#" class="button-small skin-background-color1 skin-font-color3 skin-background-hover3">concerts</a>
+					<div class="one-third widget-bottom-tags regular last">
+						<h2 class="skin-font-color3">Recherches <span class="bold"></span></h2>
+						<? foreach(App::table("locations")->country("FR")->getCities(10) as $r_city):?>
+							<?= $r_city->link()->a(__("Tatoueur à :name:", array("name"=>$r_city->name())))?>
+						<? endforeach; ?>
 					</div>
 					
 					<!-- Bottom widget place /#3 -->
 					
 					<!-- Bottom widget place #4 -->
 					
-					<div class="one-fourth widget-bottom-flickr regular last">
-						<h2 class="skin-font-color3">Flickr <span class="bold">widget</span></h2>
-						<ul class="flickr"></ul>
-					</div>
-					
-					<!-- Bottom widget place /#4 -->
+				<!-- Bottom widget place /#4 -->
 					
 				</div>
 				
@@ -325,32 +307,6 @@
 			<!-- /FOOTER -->
 
 			<!-- ATTACHMENTS>
-
-			<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-			<script type="text/javascript" src="js/jquery.migrate-1.2.1.min.js"></script>
-			<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-			<script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
-			<script type="text/javascript" src="js/wait.js"></script>
-			<script type="text/javascript" src="js/jquery.parallax.min.js"></script>
-			<script type="text/javascript" src="js/retina.js"></script>
-			<script type="text/javascript" src="js/jquery.tweet.js"></script>
-			<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-			<script type="text/javascript" src="js/modernizer.min.js"></script>
-			<script type="text/javascript" src="js/camera.js"></script>
-			<script type="text/javascript" src="js/jflickrfeed.min.js"></script>
-			<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-			<script type="text/javascript" src="js/jquery-ui.js"></script>
-			
-			<! Player >
-
-			<script type="text/javascript" src="js/player/soundmanager2-nodebug-jsmin.js"></script>
-			<script type="text/javascript" src="https://connect.soundcloud.com/sdk.js"></script>
-			<script type="text/javascript" src="js/player/amplify.min.js"></script>
-			<script type="text/javascript" src="js/player/jquery.fullwidthAudioPlayer.min.js"></script>
-
-			<!-- Custom Js >
-			
-			<script type="text/javascript" src="js/custom.js"></script>
 
 			<!-- /ATTACHMENTS -->
 			</div>

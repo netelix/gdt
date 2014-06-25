@@ -1,0 +1,39 @@
+<?
+//Preview=true on location page. False on org page.
+$review = $this->review['row'];
+
+$review_date = $review->event("new")->zendDate();
+$org = $review->Organization();
+
+$desc_split = explode(" ", $review->description(), 20);
+if (sizeof($desc_split) > 2) { array_pop($desc_split); }
+$desc_preview = implode(" ", $desc_split);
+?>
+
+
+<div class="row">
+	<div class="col-md-6">
+		<h4>
+			<small><?=$review_date->get(Zend_Date::DATES)?> - </small>
+			<?=$review->user()->name()?>
+		</h4>
+		<h5><?= $review->name() ?></h5>
+		<?= $review->description()->toPara() ?>
+	</div>
+	<div class="col-md-5">
+		<div class="well"  style="margin-top:15px;">
+			<div class="row" style="margin-bottom:5px;">
+				<label class="col-xs-6"><b><?= __("Note moyenne")?></b></label>
+				<span class="col-xs-6"><?= $this->starRate("rating_".$review->id, $review->average); ?></span>
+			</div>
+			<? foreach (App::table("attributes")->reviewRate() as $r_criteria) : ?>
+			<div class="row">
+	      <? $method = $r_criteria->key; ?>
+				<label class="col-xs-6"><?= $name = $r_criteria->name();?></label>
+				<span class="col-xs-6"><?= $this->starRate("rating_".$review->id."_".$name, $review->$method()); ?></span>
+			</div>
+			<? endforeach; ?>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,46 @@
+<? 
+if(isset($this->message)){
+	$msg = $this->message;
+	$content = nl2br($msg->content);
+	$user = $msg->user();
+	$date = $msg->creationDate();
+} else {
+	$content = $this->content;
+	$user = $this->user;
+}
+assert('isset($content)');
+assert('isset($user)');
+
+if($this->user()->loggedUser()->id == $user->id){
+	$label = __("Vous");
+	$label_wrote = __("vous avez écrit");
+} else {
+	$label = $user->name();
+	$label_wrote = $label . __(" a écrit");
+}
+
+$who = $this->partial('message/_who.phtml', array('user'=>$user, 'label'=>$label, 'org'=>$this->org));
+$when ="";
+
+if(isset($date)){	
+	$class = "";
+  $when = __("Le :date: à :time:, :you_has_wrote:", array(
+    'date' => $this->date($date),
+    'time' => $this->date($date, Zend_Date::TIME_MEDIUM),
+    'you_has_wrote' => $label_wrote
+  ));
+} else {
+	$when = __("Répondez à ce message :");
+	$class = "message-form";
+}
+?>
+
+<tr class=" <?= $this->class?>">
+  <td class="text-center" href="#">
+    <?= $who ?>
+  </td>
+  <td class="">
+    <h4 class="media-heading h5"><?= $when?></h4>
+		<?= $content ?>
+  </td>
+</tr>

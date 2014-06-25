@@ -1,0 +1,29 @@
+<? $this->placeholder("h1")->captureStart() ?>
+	<? 
+		$user = $this->user()->loggedUser();
+		$name = $user->fname." ".$user->lname;
+		$name = !empty($name) ? $name : $user->id;
+	?>
+		<h1 class="h2"><?= __("Espace d'administration de l'utilisateur :name:", array("name"=>$name))?></h1>
+<? $this->placeholder("h1")->captureEnd() ?>
+<?php
+	$tabs = array(
+		"user/edit" => __("Coordonnees Personelles"),
+		"user/orders" => __("Commandes en cours"),
+		"user/invoices" => __("Factures/Avoirs"),
+		"user/messages" => __("Messages")
+	);
+	$this->body_class = 'bo';
+?>
+<div class="row">
+	<ul class="nav nav-tabs user">
+		<? foreach($tabs as $route=>$label): ?>
+			<? if($route == $this->current): ?>
+				<li class="active"><?= $this->link(array(), $route, array('user_admin'=>1))->a($label) ?></li>
+			<? else: ?>
+				<li><?= $this->link(array(), $route, array('user_admin'=>1))->a($label) ?></li>
+			<? endif; ?>    	
+		<? endforeach; ?>
+	</ul>
+</div>
+<br/>

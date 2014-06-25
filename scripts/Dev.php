@@ -2,9 +2,8 @@
 
 class Script_Dev extends Uop_Script_Abstract {
 	public function run(){
-		foreach(App::table("users")->fetchRow("id =2057 ")->organizations() as $org){
-			$org->isComplete();
-		}
+		$img = App::table("images")->find(40)->current();
+		$img->updateFbShares();
 	}
 }
 

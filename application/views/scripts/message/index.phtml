@@ -1,0 +1,62 @@
+<?php 
+   $form = $this->form;
+   $user = $this->user;
+   $t_organizations = App::table('organizations');
+   $t_messages = App::table('messages');
+   $t_demands = App::table('demands');
+   $t_users = App::table('users');
+?>
+<?= $this->partial("user/_tabs.phtml", array("current"=>'user/messages')); ?>
+<div id="message-index">   
+	<nav class="navbar navbar-default">
+		<?= $this->formHeader($form, 
+			array("class"=>"navbar-form navbar-left"),
+			array("showMessages"=>false)
+			); ?>
+			<? $form->hideLabels(true); ?>
+      <?= $form->renderGroups(array(
+      	"type"=>array(
+	      	"class"=>"type-selector",
+	      ))) ?>
+    <button type="submit" class="btn btn-default"><?= __("Filtrer")?></button>
+	</form>
+	</nav>
+	
+  <table class="table">
+	<? foreach($this->messageList as $data): ?>
+	<? $r_message = $t_messages->row($data) ?>
+	<? $r_other_user = $t_users->row(Uop_Util::hashSlice($data, array('fname','lname'))) ?>
+		<tr class="<?= ($data['unread'] > 0) ? 'unread' : '' ?>">
+			<td style="border:none;background:transparent">
+				<?= $this->date($data['last']) ?>
+			</td>
+			<td>
+				<?= $r_other_user->name() ?> (<?= $data['total'] ?>)
+			</td>
+			<td>
+				<? //if(!empty($data['org_name'])): ?>
+					<a href="<?= $this->link(array('id'=>$r_message->id), 'messages/show') ?>">
+						<?= App::table('locations')->find($data['loc_id'])->current()->name() ?>
+						<? if($r_message->ref_type == 'demands'): ?>
+							- <?= $this->partial("message/_demand-summary.phtml", array("demand"=>$r_message->findRef())) ?>
+						<? endif ?>
+					</a>
+					- <?= mb_strimwidth($r_message->content, 0, 30, "…") ?>
+				<? //endif ?>
+			</td>
+			<td>
+				<? $class = $r_message->ref_type == "demands" ? "label-danger" : "label-warning"; ?>
+				<span class="label <?=$class?>"><?= $r_message->typeLabel() ?></span>
+			</td>
+		</tr>
+	<? endforeach ?>
+  </table>
+  <script>
+    $(function(){
+	    $("tr").click(function(){
+		    document.location = $(this).find("a").attr("href");
+	    });
+    });
+  </script>
+  <?= $this->messageList ?>
+</div>
