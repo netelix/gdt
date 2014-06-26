@@ -41,6 +41,16 @@ h4, h5, h6, h7{
 	margin-bottom: 10px;
 }
 
+.h1,.h2,.h3, .h4,.h5, .h6, h1, h2, h3, h4, h5, h6  {
+	small{
+		color: @green;
+	}
+}
+
+.breadcrumb>.active {
+		color: @green;
+}
+
 a{
 	color: #1e1e1e;
 }
@@ -84,6 +94,10 @@ a:hover, a:focus {
 .block {
 	border:solid 1px #797979;
 	.box-shadow(3px 6px 12px #333);
+}
+
+.form-control, .btn{
+	.border-radius(0);
 }
 
 header.top-wrapper {
@@ -566,9 +580,15 @@ body .top-wrapper-mask {
 		}
 		margin-top: 50px;
 		color: white;
-		width: 50%;
-		margin-left: 90px;
-		margin-bottom: 50px;	
+		margin: 90px;
+		form{
+			margin-top:30px;
+			padding:20px 10px;
+			background:rgba(0, 0, 0, 0.61);
+			.form-group {
+				margin:0px;
+			}
+		}
 	}
 	.content {
 		h2 {

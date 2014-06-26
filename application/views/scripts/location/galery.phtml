@@ -10,7 +10,7 @@
 	<div class="row checkbox-filters">
 	<? foreach($this->filters as $link): ?>
 		<div class="col-md-4">
-			<? $link->option("jslink", $have_filter); ?>
+			<? $link->option("jslink", $have_filter	); ?>
 			<label><?= $link->a()?></label>
 		</div>
 	<? endforeach ?>

@@ -6,17 +6,27 @@
 
 <? $this->headMeta()->appendName("description", __("La sélection des meilleurs tatoueurs de France")) ?>
 
-
 <? $this->placeholder("h1")->captureStart() ?>
 
   <div class="headline">
-  	<div class="center-wrapper">
-		<h1>La Galerie du Tatouage</h1>
-		<p>
+		<!--h1>La Galerie du Tatouage</h1-->
+		<p style="font-size: 37px;line-height: 1.5;">
 		<?= __("Visiter, s’inspirer, trouver le tatoueur le plus adapté.");?>
 		</p>
-		<br/>
-		<? $r_loc->link()->a(__("Voir tous les tatoueurs de la galerie"), "btn btn-default") ?>
+		<div class="row">
+		<?= $this->formHeader($this->search_form, array("class"=>"clearfix")) ?>
+				<?= $this->search_form->renderGroups(array(
+				  "loc_name"=>array(
+				    "label"=>__("Toute la France"),
+   	  			"group_class"=>"col-md-5",
+				  ),
+				  "tattoo_style"=>array(
+				  	"label"=>__("Tous les styles"),
+				  	"group_class"=>"col-md-4")));?>
+				  <div class="col-md-3">
+					  <button type="submit" class="btn btn-success btn-block"><?= _("Trouver un tatoueur") ?></button>
+				  </div>
+			</form>
 		</div>
   </div>
 <? $this->placeholder("h1")->captureEnd() ?>

@@ -1,0 +1,1 @@
+rm -f "${DELIVERY_PATH}/.maintenance" 

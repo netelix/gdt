@@ -22,6 +22,12 @@ trait Trait_Controller
 			if(!isset($r_loc)){
 				$r_loc = App::table("locations")->findByLocalId("country", "FR");
 			}
+			
+			$style = $form->getValue("tattoo_style");
+			if(!empty($style)){
+				$filters["attr"]=array($style);
+			}
+			
 			$params = array(
 				"filters"=>$filters,
 				"sort"=>null,
