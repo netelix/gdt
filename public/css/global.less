@@ -362,7 +362,6 @@ body {
 	background: #FFF;
 	#carousel-top{
 		position:absolute;
-		z-index:-1;
 		.carousel-control{
 			display: none;
 		}
@@ -567,20 +566,25 @@ body .top-wrapper-mask {
 	#carousel-top{
 		position:relative;
 		.carousel-control{
-			display: block;
+			display: none;
 		}
 	}
+
 	header.top-wrapper {
 		position:absolute;
 	}
 
 	.headline {
+		position:absolute; 
+		width:100%; 
+		padding-left:10%; 
+		padding-right:10%; 
+		margin:auto; 
+		bottom:20px;
+		z-index:1002;
 		h1 {
-			margin-bottom: 30px;
 		}
-		margin-top: 50px;
 		color: white;
-		margin: 90px;
 		form{
 			margin-top:30px;
 			padding:20px 10px;

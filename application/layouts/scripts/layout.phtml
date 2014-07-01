@@ -96,7 +96,7 @@
 			      </div>
 			    </div>
 			  </div>
-			
+			  
 			  <!-- Controls -->
 			  <a class="left carousel-control" href="#carousel-top" data-slide="prev">
 			    <span class="glyphicon glyphicon-chevron-left"></span>
@@ -104,6 +104,7 @@
 			  <a class="right carousel-control" href="#carousel-top" data-slide="next">
 			    <span class="glyphicon glyphicon-chevron-right"></span>
 			  </a>
+			  <?= $this->placeholder("carousel-content") ?>
 		  </div>
 
 
@@ -261,8 +262,8 @@
 						<ul>
 							<li><?= Link::factory(array("page"=>"contact"), "static")->a("Contact")?></li>
 							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Mentions légales")?></li>
-							<li><?= Link::factory(array("page"=>"cgv"), "static")->a("Conditions d'utilisation")?></li>
-							<li><?= Link::factory(array("page"=>"cgv"), "static")->a("Conditions de vente")?></li>
+							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Conditions d'utilisation")?></li>
+							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Conditions de vente")?></li>
 						</ul>
 					</div>
 					

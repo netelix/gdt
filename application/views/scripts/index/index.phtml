@@ -1,18 +1,12 @@
 <? $this->body_class = "home" ?>
 <? $r_loc = App::table("locations")->country("FR"); ?>
 
-<? $this->placeholder("home-slider")->captureStart() ?>
-<? $this->placeholder("home-slider")->captureEnd() ?>
-
-<? $this->headMeta()->appendName("description", __("La sélection des meilleurs tatoueurs de France")) ?>
-
-<? $this->placeholder("h1")->captureStart() ?>
-
-  <div class="headline">
+<? $this->placeholder("carousel-content")->captureStart() ?>
+  <div class="headline" style="">
 		<!--h1>La Galerie du Tatouage</h1-->
-		<p style="font-size: 37px;line-height: 1.5;">
+		<h1 style="font-size: 30px;line-height: 0;">
 		<?= __("Visiter, s’inspirer, trouver le tatoueur le plus adapté.");?>
-		</p>
+		</h1>
 		<div class="row">
 		<?= $this->formHeader($this->search_form, array("class"=>"clearfix")) ?>
 				<?= $this->search_form->renderGroups(array(
@@ -29,6 +23,13 @@
 			</form>
 		</div>
   </div>
+
+<? $this->placeholder("carousel-content")->captureEnd() ?>
+
+<? $this->headMeta()->appendName("description", __("La sélection des meilleurs tatoueurs de France")) ?>
+
+<? $this->placeholder("h1")->captureStart() ?>
+
 <? $this->placeholder("h1")->captureEnd() ?>
 
 <?= $this->partial('shared/_sidebar.phtml') ?>
@@ -50,7 +51,7 @@
 		<p class="col-md-9">
 			<?= __("Chaque semaine, la Galerie du Tatouage vous propose un classement des tatouages les plus populaires.")?>
 		</p>
-		<?= $r_loc->link()->a(__("Voir tous les tatouages"), "btn btn-default pull-right") ?>
+		<?= $this->link(array(), "galery")->a(__("Voir tous les tatouages"), "btn btn-default pull-right") ?>
 	</div>
 	<h2 class="h4"><?= __("Les studios par style")?></h2>
 	<div class="row" style="padding-left:15px; padding-right:30px;">
