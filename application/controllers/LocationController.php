@@ -36,7 +36,6 @@ class LocationController extends Uop_Controller_Location
 		$checkboxes = array();
 		foreach($filters as $key=>$filter_data){
 			foreach($filter_data["rowset"] as $r_attr){
-			var_dump($r_attr->name());
 				$filters = $current_filters;
 				if(empty($filters["attr"])){
 					$filters["attr"] = array();
