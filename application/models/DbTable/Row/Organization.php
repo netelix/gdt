@@ -42,7 +42,7 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 			$values["city_links"][$lang] = $r_city->link()->param("lang",$lang)->assemble();
 			$values["city_names"][$lang] = $city->name()->label;
 			foreach($styles as $r_attr){
-				$values["styles"][$lang][] = $r_attr->name(null, array("lang"=>$lang));
+				$values["styles"][$lang][] = $r_attr->name(null, array("lang"=>$lang))->__toString();
 			}
 		}
 		foreach($this->getAllImages(11) as $r_img){
