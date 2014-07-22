@@ -4,8 +4,8 @@
 <? $this->placeholder("carousel-content")->captureStart() ?>
   <div class="headline" style="">
 		<!--h1>La Galerie du Tatouage</h1-->
-		<h1 style="font-size: 30px;line-height: 0;">
-		<?= __("Visiter, s’inspirer, trouver le tatoueur le plus adapté.");?>
+		<h1 style="font-size: 30px;line-height: 0; padding-left:10px">
+		<?= __("Trouver votre studio de tatouage");?>
 		</h1>
 		<div class="row">
 		<?= $this->formHeader($this->search_form, array("class"=>"clearfix")) ?>
@@ -64,7 +64,7 @@
 							$url = isset($img) ? $img->url("small") : "http://placehold.it/173x177";
 						?>
 						<?= $link->jslink("<img src='$url' class='img-responsive'/>"); ?>
-						<?= $link->a(__("Tatouages :style:", array("style"=>$r_attr->name())), "h4"); ?>
+						<?= $link->a(__("Tatouage :style:", array("style"=>$r_attr->name())), "h4"); ?>
 					</div>
 			</div>
 		<? endforeach ?>

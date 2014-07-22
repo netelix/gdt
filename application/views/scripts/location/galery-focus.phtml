@@ -13,7 +13,7 @@
 		<img class="img-responsive" src="<?= $this->img->url("large")?>"/>
 	</div>
 	<div>
-		<?= __("Votez pour ce tatouage en cliquant sur 'J'aime' et en partageant sur Facebook");?>
+		<?= __("Ce tatouage vous plait, cliquez sur j'aime et partagez-le sur facebook");?>
     <? $url = $this->link(array("id"=>$this->img->id),"galery-focus")->option("canonical", true)->assemble()?>
     <br/>
     <div class="fb-share-button" data-type="button" href="<?= $url ?>" data-href="<?= $url ?>"></div>
