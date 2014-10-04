@@ -7,7 +7,7 @@
 		"photos"=>$this->link(array('id'=>$org->id), 'organization-photos-edit')->fragment("title")->a_("Photos"),
 	);
 	if($this->layout()->logged_user->type == "admin"){
-		$tabs["website"]=$this->link(array('id'=>$org->id), 'minisite-edit')->fragment("title")->a_("Mon site web");
+	//	$tabs["website"]=$this->link(array('id'=>$org->id), 'minisite-edit')->fragment("title")->a_("Mon site web");
 	}
 ?>
 <? $current_class = 'class="active"'; ?>

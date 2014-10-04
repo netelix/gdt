@@ -42,11 +42,17 @@ if($message->hasReview()){
 				<tr class="review_read">
 					<td colspan="2">
 				<?= $this->partial("shared/_review_content.phtml", array("review"=>$review)); ?>
+				<? if($review->deleted == 1): ?>
+				<p class="msg"><?= __("Ce message a été supprimé et n'apparaitra plus dans l'annonce")?></p>
+				<? else: ?>
 				<?= $review->organization()
 					->link()
 					->fragment("review".$review->id)
 					->a_("Voir le commentaire", array("class"=>"btn btn-default fr")); ?>
-
+				<? endif; ?>
+				<?= $this->link(array("id"=>$review->id), 
+					"organization-delete-restore-review")
+						->a($review->deleted ? "Restaurer":"Supprimer", array("class"=>"btn btn-default fr")); ?>
 					</td>
 				</tr>
 		  <? else: ?>
