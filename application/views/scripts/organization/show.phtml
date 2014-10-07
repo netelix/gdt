@@ -12,15 +12,21 @@
   foreach($products as $r_product){
 	  $people_names[] = $r_product->name()->__toString();
   }
-  
-  $last_people_name = array_pop($people_names);
-  $people_names = implode(", ", $people_names).__(" et ").$last_people_name;
+  if(count($people_names)>1){
+	  $last_people_name = array_pop($people_names);
+	  $people_names = implode(", ", $people_names).__(" et ").$last_people_name;
+    $desc = __("Depuis leur studio de :loc_name:, :names: vous montrent les :num: photos de leurs derniers tatouages", array("names"=>$people_names, "num"=>$images->count(), "loc_name"=>$city->name()));
+
+  } else {
+	  $people_names = current($people_names);
+    $desc = __("Depuis son studio de :loc_name:, :names: vous montre les :num: photos de ses derniers tatouages", array("names"=>$people_names, "num"=>$images->count(), "loc_name"=>$city->name()));
+
+  }
   
   $this->doctype(Zend_View_Helper_Doctype::XHTML1_RDFA);
   $this->headMeta()->appendProperty("og:title", $org->name()." - La galerie du tatouage");
-  $desc = __("Depuis leur studio de :loc_name:, :names: vous montrent les :num: photos de leurs derniers tatouages, partagez et votez pour le meilleur", array("names"=>$people_names, "num"=>$images->count(), "loc_name"=>$city->name()));
   $this->headMeta()->appendProperty("og:description", $desc);
-  $this->headMeta()->appendProperty("og:image", "http://".App::config()->link->domain.$images->getRow(0)->url("orig"));
+  $this->headMeta()->appendProperty("og:image", "//".App::config()->link->domain.$images->getRow(0)->url("orig"));
   $this->headMeta()->appendProperty("og:url", $org->link()->option("canonical", true)->assemble());
 
   $this->headMeta()->appendName("description", $desc);
@@ -226,13 +232,16 @@ padding-bottom: 15px;">
 	  	<dl class="opening">
 	  	<? $date = new Zend_Date() ?>
 	  	<? foreach($days as $day=>$times): ?>
-	  	  <dt><?= ucfirst($date->set($day+1, Zend_Date::WEEKDAY_DIGIT)->get(Zend_Date::WEEKDAY));?></dt>
+	  	  <dt><?= ucfirst($date->set($day+1, Zend_Date::WEEKDAY_8601)->get(Zend_Date::WEEKDAY));?></dt>
 	  	  <? foreach($times as $time): ?>
 	 			  <dd><?= $time?></dd>
 	 			<? endforeach ?>
 	  	<? endforeach; ?>
 	  	</dl>
 	  	</p>
+	  	<? if($website = $org->website()): ?>
+	  		<h4><?= Link::factory(array(), null)->setUrl($website)->jsLink("Site internet") ?></h4>
+	  	<? endif ?>
 	  </div>
 	</div>
 </section>
