@@ -7,7 +7,7 @@ class Form_OrganizationPhotosEdit extends Uop_Form_OrganizationPhotosEdit {
   
   protected function entitySelectValues($org)
   {
-    $entity_select_values["organizations_$org->id"] = __("Le salon");
+    $entity_select_values["organizations_$org->id"] = __("Le studio");
     foreach($org->products() as $r_product){
       $entity_select_values["products_$r_product->id"] = $r_product->name();
     }
