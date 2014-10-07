@@ -134,6 +134,7 @@
 										<li><?= Link::home()->a(__("Accueil"))?></a></li>
 										<li><?= App::table("locations")->country("FR")->link()->a(__("Trouver un tatoueur"))?></a></li>
 										<li><?=  $this->link(array(), 'galery')->a(__("La galerie"))?></a></li>
+										<li><a href="http://blog.galeriedutatouage.com" _target="blank">Le blog</a></li>
 										<li><?= $this->link(array(), 'subscription-lead')->a(__("Rejoignez-nous"))?></li>
 										<? if($this->user()->loggedUser()){
 											$member_link = $this->link(array(), 'user/organizations');
