@@ -81,7 +81,7 @@
 		</ul>
 		<ul>
 			<? foreach($r_loc->getCities(11) as $r_city): ?>
-				<li><?= $row->link()->a(__("Tatoueurs à :name:", array("name"=>$r_city->name())))?></li>
+				<li><?= $r_city->link()->a(__("Tatoueurs à :name:", array("name"=>$r_city->name())))?></li>
 			<? endforeach; ?>
 		</ul>
 	</div>

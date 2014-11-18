@@ -2,7 +2,7 @@
 class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 {
   protected $_dependent_attr_map_types = array("tattoo_style");
-  protected $_dependent_attr_map_values = array("opening_days","piercing_style");
+  protected $_dependent_attr_map_values = array("opening_days","piercing_style", "admin_note");
   
   public function updateFromEdit($form){
   	$openings = array();
@@ -55,6 +55,14 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 		return $values;
   }
   
+  public function note()
+  {
+  	$handicap = (int)$this->adminNote();
+  	$handicap = empty($handicap) ? 0 : $handicap;
+  	var_dump( $handicap*10);
+ 	  return parent::note()+$handicap*10;
+  }
+  
   public function publish($opts=array())
   {
 	  parent::publish($opts);
@@ -70,7 +78,7 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 		  }
 	  }
   }
-  
+    
   protected function _requiredProductProperties($options=array())
   {
     return array(

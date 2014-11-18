@@ -68,6 +68,14 @@
       	</div>
      	 	<a class="add-opening btn btn-default" style="margin-top:24px" href="javascript:void(0);"><?=__("Ajouter un horaire")?></a>
       </div>
+      <? if($this->user()->admin()): ?>
+        <h3><?=__("Admin")?></h3>
+      	<div style="width:100px">
+	   		<?= $this->form->renderGroups(array(
+	  			"admin_note"=>__("Handicap")
+	  		)) ?>
+      	</div>
+      <? endif ?>
     <?=$this->formFooter();?>
   </div>
   <?= $this->headScript()->appendFile("/uop/js/helper/jquery.dynamicForm.js"); ?>
