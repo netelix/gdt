@@ -12,4 +12,5 @@ $form = $this->form;
 <? $footer = $this->formFooter(__("Valider"))->captureStart();?>
 <?= $this->link(array(), "user/password-lost")->a("J'ai oublié mon mot de passe...", array("class"=>"pull-left"));?>
 <?= $footer->captureEnd() ?>
+<?= $this->partial("shared/_remarketing.phtml") ?>
 </div>

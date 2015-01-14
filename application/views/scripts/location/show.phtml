@@ -37,10 +37,10 @@
 <? $this->placeholder('sidebar')->captureEnd() ?>
 <?= $this->partial("shared/_sidebar.phtml", array("joinus"=>true)) ?>
 <? $this->placeholder('sidebar')->captureStart() ?>
-  <?= $this->linkList()->title(__("Recherches similaires"), "h4")->rs($this->brothers); ?>
-  <?= $this->linkList()->title(__("Recherches populaires"), "h4")->rs($this->cities); ?>
-  <?= $this->linkList()->title(__("Affinez votre recherche"), "h4")->rs($this->children); ?>
-  <? $this->linkList()->title(__("Ils viennent de nous rejoindre"), "h4")->rs($this->lastAds); ?>
+  <?= $this->linkList()->title(__("Recherches similaires"), "h4")->labelName("tatoueurs :name:")->rs($this->brothers); ?>
+  <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($this->cities); ?>
+  <?= $this->linkList()->title(__("Affinez votre recherche"), "h4")->labelName("tatoueurs :name:")->rs($this->children); ?>
+  <? $this->linkList()->title(__("Ils viennent de nous rejoindre"), "h4")->labelName("tatoueurs :name:")->rs($this->lastAds); ?>
   <?= $this->linkList()->title(__("Les villes de :name:", array("name"=>$this->location->name())), "h4")->rs($this->cities_index); ?>
 <? $this->placeholder('sidebar')->captureEnd() ?>
 
@@ -72,7 +72,7 @@
 ", array("style"=>$style, "name"=>$loc_name));
 		
 	$this->headTitle()
-		->set(__("Tous les tatoueurs:style: de :name:", array("style"=>$style, "name"=>$loc_name)));
+		->set(__("Tatoueur:style: de :name:", array("style"=>$style, "name"=>$loc_name)));
 		
 	if($page > 1){
 		$meta_desc .= " - page $page";
@@ -83,7 +83,7 @@
 ?>
 
 	<? $this->placeholder("h1")->captureStart() ?>
-		<h1 class="h2"><?= __("Les studios de tatouage <b>:loc:</b>", array("loc"=>$this->location->inName()))?>
+		<h1 class="h2"><?= __("Tatoueurs <b>:loc:</b>", array("loc"=>$this->location->inName()))?>
 		<small><?= $page_label?></small></h1>
  	<? $this->placeholder("h1")->captureEnd() ?>
  		<div class="result-header clearfix">
