@@ -77,6 +77,14 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 			  $r_loc->save();
 		  }
 	  }
+	  foreach($this->city()->getNeighbors() as $r_loc){
+	  	$r_loc->setReadOnly(false);
+		  if($r_loc->indexed == 0){
+			  $r_loc->indexed = 1;
+			  $r_loc->save();
+		  }
+	  }
+
   }
     
   protected function _requiredProductProperties($options=array())

@@ -1,7 +1,11 @@
 <? 
-	$noindex = ($this->count_exact == 0) ||
-		(isset($this->current_filters["attr"]) && count($this->current_filters["attr"]) > 1);
+	$noindex = ($this->count_exact+$this->count_around == 0) ||
+		(isset($this->current_filters["attr"]) && count($this->current_filters["attr"]) > 1) ||
+		(isset($this->current_filters["attr"]) && count($this->current_filters["attr"]) > 0 && $this->location->type == 'city')
+		;
+		
 ?>
+
 <? if($noindex) $this->headMeta()->appendName("robots", "noindex,follow") ?>
 
 <? $this->body_class='location-show' ?>
@@ -72,7 +76,7 @@
 ", array("style"=>$style, "name"=>$loc_name));
 		
 	$this->headTitle()
-		->set(__("Tatoueur:style: de :name:", array("style"=>$style, "name"=>$loc_name)));
+		->set(__("Tatoueur:style: :name:", array("style"=>$style, "name"=>$loc_name)));
 		
 	if($page > 1){
 		$meta_desc .= " - page $page";

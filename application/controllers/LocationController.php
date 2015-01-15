@@ -17,7 +17,9 @@ class LocationController extends Uop_Controller_Location
   	
 	public function galeryAction()
 	{
-		$loc = App::table("locations")->fetchRow();
+		$r_loc = App::table("locations")->country("FR");
+    $this->view->adm2 = $r_loc->getDescendants(null,  array("type"=>Uop_Model_DbTable_Locations::TYPE_ADM2));
+		
 		if($img_id = $this->getParam("id")){
 			$this->view->img =  $img = App::table("images")->find($img_id)->current();
 			$pager_link = Link::factory(array(), "galery");

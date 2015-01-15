@@ -15,6 +15,7 @@
 		</div>
 	<? endforeach ?>
 	</div>
+  <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($this->adm2); ?>
 <? $this->placeholder('sidebar')->captureEnd() ?>
 <? $this->partial("shared/_sidebar.phtml"); ?>
 <? $focus = !empty($this->img); ?>
