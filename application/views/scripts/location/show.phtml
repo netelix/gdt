@@ -52,8 +52,9 @@
   $page = $this->ads->getCurrentPageNumber();
   $bc = $this->breadcrumb()->setLoc($this->location); 
   if($page > 1){
-    $bc->append(__("Page :num:", array("page"=>$page)));
+    $bc->append(__("Page :num:", array("num"=>$page)));
   }
+  $loc_desc = $this->location->description();
 ?>
 
 <? 
@@ -88,8 +89,15 @@
 
 	<? $this->placeholder("h1")->captureStart() ?>
 		<h1 class="h2"><?= __("Tatoueurs <b>:loc:</b>", array("loc"=>$this->location->inName()))?>
-		<small><?= $page_label?></small></h1>
+		<small><?= $page_label?>
+		<? if($this->user()->admin()): ?>
+			- <?= $this->link(array("table"=>"locations","id"=>$this->location->id), "admin/entity")->a("Editer") ?>
+		<? endif ?>
+		</small></h1>
  	<? $this->placeholder("h1")->captureEnd() ?>
+ 	<? if($page == 1): ?>
+	 	<?= $this->partial("shared/description.phtml", array("row"=>$this->location)) ?>
+ 	<? endif ?>
  		<div class="result-header clearfix">
 			<div class="h4"><?=__(":num: studios trouvés", array("num"=>$this->count_exact+$this->count_around))?></div>
 						<?= $this->ads; ?> 

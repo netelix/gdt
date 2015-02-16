@@ -133,6 +133,11 @@ padding-bottom: 15px;">
 	  <div class="col-md-8"> 
 	   	<h3 class="h4"><?= __("A propos du studio")?></h3>
 	    <?= $org->description() ?>
+	    <br>
+	    <br>
+	    <? $link = clone $city->link();
+		    echo $link->a(__("Voir les autres tatoueurs de :name:", array("name"=>$city->name())), "btn  btn-warning btn-xs");
+	    ?> 
 	  </div>
 	  <div class="col-md-4">
 	  	<h3 class="h4"><?= __("Spécialités pratiquées")?></h3>

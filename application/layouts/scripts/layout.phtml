@@ -43,6 +43,7 @@
           ->prependFile("//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
           ->appendFile("//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
           ->appendFile('/uop/bootstrap-select/bootstrap-select.js')
+          ->appendFile("/uop/js/jquery.autosize.min.js")
           ->appendFile('//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js') ?>
 
 			<script type="text/javascript">
@@ -321,6 +322,11 @@
 
 			<!-- /ATTACHMENTS -->
 			</div>
+			<script language="javascript">
+			$(function(){
+				$(".uop-autosize").autosize();
+			});
+			</script>
 
 		</body>	
 
