@@ -43,7 +43,9 @@
 <? $this->placeholder('sidebar')->captureStart() ?>
   <?= $this->linkList()->title(__("Recherches similaires"), "h4")->labelName("tatoueurs :name:")->rs($this->brothers); ?>
   <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($this->cities); ?>
-  <?= $this->linkList()->title(__("Affinez votre recherche"), "h4")->labelName("tatoueurs :name:")->rs($this->children); ?>
+  <? $children = $this->linkList()->title(__("Affinez votre recherche"), "h4")->labelName("tatoueurs :name:")->rs($this->children); 
+	  echo $children;
+  ?>
   <? $this->linkList()->title(__("Ils viennent de nous rejoindre"), "h4")->labelName("tatoueurs :name:")->rs($this->lastAds); ?>
   <?= $this->linkList()->title(__("Les villes de :name:", array("name"=>$this->location->name())), "h4")->rs($this->cities_index); ?>
 <? $this->placeholder('sidebar')->captureEnd() ?>
@@ -189,4 +191,8 @@
 		<div style="margin-top:10px;">
 			<?= $this->ads; ?> 
 		</div>
+	 	<div class="refine">
+		 	<?= $this->linkList()->title(__("Affinez votre recherche"), "h4")->rs($this->children); ?>
+	 	</div>
+
 		<div style="height:200px;">&nbsp;</div>

@@ -139,11 +139,11 @@ padding-bottom: 15px;">
 	   	<h3 class="h4"><?= __("A propos du studio")?></h3>
 	    <?= $org->description() ?>
 	    <?= $phone ?>
-	    <br>
-	    <br>
+	    <div style="margin-top:20px;" class="hidden-xs">
 	    <? $link = clone $city->link();
 		    echo $link->a(__("Voir les autres tatoueurs de :name:", array("name"=>$city->name())), "btn  btn-warning btn-xs hidden-xs");
-	    ?> 
+	    ?>
+	    </div>
 	  </div>
 	  <div class="col-md-4 styles">
 	  	<h3 class="h4"><?= __("Spécialités pratiquées")?></h3>
@@ -174,16 +174,16 @@ padding-bottom: 15px;">
 	<?= $ph_tabs ?>
 	<? foreach($products as $r_product):?>
 	<div class="row">    
-	  <div class="col-md-6">
+	  <div class="col-md-6 col-md-push-6"> 
+	    <h3 class="h4"><?= $r_product->name() ?></h3>
+	    <?= $r_product->description() ?>
+	    <?= $this->placeholder("fb") ?>
+	  </div>
+ 	  <div class="col-md-6 col-md-pull-6">
 	  	<? $images = $r_product->images(); ?>
 		  <? if($images->count() > 0): ?>
 		    <?= $this->partial("shared/_carousel.phtml", array("images"=>$r_product->images(),	"size"=>"large-square")); ?>	  
 	  	<? endif ?>
-	  </div>
-	  <div class="col-md-6"> 
-	    <h3 class="h4"><?= $r_product->name() ?></h3>
-	    <?= $r_product->description() ?>
-	    <?= $this->placeholder("fb") ?>
 	  </div>
 	</div>
 	<div class="separator"></div>
