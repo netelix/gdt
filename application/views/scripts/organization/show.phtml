@@ -44,21 +44,26 @@ background: #ddd;
 padding-bottom: 15px;">
 			  <h4><?= __("Contacter le studio")?></h4>
 			  <h5 class="h3"><?= __("Par téléphone") ?></h5>
-			  <a id="phone-number-toggler" 
-			  	class="btn btn-warning collapse in" 
+			  <? 
+			  	$phone = $this->placeholder("phone"); 
+				  $phone->captureStart();
+			  ?>
+			  <a class="phone-number-toggler btn btn-warning collapse in bt" 
 			  	data-toggle="collapse" 
-			  	data-target="#phone-number,#phone-number-toggler">
-			  		<?= __("Afficher le numéro")?>
+			  	data-target=".phone-number,.phone-number-toggler">
+			  		<?= __("Voir le numéro de téléphone")?>
 			  </a>
+			  <p class="well well-sm collapse phone-number"><span class="glyphicon glyphicon-phone"></span><?= $org->phoneNumber() ?></p>
+			  <? $phone->captureEnd(); ?>
+			  <?= $phone ?>
 	 		  <script>
 				  <?= $this->eventHit($org, "visit");?>
 				</script>
 			  <script>
-				  $("#phone-number-toggler").click(function(){
+				  $(".phone-number-toggler").click(function(){
 					  <?= $this->eventHit($org, "show-phone");?>
 					});
 			  </script>
-				  <p class="well well-sm collapse" id="phone-number"><span class="glyphicon glyphicon-phone"></span><?= $org->phoneNumber() ?></p>
 			  <h5 class="h3"><?= __("Par email") ?></h5>
 		  	<? if($contacted = $this->contact_form->sentTo($org->id)): ?>
 		  	<div class="alert alert-success alert-dismissable">
@@ -133,13 +138,14 @@ padding-bottom: 15px;">
 	  <div class="col-md-8"> 
 	   	<h3 class="h4"><?= __("A propos du studio")?></h3>
 	    <?= $org->description() ?>
+	    <?= $phone ?>
 	    <br>
 	    <br>
 	    <? $link = clone $city->link();
-		    echo $link->a(__("Voir les autres tatoueurs de :name:", array("name"=>$city->name())), "btn  btn-warning btn-xs");
+		    echo $link->a(__("Voir les autres tatoueurs de :name:", array("name"=>$city->name())), "btn  btn-warning btn-xs hidden-xs");
 	    ?> 
 	  </div>
-	  <div class="col-md-4">
+	  <div class="col-md-4 styles">
 	  	<h3 class="h4"><?= __("Spécialités pratiquées")?></h3>
 	  	<div style="font-size:20px;">
 		  	<? foreach($org->attributes("tattoo_style") as $style): ?>
@@ -223,6 +229,7 @@ padding-bottom: 15px;">
 	  	<h4><?= __("Adresse") ?></h4>
 	  	<p><?= $org->name() ?></p>
   		<p><?= $org->completeAddress("</p><p>") ?></p>
+		  <?= $phone ?>
 	  	<h4><?= __("Horaires d'ouverture") ?></h4>
 	  	
 	  	<p>

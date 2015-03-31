@@ -96,7 +96,9 @@
 		</small></h1>
  	<? $this->placeholder("h1")->captureEnd() ?>
  	<? if($page == 1): ?>
+ 	<div class="loc-description">
 	 	<?= $this->partial("shared/description.phtml", array("row"=>$this->location)) ?>
+ 	</div>
  	<? endif ?>
  		<div class="result-header clearfix">
 			<div class="h4"><?=__(":num: studios trouvés", array("num"=>$this->count_exact+$this->count_around))?></div>
