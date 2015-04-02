@@ -82,6 +82,25 @@
 		  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="mobile-bar visible-xs">
+				<? $global_search = $this->placeholder("global_search"); 
+					$global_search->captureStart();
+				?>
+				<? if(isset($this->search_form)):?>
+				<div class="global-search center-wrapper">
+					<?= $this->formHeader($this->search_form, array("class"=>'form-inline'))?>
+							<?= $this->search_form->renderGroups(array(
+							  "loc_name"=>array(
+							    "label"=>__("Ville, Département...")
+							  )));?>
+						<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+					</form>
+				</div>
+				<? endif ?>
+				<? $global_search->captureEnd(); ?>
+				<? $global_search ?>
+			</div>
+
 			<div class="top-wrapper-mask clearfix">	
 
 			<!-- HEADER -->
@@ -107,7 +126,6 @@
 			  </a>
 			  <?= $this->placeholder("carousel-content") ?>
 		  </div>
-
 
 			<header class="top-wrapper small-wrapper clearfix hidden-print" style="z-index:2">
 					<?= $this->partial("admin/navbar.phtml"); ?>
@@ -167,7 +185,9 @@
 																		
 									<!-- /Mobile menu  -->
 									
-								</div>
+								</div>									
+								<?= $global_search ?>
+
 								<div class="top-content-down skin-border-color3 hidden-xs">
 								
 									<!-- Place info  -->
@@ -182,18 +202,6 @@
 									<!-- /Place info  -->
 									
 									<!-- Social  -->
-									<? if(isset($this->search_form)):?>
-									<div class="global-search">
-										<?= $this->formHeader($this->search_form, array("class"=>'form-inline'))?>
-												<?= $this->search_form->renderGroups(array(
-												  "loc_name"=>array(
-												    "label"=>__("Ville, Département...")
-												  )));?>
-											<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
-										</form>
-									</div>
-									<? endif ?>
-									
 									<!-- /Social  -->
 									
 								</div>

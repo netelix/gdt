@@ -369,7 +369,7 @@ form h3 {
 	margin-top:20px;
 }
 
-.global-search{
+.center-wrapper .global-search{
 	float: right;
 	margin-top: 10px;
 	position: relative;	
@@ -395,6 +395,7 @@ body {
 body .top-wrapper-mask {
 	background: none;
 	height:auto;
+	position:relative;
 }
 
 .custom-nav-tabs {
@@ -733,9 +734,35 @@ body .top-wrapper-mask {
 			padding:10px 0px;
 		}
 	}
+	.center-wrapper .global-search {
+		padding: 0;
+	  top: 0;
+	  position: absolute;
+	  width: 100%;
+	  margin: 0;
+	  margin-top: -23px;
+	  .form-group{
+		  width: 85%;
+		  float: left;
+	  }
+	  input, .btn{
+		  font-size: 12px;
+		  height: 22px;
+	  }
+	  .btn {
+	 	  margin-top: -4px;
+	 	  padding:0px 5px;
+	  }
+	}
+	
 }
 
 .refine li {
 	width:50%;
 	float:left;
+}
+
+.mobile-bar {
+  height: 30px;
+	background:black;
 }
