@@ -151,7 +151,7 @@
 		      <? if(!empty($images)):?>
 		      	<? foreach($images as $x=>$r_image): ?>
 		      	<? if($x>12) break;?>
-			      	<?= $this->imgTag($image, "mini", array(
+			      	<?= $this->imgTag($r_image, "mini", array(
 			      		"link"=>$link,
 			      		"size"=>"50x50",
 			      		"alt"=>"tatoueur $city_name - $org_name",
