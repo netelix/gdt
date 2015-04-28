@@ -75,8 +75,8 @@
 <? 
 	$loc_name = $this->location->name();
 	$style = !empty($attr_names) ? __(' style :style:', array("style"=>$attr_names)) : "";
-	$meta_desc = __("Retrouvez les meilleurs tatoueurs de :name::style:. Regardez et évaluez leur travail. Découvrez les évaluations des studios de tatouage faites par les internautes. 
-", array("style"=>$style, "name"=>$loc_name));
+	$meta = $this->location->metaDescription();
+	$meta_desc = (!empty($meta) && empty($attr_names)) ? $meta : __("Retrouvez les meilleurs tatoueurs de :name::style:. Regardez et évaluez leur travail. Découvrez les évaluations des studios de tatouage faites par les internautes.", array("style"=>$style, "name"=>$loc_name));
 		
 	$this->headTitle()
 		->set(__("Tatoueur:style: :name:", array("style"=>$style, "name"=>$loc_name)));
@@ -97,7 +97,7 @@
 		<? endif ?>
 		</small></h1>
  	<? $this->placeholder("h1")->captureEnd() ?>
- 	<? if($page == 1): ?>
+ 	<? if($page == 1 && empty($attr_names)): ?>
  	<div class="loc-description">
 	 	<?= $this->partial("shared/description.phtml", array("row"=>$this->location)) ?>
  	</div>
@@ -122,12 +122,13 @@
 	    	<div class="row">
 				<div class="col-md-4 event">
 		      <div class="thumbnail">
-		      	<? $this->placeholder("link")->captureStart("SET"); ?>
 		      	<? if (isset($image)) :?>
-		      	<img src="<?=$image->url(Model_DbTable_Row_Image::LARGE_SQUARE)?>" class="img-responsive" />
+			      	<?= $this->imgTag($image, "large-square", array(
+			      		"link"=>$link,
+			      		"size"=>"250x250",
+			      		"alt"=>"tatoueur $city_name - $org_name",
+			      		"title"=>"studio tatouage $city_name - $org_name")) ?>
 		      	<? endif; ?>
-		      	<? $this->placeholder("link")->captureEnd()?>
-		      	<?= $link->a($this->placeholder("link")); ?>
 			      <? $nb_image = $r_ad->meta('num_image'); ?>
 		      <p class="text-center"><?=$link->a(__('Voir les :num: tatouages <br>réalisés dans ce salon', array('num' => $nb_image))); ?></p>
 	
@@ -150,7 +151,11 @@
 		      <? if(!empty($images)):?>
 		      	<? foreach($images as $x=>$r_image): ?>
 		      	<? if($x>12) break;?>
-			       	<?= $link->a("<img src='".$r_image->url(Model_DbTable_Row_Image::MINI)."'/>") ?>
+			      	<?= $this->imgTag($image, "mini", array(
+			      		"link"=>$link,
+			      		"size"=>"50x50",
+			      		"alt"=>"tatoueur $city_name - $org_name",
+			      		"title"=>"studio tatouage $city_name - $org_name")) ?>
 		      	<? endforeach ?>
 			    <? endif ?>
 		      </div>

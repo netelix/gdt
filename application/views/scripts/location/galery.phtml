@@ -39,25 +39,42 @@
 		$page_label.= " ".__("page :num:", array("num"=>$page));
 	}
 	
+	if(count($this->current_styles) == 1){
+		$r_attr = current($this->current_styles);
+	} 
 ?>
-
 	<? 
-		$style = !empty($attr_names) ? __(' de style :style:', array("style"=>$attr_names)) : "";
+		$style = !empty($attr_names) ? " $attr_names" : "";
 		$meta_desc = __("Retrouvez les meilleurs tatouages:style: notés par les internautes. Et trouvez des idées pour votre prochain tatouage.", array("style"=>$style));
-			
-		$this->headTitle()
-			->set(__("Les meilleurs tatouages:style:", array("style"=>$style)));
 			
 		if($page > 1){
 			$meta_desc .= " - page $page";
-			$this->headTitle()->append("page $page");
+			$head_title = __("Les meilleurs tatouages:style:", array("style"=>$style));
+			$h1 = __("Les <b>tatouages</b> de la galerie");
+		} else {
+			$head_title = __("Les 10 plus beaux tatouages:style:", array("style"=>$style));
+			$h1 = __("Les 10 plus beaux <b>tatouages:style:</b>", array("style"=>$style));
+			$page_label = "";
 		}
+		$this->headTitle()
+			->set($head_title.$page_label);
+			
 		$this->headMeta()
 			->appendName("description", $meta_desc);
 	?>
 
-	<h1 class="h2"><?= __("Les <b>tatouages</b> de la galerie")?><small><?= $page_label?></small></h1>
+	<h1 class="h2"><?= $h1 ?><small><?= $page_label?>
+		<? if($this->user()->admin() && isset($r_attr)): ?>
+			- <?= $this->link(array("table"=>"attributes","id"=>$r_attr->id), "admin/entity")->a("Editer") ?>
+		<? endif ?>
+
+	</small></h1>
 <? $this->placeholder("h1")->captureEnd() ?>
+	<? if(isset($r_attr)): ?>
+	<div class="loc-description">
+	 	<?= $this->partial("shared/description.phtml", array("row"=>$r_attr)) ?>
+ 	</div>
+ 	<? endif ?>
  		<div class="clearfix result-header">
  			<h2 class="h4">
  				<? $count = $this->images->getTotalItemCount()?>

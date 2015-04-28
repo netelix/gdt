@@ -114,7 +114,11 @@ padding-bottom: 15px;">
 		<b><?= $org->name()?></b>
 		<span><?= $this->placeholder("fb") ?></span>
 		<br>
-		<small><?= __("Studio de tatouage à :city:", array("city"=>$org->city()->name()))?></small>
+		<small><?= __("Studio de tatouage à :city:", array("city"=>$org->city()->name()))?>
+		<? if($this->user()->admin()): ?>
+			- <?= $org->linkEdit()->a("Editer") ?>
+		<? endif ?>
+		</small>
 	</h1>
 <? $this->placeholder("h1")->captureEnd() ?>
 

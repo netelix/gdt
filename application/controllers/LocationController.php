@@ -35,6 +35,7 @@ class LocationController extends Uop_Controller_Location
 
 		$filters = $this->_loadFilters();
 		$this->view->current_filters = $current_filters = App::table("ads")->unserializeFilters($this->_getParam('filters'));
+		$current_styles = array();
 		$checkboxes = array();
 		foreach($filters as $key=>$filter_data){
 			foreach($filter_data["rowset"] as $r_attr){
@@ -45,6 +46,7 @@ class LocationController extends Uop_Controller_Location
 				$key = array_search($r_attr->id, $filters["attr"]);
 				if($key !== false){
 					unset($filters["attr"][$key]);
+					$current_styles[] = $r_attr;
 					$anchor = '<input type="checkbox" checked/> '.$r_attr->name();
 				} else {
 					$filters["attr"][] = $r_attr->id;
@@ -61,6 +63,7 @@ class LocationController extends Uop_Controller_Location
 				$checkboxes[] = $link;
 			}
 		}
+		$this->view->current_styles = $current_styles;
 		$this->view->filters = $checkboxes;
 		$select = App::table("images")->selectBestImages();
 		

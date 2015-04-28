@@ -12,6 +12,7 @@ class Model_DbTable_Row_Image extends Uop_Model_DbTable_Row_Image
   protected $thumbs = array(
     self::MINI => '-background white -auto-orient -virtual-pixel tile -gravity center -thumbnail 60x60^ -extent 60x60',
     self::SMALL => '-background white -auto-orient -virtual-pixel tile -gravity center -thumbnail 173x177^ -extent 173x177',
+    self::MEDIUM => '-background white -auto-orient -virtual-pixel tile -gravity center -thumbnail 250x250^ -extent 250x250',
     self::LARGE => '-background white -auto-orient -virtual-pixel tile -gravity center -thumbnail 640x337^ -extent 640x337',
     self::LARGE_SQUARE => '-background white -auto-orient -virtual-pixel tile -gravity center -thumbnail 640x640^ -extent 640x640',
 
