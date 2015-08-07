@@ -22,8 +22,9 @@
 <?
   $page = $this->images->getCurrentPageNumber();
   $bc = $this->breadcrumb(); 
+  $bc->append($this->link(array(), "galery"));
   if($page > 1){
-    $bc->append(__("Page :num:", array("page"=>$page)));
+    $bc->append(__("Page :num:", array("num"=>$page)));
   }
 ?>
 <? $this->placeholder("h1")->captureStart() ?>
@@ -36,7 +37,7 @@
 	}
 	$page_label .= $attr_names;
 	if($page > 1){
-		$page_label.= " ".__("page :num:", array("num"=>$page));
+		$page_label.= " - ".__("page :num:", array("num"=>$page));
 	}
 	
 	if(count($this->current_styles) == 1){
@@ -49,18 +50,26 @@
 			
 		if($page > 1){
 			$meta_desc .= " - page $page";
-			$head_title = __("Les meilleurs tatouages:style:", array("style"=>$style));
+			$head_title = __("Les meilleurs tatouages:style: - page $page", array("style"=>$style));
 			$h1 = __("Les <b>tatouages</b> de la galerie");
 		} else {
 			$head_title = __("Les 10 plus beaux tatouages:style:", array("style"=>$style));
 			$h1 = __("Les 10 plus beaux <b>tatouages:style:</b>", array("style"=>$style));
 			$page_label = "";
 		}
-		$this->headTitle()
-			->set($head_title.$page_label);
+		
+		if(isset($r_attr) && $page == 1){
+			$meta = $r_attr->metaDescription();
+			$meta_desc = !empty($meta) ? $meta : $meta_desc;
 			
+			$title = $r_attr->title();
+			$head_title = !empty($title) ? $title : $head_title;
+		}
+		
+		$this->headTitle($head_title);
 		$this->headMeta()
 			->appendName("description", $meta_desc);
+
 	?>
 
 	<h1 class="h2"><?= $h1 ?><small><?= $page_label?>
@@ -70,7 +79,7 @@
 
 	</small></h1>
 <? $this->placeholder("h1")->captureEnd() ?>
-	<? if(isset($r_attr)): ?>
+	<? if(isset($r_attr) && $page == 1): ?>
 	<div class="loc-description">
 	 	<?= $this->partial("shared/description.phtml", array("row"=>$r_attr)) ?>
  	</div>

@@ -75,16 +75,24 @@
 <? 
 	$loc_name = $this->location->name();
 	$style = !empty($attr_names) ? __(' style :style:', array("style"=>$attr_names)) : "";
-	$meta = $this->location->metaDescription();
-	$meta_desc = (!empty($meta) && empty($attr_names)) ? $meta : __("Retrouvez les meilleurs tatoueurs de :name::style:. Regardez et évaluez leur travail. Découvrez les évaluations des studios de tatouage faites par les internautes.", array("style"=>$style, "name"=>$loc_name));
-		
-	$this->headTitle()
-		->set(__("Tatoueur:style: :name:", array("style"=>$style, "name"=>$loc_name)));
+	$meta_desc = __("Retrouvez les meilleurs tatoueurs de :name::style:. Regardez et évaluez leur travail. Découvrez les évaluations des studios de tatouage faites par les internautes.", array("style"=>$style, "name"=>$loc_name));
+			
+	$page_title = __("Tatoueur:style: :name:", array("style"=>$style, "name"=>$loc_name));
 		
 	if($page > 1){
 		$meta_desc .= " - page $page";
-		$this->headTitle()->append("page $page");
+		$page_title.= " - page $page";
 	}
+	
+	if(empty($attr_names) && $page == 1){
+		$meta = $this->location->metaDescription();
+		$meta_desc = !empty($meta) ? $meta : $meta_desc;
+		
+		$title = $this->location->title();
+		$page_title = !empty($title) ? $title : $page_title;
+	}
+	
+	$this->headTitle($page_title);
 	$this->headMeta()
 		->appendName("description", $meta_desc);
 ?>
