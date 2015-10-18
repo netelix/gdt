@@ -9,6 +9,7 @@ class Form_OrganizationEdit extends Uop_Form_OrganizationEdit
     foreach($this->_attributesSelect as $field=>$listMethod){
       $this->addAttributeSelectElement($field, $listMethod);    
     }
+    $this->addElement("checkbox","tattoobox");
     parent::init();
   	$subform = App::form("Aggregate", $this->_org);
   	$openings = json_decode($this->_org->openingDays());
@@ -17,6 +18,6 @@ class Form_OrganizationEdit extends Uop_Form_OrganizationEdit
   		$day = isset($openings[$x]) ? $openings[$x] : null;
       $subform->addSubForm(App::form("OrganizationOpening", $day, array("counter"=>$x)), "openings_$x");
   	}
-    $this->addSubForm($subform, "openings");	
+    $this->addSubForm($subform, "openings");
   }
 }

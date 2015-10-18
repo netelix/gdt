@@ -15,9 +15,14 @@
 		</div>
 	<? endforeach ?>
 	</div>
-  <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($this->adm2); ?>
 <? $this->placeholder('sidebar')->captureEnd() ?>
 <? $this->partial("shared/_sidebar.phtml"); ?>
+
+<? $this->placeholder('sidebar')->captureStart() ?>
+<?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($this->adm2); ?>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+
+
 <? $focus = !empty($this->img); ?>
 <?
   $page = $this->images->getCurrentPageNumber();

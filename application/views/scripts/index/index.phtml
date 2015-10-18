@@ -2,6 +2,14 @@
 <? $r_loc = App::table("locations")->country("FR"); ?>
 
 <? $this->placeholder("carousel-content")->captureStart() ?>
+	<div style="
+    position: absolute;
+    width: 100%;
+    bottom: 250px;" class="hidden-xs">
+		<div class="center-wrapper">		
+			<a href="/tattoobox" class="tattoobox"><img src="/img/tattoobox_red_present.png"></a>
+		</div>
+	</div>
   <div class="headline" style="">
 		<!--h1>La Galerie du Tatouage</h1-->
 		<h1 class="hidden-xs" style="font-size: 30px;line-height: 0; padding-left:10px">
@@ -25,7 +33,6 @@
   </div>
 
 <? $this->placeholder("carousel-content")->captureEnd() ?>
-
 <? $this->headMeta()->appendName("description", __("Trouvez des idées pour votre prochain tatouage et découvrez notre sélection des meilleurs studio de tatouage français et belges!")) ?>
 
 <? $this->placeholder("h1")->captureStart() ?>

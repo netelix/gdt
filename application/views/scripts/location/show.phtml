@@ -148,6 +148,15 @@
 							<a href='<?= $city_link?>'><?= __("Tatoueur à :city:", array("city"=>$city_name)) ?></a>
 		        <?= !empty($r_ad->distance) ? "(".number_format($r_ad->distance, 1)."km)":""; ?>			
 		        </p>
+		        <? if($r_ad->tattoobox): ?>
+		        <div class="hidden-xs" style="
+						    top: -2px;
+						    position: absolute;
+						    right: 105px;
+						    z-index: 2111;">
+			  			<a href="/tattoobox"><img src="/img/tattoobox_grey.png" style="height:50px!important" /></a>
+						</div>
+						<? endif ?>
 						<span class="pull-right reviews"><?=$this->starRate("avg_rating".$r_ad->org_id, $r_ad->avg_rating);?>
 							<?= $link
 	          		->option("fragment", "guestbook") 
@@ -195,7 +204,14 @@
 					</div>
 				</div>
 				<div class="text-right buttons">
-					<?= $link->a(__("En savoir plus"), "btn btn-warning") ?>
+					<?= $link->a(__("En savoir plus"), "pull-right btn btn-warning") ?>
+					<? if($r_ad->tattoobox): ?>
+		  			<a href="/tattoobox" class="pull-right" style="
+					    
+					"><img src="/img/tattoobox_red_present.png" style="    width: 120px;
+    margin-right: 10px;
+    margin-top: -4px;"/></a>
+					<? endif ?>
 				</div>
 	    </div>
     </div>
