@@ -36,7 +36,9 @@
 <? $this->placeholder('sidebar')->captureEnd() ?>
 
 <div class="content">
-	<h2 class="h4" style="padding: 3px 15px;"><?= $this->link(array(), 'galery')->a(__("Les tatouages qui vous ont tapé dans l’oeil"), "btn btn-success btn-small")?></h2>
+	<h2 class="h4" style="padding: 3px 15px;">
+		<?= $this->link(array(), 'galery')->a(__("Les tatouages qui vous ont tapé dans l’oeil"), "btn btn-success btn-small hidden-xs")?>
+		<a style="background:#EA4853; color:#FFF;" href="/tattoobox" class="btn btn-small visible-xs">Offrir un tatouage avec La TattooBox</a></h2>
 	<div class="row" style="padding-left:15px; padding-right:30px; padding-bottom:15px">
 		<? foreach(App::table("images")->selectBestImages()->limit(6)->fetchAll() as $r_img) :?>
 			<?= $this->partial("location/galery-item.phtml", array(

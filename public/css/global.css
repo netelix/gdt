@@ -284,6 +284,11 @@ a:focus {
   -moz-box-shadow: #808080 1px 1px 1px;
   box-shadow: #808080 1px 1px 1px;
 }
+.home #carousel-top .tattoobox img {
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
 header.top-wrapper {
   position: relative;
   top: 0;
@@ -449,9 +454,7 @@ form h3 {
   display: block;
 }
 .org-preview .buttons {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
+  margin-right: 15px;
 }
 .org-preview .buttons .btn {
   -webkit-border-top-right-radius: 0;
