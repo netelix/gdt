@@ -7,7 +7,9 @@
 		"photos"=>$this->link(array('id'=>$org->id), 'organization-photos-edit')->fragment("title")->a_("Photos"),
 	);
 	if($this->layout()->logged_user->type == "admin"){
-	//	$tabs["website"]=$this->link(array('id'=>$org->id), 'minisite-edit')->fragment("title")->a_("Mon site web");
+	if($org->tattoobox){
+		$tabs["tattoobox"] = $this->link(array("id"=>$org->id), "claim-tattoobox")->a(__("TattooBox"), "alert-link");
+	}
 	}
 ?>
 <? $current_class = 'class="active"'; ?>

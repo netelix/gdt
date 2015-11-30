@@ -1,0 +1,50 @@
+<? if($admin = $this->user()->admin()):?>
+	<? $logged_user = $this->user()->loggedUser(); ?>
+	<? $as_user = $admin->id != $logged_user->id; ?>
+	<div class="navbar navbar-default navbar-collapse" style="margin-bottom:0px">
+		<div class="navbar-header dropdown">
+	  <? if($as_user):?>
+			<span class="navbar-brand dropdown-toggle" data-toggle="dropdown" href="#"><?=$logged_user->fullName() ?> <b class="caret"></b></span>
+		  <ul class="dropdown-menu">
+		    <li><?=$this->link(array("admin_logged_as_user_id"=>$logged_user->id), 'admin-user/edit')
+		    	->a(__("Infos personnelles")); ?>
+		    </li>
+		    <li><?=$this->link(array("admin_logged_as_user_id"=>$logged_user->id), 'admin-user/organizations')
+		    	->a(__("Annonces")); ?>
+		    </li>
+		  </ul>
+	  <? else: ?>
+	 		<span class="navbar-brand" href="#"><?= __("Administrateur") ?></span>
+	 	<? endif ?>
+		</div>
+	  <ul class="nav navbar-nav">
+	  	<li><?= Link::factory(array("table"=>"orders"), "admin/entities")
+	  		->a("Commandes / Factures", array(), false, true)?>
+	  	</li> 
+	  	<li><?= Link::factory(array("table"=>"users"), "admin/entities")
+	  		->a("Utilisateurs", array(), false, true)?>
+	  	</li> 
+	  	<li><?= Link::factory(array("table"=>"organizations"), "admin/entities")
+	  		->a("Organisations", array(), false, true)?>
+	  	</li> 
+	  	<li><?= Link::factory(array("table"=>"attributes"), "admin/entities")
+	  		->a("Attributs", array(), false, true)?>
+	  	</li> 
+	  	<li><?= Link::factory(array("table"=>"services"), "admin/entities")
+	  		->a("Services", array(), false, true)?>
+	  	</li> 
+	  	<li><?= Link::factory(array("table"=>"posts"), "admin/entities")
+	  		->a("Blog", array(), false, true)?>
+	  	</li> 
+	  	<li><?= Link::factory(array("table"=>"reviews"), "admin/entities")
+	  		->a("Commentaires", array(), false, true)?>
+	  	</li> 
+	  	<li><?= Link::factory(array("table"=>"tattooboxes"), "admin/entities")
+	  		->a("Tattooboxes", array(), false, true)?>
+	  	</li> 
+	  	<li><?= Link::factory(array("table"=>"events", "preset"=>"performances"), "admin/entities")
+	  		->a("Performances", array(), false, true)?>
+	  	</li> 
+	  </ul>
+	</div>
+<? endif ?>

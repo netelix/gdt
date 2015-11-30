@@ -1,0 +1,75 @@
+<?
+	$tabs = array(
+		"all" => __("Tous"),
+		"used" => __("Utilisés"),
+		"not_used" => __("Non utilisés"),
+	)
+?>
+
+<? $this->body_class = "admin-tattoobox" ?>
+
+<ul class="nav nav-tabs">
+	<? foreach($tabs as $param=>$label): ?>
+		<? if($param == $this->preset): ?>
+			<li class="active"><a><?= $label ?> <span class="badge"><?= $this->entities->getTotalItemCount()?></span></a></li>
+		<? else: ?>
+			<? $label .= " <span class='badge'>".$this->presets[$param]->count()."</span>" ?>
+			<li><?= $this->link(array("preset"=>$param, "table"=>"tattooboxes"), "admin/entities", array('user_admin'=>1))->a($label) ?></li>
+		<? endif; ?>    	
+	<? endforeach; ?>
+	<li class="pull-right"><?
+	 	$link = $this->link(array("id"=>"new", "table"=>"tattooboxes"), "admin/entity");
+	 	echo $this->modalForm()->a($link, __("Nouveau code"), "btn btn-success", "+");
+	 ?>
+	 </li>
+</ul>
+<div class="list-entities">
+<? if($this->filters): ?>
+<? $this->filters->hideLabels(true); ?>
+<nav class="navbar navbar-default filters">
+	<?= $this->formHeader($this->filters, 
+		array("class"=>"navbar-form navbar-left"),
+		array("showMessages"=>false)
+		); ?>
+    <?= $this->filters->renderGroups(array(
+    	"owner"=>"Propriétaire",
+    	"org_id"=>"Id",
+    	)) ?>
+	  <button type="submit" class="btn btn-default"><?= __("Filtrer")?></button>
+	  <?= Link::factory(array("table"=>"organizations"), "admin/entities")->a(__("Reset"), "btn btn-default") ?>
+	  <?= Link::factory(array(), "admin-udpate-organizations")->a(__("Actualiser"), "btn btn-default") ?>
+	</form>
+	
+</nav>
+<? endif ?>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?=__("Nom") ?></th>
+			<th><?=__("Prénom") ?></th>
+			<th><?=__("Code")?></th>
+			<th><?=__("Prix")?></th>
+			<th><?=__("Creation")?></th>
+			<th>Utilisé par...</th>
+		</tr>
+	</thead>
+	<? foreach ($this->entities as $row):?>
+	<? $rs_oi = array()//$row->subscriptions(); ?>
+	<tr>
+		<td><?= $row->fname ;?></td>
+		<td><?= $row->lname  ?></td>
+		<td><?= $row->code ?></td>
+		<td><?= $row->price  ?>€</td>
+		<td><?= Zend_Date::now()->set($row->creation)->get(Zend_Date::DATES); ?></td>
+		<td>
+		<? if($r_org = $row->organization()): ?>
+		 	<?= $r_org->link()->a()?> le <?= Zend_Date::now()->set($row->datetime)->get(Zend_Date::DATES); ?>
+		<? else: ?>
+		 	<?= $this->link(array("id"=>$row->id, "table"=>"tattooboxes"), "admin/entity-delete")->a("Supprimer", "btn btn-danger btn-sm")?></td>
+		<? endif ?>
+ 		</td>
+	</tr>
+	<? endforeach ?>
+</table>
+<?= ($this->entities instanceof Zend_Paginator) ? $this->entities : "" ?>
+</div>

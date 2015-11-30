@@ -27,4 +27,12 @@ return array(
       'page'=>1
     )
   ),
+  'claim-tattoobox'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/edit-org-tattoobox/:id',
+      'defaults' => array(
+      'controller'=>'organization',
+      'action'=>'claim-tattoobox',
+    )
+  ),
 );

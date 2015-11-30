@@ -1,0 +1,69 @@
+<?= $this->partial("organization/_edit-header.phtml", array("org"=>$this->org, array(), array("current"=>"tattoobox"))) ?>
+<div class="row">
+	<div class="col-md-8">
+<? if(!$this->success): ?>
+<div class="alert alert-info">
+	<h2 class="h4">Lorsqu'un client se présente avec une TattooBox, vous devez verifier sa validité avec ce formulaire:</h2>
+	<?= $this->formHeader($this->form, array(), array("showMessages"=>false)) ?>
+	<div class="row">
+		<div class="col-md-6">
+			<?= $this->form->renderGroups(array("code"=>"Code TattooBox")) ?>
+		</div>
+		<? if($this->tattoobox): ?>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<p class="text-success"><b>Cette TattooBox est valide et vaut la somme de <?= $this->tattoobox->price ?> €. Pour utiliser cette tattoobox et recevoir le paiement, veuillez cliquer sur le bouton ci-dessous</b></p>
+				<br>
+				<p class=""><label><input type="checkbox" name="valid" value="1"> Utiliser cette TattooBox</label></p>
+				<button type="submit" name="claim" class="btn btn-warning">Enregistrer (cette action désactivera le code de la box)</button>
+			</div>
+		</div>
+		<? else: ?>
+			<div class="col-md-1">
+				<label>&nbsp;</label>
+				<button type="submit" class="btn btn-success">Vérifier le code</button>
+			</div>
+		</div>
+		<? endif ?>
+	</form>
+</div>
+<? else: ?>
+<div class="alert alert-success">
+	<p class="h4">L'utilisation de cette TattooBox a bien été enregistré</p>
+</div>
+<? endif ?>
+
+<? if($this->boxes): ?>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th><?=__("Nom") ?></th>
+			<th><?=__("Prénom") ?></th>
+			<th><?=__("Code")?></th>
+			<th><?=__("Prix")?></th>
+		</tr>
+	</thead>
+	<? foreach ($this->boxes as $row):?>
+	<tr>
+		<td><?= $row->fname ;?></td>
+		<td><?= $row->lname  ?></td>
+		<td><?= $row->code ?></td>
+		<td><?= $row->price  ?>€</td>
+	</tr>
+	<? endforeach ?>
+</table>
+<? else: ?>
+<div class="alert alert-info">
+	<p>Vous n'avez pas encore utilisé de Tattoobox dans ce studio</p>
+</div>
+<? endif ?>
+</div>
+	<div class="col-md-3">
+		<div class="well">
+			Aide &amp; Assistance 24h/24<br>
+			<b>06 68 31 94 84</b><br>
+			<b>06 03 29 05 93</b>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<div id="modal-title" style="display:none">Nouveau code</div>
+<? $form = $this->form ?>
+<?= $this->formHeader($this->form) ?>
+	<div class="hidden-on-success">
+	<?= $form->renderGroups(array(
+		"lname"=>"Nom",
+		"fname"=>"Prénom",
+		"code"=>"Code",
+		"price"=>"Valeur (€)",
+	)); ?>
+	</div>
+	<div class="hidden-on-success">
+		<button type="submit" class="btn btn-success">Enregistrer</button>
+	</div>
+</form>
