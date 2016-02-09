@@ -1,3 +1,4 @@
+<? $this->content_with_sidebar = true ?>
 <? 
 	$form = $this->form; 
 	$x = 1;
@@ -21,6 +22,13 @@
 	      	->renderGroups(array(
 	          "label"=>__("Présentation du tatoueur"),
 	          "attribs"=>array("rows"=>3))); ?>
+	      <? if($this->user()->admin()): ?>
+	      	<br/>
+	        <h3><?=__("Admin")?></h3>
+		   		<?= $subform->renderGroups(array(
+		  			"interview"=>__("Lien vers l'interview"),
+		  		)) ?>
+	      <? endif ?>
     	</div>
   	<? endforeach ?>
   </div>

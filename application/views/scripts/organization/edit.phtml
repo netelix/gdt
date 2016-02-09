@@ -1,3 +1,4 @@
+<? $this->content_with_sidebar = true ?>
 
   <?= $this->partial("organization/_edit-header.phtml", array("org"=>$this->resource, "current"=>"edit")); ?>
   <section>  
@@ -69,11 +70,12 @@
      	 	<a class="add-opening btn btn-default" style="margin-top:24px" href="javascript:void(0);"><?=__("Ajouter un horaire")?></a>
       </div>
       <? if($this->user()->admin()): ?>
+      	<br/>
         <h3><?=__("Admin")?></h3>
-      	<div style="width:100px">
+      	<div style="width:300px">
 	   		<?= $this->form->renderGroups(array(
 	  			"admin_note"=>__("Handicap"),
-	  			"tattoobox"=>__("Tattoobox")
+	  			"tattoobox"=>__("Tattoobox"),
 	  		)) ?>
       	</div>
       <? endif ?>

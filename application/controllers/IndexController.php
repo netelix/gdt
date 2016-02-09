@@ -7,5 +7,8 @@ class IndexController extends Uop_Controller_Index
   {
       // action body
   }
+  
+  public function creationAction()
+  {}
 }
 

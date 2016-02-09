@@ -1,0 +1,13 @@
+<? $this->content_with_sidebar = true ?>
+<? $this->placeholder("sidebar")->captureStart() ?>
+	<span></span>
+<? $this->placeholder("sidebar")->captureEnd() ?><?= $this->partial("organization/_edit-header.phtml", array("org"=>$this->resource, "current"=>"photos")); ?>
+<?
+  $org = $this->resource;
+  $action = $this->link(array('id'=>$org->id), 'organization-photos')."/";
+  $backlink = $this->link(array('id'=>$org->id), 'organization-photos-edit');
+?>
+<?= $this->partial("jquery-file-upload.phtml", array(
+	"backlink"=>$backlink,
+	"action"=>$action
+));	?>

@@ -1,8 +1,9 @@
+<? $this->content_with_sidebar = true ?>
 <?= $this->partial("organization/_edit-header.phtml", array("org"=>$this->resource, "current"=>"photos")); ?>
 <?
 $r_org = $this->resource;
 $form = $this->form;
-$col_class = $this->sort ? "col-sm-2" : "col-sm-4";
+$col_class = $this->sort ? "col-sm-2" : "col-sm-6";
 
 $class=array("class"=>"btn btn-warning navbar-btn");
 $link_edit = $this->sort ? 

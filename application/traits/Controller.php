@@ -4,7 +4,11 @@ trait Trait_Controller
 {
 	public function init()
 	{
+		$this->view->current_url = $this->getRequest()->getRequestUri();
 		$this->manageSearchForm();
+		if($r_user = $this->_loggedUser(false)){
+		  Uop_Link::setGlobalOption("force_hard_links", true);
+		}
 	}
 
 	public function manageSearchForm()

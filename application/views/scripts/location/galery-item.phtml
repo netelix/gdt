@@ -7,16 +7,19 @@ $meta = empty($this->meta) ? false : $this->meta;
 ?>
 
 <? $url = $this->link(array("id"=>$r_img->id),"galery-focus")->option("canonical", true)->assemble()?>
-<div class="col-md-<?= $col ?>" style="padding-right:0px">
-	<a href="<?= $url ?>"' class="show-focus thumbnail" >
-		<img src="<?= $r_img->url($size) ?>" alt="gallery" class=""/>
-			<? if(!isset($this->hide_buttons)): ?>
-			<div class="text-center" style="margin-top:4px">    	
-			<div class="fb-like" data-href="<?= $url?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+<div class="idee_singleton element-singleton">
+	<a href="<?= $url ?>"' class="show-focus" >
+	<img src="<?= $r_img->url("large-square") ?>" alt="">
+		<? if(!isset($this->hide_buttons)): ?>
+		<div class="idee_singleton_footer">
+			<div class="text-center" style="margin-top:10px">    	
+				<div class="fb-like" data-href="<?= $url?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 			</div>
 			<? endif ?>
 			<? if($meta): ?>
 				<p class="text-center caption"><?= strip_tags($r_img->meta());?></p>
 			<? endif ?>
+			</div>
 	</a>
 </div>
+

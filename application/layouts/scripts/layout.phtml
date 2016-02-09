@@ -1,70 +1,64 @@
-﻿<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="<?= App::lang()?>" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
-		<head>
-			<meta charset="utf-8">
-			<? $this->headTitle()->append("La Galerie du Tatouage") ?>
-			<?= $this->headTitle() ?>
-			<?= $this->headMeta()?>
+<!DOCTYPE html>
+<html lang="<?= App::lang()?>">
+	<head>
+		<meta charset="UTF-8">
+		<? $this->headTitle()->append("Tattoome, ex Galerie du Tatouage") ?>
+		<?= $this->headTitle() ?>
+		<?= $this->headMeta()?>
+		<!-- JAVASCRIPTS CALL -->
+		<script src="/tattoome/js/jquery-1.12.0.min.js"></script>
+		<script src="/tattoome/js/bootstrap.min.js"></script>
+		<!-- STYLE CALL -->
+		<? $this->headLink()
+			->appendStylesheet("/tattoome/css/bootstrap-custom.css")
+			->appendStylesheet("/tattoome/css/style.css?".uniqid()); ?>
 
-			<!-- Mobile viewport optimized: h5bp.com/viewport -->
-			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-			<meta name="format-detection" content="telephone=no">
-			<!-- Style Sheet>
-			<? $this->headLink()->appendStylesheet("/theme/css/style.css")
-					->appendStylesheet("/theme/css/skin/scheme1.css"); ?>
-
-			<!-- favicon -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,700italic' rel='stylesheet' type='text/css'>
+					<!-- favicon -->
 			<link rel="shortcut icon" href="/favicon.ico">
-			
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 			<!--[if lt IE 9]>
 					<script src="js/html5.js"></script>				
 			<![endif]-->
-      
-     	<script type="text/javascript">
-				window.baseclassename = "<?= App::config()->link->baseclassname ?>";
-			</script>
-			<script src="https://js.gleam.io/oi-WfLa2axq.js" async="async"></script>
+    
+   	<script type="text/javascript">
+			window.baseclassename = "<?= App::config()->link->baseclassname ?>";
+		</script>
+		<script src="https://js.gleam.io/oi-WfLa2axq.js" async="async"></script>
 
-			<?= $this->headLink()
-				->prependStylesheet('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', "")
-				->appendStylesheet("/uop/bootstrap-select/bootstrap-select.css")
-	      ->appendStylesheet("/css/global.less") ?>
-			    
-		    <?= $this->headScript()
-		  		->prependFile('/uop/js/modernizr-2.7.1-custom/modernizr.min.js')
-          ->appendFile('/uop/js/encryptedlink.js')
-          ->appendFile('/uop/js/helper/jquery.uopAutosuggest.js')
+		<?= $this->headLink()
+			->appendStylesheet("/uop/bootstrap-select/bootstrap-select.css")
+      ->appendStylesheet("/css/global.less") ?>
+		    
+	    <?= $this->headScript()
+	  		->prependFile('/uop/js/modernizr-2.7.1-custom/modernizr.min.js')
+        ->appendFile('/uop/js/encryptedlink.js')
+        ->appendFile('/uop/js/helper/jquery.uopAutosuggest.js')
 
-      //    ->appendFile('//connect.facebook.net/fr_FR/all.js#xfbml=1;')
-          ->prependFile("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js")
-          ->prependFile("//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
-          ->appendFile("//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
-          ->appendFile('/uop/bootstrap-select/bootstrap-select.js')
-          ->appendFile("/uop/js/jquery.autosize.min.js")
-          ->appendFile('//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js') ?>
+    //    ->appendFile('//connect.facebook.net/fr_FR/all.js#xfbml=1;')
+        ->prependFile("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js")
+        ->appendFile('/uop/bootstrap-select/bootstrap-select.js')
+        ->appendFile("/uop/js/jquery.autosize.min.js")
+        ->appendFile('//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js') ?>
 
-			<script type="text/javascript">
-				$.widget.bridge('uibutton', $.ui.button);
-				$.widget.bridge('uitooltip', $.ui.tooltip);
-			</script>
-		  <script>
-	      $(function(){
-	        $('.selectpicker').selectpicker();
-					$(".checkbox-filters input[type=checkbox]").click(function(){
-						document.location = $(this).parent("a").attr("href");
-					});
-	      })
-	    </script>
-			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-			<link rel="icon" href="/favicon.ico" type="image/x-icon">
-		</head>		
-		<!-- BODY -->
-		
-		<body id="body" class="<?=$this->body_class?>">
+		<script type="text/javascript">
+			$.widget.bridge('uibutton', $.ui.button);
+			$.widget.bridge('uitooltip', $.ui.tooltip);
+		</script>
+	  <script>
+      $(function(){
+        $('.selectpicker').selectpicker();
+				$(".checkbox-filters input[type=checkbox]").click(function(){
+					document.location = $(this).parent("a").attr("href");
+				});
+      })
+    </script>
+	</head>
+	<body id="body" class="<?=$this->body_class?>">
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -75,259 +69,151 @@
 		  ga('send', 'pageview');
 		
 		  </script>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
+		  <script>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
 		  js = d.createElement(s); js.id = id;
 		  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-			<div class="mobile-bar visible-xs">
-				<? $global_search = $this->placeholder("global_search"); 
-					$global_search->captureStart();
-				?>
-				<? if(isset($this->search_form)):?>
-				<div class="global-search center-wrapper">
-					<?= $this->formHeader($this->search_form, array("class"=>'form-inline'))?>
-							<?= $this->search_form->renderGroups(array(
-							  "loc_name"=>array(
-							    "label"=>__("Ville, Département...")
-							  )));?>
-						<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
-					</form>
-				</div>
-				<? endif ?>
-				<? $global_search->captureEnd(); ?>
-				<? $global_search ?>
-			</div>
-
-			<div class="top-wrapper-mask clearfix">	
-
-			<!-- HEADER -->
-			
-			<div id="carousel-top" class="carousel slide hidden-print" data-ride="carousel">
-			  <!-- Indicators -->
-			 		
-			  <!-- Wrapper for slides -->
-			  <div class="carousel-inner">
-			    <div class="item active">
-			      <img src="/img/slide1.jpg" alt="...">
-			      <div class="carousel-caption">
-			      </div>
+		<!-- BEGIN NAVIGATION -->
+		<!-- NAVBAR -->
+		<?= $this->partial("admin/navbar.phtml"); ?>
+		<nav class="navbar navbar-default">
+		    <div class="container-fluid" id="container-fluid-navbar">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			        </button>
+			        <?= Link::home()->a('TATTOO<span style="color:white;">ME</span>', "navbar-brand opensanscondensed")?>
 			    </div>
-			  </div>
-			  
-			  <!-- Controls -->
-			  <a class="left carousel-control" href="#carousel-top" data-slide="prev">
-			    <span class="glyphicon glyphicon-chevron-left"></span>
-			  </a>
-			  <a class="right carousel-control" href="#carousel-top" data-slide="next">
-			    <span class="glyphicon glyphicon-chevron-right"></span>
-			  </a>
-			  <?= $this->placeholder("carousel-content") ?>
-		  </div>
 
-			<header class="top-wrapper small-wrapper clearfix hidden-print" style="z-index:2">
-					<?= $this->partial("admin/navbar.phtml"); ?>
-					<div class="center-wrapper">
-						<div class="top-content-position">
-							<div class="top-content skin-font-color3">
-								<div class="top-content-up skin-border-color3 clearfix">
-									
-									<!-- Logo  -->
-								
-									<span class="logo"><img src="/img/logo.png" class="hidden-xs"/><?= Link::home()->a("LA<b>GALERIE</b>DU<b>TATOUAGE</b>") ?>	
-									<div class="fb-like hidden-xs" 
-										data-layout="button_count" 
-										data-action="like" 
-										data-show-faces="true" 
-										data-share="false" 
-										data-href="https://www.facebook.com/galeriedutatouage"></div>
-									</span>
-									
-									<!-- /Logo  -->
-									
-									<!-- Main menu  -->
-									
-									<ul class="main-menu regular">
-										<li><?= Link::home()->a(__("Accueil"))?></a></li>
-										<li><a href="/tattoobox" style="color:#EA4853">La TattooBox</a></li>
-										<li><?= App::table("locations")->country("FR")->link()->a(__("Trouver un tatoueur"))?></a></li>
-										<li><?=  $this->link(array(), 'galery')->a(__("Idées tatouages"))?></a></li>
-										<li><a href="http://blog.galeriedutatouage.com" _target="blank">Le blog</a></li>
-										<? if($this->user()->loggedUser()){
-											$member_link = $this->link(array(), 'user/organizations');
-										} else {
-											$member_link = $this->link(array(), 'user/login');
-										}?>
-										<li class="dropdown">
-											<? if($logged_user = $this->user()->loggedUser()):?>
-											<a class="dropdown-toggle" data-toggle="dropdown" data-target=".dropdown-container" href="javascript:void();"><?= __("Mon compte") ?> <b class="caret"></b></a>
-											<div class="dropdown-container" >
-										  <ul class="dropdown-menu dropdown-menu-right">
-										    <li><?=Link::factory(array(), 'user/edit')->a(__("Infos personnelles")); ?>
-										    </li>
-										    <li><?=Link::factory(array(), 'user/organizations')->a(__("Mes annonces")); ?>
-										    </li>
-										    <li><?=Link::factory(array(), 'user/logout')->a(__("Se déconnecter")); ?>
-										    </li>										  </ul>
-											</div>
-										  <? else: ?>
-										  <span><?= $member_link->a(__("Espace membre"))?>
-										  <? endif ?>
-										</li>
+		    	<!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="menu1">
+			        <ul class="nav navbar-nav">
+				        <li><?= $this->link(array(), 'creations')->a(__("Création")) ?></li>
+				        <li><a href="http://www.galeriedutatouage.com/tattoobox">tattoobox</a></li>
+				        <li><a href="http://blog.galeriedutatouage.com">blog</a></li>
+			      	</ul>
+			        <ul class="nav navbar-nav navbar-right">
+				        <li><a href="https://www.instagram.com/lagaleriedutatouage/" target="_blank" class="instagram_link"></a></li>
+				        <li><a href="https://www.facebook.com/galeriedutatouage" target="_blank" class="facebook_link"></a></li>
+			        </ul>
+		    	</div><!-- /.navbar-collapse -->
+		    </div><!-- /.container-fluid -->
+		</nav>		
+		<nav class="navbar navbar-violet">
+			<div class="container-fluid" id="container-fluid-navbar">
+				<p class="message_inscription francoisone"><span class="hidden-xs">Tatoueurs, intégrez notre guide des meilleurs studios de France</span><span style="display:inline!important" class="visible-xs">Tatoueurs, rejoignez-nous</span> <?= $this->link(array(), "subscription-lead")->a("inscription", "lien_inscription") ?></p>
+			</div>
+		</nav>
+		<!-- NAVBAR 2 -->
+		<nav class="navbar navbar-default navbar-sousmenu francoisone">
+		    <div class="container-fluid" id="container-fluid-navbar">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu2" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			        </button>
+			        <?= Link::home()->a('TATTOOME <br/>
+			        	<span class="navbar-brand-custom-badge">
+			        		Ex Galeriedutatouage
+			        	</span> 
+', "navbar-brand navbar-brand-custom opensanscondensed") ?>
+			    </div>
 
-									</ul>
-									
-									<!-- /Main menu  -->
-									
-									<!-- Mobile menu -->
-																		
-									<!-- /Mobile menu  -->
-									
-								</div>									
-								<?= $global_search ?>
+		    	<!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="menu2">
+			        <ul class="nav navbar-nav">
+				        <li class="<?= $this->active == 'studio' ? 'active':''?>"><?= App::table("locations")->country("FR")->link()->a('Trouver un tatoueur <span class="sr-only">(current)</span>')?></li>
+				        <li class="<?= $this->active == 'galery' ? 'active':''?>"><?=  $this->link(array("page"), 'galery')->a(__("Idée tatouage"))?></li>
+				        <li class="<?= $this->active == 'conventions' ? 'active':''?>"><?=  $this->link(array(), 'conventions')->a(__("Conventions"))?></li>
 
-								<div class="top-content-down skin-border-color3 hidden-xs">
-								
-									<!-- Place info  -->
-								
-									<div class="top-content-down-text regular">
-										  <div class="hidden-xs">
-	  										<span class="skin-font-color1"><?= __("Vous êtes ici:")?>	 </span>
-										    <?= $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); ?>
-										  </div>
-									</div>
-									
-									<!-- /Place info  -->
-									
-									<!-- Social  -->
-									<!-- /Social  -->
-									
-								</div>
-							</div>
-						</div>
-					  <? $title = trim($this->placeholder('h1')) ?>
-					  <? if(!empty($title)): ?>
-					   	<?= $title ?>
-					  <? endif ?>
+			      	</ul>
+			        <ul class="nav navbar-nav navbar-right">
+	        			<? if($this->user()->loggedUser()){
+									$member_link = $this->link(array(), 'user/organizations');
+								} else {
+									$member_link = $this->link(array(), 'user/login');
+								}?>
+				        <li><?= $member_link->a("espace membre", "espacemembre opensanscondensed") ?></li>
+				        <li class="dropdown">
+     				        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+     				        	<?= $this->belgium ? "Belgique" : "France" ?> <span class="caret"></span></a>
+				            <ul class="dropdown-menu">
+					            <li><?= App::table("locations")->country($this->belgium ? "FR" : "BE")->link()->a() ?></li>
+				            </ul>
+			         	</li>
+			        </ul>
+		    	</div><!-- /.navbar-collapse -->
+		    </div><!-- /.container-fluid -->
+		</nav>	
+		<!-- END NAVIGATION -->
+		<!-- FORMULAIRE TROUVER TATOUEUR -->
+		<? if($sub_header= $this->placeholder("sub-header")): ?>
+		<?= $sub_header ?>
+		<? endif ?>
+		<? if($this->full_width):?>
+			<?= $this->layout()->content ?>
+		<? else: ?>
+		<div class="container-fluid default-container center-block">
+			<? if($this->content_with_sidebar): ?>
+			<div class="row" style="margin-top:30px;">
+				<div class="col-lg-3 ">
+					<?= $this->placeholder("sidebar") ?>
+					<?= $this->partial("shared/_sidebar-content.phtml", array("joinus"=>true)) ?>
+				</div>
+				<div class="col-lg-9">
+					<?= $this->layout()->content ?>
+				</div>
+			</div>
+			<? else: ?>
+			<?= $this->layout()->content ?>
+			<? endif ?>
+		</div>
+		<? endif ?>
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer_top  container-default">
+				<div class="row">
+					<div class="col-lg-3">
+						<h4 class="footer_top_header">TATTOOME</h4>
+						<?= $this->link(array(), 'creations')->a(__("Création"), "footer_top_link link_uppercase") ?>
+						<a href="http://www.galeriedutatouage.com/tattoobox" class="footer_top_link link_uppercase">tattoobox</a>
+				    <a href="http://blog.galeriedutatouage.com" class="footer_top_link link_uppercase">blog</a>
 					</div>
-				<!-- /bottom background - absolute -->
-				
-				
-				<!-- /bottom background - absolute -->
-			</header>
-			
-			<!-- /HEADER -->
-			<div class="background">
-				<div class="background-inner">
-					<div class="center-wrapper main-content-wrapper">
-					
-						<!-- MAIN CONTENT -->
-		
-							<!-- events -->
-						<div class="main-content">
-		
-						  <div class="row" style="position:relative;background: #FFF;margin-top: 15px;">
-						    <? $sidebar = trim($this->placeholder('sidebar'))?>
-						    <? $col = !empty($sidebar) ? "col-sm-8" : "col-sm-12" ?>
-						    
-						    <div class="<?=$col?> content-col">
-						    	<?= $this->flashMessages() ?>
-						      <?= $this->layout()->content ?>
-						    </div>
-						    <? if(!empty($sidebar)): ?>
-						    <div class="col-sm-4 hidden-xs" id="sideBar">
-						      <?= $sidebar?>
-						    </div>
-						    <? endif ?>
-						  </div>
-						</div>
-						<!-- /MAIN CONTENT -->
-					</div>		
-				</div>		
-			</div>		
-			<!-- BOTTOM -->
-				
-			<div class="bottom skin-background-color2 hidden-print">
-				<div class="center-wrapper widget-bottom-contact-us skin-font-color10">
-				
-					<!-- Bottom widget place #1 -->
-				
-					<div class="one-third regular">
-						<h2 class="skin-font-color3"><span class="bold">Social</span></h2>
-							<ul class="social">
-								<li><a href="https://www.facebook.com/galeriedutatouage"><img src="/theme/images/social/facebook.png" alt="social">Facebook</a></li>
-								<li><a href="https://twitter.com/GalerieTatouage​"><img src="/theme/images/social/twitter.png" alt="social">Twitter</a></li>
-								<li><a href="https://plus.google.com/u/0/b/105612669225859415976/105612669225859415976/posts"><img src="/theme/images/social/googleplus.png" alt="social">Google+</a></li>
-							</ul>
+					<div class="col-lg-3">
+						<h4 class="footer_top_header">SUIVEZ-nous</h4>
+						<a href="https://www.facebook.com/galeriedutatouage/" target="_blank" class="footer_top_link">Facebook</a>
+						<a href="https://www.instagram.com/lagaleriedutatouage/" target="_blank" class="footer_top_link">instagram</a>
 					</div>
-					
-					<!-- Bottom widget place /#1 -->
-					
-					<!-- Bottom widget place #2 -->
-					
-					<div class="one-third widget-bottom-latest-posts regular">
-						<h2 class="skin-font-color3"> <span class="bold">Informations</span></h2>
-						<ul>
-							<li><?= Link::factory(array("page"=>"contact"), "static")->a("Contact")?></li>
-							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Mentions légales")?></li>
-							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Conditions d'utilisation")?></li>
-							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Conditions de vente")?></li>
-						</ul>
+					<div class="col-lg-3">
+						<h4 class="footer_top_header">Je suis tatoueur</h4>
+						<?= $this->link(array(), "subscription-lead")->a("Je souhaite m'inscrire", "footer_top_link") ?>
 					</div>
-					
-					<!-- Bottom widget place /#2 -->
-					
-					<!-- Bottom widget place #3 -->
-					
-					<div class="one-third widget-bottom-tags regular last">
-						<h2 class="skin-font-color3">Recherches <span class="bold"></span></h2>
-						<? foreach(App::table("locations")->country("FR")->getCities(10) as $r_city):?>
-							<?= $r_city->link()->a(__("Tatoueur à :name:", array("name"=>$r_city->name())))?>
+					<div class="col-lg-3">
+						<h4 class="footer_top_header">recherche</h4>	
+						<? foreach(App::table("locations")->country("FR")->getCities(5) as $r_city):?>
+							<?= $r_city->link()->a(__("Tatoueur à :name:", array("name"=>$r_city->name())),"footer_top_link")?>
 						<? endforeach; ?>
 					</div>
-					
-					<!-- Bottom widget place /#3 -->
-					
-					<!-- Bottom widget place #4 -->
-					
-				<!-- Bottom widget place /#4 -->
-					
 				</div>
-				
-				<!-- Go top - absolute  -->
-				
-				<div class="go-top skin-border-color5 skin-border-hover1">
-					<a href="#" onClick="ScrollTo('body')"><img src="/theme/images/go-top.png" alt="go-top"></a>
-				</div>	
-				
-				<!-- Go top - /absolute  -->
-				
 			</div>
-				
-			<!-- /BOTTOM -->
-			
-			<div class="clearfix"></div>
-			
-			<!-- FOOTER -->
-			
-			
-			<!-- /FOOTER -->
-
-			<!-- ATTACHMENTS>
-
-			<!-- /ATTACHMENTS -->
+			<div class="footer_bottom container-default">
+				<?= Link::factory(array("page"=>"contact"), "static")->a("Contact", "footer_bottom_link")?>
+				<?= Link::factory(array("page"=>"legal"), "static")->a("Mentions légales", "footer_bottom_link")?>
+				<?= Link::factory(array("page"=>"legal"), "static")->a("Conditions d'utilisation", "footer_bottom_link")?>
+				<?= Link::factory(array("page"=>"legal"), "static")->a("Conditions de vente", "footer_bottom_link")?>
 			</div>
-			<script language="javascript">
-			$(function(){
-				$(".uop-autosize").autosize();
-			});
-			</script>
+		</footer>
+		<!-- FIN FOOTER -->
 
-		</body>	
-
-		<!-- /BODY -->
-		
+	</body>
 </html>

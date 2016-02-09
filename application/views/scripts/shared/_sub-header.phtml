@@ -1,0 +1,23 @@
+<? $this->placeholder("sub-header")->captureStart(); ?>
+		<!-- FORMULAIRE TROUVER TATOUEUR -->
+		<div class="container-fluid" id="form_trouver_tatoueur_container_idee">
+			<? if(isset($this->search_form)):?>
+				<?= $this->formHeader($this->search_form, array("class"=>'form-inline form_trouver_tatoueur center-block'))?>
+						<?= $this->search_form->renderGroups(array(
+						  "loc_name"=>array(
+						    "label"=>__("Trouvez un tatoueur près de chez vous"),
+						    "group_class"=>"input_localisation"
+						  )));?>
+					<button type="submit" class="btn btn-purple"><span class="hidden-xs">RECHERCHER</span><span class="visible-xs glyphicon glyphicon-search"></span></button>
+				</form>
+			<? endif ?>
+		</div>
+		<!-- END FORMULAIRE TROUVER TATOUEUR -->
+		<!-- BREADCRUMB -->
+		<? if($bc = $this->breadcrumb()): ?>
+		<div class="container-fluid breadcrum_container hidden-xs">
+			<?= $bc ?>
+		</div>
+		<? endif ?>
+		<!-- END BREADCRUMB -->
+<? $this->placeholder("sub-header")->captureEnd(); ?>

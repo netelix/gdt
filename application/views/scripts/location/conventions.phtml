@@ -1,0 +1,28 @@
+<?
+	$this->active = "conventions";
+	$this->full_width = true;
+	$bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
+	$bc->append("Conventions");
+	$this->headTitle("Conventions de tatouages");
+	$this->headMeta()
+		->appendName("description", "Conventions de tatouages");
+
+?>
+
+<? $this->partial("shared/_sub-header.phtml", $this) ?>
+		<!-- SERP CONTAINER -->
+		<div class="container-fluid launching">
+			<div class="launching_container center-block">
+				<h1>Ici, Bientôt...</h1>
+				<p>Nous vous proposerons notre sélection des rendez-vous tatouage à ne pas manquer: conventions, salons, ateliers...</p>
+				<p>Soyez informé en avant première, laissez votre email :</p>
+				<form class="form-inline">				
+					<div class="form-group">
+						<input type="email" class="form-control launch_input" placeholder="Adresse email">
+					</div>
+					<button type="submit" class="btn btn-default">S'inscrire !</button>
+				</form>
+			</div>
+			
+		</div>
+		<!-- FIN SERP CONTAINER -->

@@ -3,7 +3,8 @@
 class Model_DbTable_Row_Product extends Uop_Model_DbTable_Row_Product
 {
   protected $_dependent_attr_map_values = array(
-    );
+   "interview"
+  );
   protected $_dependent_attr_map_types = array(
     );
   protected $_auto_remove_polymorphic_associations = array('attrMap','names', 'descs');

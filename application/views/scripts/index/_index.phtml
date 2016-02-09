@@ -1,0 +1,98 @@
+<? $this->body_class = "home" ?>
+<? $r_loc = App::table("locations")->country("FR"); ?>
+
+<? $this->placeholder("carousel-content")->captureStart() ?>
+  <div class="headline" style="">
+		<!--h1>La Galerie du Tatouage</h1-->
+		<h1 class="hidden-xs" style="font-size: 30px;line-height: 0; padding-left:10px">
+		<?= __("Trouve ton studio de tatouage");?>
+		</h1>
+		<div class="row">
+		<?= $this->formHeader($this->search_form, array("class"=>"clearfix")) ?>
+				<?= $this->search_form->renderGroups(array(
+				  "loc_name"=>array(
+				    "label"=>__("Toute la France"),
+   	  			"group_class"=>"col-md-5 hidden-xs",
+				  ),
+				  "tattoo_style"=>array(
+				  	"label"=>__("Tous les styles"),
+				  	"group_class"=>"col-md-4 hidden-xs")));?>
+				  <div class="col-md-3">
+					  <button type="submit" class="btn btn-success btn-block"><?= _("Trouver un tatoueur") ?></button>
+				  </div>
+			</form>
+		</div>
+  </div>
+
+<? $this->placeholder("carousel-content")->captureEnd() ?>
+<? $this->headMeta()->appendName("description", __("Trouvez des idées pour votre prochain tatouage et découvrez notre sélection des meilleurs studio de tatouage français et belges!")) ?>
+
+<? $this->placeholder("h1")->captureStart() ?>
+
+<? $this->placeholder("h1")->captureEnd() ?>
+
+<?= $this->partial('shared/_sidebar.phtml') ?>
+<? $this->placeholder('sidebar')->captureStart() ?>
+<? $this->placeholder('sidebar')->captureEnd() ?>
+<div class="content" id="blog-preview">
+	<h2 class="h4" style="padding: 3px 15px;"><?= __("L'actualité du tatouage") ?></h2>
+	<div class="row"></div>
+</div>
+	<script>
+		$(function(){
+			$("#blog-preview div").load('https://www.galeriedutatouage.com/blog/ .top_slider_blog .stand_slide:nth-child(-n+3)');
+		});
+	</script>
+
+<div class="content">
+	<h2 class="h4" style="padding: 3px 15px;">
+		<?= $this->link(array(), 'galery')->a(__("Les tatouages qui vous ont tapé dans l’oeil"), "btn btn-success btn-small hidden-xs")?>
+		<a style="background:#EA4853; color:#FFF;" href="/tattoobox" class="btn btn-small visible-xs">Offrir un tatouage avec La TattooBox</a></h2>
+	<div class="row" style="padding-left:15px; padding-right:30px; padding-bottom:15px">
+		<? foreach(App::table("images")->selectBestImages()->limit(6)->fetchAll() as $r_img) :?>
+			<?= $this->partial("location/galery-item.phtml", array(
+				"col"=>6, 
+				"img"=>$r_img, 
+				"size"=>"large",
+				"modal"=>false,
+				"hide_buttons"=>true,
+				"meta"=>true));?>
+		<? endforeach;?>
+		<p class="col-md-9">
+			<?= __("Chaque semaine, la Galerie du Tatouage vous propose un classement des tatouages les plus populaires.")?>
+		</p>
+		<?= $this->link(array(), "galery")->a(__("Voir tous les tatouages"), "btn btn-default pull-right") ?>
+	</div>
+	<h2 class="h4"><?= __("Les studios par style")?></h2>
+	<div class="row" style="padding-left:15px; padding-right:30px;">
+		<? foreach(App::table("attributes")->tattooStyle() as $r_attr):?>
+			<? $link = $this->link(array("filters"=>"attr:".$r_attr->id),"galery-with-filters"); ?>
+			<div class="col-md-2" style="padding-right:0px">
+					<div class="thumbnail">
+						<? 
+							$img = $r_attr->firstImage();
+							$url = isset($img) ? $img->url("small") : "http://placehold.it/173x177";
+						?>
+						<?= $link->jslink("<img src='$url' class='img-responsive'/>"); ?>
+						<?= $link->a(__("Tatouage :style:", array("style"=>$r_attr->name())), "h4"); ?>
+					</div>
+			</div>
+		<? endforeach ?>
+	</div>
+	<h2 class="h4"><?= __("Les tatoueurs près de chez vous")?></h2>
+	<div class="row">
+	<ul class="col-md-4">
+		<? $children = $r_loc->getChildren(); ?>
+		<? $columnize = $this->columnize($children->count(), 2	, '</ul><ul class="col-md-4">');?>
+		<? foreach($children as $row): ?>
+			<li><?= $row->link()->a(__("Les tatoueurs en :region:", array("region"=>$row->name()), "text-black"))?></li>
+			<?= $columnize ?>
+		<? endforeach ?>
+		</ul>
+		<ul>
+			<? foreach($r_loc->getCities(11) as $r_city): ?>
+				<li><?= $r_city->link()->a(__("Tatoueurs à :name:", array("name"=>$r_city->name()), "text-black"))?></li>
+			<? endforeach; ?>
+		</ul>
+	</div>
+</div>

@@ -1,89 +1,159 @@
-<? $this->body_class = "home" ?>
-<? $r_loc = App::table("locations")->country("FR"); ?>
+<? 
+	$r_loc = App::table("locations")->country("FR"); 
+	$this->full_width = true;
+?>
 
-<? $this->placeholder("carousel-content")->captureStart() ?>
-  <div class="headline" style="">
-		<!--h1>La Galerie du Tatouage</h1-->
-		<h1 class="hidden-xs" style="font-size: 30px;line-height: 0; padding-left:10px">
-		<?= __("Trouve ton studio de tatouage");?>
-		</h1>
-		<div class="row">
-		<?= $this->formHeader($this->search_form, array("class"=>"clearfix")) ?>
+		<div class="container-fluid" id="banner">
+			<div id="video_container">
+				<video width="100%" height="auto" autoplay loop>
+	  				<source src="/tattoome/video/mp4/tatoome.mp4" type="video/mp4" />
+	  				<source src="/tattoome/video/ogv/tatoome.ogv" type="video/ogg" />
+				</video>
+			</div>
+			<h1 class="banner_title gothamblack">trouvez un tatoueur près de chez vous</h1>
+			<p class="banner_subtitle gothambold">La plus grande sélection de tatoueurs prêts à vous accueillir</p>
+			<?= $this->formHeader($this->search_form, array("class"=>"banner_form form-inline")) ?>
 				<?= $this->search_form->renderGroups(array(
 				  "loc_name"=>array(
-				    "label"=>__("Toute la France"),
-   	  			"group_class"=>"col-md-5 hidden-xs",
+				    "label"=>__("Région, département, ville..."),
 				  ),
 				  "tattoo_style"=>array(
 				  	"label"=>__("Tous les styles"),
-				  	"group_class"=>"col-md-4 hidden-xs")));?>
-				  <div class="col-md-3">
-					  <button type="submit" class="btn btn-success btn-block"><?= _("Trouver un tatoueur") ?></button>
-				  </div>
+				  	"group_class"=>"hidden-xs")));?>
+					<button type="submit" class="btn btn-purple"><span class="hidden-xs">RECHERCHER</span><span class="visible-xs glyphicon glyphicon-search"></span></button>
 			</form>
 		</div>
-  </div>
+		<!-- END FORMULAIRE TROUVER TATOUEUR -->
 
-<? $this->placeholder("carousel-content")->captureEnd() ?>
-<? $this->headMeta()->appendName("description", __("Trouvez des idées pour votre prochain tatouage et découvrez notre sélection des meilleurs studio de tatouage français et belges!")) ?>
-
-<? $this->placeholder("h1")->captureStart() ?>
-
-<? $this->placeholder("h1")->captureEnd() ?>
-
-<?= $this->partial('shared/_sidebar.phtml') ?>
-<? $this->placeholder('sidebar')->captureStart() ?>
-<? $this->placeholder('sidebar')->captureEnd() ?>
-
-<div class="content">
-	<h2 class="h4" style="padding: 3px 15px;">
-		<?= $this->link(array(), 'galery')->a(__("Les tatouages qui vous ont tapé dans l’oeil"), "btn btn-success btn-small hidden-xs")?>
-		<a style="background:#EA4853; color:#FFF;" href="/tattoobox" class="btn btn-small visible-xs">Offrir un tatouage avec La TattooBox</a></h2>
-	<div class="row" style="padding-left:15px; padding-right:30px; padding-bottom:15px">
-		<? foreach(App::table("images")->selectBestImages()->limit(6)->fetchAll() as $r_img) :?>
-			<?= $this->partial("location/galery-item.phtml", array(
-				"col"=>6, 
-				"img"=>$r_img, 
-				"size"=>"large",
-				"modal"=>false,
-				"hide_buttons"=>true,
-				"meta"=>true));?>
-		<? endforeach;?>
-		<p class="col-md-9">
-			<?= __("Chaque semaine, la Galerie du Tatouage vous propose un classement des tatouages les plus populaires.")?>
-		</p>
-		<?= $this->link(array(), "galery")->a(__("Voir tous les tatouages"), "btn btn-default pull-right") ?>
-	</div>
-	<h2 class="h4"><?= __("Les studios par style")?></h2>
-	<div class="row" style="padding-left:15px; padding-right:30px;">
-		<? foreach(App::table("attributes")->tattooStyle() as $r_attr):?>
-			<? $link = $this->link(array("filters"=>"attr:".$r_attr->id),"galery-with-filters"); ?>
-			<div class="col-md-2" style="padding-right:0px">
-					<div class="thumbnail">
-						<? 
-							$img = $r_attr->firstImage();
-							$url = isset($img) ? $img->url("small") : "http://placehold.it/173x177";
-						?>
-						<?= $link->jslink("<img src='$url' class='img-responsive'/>"); ?>
-						<?= $link->a(__("Tatouage :style:", array("style"=>$r_attr->name())), "h4"); ?>
+		<!-- BANNIERE PROMO -->
+		<div class="container-fluid" id="banner_promo_container">
+			<div class="row" id="banner_promo">
+				<div class="col-lg-6">
+					<div class="promo_container_ld promo_container_left">
+						<div class="title_promo">
+							<h2 class="gothamblack">Création</h2>
+							<p class="gothambold">Créez votre tatouage avec un artiste dessinateur</p>
+						</div>
+						<div class="link_promo">
+							<a href="#" class="btn-link-promo link-promo-red gothambold"><span class="hidden-xs">Je crée mon tatouage</span>
+							<span class="visible-xs">Créer</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="promo_container_ld promo_container_right">
+						<div class="title_promo">
+							<h2 class="gothamblack">Tattoobox</h2>
+							<p class="gothambold">Un cadeau inoubliable : offrez un tatouage</p>
+						</div>
+						<div class="link_promo">
+							<a href="#" class="btn-link-promo link-promo-lightgreen gothambold"><span class="hidden-xs">Je choisis ma tattoobox</span>
+							<span class="visible-xs">Choisir</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN BANNIERE PROMO -->
+		<!-- BANNIERE PROMO 2-->
+		<div class="container-fluid" id="banner_promo_container">
+			<div class="row promo_container_md blog-banner-promo" id="banner_promo">
+				<div class="col-lg-9" id="blog_preview"></div>
+					<div class="col-lg-3 promo_container_md_singleton promo_container_md_singleton_right promo_container_md_singleton_custom">
+						<p class="francoisone label_tag">Newsletter</p>								
+						<h2 class="custom_title_text_prom gothamblack">News,<br/>Bons plans, Tendances...</h2>
+						<p class="custom_text_prom gothambook">Recevez le meilleur du tatouage par email</p>
+						<a href="#" class="btn-custom-link-promo link-promo-violet gothambook">Je m'inscris</a>
 					</div>
 			</div>
-		<? endforeach ?>
-	</div>
-	<h2 class="h4"><?= __("Les tatoueurs près de chez vous")?></h2>
-	<div class="row" style="padding:15px;padding-right: 30px;">
-	<ul class="col-md-4">
-		<? $children = $r_loc->getChildren(); ?>
-		<? $columnize = $this->columnize($children->count(), 2	, '</ul><ul class="col-md-4">');?>
-		<? foreach($children as $row): ?>
-			<li><?= $row->link()->a(__("Les tatoueurs en :region:", array("region"=>$row->name())))?></li>
-			<?= $columnize ?>
-		<? endforeach ?>
-		</ul>
-		<ul>
-			<? foreach($r_loc->getCities(11) as $r_city): ?>
-				<li><?= $r_city->link()->a(__("Tatoueurs à :name:", array("name"=>$r_city->name())))?></li>
-			<? endforeach; ?>
-		</ul>
-	</div>
-</div>
+		</div>
+		<!-- FIN BANNIERE PROMO 2-->
+		<script>
+			$(function(){
+				$("#blog_preview").load('https://www.galeriedutatouage.com/blog/ .top_slider_blog .stand_slide:nth-child(-n+3)');
+			});
+		</script>
+
+		<!-- SECTION 1 ( STYLE ) -->
+		<section class="container-fluid section hidden-xs">
+			<div class="row section-style" id="section_content">
+				<div class="row no-margin">
+					<div class="section_header">
+						<h3 class="francoisone">les styles de tatouage</h3>
+						<p>Découvrez les meilleurs tatouages par style</p>
+					</div>
+				</div>
+				<div class="row section_container" style="margin-left:0px;">
+					<? foreach(App::table("attributes")->tattooStyle() as $r_attr):?>
+					<? $link = $this->link(array("filters"=>"attr:".$r_attr->id),"galery-with-filters"); ?>
+								<div class="sm_img_container">
+									<? 
+										$img = $r_attr->firstImage();
+										$url = isset($img) ? $img->url("small") : "http://placehold.it/173x177";
+									?>
+									<?= $link->jslink("<img src='$url' class='img-responsive' width='150' height='150'/>"); ?>
+									<p class="label_sm_img">
+									<?= $link->a(__("Tatouage :style:", array("style"=>$r_attr->name())), "text-white"); ?>
+									</p>
+								</div>
+					<? endforeach ?>
+				</div>
+			</div>
+		</section>
+		<!-- FIN SECTION 1 ( STYLE ) -->
+		<!-- SECTION 2 ( STUDIO ) -->
+		<section class="container-fluid section">
+			<div class="row" id="section_content">
+				<div class="section_header">
+					<h3 class="francoisone">Les Studios de tatouage près de chez vous</h3>
+					<p>Choisissez votre studio par situation géographique</p>
+				</div>
+				<div class="section_container_region">
+					<div class="row">
+						<ul class="col-md-3">
+							<? $children = $r_loc->getChildren(); ?>
+							<? $columnize = $this->columnize($children->count(), 3, '</ul><ul class="col-md-3">');?>
+							<? foreach($children as $row): ?>
+								<li><p><?= $row->link()->a(__("Les tatoueurs en :region:", array("region"=>$row->name())), "text-black")?></p></li>
+								<?= $columnize ?>
+							<? endforeach ?>
+							</ul>
+							<ul class="col-md-3">
+								<? foreach($r_loc->getCities(8) as $r_city): ?>
+									<li><p><?= $r_city->link()->a(__("Tatoueurs à :name:", array("name"=>$r_city->name())), "text-black")?></p></li>
+								<? endforeach; ?>
+							</ul>
+					</div>	
+				</div>
+			</div>
+		</section>
+		<!-- FIN SECTION 2 ( STUDIO ) -->
+
+		<!-- SECTION 3 ( PUB ) -->
+		<section class="container-fluid section">
+			<div id="section_content" class="row no-border">
+				<div class="section_header">
+					<h3 class="francoisone">Ils parlent de nous</h3>
+				</div>
+				<div class="section_container_logo">
+					<div class="row">
+						<div class="col-lg-3">
+							<img src="/img/home_biba.png" alt="" class="img-responsive center-block">
+						</div>
+						<div class="col-lg-3">
+							<img src="/img/home_grazia.png" alt="" class="img-responsive center-block">
+						</div>
+						<div class="col-lg-3">
+							<img src="/img/home_shweppes.png" alt="" class="img-responsive center-block">
+						</div>
+						<div class="col-lg-3">
+							<img src="/img/home_inkage.png" alt="" class="img-responsive center-block">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- FIN SECTION 3 ( PUB ) -->
+
+
+		

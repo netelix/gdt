@@ -1,0 +1,32 @@
+<?php
+	$org = $this->org;
+	$tabs = array(
+		"user/edit"=>$this->link(array(), 'user/edit', array('user_admin'=>1))->fragment("title")->anchor(__("Mon compte")),
+		"user/messages"=>$this->link(array(), 'user/messages', array('user_admin'=>1))->fragment("title")->anchor(__("Messagerie")),
+		"user/organizations"=>$this->link(array(), 'user/organizations', array('user_admin'=>1))->fragment("title")->anchor(__("Mes studios")),
+
+);
+	foreach($this->user->organizations("deleted = 0") as $r_org){
+		$name = $r_org->name();
+		$tabs["org_".$r_org->id] =  $this->link(array('id'=>$r_org->id), 'organization-edit')->fragment("title")->anchor(isset($name) ? $name : __("Sans nom"));
+	}
+?>
+
+<? $this->placeholder("sidebar")->captureStart() ?>
+	<ul class="nav nav-pills nav-stacked">
+	<? foreach($tabs as $key=>$link): ?>
+		<? $subtitle = $link->anchor(); ?>
+		<? if($this->current==$key): ?>
+			<li class="active" role="presentation">
+				<?= $link->a(null,"selected active") ?>
+			</li>
+		<? else: ?>
+			<li class="" role="presentation">
+				<?= $link->a() ?>
+			</li>
+		<? endif ?>
+	<? endforeach ?>
+		<li><?= $this->link(array(), "user/logout")->a("Déconnexion") ?></li>
+	</ul>
+	<br>
+<? $this->placeholder("sidebar")->captureEnd() ?>

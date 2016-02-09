@@ -31,6 +31,11 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 	  return 0;
   }
   
+  protected function _additionalAdValues()
+  {
+    return array("num_products"=>$this->products()->count());
+  }
+  
   protected function extraAdValues()
   {	
   	$values = array();	

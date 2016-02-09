@@ -1,0 +1,105 @@
+<? $this->placeholder('sidebar')->captureStart() ?>
+	<h4><?= __("Découvrez la Tattoobox")?></h4>
+	<div>
+		<a href="/tattoobox"><img style="width:100%" src="/img/tattoobox_red.png" class="img-responsive"/></a>
+	</div>
+
+	<h4><?= __("Tatoueurs, rejoignez le réseau!")?></h4>
+	<?= $this->link(array(), "subscription-lead")->a("<img src='/img/autopromo.png' class='img-responsive' style='padding-bottom:15px'/>"); ?>
+	<h4><?= __("Abonnez-vous a la newsletter")?></h4>
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:transparent; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="//galeriedutatouage.us9.list-manage.com/subscribe/post?u=826c7a3d3eb773fd64064b8e5&amp;id=6169f7c852" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Votre adresse email  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-FNAME">Prénom </label>
+	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+</div>
+<div class="mc-field-group">
+	<label for="mce-LNAME">Nom </label>
+	<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+</div>
+<div class="mc-field-group">
+	<label for="mce-MMERGE3">Votre région </label>
+	<select name="MMERGE3" class="form-control selectpicker" id="mce-MMERGE3">
+	<option value=""></option>
+	<option value="choisissez votre région">choisissez votre région</option>
+<option value="Alsace">Alsace</option>
+<option value="Aquitaine">Aquitaine</option>
+<option value="Auvergne">Auvergne</option>
+<option value="Basse-Normandie">Basse-Normandie</option>
+<option value="Bourgogne">Bourgogne</option>
+<option value="Bretagne">Bretagne</option>
+<option value="Centre">Centre</option>
+<option value="Champagne-Ardenne">Champagne-Ardenne</option>
+<option value="Corse">Corse</option>
+<option value="Franche-Comté">Franche-Comté</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guyane">Guyane</option>
+<option value="Haute-Normandie">Haute-Normandie</option>
+<option value="Ile-de-France">Ile-de-France</option>
+<option value="La Réunion">La Réunion</option>
+<option value="Languedoc Roussillon">Languedoc Roussillon</option>
+<option value="Limousin">Limousin</option>
+<option value="Lorraine">Lorraine</option>
+<option value="Martinique">Martinique</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Midi-Pyrénées">Midi-Pyrénées</option>
+<option value="Nord-pas-de-Calais">Nord-pas-de-Calais</option>
+<option value="Pays de Loire">Pays de Loire</option>
+<option value="Picardie">Picardie</option>
+<option value="Poitou-Charentes">Poitou-Charentes</option>
+<option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</option>
+<option value="Rhône-Alpes">Rhône-Alpes</option>
+
+	</select>
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none; width: 100%;line-height: 1.2;"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_826c7a3d3eb773fd64064b8e5_6169f7c852" tabindex="-1" value=""></div>
+    <div class="clear text-center"><input style="margin:0px" type="submit" class="btn btn-warning" value="Je m'inscris" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='dropdown'; /*
+ * Translated default messages for the $ validation plugin.
+ * Locale: FR
+ */
+$.extend($.validator.messages, {
+        required: "Ce champ est requis.",
+        remote: "Veuillez remplir ce champ pour continuer.",
+        email: "Veuillez entrer une adresse email valide.",
+        url: "Veuillez entrer une URL valide.",
+        date: "Veuillez entrer une date valide.",
+        dateISO: "Veuillez entrer une date valide (ISO).",
+        number: "Veuillez entrer un nombre valide.",
+        digits: "Veuillez entrer (seulement) une valeur numérique.",
+        creditcard: "Veuillez entrer un numéro de carte de crédit valide.",
+        equalTo: "Veuillez entrer une nouvelle fois la même valeur.",
+        accept: "Veuillez entrer une valeur avec une extension valide.",
+        maxlength: $.validator.format("Veuillez ne pas entrer plus de {0} caractères."),
+        minlength: $.validator.format("Veuillez entrer au moins {0} caractères."),
+        rangelength: $.validator.format("Veuillez entrer entre {0} et {1} caractères."),
+        range: $.validator.format("Veuillez entrer une valeur entre {0} et {1}."),
+        max: $.validator.format("Veuillez entrer une valeur inférieure ou égale à {0}."),
+        min: $.validator.format("Veuillez entrer une valeur supérieure ou égale à {0}.")
+});}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+	
+	<h4><?= __("Suivez-nous sur Facebook")?></h4>
+	<div class="fb-like-box" data-href="https://www.facebook.com/galeriedutatouage?fref=ts" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false" data-width="350"
+style="background:white"></div>
+<? $this->placeholder('sidebar')->captureEnd() ?>

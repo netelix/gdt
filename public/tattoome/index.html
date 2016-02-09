@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>GALLERIE TATOUAGE</title>
+		<!-- JAVASCRIPTS CALL -->
+		<script src="js/jquery-1.12.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- STYLE CALL -->
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,700italic' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<!-- BEGIN NAVIGATION -->
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default">
+		    <div class="container-fluid" id="container-fluid-navbar">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			        </button>
+			        <a class="navbar-brand opensanscondensed" href="#">TATOO<span style="color:white;">ME</span></a>
+			    </div>
+
+		    	<!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="menu1">
+			        <ul class="nav navbar-nav">
+				        <li><a href="#">création <span class="sr-only">(current)</span></a></li>
+				        <li><a href="#">tatoobox</a></li>
+				        <li><a href="#">blog</a></li>
+			      	</ul>
+			        <ul class="nav navbar-nav navbar-right">
+				        <li><a href="#" class="instagram_link"></a></li>
+				        <li><a href="#" class="facebook_link"></a></li>
+			        </ul>
+		    	</div><!-- /.navbar-collapse -->
+		    </div><!-- /.container-fluid -->
+		</nav>		
+		<nav class="navbar navbar-violet">
+			<div class="container-fluid" id="container-fluid-navbar">
+				<p class="message_inscription francoisone">Tatoueurs, intégrez notre guide des meilleurs studios de France <a href="#" class="lien_inscription">inscription</a></p>
+			</div>
+		</nav>
+		<!-- NAVBAR 2 -->
+		<nav class="navbar navbar-default navbar-sousmenu francoisone">
+		    <div class="container-fluid" id="container-fluid-navbar">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu2" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			        </button>
+			        <a class="navbar-brand navbar-brand-custom opensanscondensed" href="#">
+			        	TATOONOMY <br/>
+			        	<span class="navbar-brand-custom-badge">
+			        		Ex Galeriedutattouage
+			        	</span>
+		        	</a>
+			    </div>
+
+		    	<!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="menu2">
+			        <ul class="nav navbar-nav">
+				        <li><a href="#">Trouver un tatoueur <span class="sr-only">(current)</span></a></li>
+				        <li><a href="#">idées tatouage</a></li>
+				        <li><a href="#">conventions</a></li>
+			      	</ul>
+			        <ul class="nav navbar-nav navbar-right">
+				        <li><a href="#" class="espacemembre opensanscondensed">espace membre</a></li>
+				        <li class="dropdown">
+				            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Luxembourg <span class="caret"></span></a>
+				            <ul class="dropdown-menu">
+					            <li><a href="#">France</a></li>
+					            <li><a href="#">belgique</a></li>
+				            </ul>
+			         	</li>
+			        </ul>
+		    	</div><!-- /.navbar-collapse -->
+		    </div><!-- /.container-fluid -->
+		</nav>	
+		<!-- END NAVIGATION -->
+		<!-- FORMULAIRE TROUVER TATOUEUR -->
+		<div class="container-fluid" id="banner">
+			<video width="100%" height="auto" autoplay loop>
+  				<source src="video/mp4/tatoome.mp4" type="video/mp4" />
+  				<source src="video/ogv/tatoome.ogv" type="video/ogg" />
+			</video>
+			<h1 class="banner_title gothamblack">trouvez un tatoueur près de chez vous</h1>
+			<p class="banner_subtitle gothambold">25 000 studios prêts à vous accueillir</p>
+			<form action="#" class="banner_form form-inline">			
+			    <div class="form-group">
+				    <input type="text" class="form-control" id="where_input" placeholder="Où ? Pays, Département, Ville ...">
+			    </div>				
+			    <div class="form-group">
+			    	<select name="" id="" class="form-control">
+			    		<option value="">Tous les styles</option>
+			    		<option value="">Style1</option>
+			    		<option value="">Style2</option>
+			    	</select>
+			    </div>
+  				<button type="submit" class="btn btn-search">RECHERCHER</button>
+			</form>
+		</div>
+		<!-- END FORMULAIRE TROUVER TATOUEUR -->
+
+		<!-- BANNIERE PROMO -->
+		<div class="container-fluid" id="banner_promo_container">
+			<div class="row" id="banner_promo">
+				<div class="col-lg-6">
+					<div class="promo_container_ld promo_container_left">
+						<div class="title_promo">
+							<h2 class="gothamblack">Création</h2>
+							<p class="gothambold">Créez votre tatouage avec un artiste dessinateur</p>
+						</div>
+						<div class="link_promo">
+							<a href="#" class="btn-link-promo link-promo-red gothambold">Je crée mon tatouage</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="promo_container_ld promo_container_right">
+						<div class="title_promo">
+							<h2 class="gothamblack">Tatoobox</h2>
+							<p class="gothambold">Un cadeau inoubliable : offrez un tatouage</p>
+						</div>
+						<div class="link_promo">
+							<a href="#" class="btn-link-promo link-promo-lightgreen gothambold">Je choisis ma tattoobox</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN BANNIERE PROMO -->
+		<!-- BANNIERE PROMO 2-->
+		<div class="container-fluid" id="banner_promo_container">
+			<div class="row" id="banner_promo">
+				<div class="col-lg-6">
+					<div class="promo_container_md promo_container_md_left">
+						<div class="col-lg-6">
+							<div class="promo_container_md_singleton promo_container_md_singleton_left">
+								<img src="images/img_md.png" alt="">
+								<p class="francoisone label_tag">conventions</p>
+								<h2 class="text_prom gothamblack">Tatooexpo du 15 au 20 avril 2016 à paris</h2>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="promo_container_md_singleton promo_container_md_singleton_right" id="blog1">
+								<img src="images/blog-1.jpg" alt="">
+								<p class="francoisone label_tag">Le Blog</p>
+								<h2 class="text_prom gothamblack">Le tatoueur</br>qui n'avait</br>pas de blase</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="promo_container_md promo_container_md_right">
+						<div class="col-lg-6">
+							<div class="promo_container_md_singleton promo_container_md_singleton_left" id="blog2">
+								<img src="images/blog-2.jpg" alt="">
+								<p class="francoisone label_tag">Le Blog</p>
+								<h2 class="text_prom gothamblack">Tatouage aquarelle</h2>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="promo_container_md_singleton promo_container_md_singleton_right promo_container_md_singleton_custom">
+								<p class="francoisone label_tag">Newsletter</p>								
+								<h2 class="custom_title_text_prom gothamblack">News,<br/>Bons plans, Tendances...</h2>
+								<p class="custom_text_prom gothambook">Recevez le meilleur du tatouage par email</p>
+								<a href="#" class="btn-custom-link-promo link-promo-violet gothambook">Je m'inscris</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FIN BANNIERE PROMO 2-->
+
+		<!-- SECTION 1 ( STYLE ) -->
+		<section class="container-fluid section">
+			<div class="row" id="section_content">
+				<div class="row no-margin">
+					<div class="section_header">
+						<h3 class="francoisone">les styles de tattouage</h3>
+						<p>Découvrez les meilleurs tatouages par style</p>
+					</div>
+				</div>
+				<div class="row no-margin section_container">
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+				</div>
+				<div class="row no-margin section_container">
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+				</div>
+				<div class="row no-margin section_container">
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+				</div>
+				<div class="row no-margin section_container">
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+					<div class="sm_img_container">
+						<p class="label_sm_img">Tatouage Asiatique</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- FIN SECTION 1 ( STYLE ) -->
+		<!-- SECTION 2 ( STUDIO ) -->
+		<section class="container-fluid section">
+			<div class="row" id="section_content">
+				<div class="section_header">
+					<h3 class="francoisone">Les Studios de tatouage près de chez vous</h3>
+					<p>Choisissez votre studio par situation géographique</p>
+				</div>
+				<div class="section_container_region">
+					<div class="row">
+						<div class="col-lg-3 region">
+							<p>Les tatoueurs en Île-de-France</p>
+							<p>Les tatoueurs en Rhône-Alpes</p>
+							<p>Les tatoueurs en Région PACA</p>
+							<p>Les tatoueurs en Nords-Pas-de-Calais</p>
+							<p>Les tatoueurs en Pays de Loire</p>
+							<p>Les tatoueurs en Acquitaine</p>
+							<p>Les tatoueurs en Bretage</p>
+							<p>Les tatoueurs en Midi-pyrénées</p>
+						</div>
+						<div class="col-lg-3 region">
+							<p>Les tatoueurs en Île-de-France</p>
+							<p>Les tatoueurs en Rhône-Alpes</p>
+							<p>Les tatoueurs en Région PACA</p>
+							<p>Les tatoueurs en Nords-Pas-de-Calais</p>
+							<p>Les tatoueurs en Pays de Loire</p>
+							<p>Les tatoueurs en Acquitaine</p>
+							<p>Les tatoueurs en Bretage</p>
+							<p>Les tatoueurs en Midi-pyrénées</p>
+						</div>
+						<div class="col-lg-3 region">
+							<p>Les tatoueurs en Île-de-France</p>
+							<p>Les tatoueurs en Rhône-Alpes</p>
+							<p>Les tatoueurs en Région PACA</p>
+							<p>Les tatoueurs en Nords-Pas-de-Calais</p>
+							<p>Les tatoueurs en Pays de Loire</p>
+							<p>Les tatoueurs en Acquitaine</p>
+							<p>Les tatoueurs en Bretage</p>
+							<p>Les tatoueurs en Midi-pyrénées</p>
+						</div>
+						<div class="col-lg-3 region">
+							<p>Les tatoueurs en Île-de-France</p>
+							<p>Les tatoueurs en Rhône-Alpes</p>
+							<p>Les tatoueurs en Région PACA</p>
+							<p>Les tatoueurs en Nords-Pas-de-Calais</p>
+							<p>Les tatoueurs en Pays de Loire</p>
+							<p>Les tatoueurs en Acquitaine</p>
+							<p>Les tatoueurs en Bretage</p>
+							<p>Les tatoueurs en Midi-pyrénées</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- FIN SECTION 2 ( STUDIO ) -->
+
+		<!-- SECTION 3 ( PUB ) -->
+		<section class="container-fluid section">
+			<div id="section_content" class="row no-border">
+				<div class="section_header">
+					<h3 class="francoisone">Ils parlent de nous</h3>
+				</div>
+				<div class="section_container_logo">
+					<div class="row">
+						<div class="col-lg-3">
+							<img src="images/logo.png" alt="" class="img-responsive center-block">
+						</div>
+						<div class="col-lg-3">
+							<img src="images/logo.png" alt="" class="img-responsive center-block">
+						</div>
+						<div class="col-lg-3">
+							<img src="images/logo.png" alt="" class="img-responsive center-block">
+						</div>
+						<div class="col-lg-3">
+							<img src="images/logo.png" alt="" class="img-responsive center-block">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- FIN SECTION 3 ( PUB ) -->
+
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer_top">
+				<div class="row">
+					<div class="col-lg-3">
+						<h4 class="footer_top_header opensanscondensed" style="font-weight:normal !important;">TATOONOMY</h4>
+						<a href="#" class="footer_top_link link_uppercase">Création</a>
+						<a href="#" class="footer_top_link link_uppercase">Tatoobox</a>
+						<a href="#" class="footer_top_link link_uppercase">Blog</a>
+					</div>
+					<div class="col-lg-3">
+						<h4 class="footer_top_header">SUIVEZ-nous</h4>
+						<a href="#" class="footer_top_link">Facebook</a>
+						<a href="#" class="footer_top_link">instagram</a>
+					</div>
+					<div class="col-lg-3">
+						<h4 class="footer_top_header">Je suis tatoueur</h4>
+						<a href="#" class="footer_top_link">Je souhaite m'inscrire</a>
+					</div>
+					<div class="col-lg-3">
+						<h4 class="footer_top_header">recherche</h4>
+						<a href="#" class="footer_top_link">Tatoueur à Strasbourg</a>
+						<a href="#" class="footer_top_link">Tatoueur à Toulon</a>
+						<a href="#" class="footer_top_link">Tatoueur à Metz</a>
+						<a href="#" class="footer_top_link">Tatoueur à Montreuil</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<a href="#" class="footer_bottom_link">Contact</a>
+				<a href="#" class="footer_bottom_link">Mentions légales</a>
+				<a href="#" class="footer_bottom_link">Conditions d'utilisations</a>
+				<a href="#" class="footer_bottom_link">Conditions de vente</a>
+			</div>
+		</footer>
+		<!-- FIN FOOTER -->
+
+	</body>
+</html>

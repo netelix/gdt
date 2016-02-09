@@ -1,0 +1,339 @@
+﻿<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="<?= App::lang()?>" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
+		<head>
+			<meta charset="utf-8">
+			<? $this->headTitle()->append("La Galerie du Tatouage") ?>
+			<?= $this->headTitle() ?>
+			<?= $this->headMeta()?>
+
+			<!-- Mobile viewport optimized: h5bp.com/viewport -->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+			<meta name="format-detection" content="telephone=no">
+			<!-- Style Sheet>
+			<? $this->headLink()->appendStylesheet("/theme/css/style.css")
+					->appendStylesheet("/theme/css/skin/scheme1.css"); ?>
+
+			<!-- favicon -->
+			<link rel="shortcut icon" href="/favicon.ico">
+			
+			<!--[if lt IE 9]>
+					<script src="js/html5.js"></script>				
+			<![endif]-->
+      
+     	<script type="text/javascript">
+				window.baseclassename = "<?= App::config()->link->baseclassname ?>";
+			</script>
+			<script src="https://js.gleam.io/oi-WfLa2axq.js" async="async"></script>
+
+			<?= $this->headLink()
+				->prependStylesheet('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', "")
+				->appendStylesheet("/uop/bootstrap-select/bootstrap-select.css")
+	      ->appendStylesheet("/css/global.less") ?>
+			    
+		    <?= $this->headScript()
+		  		->prependFile('/uop/js/modernizr-2.7.1-custom/modernizr.min.js')
+          ->appendFile('/uop/js/encryptedlink.js')
+          ->appendFile('/uop/js/helper/jquery.uopAutosuggest.js')
+
+      //    ->appendFile('//connect.facebook.net/fr_FR/all.js#xfbml=1;')
+          ->prependFile("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js")
+          ->prependFile("//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+          ->appendFile("//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+          ->appendFile('/uop/bootstrap-select/bootstrap-select.js')
+          ->appendFile("/uop/js/jquery.autosize.min.js")
+          ->appendFile('//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js') ?>
+
+
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+			<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+			<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,700italic' rel='stylesheet' type='text/css'>
+
+			<script type="text/javascript">
+				$.widget.bridge('uibutton', $.ui.button);
+				$.widget.bridge('uitooltip', $.ui.tooltip);
+			</script>
+		  <script>
+	      $(function(){
+	        $('.selectpicker').selectpicker();
+					$(".checkbox-filters input[type=checkbox]").click(function(){
+						document.location = $(this).parent("a").attr("href");
+					});
+	      })
+	    </script>
+			<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+			<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		</head>		
+		<!-- BODY -->
+		
+		<body id="body" class="<?=$this->body_class?>">
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', '<?= App::config()->analytics->id ?>', 'auto');
+		  ga('send', 'pageview');
+		
+		  </script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+			<div class="mobile-bar visible-xs">
+				<? $global_search = $this->placeholder("global_search"); 
+					$global_search->captureStart();
+				?>
+				<? if(isset($this->search_form)):?>
+				<div class="global-search center-wrapper">
+					<?= $this->formHeader($this->search_form, array("class"=>'form-inline'))?>
+							<?= $this->search_form->renderGroups(array(
+							  "loc_name"=>array(
+							    "label"=>__("Ville, Département...")
+							  )));?>
+						<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+					</form>
+				</div>
+				<? endif ?>
+				<? $global_search->captureEnd(); ?>
+				<? $global_search ?>
+			</div>
+
+			<div class="top-wrapper-mask clearfix">	
+
+			<!-- HEADER -->
+			
+			<div id="carousel-top" class="carousel slide hidden-print" data-ride="carousel">
+			  <!-- Indicators -->
+			 		
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <img src="/img/slide1.jpg" alt="...">
+			      <div class="carousel-caption">
+			      </div>
+			    </div>
+			  </div>
+			  
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-top" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-top" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			  </a>
+			  <?= $this->placeholder("carousel-content") ?>
+		  </div>
+
+			<header class="top-wrapper small-wrapper clearfix hidden-print" style="z-index:2">
+					<?= $this->partial("admin/navbar.phtml"); ?>
+					<div class="center-wrapper">
+						<div class="top-content-position">
+							<div class="top-content skin-font-color3">
+								<div class="top-content-up skin-border-color3 clearfix">
+									
+									<!-- Logo  -->
+								
+									<span class="logo"><img src="/img/logo.png" class="hidden-xs"/><?= Link::home()->a("LA<b>GALERIE</b>DU<b>TATOUAGE</b>") ?>	
+									<div class="fb-like hidden-xs" 
+										data-layout="button_count" 
+										data-action="like" 
+										data-show-faces="true" 
+										data-share="false" 
+										data-href="https://www.facebook.com/galeriedutatouage"></div>
+									</span>
+									
+									<!-- /Logo  -->
+									
+									<!-- Main menu  -->
+									
+									<ul class="main-menu regular">
+										<li><?= Link::home()->a(__("Accueil"))?></a></li>
+										<li><a href="/tattoobox" style="color:#EA4853">La TattooBox</a></li>
+										<li><?= App::table("locations")->country("FR")->link()->a(__("Trouver un tatoueur"))?></a></li>
+										<li><?=  $this->link(array(), 'galery')->a(__("Idées tatouages"))?></a></li>
+										<li><a href="http://blog.galeriedutatouage.com" _target="blank">Le blog</a></li>
+										<? if($this->user()->loggedUser()){
+											$member_link = $this->link(array(), 'user/organizations');
+										} else {
+											$member_link = $this->link(array(), 'user/login');
+										}?>
+										<li class="dropdown">
+											<? if($logged_user = $this->user()->loggedUser()):?>
+											<a class="dropdown-toggle" data-toggle="dropdown" data-target=".dropdown-container" href="javascript:void();"><?= __("Mon compte") ?> <b class="caret"></b></a>
+											<div class="dropdown-container" >
+										  <ul class="dropdown-menu dropdown-menu-right">
+										    <li><?=Link::factory(array(), 'user/edit')->a(__("Infos personnelles")); ?>
+										    </li>
+										    <li><?=Link::factory(array(), 'user/organizations')->a(__("Mes annonces")); ?>
+										    </li>
+										    <li><?=Link::factory(array(), 'user/logout')->a(__("Se déconnecter")); ?>
+										    </li>										  </ul>
+											</div>
+										  <? else: ?>
+										  <span><?= $member_link->a(__("Espace membre"))?>
+										  <? endif ?>
+										</li>
+
+									</ul>
+									
+									<!-- /Main menu  -->
+									
+									<!-- Mobile menu -->
+																		
+									<!-- /Mobile menu  -->
+									
+								</div>									
+								<?= $global_search ?>
+
+								<div class="top-content-down skin-border-color3 hidden-xs">
+								
+									<!-- Place info  -->
+								
+									<div class="top-content-down-text regular">
+										  <div class="hidden-xs">
+	  										<span class="skin-font-color1"><?= __("Vous êtes ici:")?>	 </span>
+										    <?= $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); ?>
+										  </div>
+									</div>
+									
+									<!-- /Place info  -->
+									
+									<!-- Social  -->
+									<!-- /Social  -->
+									
+								</div>
+							</div>
+						</div>
+					  <? $title = trim($this->placeholder('h1')) ?>
+					  <? if(!empty($title)): ?>
+					   	<?= $title ?>
+					  <? endif ?>
+					</div>
+				<!-- /bottom background - absolute -->
+				
+				
+				<!-- /bottom background - absolute -->
+			</header>
+			
+			<!-- /HEADER -->
+			<div class="background">
+				<div class="background-inner">
+					<div class="center-wrapper main-content-wrapper">
+					
+						<!-- MAIN CONTENT -->
+		
+							<!-- events -->
+						<div class="main-content">
+		
+						  <div class="row" style="position:relative;background: #FFF;margin-top: 15px;">
+						    <? $sidebar = trim($this->placeholder('sidebar'))?>
+						    <? $col = !empty($sidebar) ? "col-sm-8" : "col-sm-12" ?>
+						    
+						    <div class="<?=$col?> content-col">
+						    	<?= $this->flashMessages() ?>
+						      <?= $this->layout()->content ?>
+						    </div>
+						    <? if(!empty($sidebar)): ?>
+						    <div class="col-sm-4 hidden-xs" id="sideBar">
+						      <?= $sidebar?>
+						    </div>
+						    <? endif ?>
+						  </div>
+						</div>
+						<!-- /MAIN CONTENT -->
+					</div>		
+				</div>		
+			</div>		
+			<!-- BOTTOM -->
+				
+			<div class="bottom skin-background-color2 hidden-print">
+				<div class="center-wrapper widget-bottom-contact-us skin-font-color10">
+				
+					<!-- Bottom widget place #1 -->
+				
+					<div class="one-third regular">
+						<h2 class="skin-font-color3"><span class="bold">Social</span></h2>
+							<ul class="social">
+								<li><a href="https://www.facebook.com/galeriedutatouage"><img src="/theme/images/social/facebook.png" alt="social">Facebook</a></li>
+								<li><a href="https://twitter.com/GalerieTatouage​"><img src="/theme/images/social/twitter.png" alt="social">Twitter</a></li>
+								<li><a href="https://plus.google.com/u/0/b/105612669225859415976/105612669225859415976/posts"><img src="/theme/images/social/googleplus.png" alt="social">Google+</a></li>
+							</ul>
+					</div>
+					
+					<!-- Bottom widget place /#1 -->
+					
+					<!-- Bottom widget place #2 -->
+					
+					<div class="one-third widget-bottom-latest-posts regular">
+						<h2 class="skin-font-color3"> <span class="bold">Informations</span></h2>
+						<ul>
+							<li><?= Link::factory(array("page"=>"contact"), "static")->a("Contact")?></li>
+							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Mentions légales")?></li>
+							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Conditions d'utilisation")?></li>
+							<li><?= Link::factory(array("page"=>"legal"), "static")->a("Conditions de vente")?></li>
+						</ul>
+					</div>
+					
+					<!-- Bottom widget place /#2 -->
+					
+					<!-- Bottom widget place #3 -->
+					
+					<div class="one-third widget-bottom-tags regular last">
+						<h2 class="skin-font-color3">Recherches <span class="bold"></span></h2>
+						<? foreach(App::table("locations")->country("FR")->getCities(10) as $r_city):?>
+							<?= $r_city->link()->a(__("Tatoueur à :name:", array("name"=>$r_city->name())))?>
+						<? endforeach; ?>
+					</div>
+					
+					<!-- Bottom widget place /#3 -->
+					
+					<!-- Bottom widget place #4 -->
+					
+				<!-- Bottom widget place /#4 -->
+					
+				</div>
+				
+				<!-- Go top - absolute  -->
+				
+				<div class="go-top skin-border-color5 skin-border-hover1">
+					<a href="#" onClick="ScrollTo('body')"><img src="/theme/images/go-top.png" alt="go-top"></a>
+				</div>	
+				
+				<!-- Go top - /absolute  -->
+				
+			</div>
+				
+			<!-- /BOTTOM -->
+			
+			<div class="clearfix"></div>
+			
+			<!-- FOOTER -->
+			
+			
+			<!-- /FOOTER -->
+
+			<!-- ATTACHMENTS>
+
+			<!-- /ATTACHMENTS -->
+			</div>
+			<script language="javascript">
+			$(function(){
+				$(".uop-autosize").autosize();
+			});
+			</script>
+
+		</body>	
+
+		<!-- /BODY -->
+		
+</html>

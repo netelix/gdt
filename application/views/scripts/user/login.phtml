@@ -1,10 +1,13 @@
-<?= $this->partial("shared/_sidebar.phtml", array("joinus"=>true)) ?>
-
 <?
-$form = $this->form;
+	$form = $this->form;
+	$this->content_with_sidebar = true;
+	$bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
+	$bc->append("Espace membre");
 ?>
-<h2 class="title-2 h4"><?= __("Identifiez vous pour accèder à votre espace personel")?></h2>
-<div style="padding:15px">
+<? $this->partial("shared/_sub-header.phtml", $this) ?>
+
+<h1><?= __("Identifiez vous pour accèder à votre espace personel")?></h1>
+<div>
 <?= $this->formHeader($form); ?>
 	<?= $form->renderGroups(array(
 		"email"=>__("Adresse email"),

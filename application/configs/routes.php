@@ -9,6 +9,25 @@ return array(
       'page'=>1
     )
   ),
+  'conventions'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/conventions',
+      'defaults' => array(
+      'controller'=>'location',
+      'action'=>'conventions',
+      'page'=>1
+    )
+  ),
+  'creations'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/creation',
+      'defaults' => array(
+      'controller'=>'index',
+      'action'=>'creation',
+      'page'=>1
+    )
+  ),
+
   'galery-focus'=>array(
     'type'   => 'Zend_Controller_Router_Route',
     'route'  => '/:lang/galery-focus/:id',

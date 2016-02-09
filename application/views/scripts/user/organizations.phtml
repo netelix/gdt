@@ -1,3 +1,4 @@
+<? $this->content_with_sidebar = true ?>
 <? $this->body_class = 'bo'; ?>
 <? if($this->logged_admin): ?>
 	<?= $this->partial("user/_form_add_org.phtml", $this); ?>
@@ -29,3 +30,4 @@
     </li>
 <? endforeach ?>
 </ul>
+<?= $this->partial("shared/owner-sidebar.phtml", array("user"=>$this->user()->loggedUser(), "current"=>"user/organizations") ) ?>
