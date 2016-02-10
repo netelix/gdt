@@ -22,8 +22,8 @@ if(isset($r_user)){
 	<div class="studio_avis_avis" id="review<?= $review->id ?>">
 		<div class="studio_avis_avis_text">
 			<p class="author_avis"><?=$review->user()->name()?></p>
-			<p><?= $review->name() ?><br>
-			<?= $review->description()->toPara() ?></p>
+			<?= $review->name() ?><br>
+			<?= $review->description()->toPara() ?>
 			<? if($can_answer && $response instanceOf Uop_Form_ReviewAnswer): ?>
 			<?= $this->formHeader($response, array("class"=>"form-answer", "action"=>"#review$review->id"))?>
 			<? $response->hideLabels(true) ?>

@@ -35,8 +35,9 @@
 							<p class="gothambold">Créez votre tatouage avec un artiste dessinateur</p>
 						</div>
 						<div class="link_promo">
-							<a href="#" class="btn-link-promo link-promo-red gothambold"><span class="hidden-xs">Je crée mon tatouage</span>
-							<span class="visible-xs">Créer</span></a>
+							<?= $this->link(array(), "creations")->a('<span class="hidden-xs">Je crée mon tatouage</span>
+							<span class="visible-xs">Créer</span>', "btn-link-promo link-promo-red gothambold"); ?>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -47,7 +48,7 @@
 							<p class="gothambold">Un cadeau inoubliable : offrez un tatouage</p>
 						</div>
 						<div class="link_promo">
-							<a href="#" class="btn-link-promo link-promo-lightgreen gothambold"><span class="hidden-xs">Je choisis ma tattoobox</span>
+							<a href="https://www.galeriedutatouage.com/tattoobox" class="btn-link-promo link-promo-lightgreen gothambold"><span class="hidden-xs">Je choisis ma tattoobox</span>
 							<span class="visible-xs">Choisir</span></a>
 						</div>
 					</div>
@@ -63,7 +64,7 @@
 						<p class="francoisone label_tag">Newsletter</p>								
 						<h2 class="custom_title_text_prom gothamblack">News,<br/>Bons plans, Tendances...</h2>
 						<p class="custom_text_prom gothambook">Recevez le meilleur du tatouage par email</p>
-						<a href="#" class="btn-custom-link-promo link-promo-violet gothambook">Je m'inscris</a>
+						<a href="#" class="btn-custom-link-promo link-promo-violet gothambook" data-toggle="modal" data-target="#newsletter">Je m'inscris</a>
 					</div>
 			</div>
 		</div>
@@ -156,4 +157,4 @@
 		<!-- FIN SECTION 3 ( PUB ) -->
 
 
-		
+	<?= $this->partial("shared/_mailing-dialog.phtml") ?>	

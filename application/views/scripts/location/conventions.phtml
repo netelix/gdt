@@ -16,11 +16,17 @@
 				<h1>Ici, Bientôt...</h1>
 				<p>Nous vous proposerons notre sélection des rendez-vous tatouage à ne pas manquer: conventions, salons, ateliers...</p>
 				<p>Soyez informé en avant première, laissez votre email :</p>
-				<form class="form-inline">				
-					<div class="form-group">
-						<input type="email" class="form-control launch_input" placeholder="Adresse email">
-					</div>
+				<?= $this->formHeader($this->form, array("class"=>"form-inline")) ?>
+				<? if($this->contacted == false): ?>
+				<? $this->form->hideLabels(true); ?>
+					<?= $this->form->renderGroups(array(
+								"email"=>array(
+									"group_class"=>"launch_email",
+									"label"=>__("Adresse email")
+								)))
+					?>
 					<button type="submit" class="btn btn-default">S'inscrire !</button>
+				<? endif ?>
 				</form>
 			</div>
 			
