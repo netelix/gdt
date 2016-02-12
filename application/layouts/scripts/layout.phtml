@@ -55,6 +55,11 @@
 				$(".checkbox-filters input[type=checkbox]").click(function(){
 					document.location = $(this).parent("a").attr("href");
 				});
+				$('.autopromo').click(function(e){
+					var link = $(this).find("a");
+					var url = link.attr("href");
+					window.location = url;
+				});
       })
     </script>
 	</head>

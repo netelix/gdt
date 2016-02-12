@@ -1138,7 +1138,6 @@ margin-left: -35%;
 }
 @media (max-width: 1265px){
 	.filtres{
-		min-height: 225px;
 		float:left;
 		width: 100%;
 	}
@@ -1201,7 +1200,6 @@ margin-left: -35%;
 			width: 30%;
 			margin-left:5%;
 			float:left;
-			min-height:250px;
 			background-color: white;
 			margin-bottom:20px;
 		}

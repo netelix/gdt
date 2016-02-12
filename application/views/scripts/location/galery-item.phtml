@@ -13,7 +13,8 @@ $meta = empty($this->meta) ? false : $this->meta;
 		<? if(!isset($this->hide_buttons)): ?>
 		<div class="idee_singleton_footer">
 			<div class="text-center" style="margin-top:10px">    	
-				<div class="fb-like" data-href="<?= $url?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+				<div class="fb-like hidden-xs" data-href="<?= $url?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				<div class="fb-like visible-xs" data-href="<?= $url?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 			</div>
 			<? endif ?>
 			<? if($meta): ?>
