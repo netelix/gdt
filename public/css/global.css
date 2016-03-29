@@ -1186,6 +1186,10 @@ body .top-wrapper-mask {
 .studio_photos_carousel .carousel-main .item {
   height: 100%;
 }
+.studio_photos_carousel .carousel-main .carousel-inner img,
+.studio_photos_carousel .carousel-main .item img {
+  height: 100%;
+}
 .studio_photos_carousel .carousel_menu {
   height: 120px;
 }
@@ -1304,4 +1308,7 @@ body .top-wrapper-mask {
   .organization-show .studio_description_footer img {
     float: none !important;
   }
+}
+.autopromo {
+  cursor: pointer;
 }

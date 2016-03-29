@@ -264,7 +264,7 @@
 					<!-- fin content -->
 					<!-- sidebar -->
 					<div class="studio_sidebar_width" id="form_fixed">
-						<h2 id="contact">Contactez le studio</h2>
+										<h2 id="contact">Contactez le studio</h2>
 						<p>Par téléphone</p>
 					  <a class="phone-number-toggler collapse in bt" 
 					  	data-toggle="collapse" 
@@ -272,6 +272,13 @@
 					  		<?= __("Voir le numéro de téléphone")?>
 					  </a>
 					  <p class="well well-sm collapse phone-number"><span class="glyphicon glyphicon-phone"></span><?= $org->phoneNumber() ?></p>
+				  	 <script>
+						  <?= $this->eventHit($org, "visit");?>
+						  $(".phone-number-toggler").click(function(){
+						  <?= $this->eventHit($org, "show-phone");?>
+						  }); 
+						</script>
+
 						<p>Par email</p>
 				  	<? if($contacted = $this->contact_form->sentTo($org->id)): ?>
 				  	<div class="alert alert-success alert-dismissable">
@@ -283,7 +290,10 @@
 				  	<? endif ?>
 						<div id="contact-form-content" class="<?= $contacted ? "collapse":""?>">
 						  <p><?=__("Pour contacter le studio, remplissez le formulaire suivant")?></p>
-						  <?= $this->formHeader($this->contact_form) ?>
+						  <?= $this->formHeader($this->contact_form, array(
+						  	"enctype"=>"multipart/form-data",
+						  	"id"=>"fileupload",
+						  	)) ?>
 						    <? $this->contact_form->hideLabels(true); ?>
 						    <?= $this->contact_form->renderGroups(array(
 						      "fname"=>__("Nom*"),
@@ -294,10 +304,148 @@
 						      "message"=>array(
 						        "label"=>__("Précisez votre demande*"),
 						        "attribs"=>array("rows"=>5))
-						    ));?>
+						    ));?>						    
 								<p class="required_fields">* champs obligatoires</p>
-								<button type="submit" class="custom_submit">Envoyer</button>
-							</form>
+								
+								<?
+	$backlink = $this->backlink;
+	$action = $this->action;
+?>
+
+<form id="fileupload" action="<?=$action?>" method="POST" enctype="multipart/form-data">
+    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+    <!-- The table listing the files available for upload/download -->
+    <div role="presentation" class="table-striped"><div class="files row" style="margin-left:-7.5px;margin-right:-7.5px;"></div></div>
+
+    <div class="row fileupload-buttonbar">
+            <!-- The fileinput-button span is used to style the file input field as button -->
+            <a class="" style="font-family: 'Francois One', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #73569d;
+    text-decoration: underline; position:relatice">
+                <i class="glyphicon glyphicon-plus" style="
+    font-size: 36px;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -40px;
+"></i>
+                <span><?=__("Ajouter des images...")?></span>
+                <input type="file" name="files[]" multiple style="position: absolute;
+                  top: 0;
+                  right: 0;
+                  margin: 0;
+                  opacity: 0;
+                  -ms-filter: 'alpha(opacity=0)';
+                  direction: ltr;
+                  cursor: pointer;
+                  height: 100%;
+                  width: 100%;">
+            </a> 
+            <!-- The global file processing state -->
+            <span class="fileupload-process"></span>
+        <!-- The global progress state -->
+    </div>
+		<button type="submit" class="custom_submit">Envoyer</button>
+</form>
+
+<!-- The template to display files available for upload -->
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <div class="template-upload fade row">
+      <span class="preview pull-left col-md-3"></span>
+      <div class="col-md-9">
+	      <p class="name">{%=file.name%}</p>
+	      <strong class="error text-danger"></strong>
+	      <p class="size">Processing...</p>
+	      <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+      </div>
+    </div>
+{% } %}
+</script>
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+            {% if (file.thumbnailUrl) { %}
+				    <div class="template-download col-md-6" style="margin:7.5px; padding:0px; width:18%">
+				
+				            <span class="preview">
+				                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img class="img-responsive" src="{%=file.thumbnailUrl%}"></a>
+				            </span>
+				            <input type="hidden" name="images[]" value="{%=file.id%}"/>
+
+				    </div>
+
+            {% } %}
+
+            {% if (file.error) { %}
+                <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+            {% } %}
+{% } %}
+</script>
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+<script src="/uop/jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<!-- The Templates plugin is included to render the upload/download listings -->
+<script src="/uop/jquery-file-upload/js/tmpl.min.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="/uop/jquery-file-upload/js/load-image.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="/uop/jquery-file-upload/js/canvas-to-blob.min.js"></script>
+<!-- blueimp Gallery script -->
+<script src="/uop/jquery-file-upload/js/jquery.blueimp-gallery.min.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="/uop/jquery-file-upload/js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="/uop/jquery-file-upload/js/jquery.fileupload.js"></script>
+<!-- The File Upload processing plugin -->
+<script src="/uop/jquery-file-upload/js/jquery.fileupload-process.js"></script>
+<!-- The File Upload image preview & resize plugin -->
+<script src="/uop/jquery-file-upload/js/jquery.fileupload-image.js"></script>
+<!-- The File Upload audio preview plugin -->
+<script src="/uop/jquery-file-upload/js/jquery.fileupload-audio.js"></script>
+<!-- The File Upload video preview plugin -->
+<script src="/uop/jquery-file-upload/js/jquery.fileupload-video.js"></script>
+<!-- The File Upload validation plugin -->
+<script src="/uop/jquery-file-upload/js/jquery.fileupload-validate.js"></script>
+<!-- The File Upload user interface plugin -->
+<script src="/uop/jquery-file-upload/js/jquery.fileupload-ui.js"></script>
+<!-- The main application script -->
+<script src="/uop/jquery-file-upload/js/main.js"></script>
+<!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
+<!--[if (gte IE 8)&(lt IE 10)]>
+<script src="js/cors/jquery.xdr-transport.js"></script>
+<![endif]-->
+
+<script>
+  $(function(){
+    $("#fileupload").fileupload("option",
+    {
+      autoUpload:true,
+      start:function(){
+        $(".next").addClass("disabled");
+      },
+      stop:function(){
+        $(".next").removeClass("disabled");
+      }
+    });
+    $("#fileupload").submit(function(){
+    	var no_send = false;
+	    $("#fileupload :input, #fileupload textarea").not("[type='submit'],[type='file']").each(function() {
+		    if($(this).val() == ""){
+		    	no_send = true;
+			    $(this).css("border-color","red");
+		    }
+	    });
+	    if(no_send){
+		    return false;
+	    }
+    });
+  });
+</script>
+								
+								
 						</div>
 					</div>
 					<!--fin sidebar -->

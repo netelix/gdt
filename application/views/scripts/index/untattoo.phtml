@@ -1,0 +1,39 @@
+<?
+	$this->full_width = true;
+	$bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
+	$bc->append("Créations");
+	$this->headTitle("Créations de tatouages");
+	$this->headMeta()
+		->appendName("description", "Créations de tatouages");
+
+?>
+
+<? $this->partial("shared/_sub-header.phtml", $this) ?>		<!-- SERP CONTAINER -->
+		<div class="container-fluid launching">
+			<div class="launching_container center-block">
+				<h1>Ici, Bientôt...</h1>
+				<p>Vous pourrez effacer votre tatouage.</p>
+				<p>Envoyez-nous une photo du tatouage que vous souhaitez effacer :</p>
+				<?= $this->formHeader($this->form, array('enctype'=>'multipart/form-data')) ?>
+				<? if($this->contacted == false): ?>
+				<? $this->form->hideLabels(true); ?>
+					<?= $this->form->renderGroups(array(
+								"email"=>array(
+									"group_class"=>"launch_email",
+									"label"=>__("Adresse email")
+								),
+								"adm2"=>array("label"=>__("Département"))
+							))
+					?>
+					<div class="form-group">
+						<input type="file" name="image" style="opacity: 0;"/>
+						<a class="btn dropdown-toggle  btn-default" style="margin-top: -60px;"><?= __("Joindre la photo de votre tatouage") ?></a>
+					</div>
+					<button type="submit" style="margin-left:0px" class="btn btn-default">Envoyer !</button>
+				<? endif ?>
+				</form>
+			</div>
+			
+		</div>
+		<!-- FIN SERP CONTAINER -->
+		

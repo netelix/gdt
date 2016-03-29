@@ -154,7 +154,7 @@ var baselink = '<?= $this->baselink ?>';
   <div class="modal-dialog">
     <div class="modal-content">
     	<? if($focus): ?>
-    		<?= $this->partial("location/galery-focus.phtml", array("img"=>$this->img)); ?>
+    		<?= $this->partial("location/galery-focus.phtml", array("img"=>$this->img, "form"=>$this->form)); ?>
     	<? endif ?>
     </div>
   </div>
