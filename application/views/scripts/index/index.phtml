@@ -1,6 +1,7 @@
 <? 
 	$r_loc = App::table("locations")->country("FR"); 
 	$this->full_width = true;
+	$this->body_class = "index"
 ?>
 
 		<div class="container-fluid" id="banner">
@@ -155,6 +156,7 @@
 			</div>
 		</section>
 		<!-- FIN SECTION 3 ( PUB ) -->
+		<?	$this->headTitle("Galerie du tatouage devient Tattoome", "SET"); ?>
 
 
 	<?= $this->partial("shared/_mailing-dialog.phtml") ?>	

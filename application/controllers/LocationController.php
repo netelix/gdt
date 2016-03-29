@@ -80,6 +80,15 @@ class LocationController extends Uop_Controller_Location
 			$pager_link = null;
 		}
 
+		if($this->_loggedAdmin() && isset($img)){
+			$this->view->form = $form = App::form("AdminPhoto", $img, array($img->ref_type."_".$img->ref_id=>"1"));
+			if($this->_isSubmittedAndValid($form)){
+        $img->updateFromTranslationForm($form->getSubForm("names"));
+		    foreach( $form->getAttributesCheckboxesSubForms() as $attribute_form){
+		      $img->updateFromAttributesCheckboxesForm($attribute_form);
+		    }
+			}
+		}
 		if($this->_isAjax() && isset($img_id)){
       $this->_helper->layout->disableLayout();
 			$this->render("galery-focus");

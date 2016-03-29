@@ -2,7 +2,9 @@
 <html lang="<?= App::lang()?>">
 	<head>
 		<meta charset="UTF-8">
+		<? if($this->body_class != "index"): ?> 
 		<? $this->headTitle()->append("Tattoome, ex Galerie du Tatouage") ?>
+		<? endif ?>
 		<?= $this->headTitle() ?>
 		<?= $this->headMeta()?>
 		<!-- JAVASCRIPTS CALL -->
@@ -106,15 +108,13 @@
 			      	</ul>
 			        <ul class="nav navbar-nav navbar-right">
 				        <li><a href="https://www.instagram.com/lagaleriedutatouage/" target="_blank" class="instagram_link"></a></li>
-				        <li><a href="https://www.facebook.com/galeriedutatouage" target="_blank" class="facebook_link"></a></li>
+				        <li><a href="https://www.facebook.com/tattootattoome" target="_blank" class="facebook_link"></a></li>
 			        </ul>
 		    	</div><!-- /.navbar-collapse -->
 		    </div><!-- /.container-fluid -->
 		</nav>		
 		<nav class="navbar navbar-violet">
 			<div class="container-fluid" id="container-fluid-navbar">
-				<p class="message_inscription francoisone hidden-xs">Tatoueurs, intégrez notre guide des meilleurs studios de France	<?= $this->link(array(), "subscription-lead")->a("inscription", "lien_inscription") ?></p>
-				<p class="message_inscription francoisone visible-xs">Tatoueurs, rejoignez-nous<?= $this->link(array(), "subscription-lead")->a("inscription", "lien_inscription") ?></p>
 			</div>
 		</nav>
 		<!-- NAVBAR 2 -->
@@ -141,6 +141,7 @@
 				        <li class="<?= $this->active == 'studio' ? 'active':''?>"><?= App::table("locations")->country("FR")->link()->a('Trouver un tatoueur <span class="sr-only">(current)</span>')?></li>
 				        <li class="<?= $this->active == 'galery' ? 'active':''?>"><?=  $this->link(array("page"), 'galery')->a(__("Idée tatouage"))?></li>
 				        <li class="<?= $this->active == 'conventions' ? 'active':''?>"><?=  $this->link(array(), 'conventions')->a(__("Conventions"))?></li>
+				        <li class="<?= $this->active == 'untattoo' ? 'active':''?>"><?=  $this->link(array(), 'untattoo')->a(__("Détatouage"))?></li>
 
 			      	</ul>
 			        <ul class="nav navbar-nav navbar-right">
@@ -149,7 +150,7 @@
 								} else {
 									$member_link = $this->link(array(), 'user/login');
 								}?>
-				        <li><?= $member_link->a("espace membre", "espacemembre opensanscondensed") ?></li>
+				        <li><?= $member_link->a("espace tatoueur", "espacemembre opensanscondensed") ?></li>
 				        <li class="dropdown">
      				        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
      				        	<?= $this->belgium ? "Belgique" : "France" ?> <span class="caret"></span></a>
@@ -197,12 +198,13 @@
 					</div>
 					<div class="col-lg-3">
 						<h4 class="footer_top_header">SUIVEZ-nous</h4>
-						<a href="https://www.facebook.com/galeriedutatouage/" target="_blank" class="footer_top_link">Facebook</a>
+				    <a href="https://www.facebook.com/tattootattoome" target="_blank" class="footer_top_link">Facebook</a>
 						<a href="https://www.instagram.com/lagaleriedutatouage/" target="_blank" class="footer_top_link">instagram</a>
 					</div>
 					<div class="col-lg-3">
 						<h4 class="footer_top_header">Je suis tatoueur</h4>
 						<?= $this->link(array(), "subscription-lead")->a("Je souhaite m'inscrire", "footer_top_link") ?>
+						<?= $member_link->a("Espace membre", "footer_top_link") ?>
 					</div>
 					<div class="col-lg-3">
 						<h4 class="footer_top_header">recherche</h4>	
@@ -220,6 +222,5 @@
 			</div>
 		</footer>
 		<!-- FIN FOOTER -->
-
 	</body>
 </html>

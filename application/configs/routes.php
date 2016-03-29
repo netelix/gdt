@@ -27,7 +27,15 @@ return array(
       'page'=>1
     )
   ),
-
+  'untattoo'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/detatouage',
+      'defaults' => array(
+      'controller'=>'index',
+      'action'=>'untattoo',
+      'page'=>1
+    )
+  ),
   'galery-focus'=>array(
     'type'   => 'Zend_Controller_Router_Route',
     'route'  => '/:lang/galery-focus/:id',

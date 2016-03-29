@@ -15,10 +15,41 @@
 	<div>
 		<?= __("Ce tatouage vous plait, cliquez sur j'aime et partagez-le sur facebook");?>
     <? $url = $this->link(array("id"=>$this->img->id),"galery-focus")->option("canonical", true)->assemble()?>
-    <br/>
     <div class="fb-share-button" data-type="button" href="<?= $url ?>" data-href="<?= $url ?>"></div>
 		<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" data-href="<?= $url?>"></div>
+		
+		<? if($this->user()->admin()): ?>
+		<? $subform = $this->form ?>
+		<?= $this->formHeader($this->form, array("action"=>$this->link(array(), "galery")->assemble()."?id=".$this->img->id, "id"=>"edit-photo")) ?>
+		  <div class="clearfix">
+		    <?= $this->translationFields($subform->getSubform("names")->getSubforms())
+		    	->renderGroups(array("label"=>"")); ?>
+		    <? foreach($this->img->attributesList("tattoo_style") as $label):?>
+		    	<span class="label label-default"><?=$label?></span>
+		    <? endforeach ?>
+		  </div>
+		  <div class="" id="img_<?= $this->img->id ?>_styles">
+		 	 <?= $subform->renderAttributesCheckboxes("tattoo_style", array("label"=>null, "cols"=>3))?>
+		  </div>
+		  <div class="clearfix">
+			  <input type="submit" class="btn btn-success pull-right" value="<?= __("Enregistrer")?>">
+		  </div>
+	  </form>
+	  <script>
+		  $("#edit-photo").submit(function() { 
+		  	var $form = $(this);
+		  	var data = $form.serialize();
+		  	$form.html("<img src='/img/loading.gif' width='200px' height='200px'>");
+		  	$.post($form.attr("action"), data, function(data) { 
+			  	$("#focus-container .modal-content").html(data);
+		  	});
+		  	return false;
+		  });
+	  </script>
+		<? endif ?>
 	</div>
 </div>
+
+
 
 <? $this->headMeta()->appendName("robots", "noindex,follow"); ?>
