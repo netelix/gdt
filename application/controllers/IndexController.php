@@ -33,7 +33,7 @@ class IndexController extends Uop_Controller_Index
   
   public function untattooAction()
   {
-	  $form = App::form("Simple");
+	  $form = App::form("Simple", null);
 	  $form->addText("email", array("required"=>true));
 	  $adm2 = App::table("locations")->country("FR")->getDescendants(null, array("type"=>"adm2"));
 	  $adm2_options = array(__("Votre département"));
