@@ -113,6 +113,7 @@ body{
 .navbar-violet {
   background-color: #73569d;
   border-color: #73569d;
+  height: 15px;
 }
 	.navbar-violet .message_inscription{
 		text-align:center;
@@ -136,6 +137,7 @@ body{
 .navbar-sousmenu{
   background-color: white;
   border-color: white;
+  margin-top: 65px;
 }
 	
 	.navbar-sousmenu .navbar-nav > li > a {
@@ -330,43 +332,74 @@ margin-left: -35%;
 			padding-bottom:30px;
 			border-bottom:1px solid black;
 		}
-			#banner_promo .col-lg-6{
+			#banner_promo .col-lg-4{
 				padding:0px;
 			}
-				#banner_promo .col-lg-6	.promo_container_ld{
+				#banner_promo .col-lg-4	.promo_container_ld{
 					min-height:168px;
 					width: 100%;
 					max-width: 482px;
 				}
-				#banner_promo .col-lg-6	.promo_container_left{
+				#banner_promo .col-lg-4	.promo_container_left{
 					background:url('../images/img_lg.png') left no-repeat;
+					background-position: -30px;
 				}
-				#banner_promo .col-lg-6 .promo_container_right{
-					float:right;
-					background:url('../images/tatoo-box.jpg') right no-repeat;
+				#banner_promo .col-lg-4 .promo_container_center{
+					background:url('../images/tatoo-box.jpg') left no-repeat;
 					min-height:168px;
+					background-position: 10px;
 				}
+				#banner_promo .col-lg-4 .promo_container_right{
+					background:url('../images/detatouage.png') left no-repeat;
+					min-height:168px;
+					background-position: 10px;
+				}				
 
-				#banner_promo .col-lg-6	.promo_container_ld .title_promo,
-				#banner_promo .col-lg-6	.promo_container_ld .link_promo
+				#banner_promo .col-lg-4	.promo_container_ld .title_promo
 				{
 					width: 100%;
-					padding-left:220px;
+					padding-left:120px;
 					padding-right:20px;
-					padding-top:18px;
+					padding-top:10px;
 				}
-					#banner_promo .col-lg-6	.promo_container_ld .title_promo h2,
-					#banner_promo .col-lg-6	.promo_container_ld .title_promo p{
+				#banner_promo .col-lg-4	.promo_container_center .title_promo
+				{
+					padding-left:155px;
+				}				
+				#banner_promo .col-lg-4	.promo_container_ld .link_promo	
+				{
+					width: 100%;
+					padding-left:70px;
+					padding-right:20px;
+				}
+				#banner_promo .col-lg-4	.promo_container_left .link_promo	
+				{
+					padding-top:20px;
+				}					
+				#banner_promo .col-lg-4	.promo_container_right .link_promo	
+				{
+					padding-top:33px;
+				}
+				#banner_promo .col-lg-4	.promo_container_right .link_promo > a	
+				{
+					background-color: #73569d;
+				}																				
+					#banner_promo .col-lg-4	.promo_container_ld .title_promo h2,
+					#banner_promo .col-lg-4	.promo_container_ld .title_promo p{
 						margin:0;
 						text-transform: uppercase;
 						font-weight:bold;
 						color:#1b1b1b;
 				    text-shadow: #FFF -2px 1px 4px;
 					}
-					#banner_promo .col-lg-6	.promo_container_ld .title_promo p{
-						margin-top:10px;
+					#banner_promo .col-lg-4	.promo_container_ld .title_promo h2{
+						font-size: 25px;
 					}
-					#banner_promo .col-lg-6	.promo_container_ld .link_promo a.btn-link-promo{
+					#banner_promo .col-lg-4	.promo_container_ld .title_promo p{
+						margin-top:10px;
+						font-size: 12px;
+					}
+					#banner_promo .col-lg-4	.promo_container_ld .link_promo a.btn-link-promo{
 						margin-top:0px;
 						display:block;
 						text-align: center;
@@ -399,6 +432,10 @@ margin-left: -35%;
 		#banner video{
 			display:none;
 		}
+		#banner_promo .col-lg-4	.promo_container_center .link_promo	
+		{	
+			padding-top:25px;
+		}		
 	}
 	@media (max-width: 810px){
 		#banner video{
@@ -406,20 +443,20 @@ margin-left: -35%;
 		}
 	}
 	@media (max-width: 530px){
-		#banner_promo .col-lg-6	.promo_container_ld .title_promo,
-		#banner_promo .col-lg-6	.promo_container_ld .link_promo
+		#banner_promo .col-lg-4	.promo_container_ld .title_promo,
+		#banner_promo .col-lg-4	.promo_container_ld .link_promo
 		{
 			/*width: 100%;
 			padding-left:10px;
 			padding-right:5px;
 			padding-top:10px;*/
-			padding-left:140px;
+			padding-left:130px !important;
 			font-size:80% !important;
 		}
-		#banner_promo .col-lg-6	.promo_container_ld h2{
+		#banner_promo .col-lg-4	.promo_container_ld h2{
 			font-size:20px;
 		}
-		#banner_promo .col-lg-6 .promo_container_right{
+		#banner_promo .col-lg-4 .promo_container_right{
 			background-position: left;
 		}
 		#banner_promo{
@@ -428,22 +465,35 @@ margin-left: -35%;
 		}
 	}
 	@media (max-width: 1200px){
-		#banner_promo .col-lg-6	.promo_container_ld{
+		#banner_promo .col-lg-4	.promo_container_ld{
 			margin-left: auto;
 			margin-right: auto;
+			background-position: 0px;
 		}
-		#banner_promo .col-lg-6 .promo_container_right{
-			float:none;
+		#banner_promo .col-lg-4 .promo_container_center,
+		#banner_promo .col-lg-4 .promo_container_right
+		{
 			margin-top:15px;
 		}
-		#banner_promo .col-lg-6 .promo_container_left{
-			float:none;
+		#banner_promo .col-lg-4	.promo_container_ld .title_promo{
+			padding-left: 180px;
 		}
 	}
 	@media (max-width: 500px){
 		#banner_promo.blog-banner-promo {
 			width:225px;
 		}
+	}
+	@media(max-width: 347px){
+		#banner_promo .col-lg-4	.promo_container_ld .link_promo	 {
+			padding-top: 15px;
+		}
+		#banner_promo .col-lg-4	.promo_container_left .title_promo,
+		#banner_promo .col-lg-4	.promo_container_right .title_promo,
+		#banner_promo .col-lg-4	.promo_container_center .title_promo
+		{
+			padding-left:70px !important;
+		}		
 	}
 
 /*END BANNER PROMO*/
