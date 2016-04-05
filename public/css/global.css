@@ -606,6 +606,13 @@ body .top-wrapper-mask {
 
 
 .organization-show {
+	.template-upload {
+		p {
+			font-size:12px;
+			margin-bottom:5px;
+		}
+	}
+
 	section {
 		background: #FFF;
 		.row {
@@ -1311,4 +1318,26 @@ body .top-wrapper-mask {
 }
 .autopromo {
   cursor: pointer;
+}
+.organization-show .template-upload p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.galery #edit-photo .translation-set label,
+.galery #edit-photo .translation-set .dropdown.form-group {
+  display: none;
+}
+#top-menu-fixed {
+  border: 0px !important;
+}
+#top-menu-fixed .navbar-brand {
+  font-family: "Open Sans" !important;
+  color: #fff;
+  font-size: 24px;
+  padding: 12px 15px;
+}
+.navbar-sousmenu .navbar-brand {
+  padding-top: 10px;
+  color: #73569d;
+  font-size: 24px;
 }

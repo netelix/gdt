@@ -1,20 +1,20 @@
 <?
 	$this->full_width = true;
 	$bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
-	$bc->append("Créations");
-	$this->headTitle("Créations de tatouages");
+	$bc->append("Détatouage");
+	$this->headTitle("Détatouage");
 	$this->headMeta()
-		->appendName("description", "Créations de tatouages");
+		->appendName("description", "Détatouage");
 
 ?>
+
 
 <? $this->partial("shared/_sub-header.phtml", $this) ?>		<!-- SERP CONTAINER -->
 		<div class="container-fluid launching">
 			<div class="launching_container center-block">
-				<p>Etre mis en relation avec les meilleurs spécialistes de votre région en matière de détatouage.</p>
-                <p>Envoyez nous la photo du tatouage que vous souhaitez faire effacer, on s'occupe du reste..</p>
-				<p>Vous pourrez effacer votre tatouage.</p>
-				<p>Envoyez-nous une photo du tatouage que vous souhaitez effacer :</p>
+				<p>Le détatouage laser est un acte médical qui nécessite un suivi et un accompagnement.</p>
+                <p>Qu'il s'agisse d'un détatouage partiel, pour vous faire à nouveau tatouer, ou d'un détatouage total TattooMe vous guide dans vox choix.</p>
+				<p>Envoyez-nous la photo du tatouage que vous souhaitez faire effacer, indiquez votre département et recevez un accompagnement personnalisé.</p>
 				<?= $this->formHeader($this->form, array('enctype'=>'multipart/form-data')) ?>
 				<? if($this->contacted == false): ?>
 				<? $this->form->hideLabels(true); ?>

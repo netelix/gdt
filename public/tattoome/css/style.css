@@ -371,14 +371,20 @@ margin-left: -35%;
 					width: 100%;
 					padding-left:70px;
 					padding-right:20px;
+					position: absolute;
+					bottom: 20px;
 				}
 				#banner_promo .col-lg-4	.promo_container_left .link_promo	
 				{
 					padding-top:20px;
+					position: absolute;
+					bottom: 20px;
 				}					
 				#banner_promo .col-lg-4	.promo_container_right .link_promo	
 				{
 					padding-top:33px;
+					position: absolute;
+					bottom: 20px;
 				}
 				#banner_promo .col-lg-4	.promo_container_right .link_promo > a	
 				{
