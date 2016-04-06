@@ -139,6 +139,9 @@ body{
   border-color: white;
   margin-top: 65px;
 }
+.with_admin .navbar-sousmenu {
+  margin-top: 95px;
+}
 	
 	.navbar-sousmenu .navbar-nav > li > a {
 	  color: black;
@@ -1822,9 +1825,10 @@ margin-left: -35%;
 /* FIN LAUNCHING */
 .affix{
 	z-index:9999;
+	top:65px;
 }
 .affix-nav{
-	top:0;
+	top:65px;
 	width:664px;
 	left:auto;
 	z-index:999999;
@@ -1847,10 +1851,16 @@ margin-left: -35%;
 
 @media (min-width: 1050px){
 .affix{
-	top:0;
+	top:65px;
 	left:auto;
 	margin-left:684px;
 	/*width:auto !important;*/
+	}
+	.with_admin .affix{
+		top:95px !important;	
+	}
+	.with_admin .affix-nav{
+		top:95px !important;	
 	}
 }
 @media (max-width: 998px){
@@ -1858,3 +1868,7 @@ margin-left: -35%;
 		left:0;
 	}
 	}
+	
+#admin-bar {
+	background: #E6E6E6;
+}
