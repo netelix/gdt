@@ -14,6 +14,10 @@ class IndexController extends Uop_Controller_Index
 	  $form->addText("email", array("required"=>true));
 		$this->view->contacted = $this->_getParam("submitted");
 
+		if(isset($_POST["password"]) && $_POST["password"] == "avoscrayons"){
+			$this->_redirect("/creation");
+		}
+
 		if( $this->_isSubmittedAndValid($form)){
 	 		$z_mail = new Zend_Mail("UTF-8");
     	foreach(App::table("users")->select()->where("type='admin'")->fetchAll() as $r_user){

@@ -1,7 +1,9 @@
 <?php
 class Form_OrganizationEdit extends Uop_Form_OrganizationEdit
 {
-  protected $_attributesSelect = array('admin_note'=>array(-1=>"-1", null=>0, 1=>1));
+  protected $_attributesSelect = array(
+  	'admin_note'=>array(-1=>"-1", null=>0, 1=>1),
+  	'status'=>array("free"=>"Gratuit", "classic"=>"Payant"));
   protected $_attributesCheckbox = array("tattoo_style", "piercing_style");
 
   
