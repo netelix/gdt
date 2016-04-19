@@ -163,7 +163,7 @@ class LocationController extends Uop_Controller_Location
       $select = $t_ads->select()
         ->union(array('('.$select_exact.')', '('.$select_around.')')) 
         // for the weird stuff : cf. http://stackoverflow.com/a/11579935/1108154
-        ->order("Round(distance,1) ASC");
+        ->order("status, Round(distance,1) ASC");
       $tmp = new Zend_Paginator_Adapter_DbTableSelect($select_around);
       $this->view->$count_around = $tmp->count();
       
