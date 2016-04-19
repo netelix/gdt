@@ -63,7 +63,7 @@ class LocationController extends Uop_Controller_Location
   
   protected function _filterTypes()
   {
-	  return array("tattoo_style"=>__("Style pratiqués"));
+	  return array("tattoo_style"=>__("Style pratiquï¿½s"));
   }
   	
 	public function galeryAction()

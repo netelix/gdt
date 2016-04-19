@@ -14,4 +14,5 @@ class Model_DbTable_Row_Location extends Uop_Model_DbTable_Row_Location
 		
 		return $link;
 	}
+    
 }

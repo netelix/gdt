@@ -19,5 +19,11 @@ class Model_DbTable_Row_Ad extends Uop_Model_DbTable_Row_Ad
   {
 	  return current($this->images());
   }
+  
+  public function getStatus()
+  {
+    $row = App::table("organizations")->find((int) $this->org_id);
+    return $row->current()->status;
+  }
 }
 
