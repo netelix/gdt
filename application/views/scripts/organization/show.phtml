@@ -74,6 +74,7 @@
 				<div class="row studio_content">
 					<!-- content -->
 					<div class="studio_content_width">
+					    <? if($org->status() != 'free'): ?>
 						<div class="subnav_studio" id="barre-fixe">
 							<ul>
 								<li><a href="#photos">Photos</a></li>
@@ -115,6 +116,24 @@
 								<?= $this->link(array(), "creations")->a('CRÉATION : Créez vous-même votre tatouage', "pull-right") ?>
 							</div>
 						</div>
+						<? else: ?>
+						<div class="studio_description">
+						    <div class="studio_description_texte">
+						        <?= $this->link(array(), "subscription-lead")->a("C'est mon studio !", "a_free-tattoos") ?>
+						        <p class="desc_free-tattoos">Tatoueur non-membre TattooMe.<br />
+						        Pour consulter la liste des studios membres près de <?= $city->name()?>, <?= $city->link()->a("cliquez ici") ?>.</p>
+						        <?= $city->link()->a("Voir la liste des studios membres près de ".$city->name(),"a_free-tattoos") ?>
+						    </div>
+						    <div class="row studio_description_tag">
+                                <br>
+                                <p> 
+                                <? foreach($org->attributes("tattoo_style") as $style): ?>
+                                <span class="resultat_content_texte_tag"><?= $style->name() ?></span>
+                                <? endforeach ?>
+                                </p>						        
+						    </div>
+						</div>
+						<? endif ?>
 						<div class="studio_photos" id="photos">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact">Contacter le studio</a>
 							<h2>Photos</h2>
@@ -122,6 +141,7 @@
 								<?= $this->partial("shared/_carousel.phtml", array("images"=>$images,	"size"=>"orig")); ?>
 							</div>
 						</div>
+						<? if($org->status() != 'free'): ?>
 						<div class="studio_tatoueurs" id="products">
 							<a class="btn btn-purple btn-block  visible-xs" href="#contact">Contacter le studio</a>
 							<h2>Tatoueurs</h2>
@@ -150,9 +170,10 @@
 							    <? endforeach ?>
 						    </div>
 						</div>
+						<? endif ?>
 						<div class="studio_localisation" id="location">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact">Contacter le studio</a>
-							<h2>Localisation / Horaires</h2>
+							<h2>Localisation<? if($org->status() != 'free'): ?> / Horaires<? endif ?></h2>
 							<div class="studio_localisation_map">
 									<div id="org_gmap" style="background: url(/img/staticmap.png); height:100%; margin-top:15px; text-align:center">
 										<button class="btn btn-default" id="show-map" style="margin-top:130px"><?= __("Voir la localisation")?></button>
@@ -164,6 +185,7 @@
 							  	<p><?= $org->name() ?></p>
 						  		<p><?= $org->completeAddress("</p><p>") ?></p>
 								</div>
+								<? if($org->status() != 'free'): ?>
 								<div class="studio_localisation_horaires">
 									<h4>Horaires d'ouverture</h4>
 							  	<? 
@@ -184,8 +206,10 @@
 										</div>
 							  	<? endforeach; ?>
 								</div>
+								<? endif ?>
 							</div>
 						</div>
+						<? if($org->status() != 'free'): ?>
 						<div class="studio_avis" id="reviews">
 							<h2>Avis (<?= $ad->meta("num_review")?>)</h2>
 							<div class="row">
@@ -260,10 +284,12 @@
 							</form>
 						</div>
 					</div>
+					<? endif ?>
 					</div>
 					<!-- fin content -->
 					<!-- sidebar -->
-					<div class="studio_sidebar_width" id="form_fixed" 
+					<div class="studio_sidebar_width" id="form_fixed">
+					    <? if($org->status() != 'free'): ?> 
 						<h2 id="contact">Contactez le studio</h2>
 						<p>Par téléphone</p>
 					  <a class="phone-number-toggler collapse in bt" 
@@ -278,7 +304,9 @@
 						  <?= $this->eventHit($org, "show-phone");?>
 						  }); 
 						</script>
-
+                    <? else: ?>
+                        <h2 id="contact">Besoin de conseils dans votre choix ? Demandez conseil à l'équipe de TattooMe </h2>
+                    <? endif ?>
 						<p>Par email</p>
 				  	<? if($contacted = $this->contact_form->sentTo($org->id)): ?>
 				  	<div class="alert alert-success alert-dismissable">
@@ -449,6 +477,10 @@
 								
 						</div>
 					</div>
+
+                    <?= $this->linkList()->title(__("Recherches similaires"), "h4")->labelName("tatoueurs :name:")->rs($this->brothers); ?>
+                    <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($this->cities); ?>					
+					
 					<!--fin sidebar -->
 				</div>
 				<!-- fin content -->
