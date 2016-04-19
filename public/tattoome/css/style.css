@@ -420,7 +420,6 @@ margin-left: -35%;
 						float:left;
 						text-transform: uppercase;
 						padding-top:2px;
-						width:100%;
 					}
 					a.link-promo-red{
 						background-color:#ff0000;
@@ -474,6 +473,10 @@ margin-left: -35%;
 		}
 	}
 	@media (max-width: 1200px){
+		#banner_promo .col-lg-4	.promo_container_ld .link_promo	
+		{
+			padding-left: 170px;	
+		}
 		#banner_promo .col-lg-4	.promo_container_ld{
 			margin-left: auto;
 			margin-right: auto;
@@ -1676,7 +1679,8 @@ margin-left: -35%;
 					color:black;
 					margin-top:0px;
 					margin-bottom:20px;
-					font-size:22px;				
+					font-size:22px;	
+					text-align: center;			
 				}
 				.studio_sidebar_width > p{
 					font-family: 'Francois One', sans-serif;
