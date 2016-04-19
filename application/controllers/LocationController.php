@@ -157,24 +157,33 @@ class LocationController extends Uop_Controller_Location
     
     // If hierarchical (!populated place) loc or city or quarter, get org from this loc
 	  $select_exact = $t_ads->selectFromLocation($location, $filters, $sort);
+
+ 	  $select_exact_free = $t_ads->selectFromLocation($location, $filters, $sort);
+	  $select_exact_free->where("status = 'free'");
+
 	  $num_products_around = 0;
 	  if(in_array($location->type, array("city","quarter"))){
+  	  $select_exact->where("status = 'classic'");
+
 		  $select_around = $t_ads->selectAroundLocation($location, $filters);
+		  $select_around->where("status = 'classic'");
+
+		  $select_around_free = $t_ads->selectAroundLocation($location, $filters);
+		  $select_around_free->where("status = 'free'");
+
       $select = $t_ads->select()
-        ->union(array('('.$select_exact.')', '('.$select_around.')')) 
+        ->union(array('('.$select_exact.')', '('.$select_around.')', '('.$select_exact_free.')', '('.$select_around_free.')')); 
         // for the weird stuff : cf. http://stackoverflow.com/a/11579935/1108154
-        ->order("status, Round(distance,1) ASC");
       $tmp = new Zend_Paginator_Adapter_DbTableSelect($select_around);
       $this->view->$count_around = $tmp->count();
-      
     	$num_products_around = $select_around
     		->columns("SUM(num_products) as num_products")
     		->fetchRow()->num_products;
 	  } else {
+      $select_exact->reset(Zend_Db_Select::ORDER)->order("status DESC")->order("ad_note DESC");
 		  $select = $select_exact;
       $this->view->$count_around = 0;
 	  }
-
     $tmp = new Zend_Paginator_Adapter_DbTableSelect($select_exact);
     $this->view->$count_exact = $tmp->count();
     $this->view->$ads = $this->_paginator($select, $limit);

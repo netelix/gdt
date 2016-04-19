@@ -73,7 +73,9 @@
 				</div>
 				<div class="row studio_content">
 					<!-- content -->
-					<div class="studio_content_width">
+					<div class="studio_content_width" style="
+    height: 100%;
+">
 					    <? if($org->status() != 'free'): ?>
 						<div class="subnav_studio" id="barre-fixe">
 							<ul>
@@ -134,6 +136,8 @@
 						    </div>
 						</div>
 						<? endif ?>
+						
+						<? if($org->status() != 'free'): ?>
 						<div class="studio_photos" id="photos">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact">Contacter le studio</a>
 							<h2>Photos</h2>
@@ -141,7 +145,6 @@
 								<?= $this->partial("shared/_carousel.phtml", array("images"=>$images,	"size"=>"orig")); ?>
 							</div>
 						</div>
-						<? if($org->status() != 'free'): ?>
 						<div class="studio_tatoueurs" id="products">
 							<a class="btn btn-purple btn-block  visible-xs" href="#contact">Contacter le studio</a>
 							<h2>Tatoueurs</h2>
@@ -478,8 +481,8 @@
 						</div>
 					</div>
 
-                    <?= $this->linkList()->title(__("Recherches similaires"), "h4")->labelName("tatoueurs :name:")->rs($this->brothers); ?>
-                    <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($this->cities); ?>					
+          <?= $this->linkList()->title(__("Recherches similaires"), "h4")->labelName("tatoueurs :name:")->rs($city->getCousins("adm2", 10)); ?>
+          <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($city->getNeighbors(10)); ?>					
 					
 					<!--fin sidebar -->
 				</div>
