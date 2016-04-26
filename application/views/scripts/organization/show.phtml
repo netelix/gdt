@@ -12,7 +12,7 @@
   $city = $org->city();
   $country = $city->ancester(array("country"));
   $this->belgium = $country->local_id == "BE";
-  
+  $people_names = array();
   foreach($products as $r_product){
 	  $people_names[] = $r_product->name()->__toString();
   }
@@ -37,7 +37,9 @@
   $this->doctype(Zend_View_Helper_Doctype::XHTML1_RDFA);
   $this->headMeta()->appendProperty("og:title", $org->name()." - La galerie du tatouage");
   $this->headMeta()->appendProperty("og:description", $desc);
-  $this->headMeta()->appendProperty("og:image", "//".App::config()->link->domain.$images->getRow(0)->url("orig"));
+  if($images->count()){
+	  $this->headMeta()->appendProperty("og:image", "//".App::config()->link->domain.$images->getRow(0)->url("orig"));
+  }
   $this->headMeta()->appendProperty("og:url", $org->link()->option("canonical", true)->assemble());
 
   $this->headMeta()->appendName("description", $desc);
