@@ -12,7 +12,7 @@
   $city = $org->city();
   $country = $city->ancester(array("country"));
   $this->belgium = $country->local_id == "BE";
-  
+  $people_names = array();
   foreach($products as $r_product){
 	  $people_names[] = $r_product->name()->__toString();
   }
@@ -37,7 +37,9 @@
   $this->doctype(Zend_View_Helper_Doctype::XHTML1_RDFA);
   $this->headMeta()->appendProperty("og:title", $org->name()." - La galerie du tatouage");
   $this->headMeta()->appendProperty("og:description", $desc);
-  $this->headMeta()->appendProperty("og:image", "//".App::config()->link->domain.$images->getRow(0)->url("orig"));
+  if($images->count()){
+	  $this->headMeta()->appendProperty("og:image", "//".App::config()->link->domain.$images->getRow(0)->url("orig"));
+  }
   $this->headMeta()->appendProperty("og:url", $org->link()->option("canonical", true)->assemble());
 
   $this->headMeta()->appendName("description", $desc);
@@ -73,7 +75,9 @@
 				</div>
 				<div class="row studio_content">
 					<!-- content -->
-					<div class="studio_content_width">
+					<div class="studio_content_width" style="
+    height: 100%;
+">
 					    <? if($org->status() != 'free'): ?>
 						<div class="subnav_studio" id="barre-fixe">
 							<ul>
@@ -134,6 +138,8 @@
 						    </div>
 						</div>
 						<? endif ?>
+						
+						<? if($org->status() != 'free'): ?>
 						<div class="studio_photos" id="photos">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact">Contacter le studio</a>
 							<h2>Photos</h2>
@@ -141,7 +147,6 @@
 								<?= $this->partial("shared/_carousel.phtml", array("images"=>$images,	"size"=>"orig")); ?>
 							</div>
 						</div>
-						<? if($org->status() != 'free'): ?>
 						<div class="studio_tatoueurs" id="products">
 							<a class="btn btn-purple btn-block  visible-xs" href="#contact">Contacter le studio</a>
 							<h2>Tatoueurs</h2>
@@ -478,8 +483,8 @@
 						</div>
 					</div>
 
-                    <?= $this->linkList()->title(__("Recherches similaires"), "h4")->labelName("tatoueurs :name:")->rs($this->brothers); ?>
-                    <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($this->cities); ?>					
+          <?= $this->linkList()->title(__("Recherches similaires"), "h4")->labelName("tatoueurs :name:")->rs($city->getCousins("adm2", 10)); ?>
+          <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($city->getNeighbors(10)); ?>					
 					
 					<!--fin sidebar -->
 				</div>

@@ -3,6 +3,10 @@ class Model_DbTable_Row_Location extends Uop_Model_DbTable_Row_Location
 {
 	public function link(array $opts=null)
 	{
+		if(isset($opts["page"]) && $opts["page"] == 1){
+			unset($opts["page"]);
+		}
+		
 		$link = parent::link($opts);
 		if(!empty($opts['filters']) 
 			&& key_exists('attr', $opts['filters']) 

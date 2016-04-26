@@ -100,17 +100,21 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
   
   protected function _atLeastOneProperties($options=array())
   {
-    return array(      
-      array(
-        'method'=>'countProducts',
-        'msg'=>'Vous devez ajouter au moins un tatoueur',
-        'cat'=>"products"
-      ),
-      array(
-        'method'=>'countImages',
-        'msg'=>'Vous devez ajouter au moins une photo',
-        'cat'=>'images'
-      ));
+  	if($this->status == "classic"){
+	 	  return array(      
+	      array(
+	        'method'=>'countProducts',
+	        'msg'=>'Vous devez ajouter au moins un tatoueur',
+	        'cat'=>"products"
+	      ),
+	      array(
+	        'method'=>'countImages',
+	        'msg'=>'Vous devez ajouter au moins une photo',
+	        'cat'=>'images'
+	      ));
+  	} else {
+	  	return array();
+  	}
   }
 
 }
