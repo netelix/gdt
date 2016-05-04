@@ -64,7 +64,7 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
   {
   	$handicap = (int)$this->adminNote();
   	$handicap = empty($handicap) ? 0 : $handicap;
- 	  return parent::note()+$handicap*10;
+ 	  return parent::note()+$handicap*100;
   }
   
   public function publish($opts=array())
