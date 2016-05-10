@@ -117,14 +117,15 @@
 						  	<? if($org->tattoobox):?>
 									<img src="/tattoome/images/tatoobox.png" alt="">
 								<? endif ?>
-								<?= $this->link(array(), "creations")->a('CRÉATION : Créez vous-même votre tatouage', "pull-right") ?>
+								<a href="https://www.galeriedutatouage.com/creation" class="pull-right">CRÉATION : Créez vous-même votre tatouage</a>
 							</div>
 						</div>
 						<? else: ?>
 						<div class="studio_description">
 						    <div class="studio_description_texte">
 						        <?= $this->link(array(), "subscription-lead")->a("C'est mon studio !", "a_free-tattoos") ?>
-						        <p class="desc_free-tattoos">Tatoueur non-membre TattooMe.<br />
+						        <p class="desc_free-tattoos"><?= $org->description() ?>
+<br />
 						        Pour consulter la liste des studios membres près de <?= $city->name()?>, <?= $city->link()->a("cliquez ici") ?>.</p>
 						        <?= $city->link()->a("Voir la liste des studios membres près de ".$city->name(),"a_free-tattoos") ?>
 						    </div>

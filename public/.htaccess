@@ -17,7 +17,7 @@ RewriteRule ^.*$ - [NC,L]
 # fits all solution.
 RewriteCond %{REQUEST_URI}::$1 ^(/.+)(.+)::$
 RewriteRule ^(.*)$ - [E=BASE:%1]
-RewriteRule !\.(js|ico|gif|jpg|png|css|html)$ %{ENV:BASE}index.php [NC,L]
+RewriteRule !\.(txt|js|ico|gif|jpg|png|css|html)$ %{ENV:BASE}index.php [NC,L]
 
 SetOutputFilter DEFLATE
 AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript application/x-httpd-php

@@ -157,7 +157,7 @@ function on_serp_page_loaded(){
                               <h3><?= $link->a(null, "text-purple"); ?></h3>
                           </div>
                       </div>
-                      <div class="row resultat_header_lieu">
+                      <div class="row ">
                           <div class="col-lg-12">
                               <p><a href="<?= $city_link ?>" class="text-black">Tatoueur a <?= $city_name ?></a>
                                   <?= !empty($r_ad->distance) ? "(".number_format($r_ad->distance, 1)."km)":""; ?>            
@@ -167,7 +167,7 @@ function on_serp_page_loaded(){
                       <div class="row resultat_content">
                           <div class="col-lg-12">
                               <div class="resultat_content_texte resultat_content_texte_free">
-                                  <p>Ce studio de <?= $city_name ?> n'est pas encore membre.</p>
+                                <p><?= $org_desc ?></p>
                               </div>
                           </div>
                       </div>
@@ -274,7 +274,7 @@ function on_serp_page_loaded(){
                                 <div class="row resultat_content">
                                     <div class="col-lg-12">
                                         <div class="resultat_content_texte">
-                                            <p>Ce studio de <?= $city_name ?> n'est pas encore membre.</p>
+                                        <p><?= $org_desc ?></p>
                                         </div>
                                     </div>
                                 </div>

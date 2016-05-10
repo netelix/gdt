@@ -172,7 +172,7 @@ class LocationController extends Uop_Controller_Location
 
       $select = $t_ads->select()
         ->union(array('('.$select_exact.')', '('.$select_around.')', '('.$select_exact_free.')', '('.$select_around_free.')')); 
- 		  $select->order("FIELD(status, 'classic', 'free'), distance ASC");
+ 		  $select->order("FIELD(status, 'classic', 'free'), distance ASC, ad_note DESC");
 
         // for the weird stuff : cf. http://stackoverflow.com/a/11579935/1108154
       $tmp = new Zend_Paginator_Adapter_DbTableSelect($select_around);

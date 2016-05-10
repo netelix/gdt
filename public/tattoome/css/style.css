@@ -1399,7 +1399,7 @@ margin-left: -35%;
 
 			.studio_content{
 				width:999px;
-				height:1500px;
+				min-height:1500px;
 			}
 				.subnav_studio{
 					width:100%;
