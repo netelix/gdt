@@ -1203,11 +1203,38 @@ body .top-wrapper-mask {
   border: 0px !important;
 }
 
+#top-menu-fixed .navbar-header {
+    margin-left: -15px !important;
+    margin-right: 3% !important;
+}
+
+@media(max-width: 768px){
+  #top-menu-fixed .navbar-header {  
+      margin-right: 0px !important;
+  }
+  #top-menu-fixed .navbar-toggle {
+    margin-right: 0px;
+  }  
+}
+
 #top-menu-fixed .navbar-brand{
   font-family: "Open Sans" !important;
   color: #fff;
   font-size: 24px;
   padding: 12px 15px;
+  margin-left: 0px !important;
+}
+
+#top-menu-fixed .navbar-nav {
+  margin-left: 10px;
+}
+
+#top-menu-fixed .navbar-nav > li > a {
+  padding-right: 15px;
+}
+
+#top-menu-fixed .navbar-right {
+  margin-right: 25px;
 }
 
 .navbar-sousmenu .navbar-brand{
@@ -1388,7 +1415,43 @@ body .top-wrapper-mask {
       font-family: "GothamBlack";
       text-transform: uppercase;      
     }
-      
+@media (max-width: 614px){
+  .box {
+    width:90% !important;
+    height: 450px !important;
+  }
+  .lightbox .content {
+    font-size: 14px !important;
+    width: 100% !important;
+  }
+  
+  .lightbox_desc > p:first-child  {
+    line-height: 20px;
+  }
+  
+  .lightbox_desc > p:nth-child(2) {
+    line-height: 20px;
+  }
+  
+  .lightbox_desc > #join_tattoome_communaute {
+    margin-top: 20px;
+    width: 100%;
+    margin: 10px auto;
+    
+  }
+  
+  .lightbox_desc > #join_tattoome_communaute > input[type="text"] {
+    margin-left: 0px;
+  }
+  
+  .lightbox_desc > #join_tattoome_communaute > button {
+    margin-left: 0px;
+  }
+  
+  .lightbox_desc > p:nth-child(4) {
+    margin-top: 10px;
+  }
+}      
 /** END MODAL **/
 
 .overlay{
