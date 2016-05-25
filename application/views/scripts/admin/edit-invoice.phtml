@@ -1,0 +1,20 @@
+<div id="modal-title" style="display:none">Nouveau contrat</div>
+<? $form = $this->form ?>
+<? $form->hideLabels(true) ?>
+<?= $this->formHeader($this->form) ?>
+	<div class="hidden-on-success row">
+	<?= $form->renderGroups(array(
+		"date_start"=>array("label"=>"Date de début","group_class"=>"col-md-4"),
+		"type"=>array("label"=>"Mode de facturation","group_class"=>"col-md-4"),
+		"price_ht"=>array("label"=>"Prix","group_class"=>"col-md-4"),
+
+		"org_label"=>array("label"=>"Studio","group_class"=>"col-md-12"),
+		"address"=>array("label"=>"Adresse", "group_class"=>"col-md-12"),
+		"postcode"=>array("label"=>"Code postal", "group_class"=>"col-md-6"),
+		"city"=>array("label"=>"Ville", "group_class"=>"col-md-6"),
+	)); ?>
+	</div>
+	<div class="hidden-on-success">
+		<button type="submit" class="btn btn-success">Enregistrer</button>
+	</div>
+</form>

@@ -23,4 +23,12 @@ class Form_OrganizationEdit extends Uop_Form_OrganizationEdit
   	}
     $this->addSubForm($subform, "openings");
   }
+  
+  public function asAdmin($val)
+  {
+	  if(!$val){
+		  $this->removeElement("admin_note");
+		  $this->removeElement("status");
+	  }
+  }
 }

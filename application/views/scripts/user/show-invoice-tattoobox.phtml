@@ -1,0 +1,71 @@
+<?
+	$invoice = $this->invoice;
+	$name = $this->org->name();
+	$user = $this->user;
+?>
+<style>
+	table {
+		border-collapse:collapse;
+		width: 100%;
+	}
+	.table-header td, .table-price td{
+		border:solid 1px #DDD;
+		padding:3px;
+	}
+	table td.right{
+		text-align:right;
+	}
+	.small{
+		font-size: 10px;
+	}
+	.footer td img{
+		width:100%;
+	}
+</style>
+<div style="width:800px; margin-left:auto; margin-right:auto; font-family:arial">
+	<h1 class="text-center"><img src="/img/invoice/tattoobox.png"></h1>
+	<table class="table-header">
+		<tr>
+			<td><?= $name ?></td>
+			<td>SAS Archibald Rescue</td>
+		</tr>
+		<tr>
+			<td><?= $user->address ?></td>
+			<td>TattooMe</td>
+		</tr>
+		<tr>
+			<td><?= $user->postcode ?> <?= $user->city ?></td>
+			<td>38 rue Bellechasse, 75007 Paris</td>
+		</tr>
+	</table>
+	<br>
+	<p>
+		<?= $name ?><br>
+		N°SIRET: <?= $this->user->siret() ?><br>
+	</p>
+	<br>
+		<h2>FACTURE TATTOOBOX- TATTOOME, site de la SAS Archibald Rescue</h2>
+	<br>
+
+	<p>Objet: Suite l’utilisation de la box : <?= $this->box->code ?> Paiement par le site TattooMe à <?= $name ?> du montant de la prestation soit :</p>
+	<table class="table-price">
+		<tr>
+			<td>Montant TTC</td>
+			<td class="right"><?= $this->currency($this->box->price-20) ?></td>
+		</tr>
+	</table>
+	
+	<br>
+	<br>
+	<br>
+
+	<table class="footer">
+		<tr>
+			<td><img src="/img/invoice/creation.png"></td>
+			<td><img src="/img/invoice/guide.png"></td>
+			<td><img src="/img/invoice/mag.png"></td>
+			<td><img src="/img/invoice/shop.png"></td>
+		</tr>
+	</table>
+</div>
+<script>window.print();</script>

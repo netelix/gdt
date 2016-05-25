@@ -33,25 +33,32 @@
 <? else: ?>
 <div class="alert alert-success">
 	<p class="h4">L'utilisation de cette TattooBox a bien été enregistré</p>
+	<script>
+		alert("Pour complémenter votre demande de remboursement, veuillez nous envoyer la facture associée a la tattoobox");
+	</script>
 </div>
 <? endif ?>
-
+<? if($this->boxes->count() > 0): ?>
+<div class="alert alert-info">
+	<p>Pour demander le paiement vous devez
+envoyer la facture associée à TattooMe</p>
+</div>
+<? endif ?>
 <? if($this->boxes): ?>
 <table class="table table-striped">
 	<thead>
 		<tr>
 			<th><?=__("Nom") ?></th>
-			<th><?=__("Prénom") ?></th>
 			<th><?=__("Code")?></th>
 			<th><?=__("Prix")?></th>
 		</tr>
 	</thead>
 	<? foreach ($this->boxes as $row):?>
 	<tr>
-		<td><?= $row->fname ;?></td>
-		<td><?= $row->lname  ?></td>
+		<td><?= $row->fname ;?> <?= $row->lname  ?></td>
 		<td><?= $row->code ?></td>
 		<td><?= $row->price  ?>€</td>
+		<td><?= $this->link(array("code"=>$row->code), "show-invoice-tattoobox")->a("Facture", array("class"=>"btn btn-default btn-xs", "target"=>"_blank")) ?></td>
 	</tr>
 	<? endforeach ?>
 </table>
