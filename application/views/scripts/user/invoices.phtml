@@ -2,7 +2,7 @@
 	$is_admin = $this->user()->admin();
 ?>
 <? $this->content_with_sidebar = true ?>
-<?= $this->partial("user/_tabs.phtml", array("current"=>'user/edit')); ?>
+<?= $this->partial("user/_tabs.phtml", array("current"=>'user/invoices')); ?>
 
 <? if($this->next_invoices->count() > 0): ?>
 <table class="table table-condensed">

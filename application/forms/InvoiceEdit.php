@@ -24,7 +24,7 @@ class Form_InvoiceEdit extends Uop_Form_Abstract
   {
   	// if is new
     $this->addElement("date","date_start");
-    $this->addElement("text","price_ht");
+    $this->addElement("text","price_ttc");
     $this->addElement("text","city");
     $this->addElement("text","postcode");
     $this->addElement("text","address");
