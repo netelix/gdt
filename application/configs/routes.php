@@ -36,6 +36,24 @@ return array(
       'page'=>1
     )
   ),
+  'conciergerie'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/conseil',
+      'defaults' => array(
+      'controller'=>'index',
+      'action'=>'conciergerie',
+      'page'=>1
+    )
+  ),
+  'updateName'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/updatename',
+      'defaults' => array(
+      'controller'=>'admin',
+      'action'=>'updateName',
+      'page'=>1
+    )
+  ),    
   'galery-focus'=>array(
     'type'   => 'Zend_Controller_Router_Route',
     'route'  => '/:lang/galery-focus/:id',

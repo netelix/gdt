@@ -55,7 +55,7 @@ class AdminController extends Uop_Controller_Admin
 		  $form->addText("price", array("required"=>true));
 		  if($this->_isSubmitted($form)){
 			  if($form->getValue("code") != "" && $t_tattoo->select()->where("code = ?", $form->getValue("code"))->fetchRow() !== NULL){
-				 // $form->getElement("code")->addErrorMessage(__("Ce code est déjà utilisé"));
+				 // $form->getElement("code")->addErrorMessage(__("Ce code est dï¿½jï¿½ utilisï¿½"));
 			  }
 			  
 			  if($this->_isSubmittedAndValid($form)){
@@ -66,5 +66,29 @@ class AdminController extends Uop_Controller_Admin
 			  }
 		  }
 		}
+      
+      public function imagesAction()
+      {
+          $t_image = App::table("images");
+          $this->view->preset = $preset = $this->getParam("preset", "all");
+          // Building filter request
+          $select = $t_image->select()
+              ->setIntegrityCheck(false)
+              ->from("images")
+              ->where("images.ref_type = 'organizations' OR images.ref_type = 'products'")
+              ->order("images.id ASC");
+            
+          $presets["all"] = $select;
+            
+          $this->view->entities = $this->_paginator($presets[$preset], 50);
+          $this->view->presets = $presets;         
+      }
+      
+      public function updatenameAction(){
+          
+          $t_image = App::table("images");
+          $r_image = $t_image->find($_POST['id_image'])->current();
+          $r_image->name($_POST['name_image']);
+      }
 }
 

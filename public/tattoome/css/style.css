@@ -345,7 +345,7 @@ margin-left: -35%;
 				}
 				#banner_promo .col-lg-4	.promo_container_left{
 					background:url('../images/img_lg.png') left no-repeat;
-					background-position: -30px;
+					/*background-position: -30px;*/
 				}
 				#banner_promo .col-lg-4 .promo_container_center{
 					background:url('../images/tatoo-box.jpg') left no-repeat;
@@ -353,7 +353,7 @@ margin-left: -35%;
 					background-position: 10px;
 				}
 				#banner_promo .col-lg-4 .promo_container_right{
-					background:url('../images/detatouage.png') left no-repeat;
+					background:url('../images/conciergerie.png') left no-repeat;
 					min-height:168px;
 					background-position: 10px;
 				}				
@@ -391,8 +391,31 @@ margin-left: -35%;
 				}
 				#banner_promo .col-lg-4	.promo_container_right .link_promo > a	
 				{
-					background-color: #73569d;
-				}																				
+					/*background-color: #73569d;*/
+					background-color: white;
+					color: #73569d !important;
+				}
+				
+				#banner_promo .col-lg-4 .promo_container_right .title_promo h2{
+					font-size: 20px !important;
+					color: white !important;
+					text-shadow: none !important;
+				}
+				
+				#banner_promo .col-lg-4 .promo_container_right .title_promo .gothambold{
+					font-size: 11px;
+					color: white !important;
+					text-shadow: none !important;
+					margin-top: 5px;
+				}	
+
+				#banner_promo .col-lg-4 .promo_container_right .title_promo .gotham{
+					font-size: 9px;
+					color: white !important;
+					text-shadow: none !important;
+					margin-top: 0px;
+				}
+																											
 					#banner_promo .col-lg-4	.promo_container_ld .title_promo h2,
 					#banner_promo .col-lg-4	.promo_container_ld .title_promo p{
 						margin:0;
@@ -513,6 +536,9 @@ margin-left: -35%;
 /*BANNER PROMO 2*/
 	#banner_promo .col-lg-3{
 		padding:0px;
+	}
+	#banner_promo .promo_container_md_singleton_right {
+		cursor: pointer;
 	}
 		#banner_promo .col-lg-6	.promo_container_md{
 			min-height:225px;

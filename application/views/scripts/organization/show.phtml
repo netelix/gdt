@@ -50,11 +50,11 @@
 		<? $this->partial("shared/_sub-header.phtml", $this) ?>
 		<!-- SERP CONTAINER -->
 		<div class="container-fluid serp">
-			<div class="serp_container center-block">
+			<div class="serp_container center-block" itemscope itemtype="http://schema.org/Organization">
 				<!-- content -->
 				<div class="row studio_header">
 					<div class="studio_content_width studio_content_header">
-						<h1><?= $org->name()?> - <?= strtoupper($city->name())?>
+						<h1><span itemprop="name"><?= $org->name()?></span> - <?= strtoupper($city->name())?>
 							<? if($this->user()->admin()): ?>
 							- <small><?= $org->linkEdit()->a("Editer") ?></small>
 							<? endif ?>
@@ -143,7 +143,7 @@
 						<? if($org->status() != 'free'): ?>
 						<div class="studio_photos" id="photos">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact">Contacter le studio</a>
-							<h2>Photos</h2>
+							<h2>Photos des tatouages</h2>
 							<div class="studio_photos_carousel">
 								<?= $this->partial("shared/_carousel.phtml", array("images"=>$images,	"size"=>"orig")); ?>
 							</div>
@@ -179,7 +179,7 @@
 						<? endif ?>
 						<div class="studio_localisation" id="location">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact">Contacter le studio</a>
-							<h2>Localisation<? if($org->status() != 'free'): ?> / Horaires<? endif ?></h2>
+							<h2>Localisation<? if($org->status() != 'free'): ?> / Horaires<? endif ?> du studio de tatouage</h2>
 							<div class="studio_localisation_map">
 									<div id="org_gmap" style="background: url(/img/staticmap.png); height:100%; margin-top:15px; text-align:center">
 										<button class="btn btn-default" id="show-map" style="margin-top:130px"><?= __("Voir la localisation")?></button>
@@ -220,7 +220,11 @@
 							<h2>Avis (<?= $ad->meta("num_review")?>)</h2>
 							<div class="row">
 								<div class="studio_avis_global">
-									<div class="row_avis_singleton">
+									<div class="row_avis_singleton" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+									    <meta itemprop="worstRating" content="1">
+									    <meta itemprop="ratingValue" content="<?= round($ad->avg_rating) ?>">
+									    <meta itemprop="bestRating" content="5">
+									    <meta itemprop="reviewCount" content="<?= $ad->meta("num_review")?>">
 										<p class="left_content avis_left"><b>Note globale, basée sur <?= $ad->meta("num_review")?> avis</b></p>
 										<div class="bloc_etoile">
 											<?= $this->starRate("moyenne_globale", $ad->avg_rating); ?>

@@ -35,7 +35,10 @@
 	  	</li> 
 	  	<li><?= Link::factory(array("table"=>"events", "preset"=>"performances"), "admin/entities")
 	  		->a("Performances", array(), false, true)?>
-	  	</li> 
+	  	</li>
+        <li><?= Link::factory(array("table"=>"images"), "admin/entities")
+            ->a("Légendes photos", array(), false, true)?>
+        </li>	  	 
 	  </ul>
 	</div>
 <? endif ?>

@@ -11,7 +11,7 @@
 		<?= $this->headTitle('Le meilleur du tatouage | TattooMe','SET') ?>
 		<? endif ?>
 		<? if($this->body_class == "index"): ?>
-		<? $this->headMeta()->appendName('description','Retrouver les meilleurs tatoueurs de votre région ainsi que les plus beaux modèles de tatouages.') ?>
+		<? $this->headMeta()->appendName('description','Retrouvez les meilleurs tatoueurs de votre région ainsi que les plus beaux modèles de tatouages.') ?>
 		<? endif ?>
 		<?= $this->headMeta()?>
 		<!-- JAVASCRIPTS CALL -->
@@ -106,12 +106,16 @@
                 function ajoutNL() {
                     var reg = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
                     var email = $('#email').val();
+                    var guide = 0;
+                    if($("#guideFirstTattoo").is(':checked')){
+                        guide = $("#guideFirstTattoo").val();
+                    }
 
                     if(reg.test(email)){
                     $.ajax({
                       method: "POST",
                       url: "https://<?=$_SERVER['SERVER_NAME']?>/tattoobox/registration.php",
-                      data: { email: $("#email").val(), guide: $("#guideFirstTattoo").val(), action: "0" },
+                      data: { email: email, guide: guide, action: "0" },
                       success : function(code_html, statut){                        
                             $("#email").val("Inscription réussie !");
                          },
@@ -150,7 +154,7 @@
                 }
              
                 // set cookie
-                $.cookie('visited_popin', 'yes', { expires: 1, path: '/' });
+                $.cookie('visited_popin', 'yes', { expires: 30, path: '/' });
             });
 		</script>
 		<!-- POPIN -->
@@ -202,7 +206,7 @@
 					        <li><a href="http://blog.galeriedutatouage.com">Le Mag</a></li>
 				      	</ul>
 				        <ul class="nav navbar-nav navbar-right">
-					        <li><a href="https://www.instagram.com/lagaleriedutatouage/" target="_blank" class="instagram_link" style="margin-right:10px;"></a></li>
+					        <li><a href="https://www.instagram.com/tattoometattoo/" target="_blank" class="instagram_link" style="margin-right:10px;"></a></li>
 					        <li><a href="https://www.facebook.com/tattootattoome" target="_blank" class="facebook_link"></a></li>
 				        </ul>
 			    	</div><!-- /.navbar-collapse -->
@@ -246,9 +250,9 @@
 				        <li><?= $member_link->a("espace tatoueur", "espacemembre opensanscondensed") ?></li>
 				        <li class="dropdown">
      				        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-     				        	<?= $this->belgium ? "Belgique" : "France" ?> <span class="caret"></span></a>
+     				        	<?= $this->belgium ? "Tatoueurs Belgique" : "Tatoueurs France" ?> <span class="caret"></span></a>
 				            <ul class="dropdown-menu">
-					            <li><?= App::table("locations")->country($this->belgium ? "FR" : "BE")->link()->a() ?></li>
+					            <li><?= App::table("locations")->country($this->belgium ? "FR" : "BE")->link()->a($this->belgium ? "Tatoueurs France" : "Tatoueurs Belgique") ?></li>
 				            </ul>
 			         	</li>
 			        </ul>
@@ -292,7 +296,7 @@
 					<div class="col-lg-3">
 						<h4 class="footer_top_header">SUIVEZ-nous</h4>
 				    <a href="https://www.facebook.com/tattootattoome" target="_blank" class="footer_top_link">Facebook</a>
-						<a href="https://www.instagram.com/lagaleriedutatouage/" target="_blank" class="footer_top_link">instagram</a>
+						<a href="https://www.instagram.com/tattoometattoo/" target="_blank" class="footer_top_link">instagram</a>
 					</div>
 					<div class="col-lg-3">
 						<h4 class="footer_top_header">Je suis tatoueur</h4>

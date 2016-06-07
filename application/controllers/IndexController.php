@@ -87,5 +87,74 @@ class IndexController extends Uop_Controller_Index
 		$this->view->form = $form;
   }
 
+  public function conciergerieAction()
+  {
+       $form = App::form("Simple", null);
+       $form->addTextArea("description", array("required"=>true));
+       $element = new Zend_Form_Element_File('image');
+       $element->addValidator('Extension', false, 'jpg,png,gif')
+        ->setDestination(APPLICATION_PATH.'/../tmp');
+       $form->addElement($element, 'image'); 
+       $form->addSelect("size", array("multiOptions"=>array(0=>'xxx'))); 
+       $form->addSelect("date", array("multiOptions"=>array(0=>'1 mois'))); 
+       $form->addText("firstname",array("required"=>true));
+       $form->addText("lastname",array("required"=>true));
+       $form->addText("email",array("required"=>true));
+       $form->addText("phone",array("required"=>true));
+       $form->addText("adress",array("required"=>true));
+       $form->addText("postcode",array("required"=>true));
+       $form->addText("city",array("required"=>true));
+       
+       $this->view->contacted = $this->_getParam("submitted");
+
+       if( $this->_isSubmittedAndValid($form)){
+
+           $leadsConciergerie = App::table("leads_conciergerie");
+           $newLead = $leadsConciergerie->createRow();
+
+           foreach($form->getValues() as $key=>$value){
+               
+               switch ($key) {
+                   case 'description':
+                        $newLead->description = $value;                       
+                       break;
+                   case 'size':
+                        $newLead->size = $value;                       
+                       break;
+                   case 'date':
+                        $newLead->date = $value;                       
+                       break;
+                   case 'firstname':
+                        $newLead->firstname = $value;                       
+                       break;
+                   case 'lastname':
+                        $newLead->lastname = $value;                       
+                       break;
+                   case 'email':
+                        $newLead->email = $value;                       
+                       break;
+                   case 'phone':
+                        $newLead->phone = $value;                       
+                       break;   
+                   case 'adress':
+                        $newLead->adress = $value;                       
+                       break;
+                   case 'postcode':
+                        $newLead->postcode = $value;                       
+                       break;
+                   case 'city':
+                        $newLead->city = $value;                       
+                       break;                                                                                                                                                                                                        
+                   default:                       
+                       break;
+               }
+           }
+           $newLead->save();                           
+       }            
+       
+       $this->view->form = $form;
+      
+  }
+
 }
 
