@@ -1,0 +1,64 @@
+<?
+    $this->full_width = true;
+    $bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
+    $bc->append("Le conseiller TattooMe");
+    $this->headTitle("Le conseiller TattooMe");
+    $this->headMeta()
+        ->appendName("description", "Le conseiller TattooMe");
+
+?>
+
+<? $this->partial("shared/_sub-header.phtml", $this) ?>     <!-- SERP CONTAINER -->
+        <img class="img-conseiller" src="/img/conseiller-tattooMe.jpg" alt="Le conseiller TattooMe" />
+        <div class="container-fluid">
+            <div class="container_conseiller">
+                <p>Donnez quelques informations sur votre projet.<br />Vous serez contacté dans un délai de 24h.</p>
+                <?= $this->formHeader($this->form, array('enctype'=>'multipart/form-data')) ?>
+                <? if($this->contacted == false): ?>
+                    <?= $this->form->renderGroups(array(
+                                "description"=>array(
+                                    "placeholder" => __("Test placeholder"),
+                                    "label"=>__("Description du tatouage souhaité (en quelques mots)")
+                                    )
+                                ))
+                     ?>
+                    <div class="form-group">
+                        <label for="image">Image <span style="font-weight:normal;">(je joins une image qui m'inspire, illustre mon projet)</span></label>
+                        <input type="file" name="image" style="opacity: 0;"/>
+                        <a class="btn dropdown-toggle  btn-default" style="margin-top: -20px;"><?= __("Télécharger") ?></a>
+                    </div>
+                    <?= $this->form->renderGroups(array(
+                                "size"=>array(
+                                    "label"=>__("Taille du tatouage")
+                                ),
+                                "date"=>array(
+                                    "label"=>__("Je souhaite me faire tatouer dans :")
+                                ),                                    
+                                "firstname"=>array(
+                                    "label"=>__("Prénom")
+                                ),
+                                "lastname"=>array(
+                                    "label"=>__("Nom")
+                                ),
+                                "email"=>array(
+                                    "label"=>__("Email")
+                                ),
+                                "phone"=>array(
+                                    "label"=>__("Numéro de téléphone")
+                                ),
+                                "adress"=>array(
+                                    "label"=>__("Adresse")
+                                ),
+                                "postcode"=>array(
+                                    "label"=>__("Code postal")
+                                ),
+                                "city"=>array(
+                                    "label"=>__("Ville")
+                                )
+                            ))
+                    ?>
+                    <button type="submit" style="margin-left:0px" class="btn btn-default btn-purple">Envoyer au conseiller tatouage</button>
+                <? endif ?>
+                </form>                
+            </div>
+        </div>

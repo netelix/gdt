@@ -1,0 +1,37 @@
+<? $this->body_class = "admin-images" ?>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 35%;"><?=__("Image") ?></th>
+            <th style="width: 20%;"><?=__("Tatoueurs") ?></th>
+            <th style="width: 45%;"><?=__('Légendes') ?></th>
+        </tr>
+    </thead>
+    <? foreach ($this->entities as $row):?>
+    <tr>
+        <td style="width: 35%;"><img src="<?= $row->url('small') ?>" class="img-thumbnail" style="margin-bottom:40px"/></td>
+        <td style="width: 20%;">
+            <? if($r_org = $row->organization()): ?>
+                <?= $r_org->name() ?>
+            <? endif ?>
+        </td>
+        <td style="width: 45%;">
+            <form class="form-image" action="<?=  $this->link(array(), 'updateName')?>">
+                <input type="hidden" name="id_image" class="id_image" value="<?= $row->id ?>">
+                <input type="text" name="name_image" class="name_image" value="<?= $row->name() ?>" class="form-control" style="width: 80%;float:left;">
+                <input type="submit" value="OK" style="width: 15%;margin-top:4px;margin-left:10px;">
+            </form>
+        </td>
+    </tr>
+    <? endforeach ?>
+</table>
+<?= ($this->entities instanceof Zend_Paginator) ? $this->entities : "" ?>
+<script>
+    $('.form-image').submit(function(e){
+       e.preventDefault();
+       var data = $(this).serialize();
+       $.post($(this).attr("action"), data, function(data) {            
+       });
+    });
+</script>
