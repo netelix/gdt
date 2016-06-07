@@ -90,5 +90,73 @@ class AdminController extends Uop_Controller_Admin
           $r_image = $t_image->find($_POST['id_image'])->current();
           $r_image->name($_POST['name_image']);
       }
+
+	  public function editInvoiceAction()
+	  {
+ 	   	$this->checkAdmin();
+	    if($this->_isAjax()){
+		    $this->_helper->layout->disableLayout();
+	    }
+ 	   	$invoice_id = $this->_getParam("invoice_id");
+ 	   	$user_id = $this->_getParam("user_id");
+ 	   	
+ 	   	$t_invoices = App::table("invoices");
+ 	   	$r_invoice = $t_invoices->find($invoice_id)->current();
+ 	   	$r_user = App::table("users")->find($user_id)->current();
+
+ 	   	if(empty($r_invoice) && empty($r_user)){
+	 	   	throw new Exception("User #$user_id and invoice #$invoice_id not found");
+ 	   	}	   	
+ 	   	if(!empty($r_invoice) && $r_user->id != $r_invoice->user_id){
+	 	   	throw new Exception("Invoice #$invoice_id and does not match with #$user_id");
+ 	   	}
+ 	   	
+		  $this->view->form = $form = App::form("InvoiceEdit", $r_invoice, array("user"=>$r_user));
+		  if($this->_isSubmittedAndValid($form)){
+		  	if(empty($r_invoice)){
+			  	$r_invoice = $t_invoices->createRow(array("user_id"=>$user_id));
+		  	}
+		  	$values = $form->getValues();
+			  $r_invoice->setFromArray($values);
+			  $r_invoice->price_ht = $values["price_ttc"] / 1.20;
+			  if($values["type"] == "month"){
+				  $date_start = Zend_Date::now()->set($values["date_start"], Zend_Date::ISO_8601);
+					$r_invoice->label = "Abonnement mensuel - ".$date_start->get("MMM YYYY");
+					$r_invoice->date_next = $date_start->addMonth(1)->get(Zend_Date::ISO_8601);
+			  } else {
+					$r_invoice->label = "Abonnement annuel";
+					$r_invoice->date_next = NULL;
+			  }
+			  $r_invoice->save();
+			  $this->_reload();
+		  }
+		}
+
+	  public function cancelNextInvoiceAction()
+	  {
+			$this->checkAdmin();
+			$t_invoices = App::table("invoices");
+			$r_invoice = $t_invoices->find($this->_getParam("invoice_id"))->current();
+			
+			if(empty($r_invoice)){
+				throw new Exception("#$invoice_id not found");
+			}
+			$r_invoice->date_next = NULL;
+			$r_invoice->save();
+			$this->_goBack();
+		}
+
+	  public function cancelInvoiceAction()
+	  {
+			$this->checkAdmin();
+			$t_invoices = App::table("invoices");
+			$r_invoice = $t_invoices->find($this->_getParam("invoice_id"))->current();
+			
+			if(empty($r_invoice)){
+				throw new Exception("#$invoice_id not found");
+			}
+			$r_invoice->delete();
+			$this->_goBack();
+		}
 }
 

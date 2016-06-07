@@ -80,4 +80,58 @@ return array(
       'action'=>'claim-tattoobox',
     )
   ),
+  'edit-invoice'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/admin/invoice/:user_id/:invoice_id',
+      'defaults' => array(
+      'invoice_id'=>null,
+      'controller'=>'admin',
+      'action'=>'edit-invoice',
+    )
+  ),
+  "cancel-next-invoice"=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/admin/cancel-next-invoice/:invoice_id',
+      'defaults' => array(
+      'controller'=>'admin',
+      'action'=>'cancel-next-invoice',
+    )
+  ),
+  "cancel-invoice"=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/admin/cancel-invoice/:invoice_id',
+      'defaults' => array(
+      'controller'=>'admin',
+      'type'=>'invoice',
+      'action'=>'cancel-invoice',
+    )
+  ),
+  "show-contract"=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/user/show-contract/:invoice_id',
+      'defaults' => array(
+      'controller'=>'user',
+      'type'=>'contract',
+      'action'=>'show-contract',
+    )
+  ),
+  "show-invoice"=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/user/show-invoice/:invoice_id',
+      'defaults' => array(
+      'controller'=>'user',
+      'type'=>'invoice',
+      'action'=>'show-contract',
+    )
+  ),
+  "show-invoice-tattoobox"=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/user/show-invoice-tattoobox/:code',
+      'defaults' => array(
+      'controller'=>'user',
+      'action'=>'show-invoice-tattoobox',
+    )
+  ),
+
+
 );

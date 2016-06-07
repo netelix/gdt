@@ -21,6 +21,8 @@
 		<!-- STYLE CALL -->
 		<? $this->headLink()
 			->appendStylesheet("/tattoome/css/bootstrap-custom.css")
+			->appendStylesheet("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css")
+
 			->appendStylesheet("/tattoome/css/style.css?".uniqid()); ?>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -49,12 +51,16 @@
 	  		->prependFile('/uop/js/modernizr-2.7.1-custom/modernizr.min.js')
         ->appendFile('/uop/js/encryptedlink.js')
         ->appendFile('/uop/js/helper/jquery.uopAutosuggest.js')
+        
 
     //    ->appendFile('//connect.facebook.net/fr_FR/all.js#xfbml=1;')
         ->prependFile("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js")
         ->appendFile('/uop/bootstrap-select/bootstrap-select.js')
         ->appendFile("/uop/js/jquery.autosize.min.js")
-        ->appendFile('//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js') ?>
+        ->appendFile('//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js') 
+        ->appendFile('/uop/js/jquery.ui.i18n/jquery.ui.datepicker-'.App::getBrowserLanguage().'.js')
+    		->appendFile('/uop/js/form/datepicker.js');
+        ?>
 
 		<script type="text/javascript">
 			$.widget.bridge('uibutton', $.ui.button);

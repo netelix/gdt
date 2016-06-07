@@ -1,0 +1,93 @@
+<?
+	$invoice = $this->invoice;
+?>
+<style>
+	table {
+		border-collapse:collapse;
+		width: 100%;
+	}
+	.table-header td, .table-price td{
+		border:solid 1px #DDD;
+		padding:3px;
+	}
+	table td.right{
+		text-align:right;
+	}
+	.small{
+		font-size: 10px;
+		margin-top:-10px;
+	}
+	.footer td img{
+		width:100%;
+	}
+</style>
+<div style="width:800px; margin-left:auto; margin-right:auto; font-family:arial">
+	<h1 class="text-center"><img src="/img/invoice/header.png"></h1>
+	<table class="table-header">
+		<tr>
+			<td>SAS Archibald Rescue</td>
+			<td><?= $invoice->org_label ?></td>
+		</tr>
+		<tr>
+			<td>TattooMe</td>
+			<td><?= $invoice->address ?></td>
+		</tr>
+		<tr>
+			<td>38 rue Bellechasse, 75007 Paris</td>
+			<td><?= $invoice->postcode ?> <?= $invoice->city ?></td>
+		</tr>
+	</table>
+	<br>
+	<p>
+		SAS Archibald Rescue<br>
+		N°SIRET: 802 699 850 00011<br>
+		N°TVA: FR66 802 699 850<br>
+	</p>
+	<br>
+	<? if($this->type=="invoice"): ?>
+		<h2>FACTURE #T<?= $invoice->id ?> - TATTOOME, site de la SAS Archibald Rescue</h2>
+	<? else: ?>
+		<h2>CONTRAT - TATOOME, site de la SAS Archibald Rescue</h2>
+	<? endif ?>
+	<br>
+
+	<p>Objet: 
+	<? if($this->type=="invoice"): ?>
+		<?= $invoice->label ?><?= $invoice->type=="month" ? " - <b>".ucfirst($this->date($invoice->date_start, "MMM YY"))." </b>":" a partir du ".$this->date($invoice->date_start, Zend_Date::DATES); ?> pour le réferencement de <b><?= $invoice->org_label ?></b> sur TattooMe
+	<? else: ?>
+		Creation d'un espace dédié sur le site TattooMe (ex Galerie du Tatouage) pour <b><?= $invoice->org_label ?></b> a compter du <?= $this->date($invoice->date_start, Zend_Date::DATES) ?>
+	<? endif ?>
+	</p>
+	<table class="table-price">
+		<tr>
+			<td>Montant HT</td>
+			<td class="right"><?= $this->currency($invoice->price_ht) ?></td>
+		</tr>
+		<tr>
+			<td>TVA 20%</td>
+			<td class="right"><?= $this->currency($invoice->price_ht*0.20) ?></td>
+		</tr>
+		<tr>
+		<td>Montant TTC</td>
+			<td class="right"><?= $this->currency($invoice->price_ttc) ?></td>
+		</tr>
+	</table>
+	
+	<? if($this->type!="invoice" && $invoice->type=="month"): ?>
+	<p>Conditions de résiliation: Sans préavis par email, après 3 mois d'utilisation, à l'adresse: tattoo@tattoome.com</p>
+	<p class="small">Tout autre droit réservé - valeur en votre aimable réglement par prélèvement SEPA</p>
+	<? endif ?>
+	<br>
+	<br>
+	<br>
+
+	<table class="footer">
+		<tr>
+			<td><img src="/img/invoice/creation.png"></td>
+			<td><img src="/img/invoice/guide.png"></td>
+			<td><img src="/img/invoice/mag.png"></td>
+			<td><img src="/img/invoice/shop.png"></td>
+		</tr>
+	</table>
+</div>
+<script>window.print();</script>

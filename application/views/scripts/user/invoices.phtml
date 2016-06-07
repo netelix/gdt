@@ -1,0 +1,88 @@
+<? 
+	$is_admin = $this->user()->admin();
+?>
+<? $this->content_with_sidebar = true ?>
+<?= $this->partial("user/_tabs.phtml", array("current"=>'user/invoices')); ?>
+
+<? if($this->next_invoices->count() > 0): ?>
+<table class="table table-condensed">
+	<thead>
+    <tr>
+      <th>Prochaines factures</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<? foreach($this->next_invoices as $r_invoice): ?>
+  	<tr>
+  		<td>
+    		<?= $this->date($r_invoice->date_next, Zend_Date::DATES); ?> - 
+    		<?= $r_invoice->org_label ?>
+   		</td>
+  		<td>
+    		<?= $this->currency($r_invoice->price_ttc) ?>
+  		</td>
+  		<td>
+        <? if($is_admin): ?>
+	  			<?= $this->link(array("invoice_id"=>$r_invoice->id), "cancel-next-invoice")->a("Annuler", "btn btn-danger btn-xs pull-right") ?>
+	  		<? endif ?>
+  		</td>
+  	</tr>
+  	<? endforeach ?>	
+  </tbody>
+</table>
+<? endif ?>
+
+<table class="table">
+	<thead>
+    <tr>
+      <th>#</th>
+      <th><?=__("Date")?></th>
+      <th><?=__("Details")?></th>
+      <th><?=__("Prix")?></th>
+      <th>
+        <? if($is_admin): ?>
+        	<? 	 	
+        		$link = $this->link(array("user_id"=>$this->user->id, "invoice_id"=>null), "edit-invoice");
+					 	echo $this->modalForm()->a($link, __("Nouveau contrat"), "btn btn-success btn-xs pull-right", "+");
+				 ?>
+        <? endif ?>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  	<? foreach($this->orders as $r_invoice): ?>
+  	<tr>
+  		<td><?=	          		
+  			"Facture #T$r_invoice->id"	?>
+  		</td>
+  		<td>
+    		<?
+    			 $date_start = $r_invoice->date_start;
+    			 echo $this->date($date_start, Zend_Date::DATES);
+    		?>
+  		</td>
+  		<td>
+    		<?= $r_invoice->label ?> - 
+    		<?= $r_invoice->org_label ?>
+  		</td>
+  		<td>
+  			<?= $this->currency($r_invoice->price_ttc) ?>
+  		</td>
+  		<td style="text-align:right">
+        <? if($is_admin): ?>
+	  		<?= $this->link(array("invoice_id"=>$r_invoice->id), "cancel-invoice")->a("Annuler", array("target"=>"_blank", "class"=>"btn btn-danger btn-xs")) ?>
+	  		<? endif ?>	
+	  		<? if($r_invoice->type == "month"): ?>
+	  		<?= $this->link(array("invoice_id"=>$r_invoice->id), "show-contract")->a("Contrat", array("target"=>"_blank", "class"=>"btn btn-default btn-xs")) ?>
+	  		<? endif ?>
+	  		<?= $this->link(array("invoice_id"=>$r_invoice->id), "show-invoice")->a("Facture", array("target"=>"_blank", "class"=>"btn btn-default btn-xs")) ?>
+  		</td>
+  	</tr>
+  	<? endforeach ?>	
+  </tbody>
+</table>
+<script>
+	$(".btn-danger").click(function(){
+		return confirm("Cette action est définitive, êtes vous sûr de vouloir continuer ?")
+	});
+</script>
