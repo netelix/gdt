@@ -45,6 +45,24 @@ return array(
       'page'=>1
     )
   ),
+  'conciergerieSend'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/conciergeriesend/:id',
+      'defaults' => array(
+      'controller'=>'admin',
+      'action'=>'conciergeriesend',
+      'page'=>1
+    )
+  ),
+  'downloadimageconciergerie'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/downloadimageconciergerie/:id/:ext',
+      'defaults' => array(
+      'controller'=>'admin',
+      'action'=>'downloadimageconciergerie',
+      'page'=>1
+    )
+  ),  
   'updateName'=>array(
     'type'   => 'Zend_Controller_Router_Route',
     'route'  => '/:lang/updatename',

@@ -30,8 +30,28 @@
 <script>
     $('.form-image').submit(function(e){
        e.preventDefault();
-       var data = $(this).serialize();
-       $.post($(this).attr("action"), data, function(data) {            
-       });
+       var id = $(".id_image",this).val();
+       var name = $(".name_image",this).val();
+       $.ajax({
+            type: "POST",
+            // DUE TO THE NATURE OF HOW ZEND WORKS YOU NEED ONLY NEED TO PROVIDE /CONTROLLER/ACTION
+            url: $(this).attr("action"),
+    
+             // I USE THIS DATA TYPE WHEN SENDING AJAX REQUESTS IN ZEND
+              dataType:  'json',
+    
+            // YOU DO NOT NEED THE () ONLY {}
+            data: { 
+                id:id,
+                name:name
+            },
+            cache: false,
+            error: function(msg){ 
+                alert('Il y a eu une erreur.');
+            },
+            success: function(){
+                alert('Mise à jour effectuée');
+            } 
+        });      
     });
 </script>

@@ -85,78 +85,63 @@ class AdminController extends Uop_Controller_Admin
       }
       
       public function updatenameAction(){
-          
           $t_image = App::table("images");
-          $r_image = $t_image->find($_POST['id_image'])->current();
-          $r_image->name($_POST['name_image']);
+          $r_image = $t_image->find($this->_request->getPost('id'))->current();
+          $r_image->name($this->_request->getPost('name'));
+          echo Zend_Json_Encoder::encode(array(
+                                  'success' => true,
+                                  'value' => $r_image->name()
+                          ));
+          exit;
       }
-
-	  public function editInvoiceAction()
-	  {
- 	   	$this->checkAdmin();
-	    if($this->_isAjax()){
-		    $this->_helper->layout->disableLayout();
-	    }
- 	   	$invoice_id = $this->_getParam("invoice_id");
- 	   	$user_id = $this->_getParam("user_id");
- 	   	
- 	   	$t_invoices = App::table("invoices");
- 	   	$r_invoice = $t_invoices->find($invoice_id)->current();
- 	   	$r_user = App::table("users")->find($user_id)->current();
-
- 	   	if(empty($r_invoice) && empty($r_user)){
-	 	   	throw new Exception("User #$user_id and invoice #$invoice_id not found");
- 	   	}	   	
- 	   	if(!empty($r_invoice) && $r_user->id != $r_invoice->user_id){
-	 	   	throw new Exception("Invoice #$invoice_id and does not match with #$user_id");
- 	   	}
- 	   	
-		  $this->view->form = $form = App::form("InvoiceEdit", $r_invoice, array("user"=>$r_user));
-		  if($this->_isSubmittedAndValid($form)){
-		  	if(empty($r_invoice)){
-			  	$r_invoice = $t_invoices->createRow(array("user_id"=>$user_id));
-		  	}
-		  	$values = $form->getValues();
-			  $r_invoice->setFromArray($values);
-			  $r_invoice->price_ht = $values["price_ttc"] / 1.20;
-			  if($values["type"] == "month"){
-				  $date_start = Zend_Date::now()->set($values["date_start"], Zend_Date::ISO_8601);
-					$r_invoice->label = "Abonnement mensuel - ".$date_start->get("MMM YYYY");
-					$r_invoice->date_next = $date_start->addMonth(1)->get(Zend_Date::ISO_8601);
-			  } else {
-					$r_invoice->label = "Abonnement annuel";
-					$r_invoice->date_next = NULL;
-			  }
-			  $r_invoice->save();
-			  $this->_reload();
-		  }
-		}
-
-	  public function cancelNextInvoiceAction()
-	  {
-			$this->checkAdmin();
-			$t_invoices = App::table("invoices");
-			$r_invoice = $t_invoices->find($this->_getParam("invoice_id"))->current();
-			
-			if(empty($r_invoice)){
-				throw new Exception("#$invoice_id not found");
-			}
-			$r_invoice->date_next = NULL;
-			$r_invoice->save();
-			$this->_goBack();
-		}
-
-	  public function cancelInvoiceAction()
-	  {
-			$this->checkAdmin();
-			$t_invoices = App::table("invoices");
-			$r_invoice = $t_invoices->find($this->_getParam("invoice_id"))->current();
-			
-			if(empty($r_invoice)){
-				throw new Exception("#$invoice_id not found");
-			}
-			$r_invoice->delete();
-			$this->_goBack();
-		}
+      
+      public function conciergeriesAction()
+      {
+          $t_conciergerie = App::table("conciergeries");
+          $this->view->preset = $preset = $this->getParam("preset", "all");
+          // Building filter request
+          $select = $t_conciergerie->select()
+              ->setIntegrityCheck(false)
+              ->from("conciergeries")
+              ->order("conciergeries.id ASC");
+            
+          $presets["all"] = $select;
+            
+          $this->view->entities = $this->_paginator($presets[$preset], 50);
+          $this->view->presets = $presets;           
+      }
+      
+      public function conciergeriesendAction()
+      {
+          $t_conciergeries = App::table("conciergeries");
+          $r_conciergerie = $t_conciergeries->find($this->_getParam("id"))->current();
+          $r_conciergerie->send = 1;
+          $r_conciergerie->save();
+          $this->_redirect(Link::factory(array("table"=>"conciergeries"), "admin/entities"));
+      }
+      
+      public function downloadimageconciergerieAction()
+      {
+        $filepath = APPLICATION_PATH.'/../conciergerie/'.$this->_getParam("id").'.'.$this->_getParam("ext");
+        $filesize = filesize($filepath);
+        $filemd5 = md5_file($filepath);
+ 
+        // Gestion du cache
+        header('Pragma: public');
+        header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
+        header('Cache-Control: must-revalidate, pre-check=0, post-check=0, max-age=0');
+        // Informations sur le contenu à envoyer
+       // header('Content-Tranfer-Encoding: ' . $type . "\n");
+        header('Content-Length: ' . $filesize);
+        header('Content-MD5: ' . base64_encode($filemd5));
+        header('Content-Type: application/force-download; name="' . $this->_getParam("id").'.'.$this->_getParam("ext") . '"');
+        header('Content-Disposition: attachement; filename="' . $this->_getParam("id").'.'.$this->_getParam("ext") . '"');
+        // Informations sur la réponse HTTP elle-même
+        header('Date: ' . gmdate('D, d M Y H:i:s', time()) . ' GMT');
+        header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 1) . ' GMT');
+        header('Last-Modified: ' . gmdate('D, d M Y H:i:s', time()) . ' GMT');
+        readfile($filepath);
+        exit;
+      }
 }
 

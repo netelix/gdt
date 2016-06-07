@@ -1,0 +1,62 @@
+<? $this->body_class = "admin-conciergeries" ?>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <? foreach ($this->entities as $row):?>
+    <tr>
+        <td>
+            <?= $row->firstname . ' ' . $row->lastname . ', ' . $row->address . ' ' . $row->postcode . ' ' . $row->city . ', ' . $row->email . ' ' . $row->phone . ' || ' . $row->description . ', ' ?>
+            
+            <?php
+                switch ($row->size) {
+                    case '0':
+                        echo 'Taille du taoutage : 1 à 10 cm';
+                        break;
+                    case '1':
+                        echo 'Taille du taoutage : 10 à 20 cm';
+                        break;
+                    case '2':
+                        echo 'Taille du taoutage : 20 à 30 cm';
+                        break;
+                    case '3':
+                        echo 'Taille du taoutage : Plus de 30 cm';
+                        break;                                                                        
+                }
+                
+                echo ', ';
+                
+                switch ($row->date) {
+                    case '0':
+                        echo 'Tatouage dans 1 à 3 mois';
+                        break;
+                    
+                    case '1':
+                        echo 'Tatouage dans 3 à 6 mois';
+                        break;
+                        
+                    case '2':
+                        echo 'Tatouage dans plus de 6 mois';
+                        break;
+                }
+            ?>
+        </td>
+        <td>
+            <?= $this->link(array("id"=>$row->id,"ext"=>pathinfo($row->filename, PATHINFO_EXTENSION)), "downloadimageconciergerie")->a("Image", "btn btn-sm")?>
+        </td>
+        <td>
+        <? if($row->send == 1 ): ?>
+            <spans style='color:green;font-weight:bold;'>Traité</spans>
+        <? else: ?>
+            <?= $this->link(array("id"=>$row->id), "conciergerieSend")->a("Traiter", "btn btn-danger btn-sm")?></td>
+        <? endif ?>            
+        </td>
+    </tr>
+    <? endforeach ?>
+</table>
+<?= ($this->entities instanceof Zend_Paginator) ? $this->entities : "" ?>

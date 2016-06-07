@@ -93,15 +93,16 @@ class IndexController extends Uop_Controller_Index
        $form->addTextArea("description", array("required"=>true));
        $element = new Zend_Form_Element_File('image');
        $element->addValidator('Extension', false, 'jpg,png,gif')
-        ->setDestination(APPLICATION_PATH.'/../tmp');
+        ->setDestination(APPLICATION_PATH.'/../conciergerie');
+        
        $form->addElement($element, 'image'); 
-       $form->addSelect("size", array("multiOptions"=>array(0=>'xxx'))); 
-       $form->addSelect("date", array("multiOptions"=>array(0=>'1 mois'))); 
+       $form->addSelect("size", array("multiOptions"=>array(0=>'1 à 10 cm',1=>'10 à 20 cm',2=>'20 à 30 cm',3=>'30 cm et plus'))); 
+       $form->addSelect("date", array("multiOptions"=>array(0=>'1 à 3 mois',1=>'3 à 6 mois',2=>"Plus de 6 mois"))); 
        $form->addText("firstname",array("required"=>true));
        $form->addText("lastname",array("required"=>true));
        $form->addText("email",array("required"=>true));
        $form->addText("phone",array("required"=>true));
-       $form->addText("adress",array("required"=>true));
+       $form->addText("address",array("required"=>true));
        $form->addText("postcode",array("required"=>true));
        $form->addText("city",array("required"=>true));
        
@@ -109,47 +110,55 @@ class IndexController extends Uop_Controller_Index
 
        if( $this->_isSubmittedAndValid($form)){
 
-           $leadsConciergerie = App::table("leads_conciergerie");
-           $newLead = $leadsConciergerie->createRow();
+           $t_conciergeries = App::table("conciergeries");
+           $r_conciergerie = $t_conciergeries->createRow();
 
            foreach($form->getValues() as $key=>$value){
                
                switch ($key) {
                    case 'description':
-                        $newLead->description = $value;                       
+                        $r_conciergerie->description = $value;                       
                        break;
                    case 'size':
-                        $newLead->size = $value;                       
+                        $r_conciergerie->size = $value;                       
                        break;
                    case 'date':
-                        $newLead->date = $value;                       
+                        $r_conciergerie->date = $value;                       
                        break;
                    case 'firstname':
-                        $newLead->firstname = $value;                       
+                        $r_conciergerie->firstname = $value;                       
                        break;
                    case 'lastname':
-                        $newLead->lastname = $value;                       
+                        $r_conciergerie->lastname = $value;                       
                        break;
                    case 'email':
-                        $newLead->email = $value;                       
+                        $r_conciergerie->email = $value;                       
                        break;
                    case 'phone':
-                        $newLead->phone = $value;                       
+                        $r_conciergerie->phone = $value;                       
                        break;   
-                   case 'adress':
-                        $newLead->adress = $value;                       
+                   case 'address':
+                        $r_conciergerie->address = $value;                       
                        break;
                    case 'postcode':
-                        $newLead->postcode = $value;                       
+                        $r_conciergerie->postcode = $value;                       
                        break;
                    case 'city':
-                        $newLead->city = $value;                       
+                        $r_conciergerie->city = $value;                       
                        break;                                                                                                                                                                                                        
                    default:                       
                        break;
                }
            }
-           $newLead->save();                           
+
+           $r_conciergerie->save();
+           
+           $extension = pathinfo($form->image->getFileName(), PATHINFO_EXTENSION);
+           rename($form->image->getFileName(),APPLICATION_PATH.'/../conciergerie/'.$r_conciergerie->id.'.'.$extension);
+           
+           $r_conciergerie->filename = $r_conciergerie->id.'.'.$extension;
+           $r_conciergerie->save();
+                                                    
        }            
        
        $this->view->form = $form;
