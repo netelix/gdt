@@ -91,10 +91,11 @@ class IndexController extends Uop_Controller_Index
   {
        $form = App::form("Simple", null);
        $form->addTextArea("description", array("required"=>true));
+       $path = APPLICATION_PATH.'/../public/upload/images/conciergerie';
        $element = new Zend_Form_Element_File('image');
        $element->addValidator('Extension', false, 'jpg,png,gif')
-        ->setDestination(APPLICATION_PATH.'/../conciergerie');
-        
+        ->setDestination($path);
+       
        $form->addElement($element, 'image'); 
        $form->addSelect("size", array("multiOptions"=>array(0=>'1 à 10 cm',1=>'10 à 20 cm',2=>'20 à 30 cm',3=>'30 cm et plus'))); 
        $form->addSelect("date", array("multiOptions"=>array(0=>'1 à 3 mois',1=>'3 à 6 mois',2=>"Plus de 6 mois"))); 
@@ -154,7 +155,7 @@ class IndexController extends Uop_Controller_Index
            $r_conciergerie->save();
            
            $extension = pathinfo($form->image->getFileName(), PATHINFO_EXTENSION);
-           rename($form->image->getFileName(),APPLICATION_PATH.'/../conciergerie/'.$r_conciergerie->id.'.'.$extension);
+           rename($form->image->getFileName(),$path.'/'.$r_conciergerie->id.'.'.$extension);
            
            $r_conciergerie->filename = $r_conciergerie->id.'.'.$extension;
            $r_conciergerie->save();
