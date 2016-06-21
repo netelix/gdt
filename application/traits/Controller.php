@@ -22,7 +22,10 @@ trait Trait_Controller
 			$filters = $form->getFilters();
 			$loc_id = $form->getElement("search_loc_id")->getValue();
 			$r_loc = App::table("locations")->find($loc_id)->current();
-
+			if($r_loc->type == "org"){
+				$r_org = App::table("organizations")->findByLocId($r_loc->id)->current();
+				$this->_gotoUrl($r_org->link()->assemble());
+			}
 			if(!isset($r_loc)){
 				$r_loc = App::table("locations")->findByLocalId("country", "FR");
 			}
