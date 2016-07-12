@@ -170,7 +170,7 @@ var baselink = '<?= $this->baselink ?>';
 		$this->headMeta()->appendProperty("og:type", "website");
 	  $this->headMeta()->appendProperty("og:url", $this->link(array("id"=>$this->img->id),"galery-focus")->option("canonical", true)->assemble());
 	  $this->headMeta()->setName("description",  $this->img->name());
-	  $this->headTitle()->set($this->img->name()." - ".$this->img->org()->name());
+	  $this->headTitle()->set($this->img->name()." - ".$this->img->organization()->name());
 	 ?>
   <? endif ?>
 </div>

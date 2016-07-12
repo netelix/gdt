@@ -29,7 +29,13 @@ $link_edit = $this->sort ?
     </div>
 	</div>
 	<ul class="row sortable-container list-unstyled photo-edit-list">
+		<? $x = 0; ?>
+		<? 
+			$subforms = $form->getSubforms();
+			var_dump(count($subforms));
+		?>
 		<? foreach($form->getSubforms() as $subform) : ?>
+			<? $x++ ?>
 			<? $subform->hideLabels(true); ?>
 			<? $r_image = $subform->getImage(); ?>
 			<li class="<?=$col_class?> sortable">
@@ -56,7 +62,7 @@ $link_edit = $this->sort ?
 	  	    <a href="javascript:void();" data-toggle="collapse" data-target="#img_<?= $r_image->id ?>_styles"><?= __("Gèrer les styles associés...")?></a>
         </div>
         <div class="col-xs-12 collapse <?= $this->sort ?'hide':''?>" id="img_<?= $r_image->id ?>_styles">
-  	   	 <?= $subform->renderAttributesCheckboxes("tattoo_style", array("label"=>null, "cols"=>4))?>
+  	   	 <?  $subform->renderAttributesCheckboxes("tattoo_style", array("label"=>null, "cols"=>4)); //var_dump($x, $r_image->id); if($x > 44) die();?>
         </div>
 			</li>
 		<? endforeach?>
