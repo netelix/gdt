@@ -9,11 +9,14 @@
 ?>
 
 <? $this->partial("shared/_sub-header.phtml", $this) ?>     <!-- SERP CONTAINER -->
-        <img class="img-conseiller" src="/img/conseiller-tattooMe.jpg" alt="Le conseiller TattooMe" />
+        <div class="img-conciergerie">
+            <img class="img-conseiller" src="/img/conseiller-tattooMe.jpg" alt="Le conseiller TattooMe" />
+            <a href="#conciergerie"><button style="margin-left:0px" class="btn btn-default">Contacter le conseiller</button></a>
+        </div>
         <div class="container-fluid">
             <div class="container_conseiller">
-                <p>Donnez quelques informations sur votre projet.<br />Vous serez contacté dans un délai de 24h.</p>
-                <?= $this->formHeader($this->form, array('enctype'=>'multipart/form-data')) ?>
+                <p>Donnez quelques informations sur votre projet.</p>
+                <?= $this->formHeader($this->form, array('enctype'=>'multipart/form-data','id'=>'conciergerie')) ?>
                 <? if($this->contacted == false): ?>
                     <?= $this->form->renderGroups(array(
                                 "description"=>array(
@@ -27,13 +30,7 @@
                         <input type="file" name="image" style="opacity: 0;"/>
                         <a class="btn dropdown-toggle  btn-default" style="margin-top: -20px;"><?= __("Télécharger") ?></a>
                     </div>
-                    <?= $this->form->renderGroups(array(
-                                "size"=>array(
-                                    "label"=>__("Taille du tatouage")
-                                ),
-                                "date"=>array(
-                                    "label"=>__("Je souhaite me faire tatouer dans :")
-                                ),                                    
+                    <?= $this->form->renderGroups(array(                                  
                                 "firstname"=>array(
                                     "label"=>__("Prénom")
                                 ),
@@ -45,9 +42,6 @@
                                 ),
                                 "phone"=>array(
                                     "label"=>__("Numéro de téléphone")
-                                ),
-                                "address"=>array(
-                                    "label"=>__("Adresse")
                                 ),
                                 "postcode"=>array(
                                     "label"=>__("Code postal")

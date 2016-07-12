@@ -75,7 +75,7 @@
 		<div class="container-fluid" id="banner_promo_container">
 			<div class="row promo_container_md blog-banner-promo" id="banner_promo">
 				<div class="col-lg-9" id="blog_preview"></div>
-					<div class="col-lg-3 promo_container_md_singleton promo_container_md_singleton_right promo_container_md_singleton_custom" data-toggle="modal" data-target="#newsletter">
+					<div class="col-lg-3 promo_container_md_singleton promo_container_md_singleton_right promo_container_md_singleton_custom">
 						<p class="francoisone label_tag">Newsletter</p>								
 						<h2 class="custom_title_text_prom gothamblack">News,<br/>Bons plans, Tendances...</h2>
 						<p class="custom_text_prom gothambook">Recevez le meilleur du tatouage par email</p>
@@ -85,6 +85,12 @@
 		</div>
 		<!-- FIN BANNIERE PROMO 2-->
 		<script>
+    		$(document).ready(function(){
+    		     $('.promo_container_md_singleton_right').on('click',function(e){
+    		          $('.lightbox').show(); 
+    		          e.stopPropagation();  
+    		     });
+    		});
 			$(function(){
 				$("#blog_preview").load('https://www.galeriedutatouage.com/blog/ .top_slider_blog .stand_slide:nth-child(-n+3)');
 			});

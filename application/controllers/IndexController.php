@@ -97,13 +97,13 @@ class IndexController extends Uop_Controller_Index
         ->setDestination($path);
        
        $form->addElement($element, 'image'); 
-       $form->addSelect("size", array("multiOptions"=>array(0=>'1 à 10 cm',1=>'10 à 20 cm',2=>'20 à 30 cm',3=>'30 cm et plus'))); 
-       $form->addSelect("date", array("multiOptions"=>array(0=>'1 à 3 mois',1=>'3 à 6 mois',2=>"Plus de 6 mois"))); 
+       //$form->addSelect("size", array("multiOptions"=>array(0=>'1 à 10 cm',1=>'10 à 20 cm',2=>'20 à 30 cm',3=>'30 cm et plus'))); 
+       //$form->addSelect("date", array("multiOptions"=>array(0=>'1 à 3 mois',1=>'3 à 6 mois',2=>"Plus de 6 mois"))); 
        $form->addText("firstname",array("required"=>true));
        $form->addText("lastname",array("required"=>true));
        $form->addText("email",array("required"=>true));
        $form->addText("phone",array("required"=>true));
-       $form->addText("address",array("required"=>true));
+       //$form->addText("address",array("required"=>true));
        $form->addText("postcode",array("required"=>true));
        $form->addText("city",array("required"=>true));
        
@@ -120,12 +120,6 @@ class IndexController extends Uop_Controller_Index
                    case 'description':
                         $r_conciergerie->description = $value;                       
                        break;
-                   case 'size':
-                        $r_conciergerie->size = $value;                       
-                       break;
-                   case 'date':
-                        $r_conciergerie->date = $value;                       
-                       break;
                    case 'firstname':
                         $r_conciergerie->firstname = $value;                       
                        break;
@@ -138,9 +132,6 @@ class IndexController extends Uop_Controller_Index
                    case 'phone':
                         $r_conciergerie->phone = $value;                       
                        break;   
-                   case 'address':
-                        $r_conciergerie->address = $value;                       
-                       break;
                    case 'postcode':
                         $r_conciergerie->postcode = $value;                       
                        break;
@@ -153,12 +144,14 @@ class IndexController extends Uop_Controller_Index
            }
 
            $r_conciergerie->save();
-           
-           $extension = pathinfo($form->image->getFileName(), PATHINFO_EXTENSION);
-           rename($form->image->getFileName(),$path.'/'.$r_conciergerie->id.'.'.$extension);
-           
-           $r_conciergerie->filename = $r_conciergerie->id.'.'.$extension;
-           $r_conciergerie->save();
+
+           if($form->image->getFileName() != null && $form->image->getFileName() != ''){
+               $extension = pathinfo($form->image->getFileName(), PATHINFO_EXTENSION);
+               rename($form->image->getFileName(),$path.'/'.$r_conciergerie->id.'.'.$extension);
+               
+               $r_conciergerie->filename = $r_conciergerie->id.'.'.$extension;
+               $r_conciergerie->save();               
+           }
                                                     
        }            
        

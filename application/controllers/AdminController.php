@@ -122,7 +122,7 @@ class AdminController extends Uop_Controller_Admin
       
       public function downloadimageconciergerieAction()
       {
-        $filepath = APPLICATION_PATH.'/../conciergerie/'.$this->_getParam("id").'.'.$this->_getParam("ext");
+        $filepath = APPLICATION_PATH.'/../public/upload/images/conciergerie/'.$this->_getParam("id").'.'.$this->_getParam("ext");
         $filesize = filesize($filepath);
         $filemd5 = md5_file($filepath);
  

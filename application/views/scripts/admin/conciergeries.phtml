@@ -11,10 +11,10 @@
     <? foreach ($this->entities as $row):?>
     <tr>
         <td>
-            <?= $row->firstname . ' ' . $row->lastname . ', ' . $row->address . ' ' . $row->postcode . ' ' . $row->city . ', ' . $row->email . ' ' . $row->phone . ' || ' . $row->description . ', ' ?>
+            <?= $row->firstname . ' ' . $row->lastname . ', ' . $row->address . ' ' . $row->postcode . ' ' . $row->city . ', ' . $row->email . ' ' . $row->phone . ' || ' . $row->description ?>
             
             <?php
-                switch ($row->size) {
+              /*  switch ($row->size) {
                     case '0':
                         echo 'Taille du taoutage : 1 à 10 cm';
                         break;
@@ -43,7 +43,7 @@
                     case '2':
                         echo 'Tatouage dans plus de 6 mois';
                         break;
-                }
+                }*/
             ?>
         </td>
         <td>

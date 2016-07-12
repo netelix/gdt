@@ -56,7 +56,7 @@ return array(
   ),
   'downloadimageconciergerie'=>array(
     'type'   => 'Zend_Controller_Router_Route',
-    'route'  => '/:lang/downloadimageconciergerie/:id/:ext',
+    'route'  => '/:lang/public/upload/images/conciergerie/:id/:ext',
       'defaults' => array(
       'controller'=>'admin',
       'action'=>'downloadimageconciergerie',

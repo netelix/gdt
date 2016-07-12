@@ -43,7 +43,7 @@ if(isset($date)){
     <h4 class="media-heading h5"><?= $when?></h4>
 		<?= $content ?>
 		<? if(isset($this->message) && ($images = $this->message->images())): ?>
-			<h5><?= __("Voici les photos d'exemples envoyées par cet utilisateur")  ?></h5>
+			<!--<h5><?= __("Voici les photos d'exemples envoyées par cet utilisateur")  ?></h5>-->
 			<div class="row">
 			<? foreach($images as $r_image): ?>
 				<div class="col-md-3"><a download="<?= $r_image->url("orig")?>" href="<?=$r_image->url("orig")?>"><img src="<?=$r_image->url("small")?>" class="img-responsive"></a></div>
