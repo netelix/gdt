@@ -1,0 +1,86 @@
+User-agent: *
+#Disallow: /fr/loc/*/*/f/*
+Disallow: /fr/galery-focus/*
+Disallow: /blog/author/*
+
+
+Disallow: /fr/user/login
+Disallow: /fr/user/password-lost
+Disallow: /tattoobox/authentification?back=my-account
+Disallow: /tattoobox/mon-compte
+
+
+Disallow: /blog/wp-login.php
+Disallow: /blog/wp-admin
+Disallow: /blog/wp-includes
+Disallow: /blog*/trackback
+Disallow: /blog/*/feed
+Disallow: /blog/*/comments
+Disallow: /blog/cgi-bin
+Disallow: /blog/*.inc$
+Disallow: /blog/*.gz
+Disallow: /blog/*.cgi
+
+
+# Private pages
+Disallow: /tattoobox/*orderby=
+Disallow: /tattoobox/*orderway=
+Disallow: /tattoobox/*tag=
+Disallow: /tattoobox/*id_currency=
+Disallow: /tattoobox/*search_query=
+Disallow: /tattoobox/*back=
+Disallow: /tattoobox/*n=
+Disallow: /tattoobox/*controller=addresses
+Disallow: /tattoobox/*controller=address
+Disallow: /tattoobox/*controller=authentication
+Disallow: /tattoobox/*controller=cart
+Disallow: /tattoobox/*controller=discount
+Disallow: /tattoobox/*controller=footer
+Disallow: /tattoobox/*controller=get-file
+Disallow: /tattoobox/*controller=header
+Disallow: /tattoobox/*controller=history
+Disallow: /tattoobox/*controller=identity
+Disallow: /tattoobox/*controller=images.inc
+Disallow: /tattoobox/*controller=init
+Disallow: /tattoobox/*controller=my-account
+Disallow: /tattoobox/*controller=order
+Disallow: /tattoobox/*controller=order-opc
+Disallow: /tattoobox/*controller=order-slip
+Disallow: /tattoobox/*controller=order-detail
+Disallow: /tattoobox/*controller=order-follow
+Disallow: /tattoobox/*controller=order-return
+Disallow: /tattoobox/*controller=order-confirmation
+Disallow: /tattoobox/*controller=pagination
+Disallow: /tattoobox/*controller=password
+Disallow: /tattoobox/*controller=pdf-invoice
+Disallow: /tattoobox/*controller=pdf-order-return
+Disallow: /tattoobox/*controller=pdf-order-slip
+Disallow: /tattoobox/*controller=product-sort
+Disallow: /tattoobox/*controller=search
+Disallow: /tattoobox/*controller=statistics
+Disallow: /tattoobox/*controller=attachment
+Disallow: /tattoobox/*controller=guest-tracking
+# Directories
+Disallow: /tattoobox/*/classes/
+Disallow: /tattoobox/*/config/
+Disallow: /tattoobox/*/download/
+Disallow: /tattoobox/*/mails/
+Disallow: /tattoobox/*/translations/
+Disallow: /tattoobox/*/tools/
+# Files
+Disallow: /tattoobox/*fr/mot-de-passe-oublie
+Disallow: /tattoobox/*fr/adresse
+Disallow: /tattoobox/*fr/adresses
+Disallow: /tattoobox/*fr/authentification
+Disallow: /tattoobox/*fr/panier
+Disallow: /tattoobox/*fr/bons-de-reduction
+Disallow: /tattoobox/*fr/historique-des-commandes
+Disallow: /tattoobox/*fr/identite
+Disallow: /tattoobox/*fr/mon-compte
+Disallow: /tattoobox/*fr/details-de-la-commande
+Disallow: /tattoobox/*fr/avoirs
+Disallow: /tattoobox/*fr/commande
+Disallow: /tattoobox/*fr/recherche
+Disallow: /tattoobox/*fr/commande-rapide
+Disallow: /tattoobox/*fr/suivi-commande-invite
+Disallow: /tattoobox/*fr/confirmation-commande
