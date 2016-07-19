@@ -10,6 +10,7 @@
   $this->full_width = true;
   
   $country = $this->location->isCountry() ? $this->location : $this->location->ancester(array("country"));
+  $this->country = $country;
   $this->belgium = $country->local_id == "BE";
 
 ?>

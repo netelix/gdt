@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<? $this->country = empty($this->country) ? App::table("locations")->country("FR") : $this->country; ?>
 <html lang="<?= App::lang()?>">
 	<head>
 		<meta charset="UTF-8">
@@ -100,24 +101,13 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 		<script>
-            $(document).ready(function() {                               
+            $(document).ready(function() {
                 // check cookie
-                var visited = $.cookie("visited_popin");
-                var visitedT = $.cookie("visited_toast");
-                
-                var $window = $(window);
-                $window.scroll(function () {
-                    if($window.height() + $window.scrollTop() < $(document).height())
-                        $('#toast-communaute').css('bottom','-'+$window.scrollTop()+'px');
-                });
+                var visited = $.cookie("visited_popin")
                 
                 function openPopup(){
                     $('body').prepend('<div class="overlay"></div>');
-                    $('#lightbox-newsletter').show();              
-                }
-                
-                function openCommu(){
-                    $('#toast-communaute').stop().fadeIn(1000);
+                    $('.lightbox').show();              
                 }
                 
                 function ajoutNL() {
@@ -147,38 +137,35 @@
                     }
                 }     
                 
-                $('#btn-popin-guide').off().on('click',function(){
+                $('#btn_popin_guide').off().on('click',function(){
                     ajoutNL();
-                    $(this).prop("disabled",true);
                 });         
-
-                $('#lightbox-newsletter .close').on('click',function(){
-                   $('#lightbox-newsletter').hide();
+                
+                $('.lightbox .close').on('click',function(){
+                   $('.lightbox').hide();
                    $('.overlay').remove(); 
                 });
                 
-                $('#toast-communaute .close').on('click',function(){
-                   $('#toast-communaute').hide();
-                });                
+                $(document).on('click',function(){
+                       $('.lightbox').hide();
+                       $('.overlay').remove();                                            
+                }); 
                 
-                $('#lightbox-newsletter .box').on('click',function(e){
+                $('.box').on('click',function(e){
                         e.stopPropagation();
                 });                              
              
                 if (visited == null) {
                     // FUNCTION POPIN DELAY 4 SECONDS
-                    setTimeout(openPopup, 4000);
-                    // set cookie
-                    $.cookie('visited_popin', 'yes', { expires: 30, path: '/' });                    
-                }else if(visitedT == null){
-                    setTimeout(openCommu, 3000);
-                    // set cookie
-                    $.cookie('visited_toast', 'yes', { expires: 3, path: '/' });                    
-                }            
+                   // setTimeout(openPopup, 4000);
+                }
+             
+                // set cookie
+                $.cookie('visited_popin', 'yes', { expires: 30, path: '/' });
             });
 		</script>
 		<!-- POPIN -->
-        <div class="lightbox" id="lightbox-newsletter">
+        <div class="lightbox">
           <div class="box">
             <a href="#" class="close">X</a>
             <div class="content">
@@ -198,23 +185,7 @@
             </div>
           </div>
         </div>
-        <!-- POPIN COMMUNAUTE -->
-        <div class="lightbox" id="toast-communaute">
-            <div class="boxCommunaute">
-                <a href="#" class="close">X</a>              
-                <div class="content">
-                    <!-- Your content here -->
-                    <p id="best-tattoo">Le meilleur<br />du tatouage<br />sur les réseaux</p>
-                    <p id="nb-follow">Déjà 300 000 passionnés</p>
-                    <p id="join-us">Rejoignez-nous !</p>
-                    <ul>
-                        <li><a href="https://www.instagram.com/tattoometattoo/" style="margin-right: 10px;"><img src="img/instagram.png" alt="Instagram" /></a></li>
-                        <li><a  href="https://www.facebook.com/tattootattoome"><img src="img/facebook.png" alt="Facebook" /></a></li>
-                    </ul>             
-                </div>
-            </div>
-        </div>
-        <!-- END POPIN --> 
+		<!-- END POPIN -->
 		<!-- BEGIN NAVIGATION -->
 		<!-- NAVBAR -->
 		<div class="navbar-fixed-top" >
@@ -242,7 +213,6 @@
 					        <li><a href="https://www.tattoome.com/blog">Le Mag</a></li>
 				      	</ul>
 				        <ul class="nav navbar-nav navbar-right">
-				            <li>Rejoignez 300 000 passionnés !</li>
 					        <li><a href="https://www.instagram.com/tattoometattoo/" target="_blank" class="instagram_link" style="margin-right:10px;"></a></li>
 					        <li><a href="https://www.facebook.com/tattootattoome" target="_blank" class="facebook_link"></a></li>
 				        </ul>
@@ -253,7 +223,7 @@
 			</nav>
 		</div>
 		<!-- NAVBAR 2 -->
-		<nav class="navbar navbar-default navbar-sousmenu francoisone"> 
+		<nav class="navbar navbar-default navbar-sousmenu francoisone" 
 		    <div class="container-fluid" id="container-fluid-navbar">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">
@@ -287,9 +257,14 @@
 				        <li><?= $member_link->a("espace tatoueur", "espacemembre opensanscondensed") ?></li>
 				        <li class="dropdown">
      				        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-     				        	<?= $this->belgium ? "Tatoueurs Belgique" : "Tatoueurs France" ?> <span class="caret"></span></a>
+     				        	 Tatoueurs <?= $this->country->name(); ?> <span class="caret"></span></a>
+     				        </a>
 				            <ul class="dropdown-menu">
-					            <li><?= App::table("locations")->country($this->belgium ? "FR" : "BE")->link()->a($this->belgium ? "Tatoueurs France" : "Tatoueurs Belgique") ?></li>
+				            	<? foreach(array("BE", "FR", "CH") as $iso): ?>
+				            		<? if($iso != $this->country->local_id): ?>
+				            		<li><?= App::table("locations")->country($iso)->link()->a() ?></li>
+				            		<? endif ?>
+					            <? endforeach ?>
 				            </ul>
 			         	</li>
 			        </ul>
@@ -328,7 +303,7 @@
 						<h4 class="footer_top_header">TATTOOME</h4>
 						<a href="https://www.tattoome.com/creation" class="footer_top_link link_uppercase">La Création</a>
 						<a href="https://www.tattoome.com/tattoobox" class="footer_top_link link_uppercase">tattoobox</a>
-					    <a href="https://www.tattoome.com/blog" class="footer_top_link link_uppercase">blog</a>
+				    <a href="https://www.tattoome.com/blog" class="footer_top_link link_uppercase">blog</a>
 					</div>
 					<div class="col-lg-3">
 						<h4 class="footer_top_header">SUIVEZ-nous</h4>
