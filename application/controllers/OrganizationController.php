@@ -65,19 +65,7 @@ class OrganizationController extends Uop_Controller_Organization
         $this->head();
         break;
       case 'GET':
-        if ($this->_isAjax())
-        {
-          $res = array();
-          foreach ($images as $image)
-          {
-            $res[] = $this->jsonify($image);
-          }
-
-          $this->_json(array(
-            'files' => $res
-          ));
-        }
-        break;
+         break;
       case 'PATCH':
       case 'PUT':
       case 'POST':

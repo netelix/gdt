@@ -42,7 +42,7 @@ if(isset($r_user)){
 		<? endif ?>
 		</div>
 		<div class="studio_avis_global">
-			<p class="left_content avis_left"><b>Note moyenne</b></p>
+			<p class="left_content avis_left"><b><?= __("Note moyenne") ?></b></p>
 			<div class="bloc_etoile">
 				<?= $this->starRate("rating_".$review->id, $review->average); ?>
 			</div>

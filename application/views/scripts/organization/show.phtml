@@ -56,10 +56,10 @@
 					<div class="studio_content_width studio_content_header">
 						<h1><span itemprop="name"><?= $org->name()?></span> - <?= strtoupper($city->name())?>
 							<? if($this->user()->admin()): ?>
-							- <small><?= $org->linkEdit()->a("Editer") ?></small>
+							- <small><?= $org->linkEdit()->a(__("Editer")) ?></small>
 							<? endif ?>
 						</h1>
-						<p>Studio de tatouage à <?= $city->name()?></p>
+						<p><?= __("Studio de tatouage à :name:", array("name"=>$city->name())) ?></p>
 					</div>
 					<div class="sutdio_sidebar_width studio_sidebar_header">
 						<div class="studio_sidebar_header_like">
@@ -68,7 +68,7 @@
 							</div>
 						</div>					
 						<div class="studio_sidebar_header_stars">
-							<p><?= $ad->meta("num_review")?> avis</p>
+							<p><?= __(":num: avis", array("num" => $ad->meta("num_review")))?></p>
 							<?= $this->starRate("avg_rating_main".$org->id, $ad->avg_rating);?>
 						</div>
 					</div>
@@ -81,14 +81,14 @@
 					    <? if($org->status() != 'free'): ?>
 						<div class="subnav_studio" id="barre-fixe">
 							<ul>
-								<li><a href="#photos">Photos</a></li>
-								<li><a href="#products">Tatoueurs</a></li>
-								<li><a href="#location"><span class="hidden-xs">Horaires / Localisation</span><span class="visible-xs">Localisation</span></a></li>
-								<li><a href="#reviews">Avis (<?= $ad->meta("num_review")?>)</a></li>
+								<li><a href="#photos"><?= __("Photos") ?></a></li>
+								<li><a href="#products"><?= __("Tatoueurs") ?></a></li>
+								<li><a href="#location"><span class="hidden-xs"><?= __("Horaires / Localisation") ?></span><span class="visible-xs"><?= __("Localisation") ?></span></a></li>
+								<li><a href="#reviews"><?= __("Avis") ?> (<?= $ad->meta("num_review")?>)</a></li>
 							</ul>
 						</div>
 						<div class="studio_description">
-							<a class="btn btn-purple btn-block visible-xs" href="#contact">Contacter le studio</a>
+							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
 							<div class="row">
 								<div class="studio_description_image">
 									<?= $this->imgTag($org->firstImage(), "large-square", array("size"=>"195xauto")) ?>
@@ -99,7 +99,7 @@
 							</div>
 							<div class="row studio_description_tag">
 								<br>
-								<p>STYLES : 
+								<p><?= __("STYLES : ")?>
 							  	<? foreach($org->attributes("tattoo_style") as $style): ?>
 							  	<span class="resultat_content_texte_tag"><?= $style->name() ?></span>
 							  	<? endforeach ?>
@@ -117,7 +117,7 @@
 						  	<? if($org->tattoobox):?>
 									<img src="/tattoome/images/tatoobox.png" alt="">
 								<? endif ?>
-								<a href="https://www.tattoome.com/creation" class="pull-right">CRÉATION : Créez vous-même votre tatouage</a>
+								<a href="https://www.tattoome.com/creation" class="pull-right"><?= __("CRÉATION : Créez vous-même votre tatouage") ?></a>
 							</div>
 						</div>
 						<? else: ?>
@@ -126,8 +126,8 @@
 						        <?= $this->link(array(), "subscription-lead")->a("C'est mon studio !", "a_free-tattoos") ?>
 						        <p class="desc_free-tattoos"><?= $org->description() ?>
 <br />
-						        Pour consulter la liste des studios membres près de <?= $city->name()?>, <?= $city->link()->a("cliquez ici") ?>.</p>
-						        <?= $city->link()->a("Voir la liste des studios membres près de ".$city->name(),"a_free-tattoos") ?>
+						        <?= __("Pour consulter la liste des studios membres près de :place:", array("place"=>$city->name()))?>, <?= $city->link()->a(__("cliquez ici")) ?>.</p>
+						        <?= $city->link()->a(__("Voir la liste des studios membres près de :place:", array("place"=>$city->name())),"a_free-tattoos") ?>
 						    </div>
 						    <div class="row studio_description_tag">
                                 <br>
@@ -142,15 +142,15 @@
 						
 						<? if($org->status() != 'free'): ?>
 						<div class="studio_photos" id="photos">
-							<a class="btn btn-purple btn-block visible-xs" href="#contact">Contacter le studio</a>
-							<h2>Photos des tatouages</h2>
+							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?><</a>
+							<h2><?= __("Photos des tatouages") ?></h2>
 							<div class="studio_photos_carousel">
 								<?= $this->partial("shared/_carousel.phtml", array("images"=>$images,	"size"=>"orig")); ?>
 							</div>
 						</div>
 						<div class="studio_tatoueurs" id="products">
-							<a class="btn btn-purple btn-block  visible-xs" href="#contact">Contacter le studio</a>
-							<h2>Tatoueurs</h2>
+							<a class="btn btn-purple btn-block  visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
+							<h2><?= __("Tatoueurs") ?></h2>
 							<!-- Nav tabs -->
 							
 					  	<ul class="nav nav-tabs" role="tablist">
@@ -164,7 +164,7 @@
 							    <div role="tabpanel" class="tab-pane <?= $x == 0 ? 'active':''?>" id="prod-<?= $r_product->id ?>">
 							    	<p><?= $r_product->description() ?> 	  	
 							    	<? if($interview_url = $r_product->interview()): ?>
-							    		<a target="_blank" href="<?= $interview_url ?>">Lisez son Interview sur le blog</a></p>
+							    		<a target="_blank" href="<?= $interview_url ?>"><?= __("Lisez son Interview sur le blog") ?></a></p>
 							    	<? endif ?>
 										<div class="studio_photos_carousel">
 									  	<? $images = $r_product->images(); ?>
@@ -178,8 +178,12 @@
 						</div>
 						<? endif ?>
 						<div class="studio_localisation" id="location">
-							<a class="btn btn-purple btn-block visible-xs" href="#contact">Contacter le studio</a>
-							<h2>Localisation<? if($org->status() != 'free'): ?> / Horaires<? endif ?> du studio de tatouage</h2>
+							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
+							<? if($org->status() != 'free'): ?>
+								<h2><?= __("Localisation / Horaires du studio de tatouage") ?></h2>
+							<? else: ?>
+								<h2><?= __("Localisation du studio de tatouage") ?> </h2>
+							<? endif ?>
 							<div class="studio_localisation_map">
 									<div id="org_gmap" style="background: url(/img/staticmap.png); height:100%; margin-top:15px; text-align:center">
 										<button class="btn btn-default" id="show-map" style="margin-top:130px"><?= __("Voir la localisation")?></button>
@@ -187,13 +191,13 @@
 							</div>
 							<div class="studio_localisation_info">
 								<div class="studio_localisation_adresse">
-									<h4>Adresse</h4>
+									<h4><?= __("Adresse") ?></h4>
 							  	<p><?= $org->name() ?></p>
 						  		<p><?= $org->completeAddress("</p><p>") ?></p>
 								</div>
 								<? if($org->status() != 'free'): ?>
 								<div class="studio_localisation_horaires">
-									<h4>Horaires d'ouverture</h4>
+									<h4><?= __("Horaires d'ouverture") ?></h4>
 							  	<? 
 							  	$days = array();
 							  	foreach(json_decode($org->opening_days()) as $data){
@@ -217,7 +221,7 @@
 						</div>
 						<? if($org->status() != 'free'): ?>
 						<div class="studio_avis" id="reviews">
-							<h2>Avis (<?= $ad->meta("num_review")?>)</h2>
+							<h2><?= __("Avis") ?> (<?= $ad->meta("num_review")?>)</h2>
 							<div class="row">
 								<div class="studio_avis_global">
 									<div class="row_avis_singleton" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
@@ -225,7 +229,7 @@
 									    <meta itemprop="ratingValue" content="<?= round($ad->avg_rating) ?>">
 									    <meta itemprop="bestRating" content="5">
 									    <meta itemprop="reviewCount" content="<?= $ad->meta("num_review")?>">
-										<p class="left_content avis_left"><b>Note globale, basée sur <?= $ad->meta("num_review")?> avis</b></p>
+										<p class="left_content avis_left"><b><?= __("Note globale, basée sur :num: avis", array("num"=>$ad->meta("num_review"))) ?></b></p>
 										<div class="bloc_etoile">
 											<?= $this->starRate("moyenne_globale", $ad->avg_rating); ?>
 										</div>
@@ -245,9 +249,9 @@
 								  <? endforeach ?>
 								</div>
 								<div class="studio_avis_know">
-									<h3>vous connaissez ce studio ?</h3>
-									<p>Partagez votre experience avec les autres internautes</p>
-									<a href="#">Laissez un avis</a>
+									<h3><?= __("vous connaissez ce studio ?")?></h3>
+									<p><?= __("Partagez votre experience avec les autres internautes") ?></p>
+									<a href="#"><?= __("Laissez un avis") ?></a>
 								</div>
 							</div>
 						  <? foreach($this->reviews_data as $review): ?>
@@ -263,10 +267,10 @@
 							  	"class"=>"studio_avis_form")) ?>
 
 								<div class="studio_avis_form" id="form-review">
-									<h3>Laissez un avis</h3>
+									<h3><?= __("Laissez un avis") ?></h3>
 									<div class="studio_avis_form_left_part">
 										<div class="studio_avis_global">
-											<p class="left_content avis_left"><b>Note par critère</b></p>
+											<p class="left_content avis_left"><b><?= __("Note par critère") ?></b></p>
 											<? foreach ($form_review->getCriteria() as $r_criteria): ?>
 											<div class="clearfix">
 												<p class="left_content avis_left"><?= $r_criteria->name(); ?></p>
@@ -288,7 +292,7 @@
 								      "fname"=>__("Votre prénom"),
 								      "email"=>__("Votre adresse email"),
 								      "website"=>array("group_class"=>"hide"))) ?>
-										<button type="submit" class="custom_submit">Envoyez votre avis</button>
+										<button type="submit" class="custom_submit"><?= __("Envoyez votre avis") ?></button>
 									</div>
 								</div>
 							</form>
@@ -300,8 +304,8 @@
 					<!-- sidebar -->
 					<div class="studio_sidebar_width" id="form_fixed">
 					    <? if($org->status() != 'free'): ?> 
-						<h2 id="contact">Contactez le studio</h2>
-						<p>Par téléphone</p>
+						<h2 id="contact"><?= __("Contactez le studio") ?></h2>
+						<p><?= __("Par téléphone") ?></p>
 					  <a class="phone-number-toggler collapse in bt" 
 					  	data-toggle="collapse" 
 					  	data-target=".phone-number,.phone-number-toggler">
@@ -315,9 +319,9 @@
 						  }); 
 						</script>
                     <? else: ?>
-                        <h2 id="contact">Demandez conseil à l'équipe de TattooMe </h2>
+                        <h2 id="contact"><?= __("Demandez conseil à l'équipe de TattooMe") ?></h2>
                     <? endif ?>
-						<p>Par email</p>
+						<p><?= __("Par email") ?></p>
 				  	<? if($contacted = $this->contact_form->sentTo($org->id)): ?>
 				  	<div class="alert alert-success alert-dismissable">
 						  <?= __("Votre message à bien été envoyé à ce studio. Si vous souhaitez envoyer un autre message, ") ?>
@@ -343,7 +347,7 @@
 						        "label"=>__("Précisez votre demande*"),
 						        "attribs"=>array("rows"=>5))
 						    ));?>						    
-								<p class="required_fields">* champs obligatoires</p>
+								<p class="required_fields"><?= __("* champs obligatoires") ?></p>
 								
 								<?
 	$backlink = $this->backlink;
@@ -387,7 +391,7 @@
             <span class="fileupload-process"></span>
         <!-- The global progress state -->
     </div>
-		<button type="submit" class="custom_submit">Envoyer</button>
+		<button type="submit" class="custom_submit"><?= __("Envoyer")?></button>
 </form>
 
 <!-- The template to display files available for upload -->

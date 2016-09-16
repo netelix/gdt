@@ -11,9 +11,9 @@
 <? $this->partial("shared/_sub-header.phtml", $this) ?>		<!-- SERP CONTAINER -->
 		<div class="container-fluid launching">
 			<div class="launching_container center-block">
-				<h1>Ici, Bientôt...</h1>
-				<p>Vous pourrez créer votre motif avec un artiste.</p>
-				<p>Soyez informé en avant première, laissez votre email :</p>
+				<h1><?= __("Ici, Bientôt...") ?></h1>
+				<p><?= __("Vous pourrez créer votre motif avec un artiste.") ?></p>
+				<p><?= __("Soyez informé en avant première, laissez votre email :") ?></p>
 				<?= $this->formHeader($this->form, array("class"=>"form-inline")) ?>
 				<? if($this->contacted == false): ?>
 				<? $this->form->hideLabels(true); ?>
@@ -23,18 +23,18 @@
 									"label"=>__("Adresse email")
 								)))
 					?>
-					<button type="submit" class="btn btn-default">S'inscrire !</button>
+					<button type="submit" class="btn btn-default"><?= __("S'inscrire !") ?></button>
 				<? endif ?>
 				</form>
 				<br><br>
-				<p>Vous êtes beta-testeur ?</p>
-				<p>Entrez votre mot de passe pour accèder à l'espace création.</p>
+				<p><?= __("Vous êtes beta-testeur ?") ?></p>
+				<p><?= __("Entrez votre mot de passe pour accèder à l'espace création.") ?></p>
 				<form name="creation" method="POST" action="" class="form-inline">
 					<div class="form-group launch_email">
-						<label class="sr-only" for="email">Mot de passe</label>
+						<label class="sr-only" for="email"><?= __("Mot de passe") ?></label>
 						<input type="password" name="password" id="password" value="" class=" form-control">
 					</div>					
-					<button type="submit" class="btn btn-default">Valider</button>
+					<button type="submit" class="btn btn-default"><?= __("Valider") ?></button>
 				</form>
 			</div>
 		</div>

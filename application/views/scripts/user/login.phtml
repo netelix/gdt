@@ -2,7 +2,7 @@
 	$form = $this->form;
 	$this->content_with_sidebar = true;
 	$bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
-	$bc->append("Espace membre");
+	$bc->append(__("Espace membre"));
 ?>
 <? $this->partial("shared/_sub-header.phtml", $this) ?>
 
@@ -13,7 +13,7 @@
 		"email"=>__("Adresse email"),
 		"password"=>__("Mot de passe")));?>	
 <? $footer = $this->formFooter(__("Valider"))->captureStart();?>
-<?= $this->link(array(), "user/password-lost")->a("J'ai oublié mon mot de passe...", array("class"=>"pull-left"));?>
+<?= $this->link(array(), "user/password-lost")->a(__("J'ai oublié mon mot de passe..."), array("class"=>"pull-left"));?>
 <?= $footer->captureEnd() ?>
 <?= $this->partial("shared/_remarketing.phtml") ?>
 </div>

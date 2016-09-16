@@ -21,5 +21,15 @@ class Model_DbTable_Row_Location extends Uop_Model_DbTable_Row_Location
 		
 		return $link;
 	}
-    
+ 
+ 	public function linkHome()
+	{
+		if($this->type != 'country'){
+			throw new Exception("Place #$this->id is not a country");
+		}
+		if($this->local_id == "FR"){
+			return Link::home();
+		}
+		return Link::factory(array("country"=>strtolower($this->local_name)), "home-country");
+	}	
 }

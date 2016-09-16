@@ -1,5 +1,5 @@
 <? 
-	$r_loc = App::table("locations")->country("FR"); 
+	$r_loc = $this->country; 
 	$this->full_width = true;
 	$this->body_class = "index"
 ?>
@@ -11,8 +11,8 @@
 	  				<source src="/tattoome/video/ogv/tatoome.ogv" type="video/ogg" />
 				</video>
 			</div>
-			<h1 class="banner_title gothamblack">trouvez votre futur tatoueur</h1>
-			<p class="banner_subtitle gothambold">La plus grande sélection de tatoueurs prêts à vous accueillir</p>
+			<h1 class="banner_title gothamblack"><?= __("trouvez votre futur tatoueur") ?></h1>
+			<p class="banner_subtitle gothambold"><?= __("La plus grande sélection de tatoueurs prêts à vous accueillir") ?></p>
 			<?= $this->formHeader($this->search_form, array("class"=>"banner_form form-inline")) ?>
 				<?= $this->search_form->renderGroups(array(
 				  "loc_name"=>array(
@@ -21,7 +21,7 @@
 				  "tattoo_style"=>array(
 				  	"label"=>__("Tous les styles"),
 				  	"group_class"=>"hidden-xs")));?>
-					<button type="submit" class="btn btn-purple"><span class="hidden-xs">RECHERCHER</span><span class="visible-xs glyphicon glyphicon-search"></span></button>
+					<button type="submit" class="btn btn-purple"><span class="hidden-xs"><?= __("RECHERCHER") ?></span><span class="visible-xs glyphicon glyphicon-search"></span></button>
 			</form>
 		</div>
 		<!-- END FORMULAIRE TROUVER TATOUEUR -->
@@ -32,13 +32,13 @@
 				<div class="col-lg-4">
 					<div class="promo_container_ld promo_container_left autopromo">
 						<div class="title_promo">
-							<h2 class="gothamblack">Création</h2>
-							<p class="gothambold">Créez votre tatouage avec un artiste dessinateur</p>
+							<h2 class="gothamblack"><?= __("Création") ?></h2>
+							<p class="gothambold"><?= __("Créez votre tatouage avec un artiste dessinateur") ?></p>
 						</div>
 						<div class="link_promo">
 							<a href="https://www.tattoome.com/creation" class="btn-link-promo link-promo-red gothambold">
-								<span class="hidden-xs">Je crée mon tatouage</span>
-								<span class="visible-xs">Créer</span>
+								<span class="hidden-xs"><?= __("Je crée mon tatouage") ?></span>
+								<span class="visible-xs"><?= __("Créer") ?></span>
 							</a>
 						</div>
 					</div>
@@ -46,25 +46,25 @@
 				<div class="col-lg-4">
 					<div class="promo_container_ld promo_container_center autopromo">
 						<div class="title_promo">
-							<h2 class="gothamblack">Tattoobox</h2>
-							<p class="gothambold">Un cadeau inoubliable : offrez un tatouage</p>
+							<h2 class="gothamblack"><?= __("Tattoobox") ?></h2>
+							<p class="gothambold"><?= __("Un cadeau inoubliable : offrez un tatouage") ?></p>
 						</div>
 						<div class="link_promo">
-							<a href="https://www.tattoome.com/tattoobox" class="btn-link-promo link-promo-lightgreen gothambold"><span class="hidden-xs">Je choisis ma tattoobox</span>
-							<span class="visible-xs">Choisir</span></a>
+							<a href="https://www.tattoome.com/tattoobox" class="btn-link-promo link-promo-lightgreen gothambold"><span class="hidden-xs"><?= __("Je choisis ma tattoobox") ?></span>
+							<span class="visible-xs"><?= __("Choisir") ?></span></a>
 						</div>
 					</div>
 				</div>
                 <div class="col-lg-4">
                     <div class="promo_container_ld promo_container_right autopromo">
                         <div class="title_promo">
-                            <h2 class="gothamblack">Le conseiller <span style="color:black;">Tattoo</span>Me</h2>
-                            <p class="gothambold">Un projet de tatouage ?</p>
-                            <p class="gotham">Notre conseiller sélectionne pour vous les meilleurs tatoueurs</p>
+                            <h2 class="gothamblack"><?= __("Le conseiller") ?> <span style="color:black;">Tattoo</span>Me</h2>
+                            <p class="gothambold"><?= __("Un projet de tatouage") ?> ?</p>
+                            <p class="gotham"><?= __("Notre conseiller sélectionne pour vous les meilleurs tatoueurs") ?></p>
                         </div>
                         <div class="link_promo">
-                            <a href="<?=  $this->link(array(), 'conciergerie')?>" class="btn-link-promo link-promo-lightgreen gothambold"><span class="hidden-xs">Je prends contact</span>
-                            <span class="visible-xs">Contact</span></a>
+                            <a href="<?=  $this->link(array(), 'conciergerie')?>" class="btn-link-promo link-promo-lightgreen gothambold"><span class="hidden-xs"><?= __("Je prends contact") ?></span>
+                            <span class="visible-xs"><?= __("Contact") ?></span></a>
                         </div>
                     </div>
                 </div>				
@@ -76,10 +76,10 @@
 			<div class="row promo_container_md blog-banner-promo" id="banner_promo">
 				<div class="col-lg-9" id="blog_preview"></div>
 					<div class="col-lg-3 promo_container_md_singleton promo_container_md_singleton_right promo_container_md_singleton_custom">
-						<p class="francoisone label_tag">Newsletter</p>								
-						<h2 class="custom_title_text_prom gothamblack">News,<br/>Bons plans, Tendances...</h2>
-						<p class="custom_text_prom gothambook">Recevez le meilleur du tatouage par email</p>
-						<a href="#" class="btn-custom-link-promo link-promo-violet gothambook">Je m'inscris</a>
+						<p class="francoisone label_tag"><?= __("Newsletter") ?></p>								
+						<h2 class="custom_title_text_prom gothamblack"><?= __("News,<br/>Bons plans, Tendances...")?></h2>
+						<p class="custom_text_prom gothambook"><?= __("Recevez le meilleur du tatouage par email") ?></p>
+						<a href="#" class="btn-custom-link-promo link-promo-violet gothambook"><?= __("Je m'inscris") ?></a>
 					</div>
 			</div>
 		</div>
@@ -101,8 +101,8 @@
 			<div class="row section-style" id="section_content">
 				<div class="row no-margin">
 					<div class="section_header">
-						<h3 class="francoisone">les styles de tatouage</h3>
-						<p>Découvrez les meilleurs tatouages par style</p>
+						<h3 class="francoisone"><?= __("les styles de tatouage") ?></h3>
+						<p><?= __("Découvrez les meilleurs tatouages par style") ?></p>
 					</div>
 				</div>
 				<div class="row section_container" style="margin-left:0px;">
@@ -127,8 +127,8 @@
 		<section class="container-fluid section">
 			<div class="row" id="section_content">
 				<div class="section_header">
-					<h3 class="francoisone">Les Studios de tatouage près de chez vous</h3>
-					<p>Choisissez votre studio par situation géographique</p>
+					<h3 class="francoisone"><?= __("Les Studios de tatouage près de chez vous") ?></h3>
+					<p><?= __("Choisissez votre studio par situation géographique") ?></p>
 				</div>
 				<div class="section_container_region">
 					<div class="row">
@@ -155,7 +155,7 @@
 		<section class="container-fluid section">
 			<div id="section_content" class="row no-border">
 				<div class="section_header">
-					<h3 class="francoisone">Ils parlent de nous</h3>
+					<h3 class="francoisone"><?= __("Ils parlent de nous") ?></h3>
 				</div>
 				<div class="section_container_logo">
 					<div class="row">
@@ -176,7 +176,7 @@
 			</div>
 		</section>
 		<!-- FIN SECTION 3 ( PUB ) -->
-		<?	$this->headTitle("Galerie du tatouage devient Tattoome", "SET"); ?>
+		<?	$this->headTitle(__("Galerie du tatouage devient Tattoome"), "SET"); ?>
 
 
 	<?= $this->partial("shared/_mailing-dialog.phtml") ?>	

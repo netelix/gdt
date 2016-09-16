@@ -150,6 +150,15 @@ return array(
       'action'=>'show-invoice-tattoobox',
     )
   ),
-
-
+  "home-country"=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/:country',
+    'defaults' => array(
+	    'controller'=>'index',
+	    'action'=>'index',
+	  ),
+		'reqs'=>array(
+			'country'=>'espana|suisse|belgique'
+		)
+  )
 );

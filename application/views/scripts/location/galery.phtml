@@ -18,7 +18,7 @@
   $page = $this->images->getCurrentPageNumber();
   $bc = $this->breadcrumb(); 
   $bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
-  $bc->append("Idée tatouages");
+  $bc->append(__("Idée tatouages"));
   
 ?>
 <? $this->placeholder("h1")->captureStart() ?>
@@ -83,7 +83,7 @@ var baselink = '<?= $this->baselink ?>';
 					<div class="col-lg-3">
 						<div class="filtres">
 							<p class="filtres_title">
-								Filtrer par style
+								<?= __("Filtrer par style") ?>
 							</p>
 							<div class="hidden-xs">
 							<? foreach($this->filters as $link): ?>
@@ -101,7 +101,7 @@ var baselink = '<?= $this->baselink ?>';
 									$url = $this->link(array(), "galery")->assemble();
 									$current = $this->current_url;
 								?>
-								<option value="<?= $this->link(array(), "galery")->assemble() ?>" <?= $url == $current ? "selected":""?> >Tous les tatouages</option>
+								<option value="<?= $this->link(array(), "galery")->assemble() ?>" <?= $url == $current ? "selected":""?> ><?= __("Tous les tatouages") ?></option>
 								<? foreach($this->filters_select as $url=>$label): ?>
 									<option value="<?= $url ?>" <?= $url == $current ? "selected":""?>><?= $label ?></option>
 								<? endforeach ?>
@@ -110,7 +110,7 @@ var baselink = '<?= $this->baselink ?>';
 						</div>
 						<?= $this->partial("shared/_sidebar-content.phtml") ?>
 						<div class="filtres filtres_region">
-							<?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($this->adm2); ?>
+							<?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName(__("tatoueurs :name:"))->rs($this->adm2); ?>
 						</div>
 					</div>
 					<!-- fin left panel -->
@@ -118,7 +118,7 @@ var baselink = '<?= $this->baselink ?>';
 					<div class="col-lg-9 idee_content">
 						<h1 class="h2 serp_content_header_idee"><?= $h1 ?><small><?= $page_label?>
 						<? if($this->user()->admin() && isset($r_attr)): ?>
-								- <?= $this->link(array("table"=>"attributes","id"=>$r_attr->id), "admin/entity")->a("Editer") ?>
+								- <?= $this->link(array("table"=>"attributes","id"=>$r_attr->id), "admin/entity")->a(__("Editer")) ?>
 							<? endif ?>
 					
 						</small></h1>
@@ -135,7 +135,7 @@ var baselink = '<?= $this->baselink ?>';
 				    </div>
 				    <div class="next-page"></div>
 						<? if($this->images->count() > $page): ?>
-						<h4 class="separator"><a href="" class="page-loader">voir la suite</a></h4>
+						<h4 class="separator"><a href="" class="page-loader"><?= __("voir la suite") ?></a></h4>
 						<? endif ?>
 					</div>
 					<!--fin resultat -->
@@ -164,9 +164,9 @@ var baselink = '<?= $this->baselink ?>';
 	</script>
 	<?
 	  $this->doctype(Zend_View_Helper_Doctype::XHTML1_RDFA);
-	  $this->headMeta()->appendProperty("og:title", $this->img->name()." - La galerie du tatouage");
+	  $this->headMeta()->appendProperty("og:title", $this->img->name()." - TattooMe");
 	  $this->headMeta()->appendProperty("og:description", strip_tags($this->img->meta()));
-	  $this->headMeta()->appendProperty("og:image", "http://".App::config()->link->domain.$this->img->url("orig"));
+	  $this->headMeta()->appendProperty("og:image", "https://".App::config()->link->domain.$this->img->url("orig"));
 		$this->headMeta()->appendProperty("og:type", "website");
 	  $this->headMeta()->appendProperty("og:url", $this->link(array("id"=>$this->img->id),"galery-focus")->option("canonical", true)->assemble());
 	  $this->headMeta()->setName("description",  $this->img->name());

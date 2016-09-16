@@ -1,10 +1,10 @@
 <?
 	$this->full_width = true;
 	$bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
-	$bc->append("Détatouage");
-	$this->headTitle("Détatouage");
+	$bc->append(__("Détatouage"));
+	$this->headTitle(__("Détatouage"));
 	$this->headMeta()
-		->appendName("description", "Détatouage");
+		->appendName("description", __("Détatouage"));
 
 ?>
 
@@ -12,9 +12,9 @@
 <? $this->partial("shared/_sub-header.phtml", $this) ?>		<!-- SERP CONTAINER -->
 		<div class="container-fluid launching">
 			<div class="launching_container center-block">
-				<p>Le détatouage laser est un acte médical qui nécessite un suivi et un accompagnement.</p>
-                <p>Qu'il s'agisse d'un détatouage partiel, pour vous faire à nouveau tatouer, ou d'un détatouage total TattooMe vous guide dans vos choix.</p>
-				<p>Envoyez-nous la photo du tatouage que vous souhaitez faire effacer, indiquez votre département et recevez un accompagnement personnalisé.</p>
+				<p><?= __("Le détatouage laser est un acte médical qui nécessite un suivi et un accompagnement.") ?></p>
+                <p><?= __("Qu'il s'agisse d'un détatouage partiel, pour vous faire à nouveau tatouer, ou d'un détatouage total TattooMe vous guide dans vos choix.") ?></p>
+				<p><?= __("Envoyez-nous la photo du tatouage que vous souhaitez faire effacer, indiquez votre département et recevez un accompagnement personnalisé.") ?></p>
 				<?= $this->formHeader($this->form, array('enctype'=>'multipart/form-data')) ?>
 				<? if($this->contacted == false): ?>
 				<? $this->form->hideLabels(true); ?>
@@ -30,7 +30,7 @@
 						<input type="file" name="image" style="opacity: 0;"/>
 						<a class="btn dropdown-toggle  btn-default" style="margin-top: -60px;"><?= __("Joindre la photo de votre tatouage") ?></a>
 					</div>
-					<button type="submit" style="margin-left:0px" class="btn btn-default">Envoyer !</button>
+					<button type="submit" style="margin-left:0px" class="btn btn-default"><?= __("Envoyer !")?></button>
 				<? endif ?>
 				</form>
 			</div>

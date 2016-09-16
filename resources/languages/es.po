@@ -1,17 +1,17 @@
-# English translations for PACKAGE package.
-# Copyright (C) 2014 THE PACKAGE'S COPYRIGHT HOLDER
+# Spanish translations for PACKAGE package.
+# Copyright (C) 2016 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#  <alex@eleveurs-pedigree.com>, 2014.
+#  <alex@lacajafuerte.org>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-26 12:12+0200\n"
-"PO-Revision-Date: 2014-06-03 11:16+0200\n"
-"Last-Translator:  <alex@eleveurs-pedigree.com>\n"
-"Language-Team: English\n"
-"Language: en\n"
+"PO-Revision-Date: 2016-07-26 12:12+0200\n"
+"Last-Translator:  <alex@lacajafuerte.org>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,9 +26,7 @@ msgid "Le meilleur du tatouage | TattooMe"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:15
-msgid ""
-"Retrouvez les meilleurs tatoueurs de votre région ainsi que les plus beaux "
-"modèles de tatouages."
+msgid "Retrouvez les meilleurs tatoueurs de votre région ainsi que les plus beaux modèles de tatouages."
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:203
@@ -63,8 +61,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:236
 msgid ""
 "<br />\n"
-"\t\t\t                             <span class=\"navbar-brand-custom-badge"
-"\">\n"
+"\t\t\t                             <span class=\"navbar-brand-custom-badge\">\n"
 "                            Ex Galeriedutatouage\n"
 "                        </span>"
 msgstr ""
@@ -191,7 +188,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:4
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
 msgid "Accueil"
-msgstr "Accueil"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:163
 msgid "Idées tatouages"
@@ -224,7 +221,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_form.phtml:5
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_form.phtml:5
 msgid "Votre réponse"
-msgstr "Votre réponse"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_review.phtml:35
 msgid "Répondre"
@@ -309,9 +306,7 @@ msgid "Tatoueurs, rejoignez le réseau!"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/__sidebar.phtml:8
-msgid ""
-"<img src='/img/autopromo.png' class='img-responsive' style='padding-"
-"bottom:15px'/>"
+msgid "<img src='/img/autopromo.png' class='img-responsive' style='padding-bottom:15px'/>"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/__sidebar.phtml:9
@@ -341,7 +336,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/subscription/lead.phtml:9
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:28
 msgid "Prénom"
-msgstr "Prénom"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/_lead.phtml:7
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:19
@@ -356,7 +351,7 @@ msgstr "Prénom"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:14
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:27
 msgid "Nom"
-msgstr "Nom"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/_lead.phtml:8
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:20
@@ -364,7 +359,7 @@ msgstr "Nom"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/subscription/lead.phtml:11
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:26
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/_lead.phtml:12
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:21
@@ -372,7 +367,7 @@ msgstr "Email"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:34
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:35
 msgid "Téléphone"
-msgstr "Téléphone"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:13
 msgid "Tatoueurs, Rejoignez-nous !"
@@ -418,7 +413,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:24
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:14
 msgid "Code postal"
-msgstr "Code postal"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:50
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:28
@@ -426,28 +421,22 @@ msgstr "Code postal"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:27
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:15
 msgid "Ville"
-msgstr "Ville"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:54
 msgid "Envoyer au conseiller tatouage"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:15
-msgid ""
-"Le détatouage laser est un acte médical qui nécessite un suivi et un "
-"accompagnement."
+msgid "Le détatouage laser est un acte médical qui nécessite un suivi et un accompagnement."
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:16
-msgid ""
-"Qu'il s'agisse d'un détatouage partiel, pour vous faire à nouveau tatouer, "
-"ou d'un détatouage total TattooMe vous guide dans vos choix."
+msgid "Qu'il s'agisse d'un détatouage partiel, pour vous faire à nouveau tatouer, ou d'un détatouage total TattooMe vous guide dans vos choix."
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:17
-msgid ""
-"Envoyez-nous la photo du tatouage que vous souhaitez faire effacer, indiquez "
-"votre département et recevez un accompagnement personnalisé."
+msgid "Envoyez-nous la photo du tatouage que vous souhaitez faire effacer, indiquez votre département et recevez un accompagnement personnalisé."
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:24
@@ -457,7 +446,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/login.phtml:8
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/login.phtml:6
 msgid "Adresse email"
-msgstr "Adresse email"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:26
 msgid "Département"
@@ -587,9 +576,7 @@ msgid "Toute la France"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:28
-msgid ""
-"Trouvez des idées pour votre prochain tatouage et découvrez notre sélection "
-"des meilleurs studio de tatouage français et belges!"
+msgid "Trouvez des idées pour votre prochain tatouage et découvrez notre sélection des meilleurs studio de tatouage français et belges!"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:38
@@ -601,9 +588,7 @@ msgid "Les tatouages qui vous ont tapé dans l’oeil"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:62
-msgid ""
-"Chaque semaine, la Galerie du Tatouage vous propose un classement des "
-"tatouages les plus populaires."
+msgid "Chaque semaine, la Galerie du Tatouage vous propose un classement des tatouages les plus populaires."
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:64
@@ -646,7 +631,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/login.phtml:9
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/login.phtml:7
 msgid "Mot de passe"
-msgstr "Mot de passe"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:37
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:15
@@ -656,7 +641,7 @@ msgstr "Mot de passe"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-default.phtml:8
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/login.phtml:10
 msgid "Valider"
-msgstr "Valider"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/conciergeries.phtml:50
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/images.phtml:6
@@ -696,7 +681,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:40
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:17
 msgid "Commentaires"
-msgstr "Commentaires"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:34
 msgid "Tattooboxes"
@@ -743,7 +728,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:31
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/index.phtml:22
 msgid "Filtrer"
-msgstr "Filtrer"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:39
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:34
@@ -752,7 +737,7 @@ msgstr "Filtrer"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:36
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:32
 msgid "Reset"
-msgstr "Reset"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:40
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:35
@@ -771,7 +756,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/orders.phtml:9
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-price.phtml:6
 msgid "Prix"
-msgstr "Prix"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:52
 msgid "Creation"
@@ -795,33 +780,33 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/_tabs.phtml:11
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:3
 msgid "Coordonnees Personelles"
-msgstr "Coordonnees Personelles"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/_tabs.phtml:12
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:3
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:5
 msgid "Factures/Avoirs"
-msgstr "Factures/Avoirs"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/_tabs.phtml:13
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:6
 msgid "Messages"
-msgstr "Messages"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/organizations.phtml:22
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/organizations.phtml:21
 msgid "Gérer l'annonce"
-msgstr "Gérer l'annonce"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/organizations.phtml:24
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/organizations.phtml:23
 msgid "Dépublier"
-msgstr "Dépublier"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/organizations.phtml:26
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/organizations.phtml:25
 msgid "Publier"
-msgstr "Publier"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:26
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:73
@@ -829,7 +814,7 @@ msgstr "Publier"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:40
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_payments.phtml:23
 msgid "Annuler"
-msgstr "Annuler"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:39
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:92
@@ -841,13 +826,13 @@ msgstr "Annuler"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/orders.phtml:7
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:93
 msgid "Date"
-msgstr "Date"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:40
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/invoices.phtml:8
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/orders.phtml:8
 msgid "Details"
-msgstr "Details"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:46
 msgid "Nouveau contrat"
@@ -870,23 +855,23 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:16
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/login.phtml:11
 msgid "J'ai oublié mon mot de passe..."
-msgstr "J'ai oublié mon mot de passe..."
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:6
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/password-lost.phtml:4
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:5
 msgid "Adresse e-mail"
-msgstr "Adresse e-mail"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:7
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:6
 msgid "Société"
-msgstr "Société"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:12
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:11
 msgid "Prenom"
-msgstr "Prenom"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:19
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:250
@@ -895,14 +880,14 @@ msgstr "Prenom"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:18
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:12
 msgid "Adresse"
-msgstr "Adresse"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:20
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:21
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:19
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:13
 msgid "Adresse (suite)"
-msgstr "Adresse (suite)"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:31
 msgid "Numéro SIRET"
@@ -911,7 +896,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:70
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:71
 msgid "Ajouter un numéro"
-msgstr "Ajouter un numéro"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:73
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:86
@@ -927,80 +912,80 @@ msgstr "Ajouter un numéro"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:26
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:25
 msgid "Enregistrer"
-msgstr "Enregistrer"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:78
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:79
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:79
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:80
 msgid "Mot de passe temporaire"
-msgstr "Mot de passe temporaire"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:83
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:84
 msgid "Mot de passe actuel"
-msgstr "Mot de passe actuel"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:84
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/reset-password.phtml:4
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:85
 msgid "Nouveau mot de passe"
-msgstr "Nouveau mot de passe"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:85
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:86
 msgid "Retapez le mot de passe"
-msgstr "Retapez le mot de passe"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:93
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:57
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:94
 msgid "Détail"
-msgstr "Détail"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:98
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:99
 msgid "Aujourd'hui"
-msgstr "Aujourd'hui"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:105
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:106
 msgid "Interlocuteur"
-msgstr "Interlocuteur"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:108
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:109
 msgid "Sujet"
-msgstr "Sujet"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:116
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:117
 msgid "Détails"
-msgstr "Détails"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:10
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-photos.phtml:13
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/>.phtml:12
 msgid "Modifier les informations des photos"
-msgstr "Modifier les informations des photos"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:11
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-photos.phtml:14
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/>.phtml:13
 msgid "Modifier l'ordre des photos"
-msgstr "Modifier l'ordre des photos"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:20
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-photos.phtml:23
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/>.phtml:22
 msgid "Faites glisser les photos pour changer l'ordre d'affichage"
-msgstr "Faites glisser les photos pour changer l'ordre d'affichage"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:23
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-photos.phtml:27
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/>.phtml:26
 msgid "Ajouter des photos"
-msgstr "Ajouter des photos"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:62
 msgid "Gèrer les styles associés..."
@@ -1044,16 +1029,12 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:18
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:22
-msgid ""
-"Depuis leur studio de :loc_name:, :names: vous montrent les :num: photos de "
-"leurs derniers tatouages"
+msgid "Depuis leur studio de :loc_name:, :names: vous montrent les :num: photos de leurs derniers tatouages"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:22
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:26
-msgid ""
-"Depuis son studio de :loc_name:, :names: vous montre les :num: photos de ses "
-"derniers tatouages"
+msgid "Depuis son studio de :loc_name:, :names: vous montre les :num: photos de ses derniers tatouages"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:45
@@ -1081,9 +1062,7 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:70
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:327
-msgid ""
-"Votre message à bien été envoyé à ce studio. Si vous souhaitez envoyer un "
-"autre message, "
+msgid "Votre message à bien été envoyé à ce studio. Si vous souhaitez envoyer un autre message, "
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:72
@@ -1100,19 +1079,19 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:83
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:29
 msgid "E-mail"
-msgstr "E-mail"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:87
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:38
 msgid "Précisez votre demande"
-msgstr "Précisez votre demande"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:90
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:394
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:136
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:41
 msgid "Envoyer"
-msgstr "Envoyer"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:117
 msgid "Studio de tatouage à :city:"
@@ -1221,25 +1200,25 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:86
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:129
 msgid "Commentaire"
-msgstr "Commentaire"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:345
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:291
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:131
 msgid "Votre nom"
-msgstr "Votre nom"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:346
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:292
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:132
 msgid "Votre prénom"
-msgstr "Votre prénom"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:347
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:293
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:133
 msgid "Votre adresse email"
-msgstr "Votre adresse email"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:349
 msgid "Commenter"
@@ -1351,14 +1330,14 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:378
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/jquery-file-upload.phtml:13
 msgid "Ajouter des images..."
-msgstr "Ajouter des images..."
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:495
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:43
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:112
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:4
 msgid "Recherches similaires"
-msgstr "Recherches similaires"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:496
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:23
@@ -1367,7 +1346,7 @@ msgstr "Recherches similaires"
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:113
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:5
 msgid "Recherches populaires"
-msgstr "Recherches populaires"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:7
 msgid "Les tatoueurs"
@@ -1387,7 +1366,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:68
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/_edit-header.phtml:7
 msgid "Mettre hors ligne"
-msgstr "Mettre hors ligne"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:18
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:48
@@ -1395,23 +1374,22 @@ msgstr "Mettre hors ligne"
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/posts.phtml:30
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/_edit-header.phtml:8
 msgid "Voir"
-msgstr "Voir"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:20
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:50
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:67
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/_edit-header.phtml:10
 msgid "Mettre en ligne"
-msgstr "Mettre en ligne"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:26
-msgid ""
-"Pour publier votre annonce, veuillez vérifier les informations suivantes :"
+msgid "Pour publier votre annonce, veuillez vérifier les informations suivantes :"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:13
 msgid "Confirmation de mot de passe"
-msgstr "Confirmation de mot de passe"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:16
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:8
@@ -1446,7 +1424,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:53
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:44
 msgid "Site internet"
-msgstr "Site internet"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:73
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:76
@@ -1472,7 +1450,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:7
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:14
 msgid "Page :num:"
-msgstr "Page :num:"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:46
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:34
@@ -1483,9 +1461,7 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:55
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:45
-msgid ""
-"Retrouvez les meilleurs tatouages:style: notés par les internautes. Et "
-"trouvez des idées pour votre prochain tatouage."
+msgid "Retrouvez les meilleurs tatouages:style: notés par les internautes. Et trouvez des idées pour votre prochain tatouage."
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:60
@@ -1554,14 +1530,14 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:25
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/index.phtml:20
 msgid "Rechercher"
-msgstr "Rechercher"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:45
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:216
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:114
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:6
 msgid "Affinez votre recherche"
-msgstr "Affinez votre recherche"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:48
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:117
@@ -1573,7 +1549,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/cities-index.phtml:3
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:8
 msgid "Les villes de :name:"
-msgstr "Les villes de :name:"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:76
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:33
@@ -1582,10 +1558,7 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:77
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:34
-msgid ""
-"Retrouvez les meilleurs tatoueurs de :name::style:. Regardez et évaluez leur "
-"travail. Découvrez les évaluations des studios de tatouage faites par les "
-"internautes."
+msgid "Retrouvez les meilleurs tatoueurs de :name::style:. Regardez et évaluez leur travail. Découvrez les évaluations des studios de tatouage faites par les internautes."
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:79
@@ -1669,35 +1642,33 @@ msgid "Conventions de tatouages"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:17
-msgid ""
-"Nous vous proposerons notre sélection des rendez-vous tatouage à ne pas "
-"manquer: conventions, salons, ateliers..."
+msgid "Nous vous proposerons notre sélection des rendez-vous tatouage à ne pas manquer: conventions, salons, ateliers..."
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:15
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:15
 msgid "Vous"
-msgstr "Vous"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:16
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:16
 msgid "vous avez écrit"
-msgstr "vous avez écrit"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:19
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:19
 msgid " a écrit"
-msgstr " a écrit"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:27
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:27
 msgid "Le :date: à :time:, :you_has_wrote:"
-msgstr "Le :date: à :time:, :you_has_wrote:"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:33
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:33
 msgid "Répondez à ce message :"
-msgstr "Répondez à ce message :"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:46
 msgid "Voici les photos d'exemples envoyées par cet utilisateur"
@@ -1706,17 +1677,17 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:11
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/show.phtml:11
 msgid "Conversation avec :other_user_name:"
-msgstr "Conversation avec :other_user_name:"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:15
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/show.phtml:15
 msgid "Demande de réservation"
-msgstr "Demande de réservation"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:18
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/show.phtml:18
 msgid "Commentaire de :other_user_name:"
-msgstr "Commentaire de :other_user_name:"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:39
 msgid "Commentaire de :user:"
@@ -1733,7 +1704,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:79
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/show.phtml:63
 msgid "Retour à la liste des messages"
-msgstr "Retour à la liste des messages"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_demand-summary.phtml:2
 msgid "Demande #:id: de :name:"
@@ -1742,51 +1713,38 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_form.phtml:9
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_form.phtml:9
 msgid "Envoyer le message"
-msgstr "Envoyer le message"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:10
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:8
 msgid "Bonjour :who:"
-msgstr "Bonjour :who:"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:14
-msgid ""
-"Vous avez reçu un message de :sender_name: à propos de votre studio :"
-"property_name:"
+msgid "Vous avez reçu un message de :sender_name: à propos de votre studio :property_name:"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:20
-msgid ""
-"Vous avez reçu un commentaire de :sender_name:, à propos de votre studio :"
-"org_link:"
+msgid "Vous avez reçu un commentaire de :sender_name:, à propos de votre studio :org_link:"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:28
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:24
-msgid ""
-"Vous pouvez consulter ce message en cliquant ou en copiant le lien suivant "
-"dans la barre d'adresse de votre navigateur:"
+msgid "Vous pouvez consulter ce message en cliquant ou en copiant le lien suivant dans la barre d'adresse de votre navigateur:"
 msgstr ""
-"Vous pouvez consulter ce message en cliquant ou en copiant le lien suivant "
-"dans la barre d'adresse de votre navigateur:"
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:31
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:27
 msgid "Contenu du message :"
-msgstr "Contenu du message :"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:35
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:31
-msgid ""
-"Pour répondre à cet utilisateur, répondez directement à cet email ou à "
-"l'adresse :sender_email:"
+msgid "Pour répondre à cet utilisateur, répondez directement à cet email ou à l'adresse :sender_email:"
 msgstr ""
-"Pour répondre à cet utilisateur, répondez directement à cet email ou à "
-"l'adresse :sender_email:"
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:40
-msgid ""
-"Toute l'équipe de la galerie du tatouage vous remercie de votre confiance"
+msgid "Toute l'équipe de la galerie du tatouage vous remercie de votre confiance"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/controllers/UserController.php:10
@@ -1815,19 +1773,19 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
 msgid "Voir le site en:lang:"
-msgstr "Voir le site en:lang:"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
 msgid "Ville, appartement, région"
-msgstr "Ville, appartement, région"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
 msgid "Filtre 1"
-msgstr "Filtre 1"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
 msgid "Filtre 2"
-msgstr "Filtre 2"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/shared/_paginator.phtml:41
 msgid "&laquo;"
@@ -1839,86 +1797,86 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-iban.phtml:2
 msgid "Réglement par RIB/IBAN"
-msgstr "Réglement par RIB/IBAN"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-iban.phtml:5
 msgid "IBAN"
-msgstr "IBAN"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-iban.phtml:8
 msgid "SWIFT/BIC"
-msgstr "SWIFT/BIC"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-iban.phtml:12
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:22
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-cheque.phtml:9
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-default.phtml:9
 msgid "Choisir un autre moyen de paiement"
-msgstr "Choisir un autre moyen de paiement"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:2
 msgid "Réglement par carte de crédit"
-msgstr "Réglement par carte de crédit"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:5
 msgid "Numéro de carte"
-msgstr "Numéro de carte"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:10
 msgid "Date d'expiration"
-msgstr "Date d'expiration"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:18
 msgid "Cryptogramme visuel"
-msgstr "Cryptogramme visuel"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-cheque.phtml:2
 msgid "Réglement par chèque banquaire"
-msgstr "Réglement par chèque banquaire"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-cheque.phtml:5
 msgid "Numéro de chèque"
-msgstr "Numéro de chèque"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-default.phtml:2
 msgid "Réglement manuel"
-msgstr "Réglement manuel"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-default.phtml:5
 msgid "Mode / Réference"
-msgstr "Mode / Réference"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/jquery-file-upload.phtml:26
 msgid "J'ai terminé, réorganiser mes photos"
-msgstr "J'ai terminé, réorganiser mes photos"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/subscription/lead.phtml:6
 msgid "Rejoignez nous"
-msgstr "Rejoignez nous"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/index.phtml:10
 msgid "Example"
-msgstr "Example"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/index.phtml:16
 msgid "Région, Ville..."
-msgstr "Région, Ville..."
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/index.phtml:30
 msgid "Régions"
-msgstr "Régions"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:37
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:41
 msgid "Créer un nom"
-msgstr "Créer un nom"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:74
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:78
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/post.phtml:39
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:36
 msgid "Description"
-msgstr "Description"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:79
 msgid "Meta description:"
@@ -1931,32 +1889,32 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:20
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:127
 msgid "Titre"
-msgstr "Titre"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:84
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:89
 msgid "Latitude :"
-msgstr "Latitude :"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:85
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:90
 msgid "Longitude :"
-msgstr "Longitude :"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:121
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:126
 msgid "Clef"
-msgstr "Clef"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:122
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:127
 msgid "Valeur"
-msgstr "Valeur"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:142
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:147
 msgid "Evenements"
-msgstr "Evenements"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:4
 msgid "Abonnées"
@@ -1969,7 +1927,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:45
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:51
 msgid "Propriétaire"
-msgstr "Propriétaire"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:47
 msgid "Fin d'abonnement"
@@ -1979,7 +1937,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entities.phtml:29
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:34
 msgid "#"
-msgstr "#"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:78
 msgid "Début"
@@ -1995,23 +1953,23 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:84
 msgid "Prix :"
-msgstr "Prix :"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:85
 msgid "Statut :"
-msgstr "Statut :"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:86
 msgid "Type :"
-msgstr "Type :"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:87
 msgid "Actif :"
-msgstr "Actif :"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:91
 msgid "Date de paiement :"
-msgstr "Date de paiement :"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:22
 msgid "Commandes / Factures"
@@ -2020,7 +1978,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:34
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:34
 msgid "Services"
-msgstr "Services"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:37
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:7
@@ -2029,15 +1987,15 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:27
 msgid "Téléphones"
-msgstr "Téléphones"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:28
 msgid "Type"
-msgstr "Type"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:29
 msgid "N°Client"
-msgstr "N°Client"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/posts.phtml:10
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/post.phtml:81
@@ -2049,22 +2007,22 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/post.phtml:80
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:12
 msgid "Statut"
-msgstr "Statut"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:42
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:32
 msgid "A partir de"
-msgstr "A partir de"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:43
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:33
 msgid "Jusqu'à"
-msgstr "Jusqu'à"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:56
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:38
 msgid "Label"
-msgstr "Label"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:58
 msgid "Entité"
@@ -2076,37 +2034,37 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:4
 msgid "Commandes"
-msgstr "Commandes"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:5
 msgid "Paiements manquants"
-msgstr "Paiements manquants"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:6
 msgid "A prélever"
-msgstr "A prélever"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:45
 msgid "Prix total"
-msgstr "Prix total"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:47
 msgid "Payé"
-msgstr "Payé"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:49
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:20
 msgid "Vendeur"
-msgstr "Vendeur"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:85
 msgid " "
-msgstr " "
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:92
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:27
 msgid "Avoir"
-msgstr "Avoir"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:3
 msgid "En ligne"
@@ -2135,20 +2093,20 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_form_add_org.phtml:8
 msgid "Ajouter une annonce"
-msgstr "Ajouter une annonce"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:4
 msgid "Commandes en cours"
-msgstr "Commandes en cours"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/invoices.phtml:22
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/orders.phtml:30
 msgid ":num: paiments"
-msgstr ":num: paiments"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/reset-password.phtml:5
 msgid "Confirmation du mot de passe"
-msgstr "Confirmation du mot de passe"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/posts.phtml:6
 msgid "Nouvel article"
@@ -2176,178 +2134,178 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:6
 msgid "Réglement de :price:"
-msgstr "Réglement de :price:"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:13
 msgid "Informations de paiment"
-msgstr "Informations de paiment"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:17
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:20
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:27
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:117
 msgid "Valider et règler"
-msgstr "Valider et règler"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:23
 msgid "Référence d'encaissement (:type:)"
-msgstr "Référence d'encaissement (:type:)"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:27
 msgid "Encaisser plus tard"
-msgstr "Encaisser plus tard"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:30
 msgid "Creer la facture et encaisser plus tard"
-msgstr "Creer la facture et encaisser plus tard"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:40
 msgid "Voir la facture"
-msgstr "Voir la facture"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:10
 msgid "Avoir n°"
-msgstr "Avoir n°"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:10
 msgid "Facture n°"
-msgstr "Facture n°"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:18
 msgid "Annuler la facture"
-msgstr "Annuler la facture"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:38
 msgid "Intitulé"
-msgstr "Intitulé"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:39
 msgid "Prix HT"
-msgstr "Prix HT"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:50
 msgid "Remise"
-msgstr "Remise"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:55
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:43
 msgid "Total HT"
-msgstr "Total HT"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:59
 msgid "TVA (:rate:%)"
-msgstr "TVA (:rate:%)"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:63
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:47
 msgid "Total TTC"
-msgstr "Total TTC"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:70
 msgid "Imprimer"
-msgstr "Imprimer"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:72
 msgid "Paiements"
-msgstr "Paiements"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:79
 msgid "Date de paiement"
-msgstr "Date de paiement"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:81
 msgid "Moyen de paiement"
-msgstr "Moyen de paiement"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:82
 msgid "Ajouter un paiement"
-msgstr "Ajouter un paiement"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:4
 msgid "Résumé de votre commande"
-msgstr "Résumé de votre commande"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:8
 msgid "Votre commande est vide"
-msgstr "Votre commande est vide"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:20
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:35
 msgid "<span></span>"
-msgstr "<span></span>"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:38
 msgid "Réduction exceptionelle"
-msgstr "Réduction exceptionelle"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:7
 msgid "Informations de paiement"
-msgstr "Informations de paiement"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:11
 msgid "Echéance des paiements"
-msgstr "Echéance des paiements"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:16
 msgid "Mode de paiement"
-msgstr "Mode de paiement"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_payments.phtml:14
 msgid " #"
-msgstr " #"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_payments.phtml:18
 msgid "Payer maintenant"
-msgstr "Payer maintenant"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_payments.phtml:23
 msgid "Êtes vous sûr(e) ? Cela pourrait avoir des conséquences DRAMATIQUES..."
-msgstr "Êtes vous sûr(e) ? Cela pourrait avoir des conséquences DRAMATIQUES..."
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:12
 msgid "Informations"
-msgstr "Informations"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:33
 msgid "Montant"
-msgstr "Montant"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:43
 msgid "Creer un avoir"
-msgstr "Creer un avoir"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:52
 msgid "Code de réduction"
-msgstr "Code de réduction"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:58
 msgid "Montant de la réduction"
-msgstr "Montant de la réduction"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:63
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:104
 msgid "Ajouter à ma commande"
-msgstr "Ajouter à ma commande"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:72
 msgid "Services disponibles"
-msgstr "Services disponibles"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:76
 msgid "Aucune option n'est disponible pour cette commande"
-msgstr "Aucune option n'est disponible pour cette commande"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:93
 msgid "Appliquer ce service à"
-msgstr "Appliquer ce service à"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:99
 msgid "Date de début"
-msgstr "Date de début"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-price.phtml:7
 msgid "Type de prix"
-msgstr "Type de prix"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-products.phtml:16
 msgid "Service n°:num:"
@@ -2363,7 +2321,7 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-products.phtml:31
 msgid "Prix de base"
-msgstr "Prix de base"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-products.phtml:42
 msgid "Ajouter un service"
@@ -2379,43 +2337,35 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/>.phtml:45
 msgid "Nom de la photo"
-msgstr "Nom de la photo"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/>.phtml:47
 msgid "Associer à..."
-msgstr "Associer à..."
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:7
 msgid "Les nouvelles organizations"
-msgstr "Les nouvelles organizations"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:24
 msgid ":num: résultats"
-msgstr ":num: résultats"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:51
 msgid "Voir l'annonce"
-msgstr "Voir l'annonce"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_demand-summary.phtml:2
 msgid "Demande :id:"
-msgstr "Demande :id:"
+msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:11
-msgid ""
-"Vous avez reçu un message de :sender_name: à propos d'une demande de "
-"réservation pour la propriété :property_name:"
+msgid "Vous avez reçu un message de :sender_name: à propos d'une demande de réservation pour la propriété :property_name:"
 msgstr ""
-"Vous avez reçu un message de :sender_name: à propos d'une demande de "
-"réservation pour la propriété :property_name:"
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:17
-msgid ""
-"Vous avez reçu un commentaire de :sender_name:, à propos de la propriété :"
-"org_link:"
+msgid "Vous avez reçu un commentaire de :sender_name:, à propos de la propriété :org_link:"
 msgstr ""
-"Vous avez reçu un commentaire de :sender_name:, à propos de la propriété :"
-"org_link:"
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/reset-password.html.phtml:1
 msgid ""
@@ -2431,17 +2381,6 @@ msgid ""
 "\n"
 "Cordialement"
 msgstr ""
-"Cher client,\n"
-"\n"
-"Pour répondre à votre demande du :date:, veuillez trouver\n"
-"ci-dessous l'adresse qui vous permettra de changer le mot de passe de\n"
-"votre identifiant.\n"
-"\n"
-":link:\n"
-"\n"
-"Nous vous remercions de votre confiance.\n"
-"\n"
-"Cordialement"
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/owner-welcome.html.phtml:9
 msgid "* Indiquez votre email : :customer_id:"
@@ -2449,31 +2388,4 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/owner-welcome.html.phtml:10
 msgid "* Indiquez votre mot de passe : :password:"
-msgstr "* Indiquez votre mot de passe : :password:"
-
-#~ msgid "* Indiquez votre numéro client : :id:"
-#~ msgstr "* Indiquez votre numéro client : :id:"
-
-#~ msgid "Nom de l'levage"
-#~ msgstr "Nom de l'levage"
-
-#~ msgid "Description de l'levage"
-#~ msgstr "Description de l'levage"
-
-#~ msgid "Description en une phrase, pour les rsultats de recherche"
-#~ msgstr "Description en une phrase, pour les rsultats de recherche"
-
-#~ msgid "Produit n°:num:"
-#~ msgstr "Produit n°:num:"
-
-#~ msgid "Nom du produit"
-#~ msgstr "Nom du produit"
-
-#~ msgid "Description du produit"
-#~ msgstr "Description du produit"
-
-#~ msgid "editer la langue"
-#~ msgstr "editer la langue"
-
-#~ msgid "Lieu parent :"
-#~ msgstr "Lieu parent :"
+msgstr ""

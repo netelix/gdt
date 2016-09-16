@@ -1,20 +1,20 @@
 <div class="serp_promo autopromo" id="serp_promo_1">
-	<h2>Création</h2>
-	<p>Créez votre tatouage avec un artise dessinateur</p>
+	<h2><?= __("Création") ?></h2>
+	<p><?= __("Créez votre tatouage avec un artise dessinateur") ?></p>
 	<a href="https://www.tattoome.com/creation" class="link-promo-red">
-		Je crée mon tatouage
+		<?= __("Je crée mon tatouage") ?>
 	</a>
 	</div>
 <div class="serp_promo autopromo" id="serp_promo_2">
-	<h2>TATTOOBOX</h2>
-	<p>Un cadeau inoubliable : offrez un tatouage</p>
-	<a href="https://www.tattoome.com/tattoobox" class="link-promo-lightgreen"> Je choisis ma TATTOOBOX</a>
+	<h2><?= __("TATTOOBOX") ?></h2>
+	<p><?= __("Un cadeau inoubliable : offrez un tatouage") ?></p>
+	<a href="https://www.tattoome.com/tattoobox" class="link-promo-lightgreen"> <?= __("Je choisis ma TATTOOBOX") ?></a>
 </div>
 <div class="serp_promo_text autopromo" data-toggle="modal" data-target="#newsletter">
-	<p class="serp_promo_text_label">newsletter</p>
-	<h2>news, bons plans, tendances...</h2>
-	<p class="serp_promo_text_emphase">Recevez le meilleur du tatouage par email</p>
-	<a href="#" class="link-promo-violet"  type="button">Je m'inscris</a>
+	<p class="serp_promo_text_label"><?= __("newsletter") ?></p>
+	<h2><?= __("news, bons plans, tendances...") ?></h2>
+	<p class="serp_promo_text_emphase"><?= __("Recevez le meilleur du tatouage par email") ?></p>
+	<a href="#" class="link-promo-violet"  type="button"><?= __("Je m'inscris") ?></a>
 </div>
 
 <?= $this->partial("shared/_mailing-dialog.phtml") ?>

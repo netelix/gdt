@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <? $this->country = empty($this->country) ? App::table("locations")->country("FR") : $this->country; ?>
+<? 
+	$countries = array("BE", "FR", "CH", "ES"); 
+	foreach($countries as $iso){
+		$r_countries[$iso] = App::table("locations")->country($iso);
+	}
+?>
 <html lang="<?= App::lang()?>">
 	<head>
 		<meta charset="UTF-8">
 		<? if($this->body_class != "index"): ?>
-		<? $this->headTitle()->append("Le meilleur du tatouage") ?>
+		<? $this->headTitle()->append(__("Le meilleur du tatouage")) ?>
 		<? endif ?>
 		<? if($this->body_class != "index"): ?>
 		<?= $this->headTitle() ?>
 		<? else: ?>
-		<?= $this->headTitle('Le meilleur du tatouage | TattooMe','SET') ?>
+		<?= $this->headTitle(__('Le meilleur du tatouage en :country: | TattooMe',array("country"=>$this->country->name())),'SET') ?>
 		<? endif ?>
 		<? if($this->body_class == "index"): ?>
-		<? $this->headMeta()->appendName('description','Retrouvez les meilleurs tatoueurs de votre région ainsi que les plus beaux modèles de tatouages.') ?>
+		<? $this->headMeta()->appendName('description',__('Retrouvez les meilleurs tatoueurs de :country: ainsi que les plus beaux modèles de tatouages.', array("country"=>$this->country->name()))) ?>
 		<? endif ?>
 		<?= $this->headMeta()?>
 		<!-- JAVASCRIPTS CALL -->
@@ -157,7 +163,7 @@
              
                 if (visited == null) {
                     // FUNCTION POPIN DELAY 4 SECONDS
-                   // setTimeout(openPopup, 4000);
+                    setTimeout(openPopup, 4000);
                 }
              
                 // set cookie
@@ -200,19 +206,20 @@
 					        <span class="icon-bar"></span>
 					        <span class="icon-bar"></span>
 				        </button>
-				        <!-- <?= Link::home()->a('Tattoo<span style="color:#73569d;">Me</span>', "navbar-brand")?> -->
-				        <?= Link::home()->a('<img src="/img/logo_tattoome_guide.png" alt="TattooMe" />', "navbar-brand")?>
+				        <!-- <?= $this->country->linkHome()->a('Tattoo<span style="color:#73569d;">Me</span>', "navbar-brand")?> -->
+				        <?= $this->country->linkHome()->a('<img src="/img/logo_tattoome_guide.png" alt="TattooMe" />', "navbar-brand")?>
 				    </div>
 	
 			    	<!-- Collect the nav links, forms, and other content for toggling -->
 				    <div class="collapse navbar-collapse" id="menu1">
 				        <ul class="nav navbar-nav">
-				            <li><?= Link::home()->a(__("Le Guide")) ?></li>
-					        <li><a href="https://www.tattoome.com/creation">La Création</a></li>
-					        <li><a href="https://www.tattoome.com/tattoobox">Le Shop</a></li>
-					        <li><a href="https://www.tattoome.com/blog">Le Mag</a></li>
+				            <li><?= $this->country->linkHome()->a(__("Le Guide")) ?></li>
+					        <li><a href="https://www.tattoome.com/creation"><?= __("La Création") ?></a></li>
+					        <li><a href="https://www.tattoome.com/tattoobox"><?= __("Le Shop") ?></a></li>
+					        <li><a href="https://www.tattoome.com/blog"><?= __("Le Mag") ?></a></li>
 				      	</ul>
 				        <ul class="nav navbar-nav navbar-right">
+					        <li>Rejoignez 300 000 passionnés !</li>
 					        <li><a href="https://www.instagram.com/tattoometattoo/" target="_blank" class="instagram_link" style="margin-right:10px;"></a></li>
 					        <li><a href="https://www.facebook.com/tattootattoome" target="_blank" class="facebook_link"></a></li>
 				        </ul>
@@ -233,7 +240,7 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 			        </button>
-			        <?= Link::home()->a('LE GUIDE <br />
+			        <?= $this->country->linkHome()->a(__('LE GUIDE') .'<br />
 			                             <span class="navbar-brand-custom-badge">
                             Ex Galeriedutatouage
                         </span>', "navbar-brand navbar-brand-custom") ?>
@@ -242,7 +249,7 @@
 		    	<!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="menu2">
 			        <ul class="nav navbar-nav">
-				        <li class="<?= $this->active == 'studio' ? 'active':''?>"><?= App::table("locations")->country("FR")->link()->a('Trouver un tatoueur <span class="sr-only">(current)</span>')?></li>
+				        <li class="<?= $this->active == 'studio' ? 'active':''?>"><?= $this->country->link()->a(__('Trouver un tatoueur').' <span class="sr-only">(current)</span>')?></li>
 				        <li class="<?= $this->active == 'galery' ? 'active':''?>"><?=  $this->link(array("page"), 'galery')->a(__("Idées tatouage"))?></li>
 				        <li class="<?= $this->active == 'conventions' ? 'active':''?>"><?=  $this->link(array(), 'conventions')->a(__("Conventions"))?></li>
 				        <!-- <li class="<?= $this->active == 'untattoo' ? 'active':''?>"><?=  $this->link(array(), 'untattoo')->a(__("Détatouage"))?></li> -->
@@ -254,15 +261,15 @@
 								} else {
 									$member_link = $this->link(array(), 'user/login');
 								}?>
-				        <li><?= $member_link->a("espace tatoueur", "espacemembre opensanscondensed") ?></li>
+				        <li><?= $member_link->a(__("espace tatoueur"), "espacemembre opensanscondensed") ?></li>
 				        <li class="dropdown">
      				        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-     				        	 Tatoueurs <?= $this->country->name(); ?> <span class="caret"></span></a>
+     				        	 <?= __("Tatoueurs") ?> <?= $this->country->name(); ?> <span class="caret"></span></a>
      				        </a>
 				            <ul class="dropdown-menu">
-				            	<? foreach(array("BE", "FR", "CH") as $iso): ?>
+				            	<? foreach($r_countries as $iso=>$r_country): ?>
 				            		<? if($iso != $this->country->local_id): ?>
-				            		<li><?= App::table("locations")->country($iso)->link()->a() ?></li>
+				            		<li><?= $r_country->link()->a('<span class="flag flag_'.strtolower($iso).'"></span> '.$r_country->name()) ?></li>
 				            		<? endif ?>
 					            <? endforeach ?>
 				            </ul>
@@ -300,34 +307,38 @@
 			<div class="footer_top  container-default">
 				<div class="row">
 					<div class="col-lg-3">
-						<h4 class="footer_top_header">TATTOOME</h4>
-						<a href="https://www.tattoome.com/creation" class="footer_top_link link_uppercase">La Création</a>
-						<a href="https://www.tattoome.com/tattoobox" class="footer_top_link link_uppercase">tattoobox</a>
-				    <a href="https://www.tattoome.com/blog" class="footer_top_link link_uppercase">blog</a>
+						<h4 class="footer_top_header"><?= __("TATTOOME") ?></h4>
+						<a href="https://www.tattoome.com/creation" class="footer_top_link link_uppercase"><?= __("La Création") ?></a>
+						<a href="https://www.tattoome.com/tattoobox" class="footer_top_link link_uppercase"><?= __("tattoobox") ?></a>
+				    <a href="https://www.tattoome.com/blog" class="footer_top_link link_uppercase"><?= __("blog") ?></a>
 					</div>
 					<div class="col-lg-3">
-						<h4 class="footer_top_header">SUIVEZ-nous</h4>
+						<h4 class="footer_top_header"><?= __("SUIVEZ-nous") ?></h4>
 				    <a href="https://www.facebook.com/tattootattoome" target="_blank" class="footer_top_link">Facebook</a>
 						<a href="https://www.instagram.com/tattoometattoo/" target="_blank" class="footer_top_link">instagram</a>
 					</div>
 					<div class="col-lg-3">
-						<h4 class="footer_top_header">Je suis tatoueur</h4>
-						<?= $this->link(array(), "subscription-lead")->a("Je souhaite m'inscrire", "footer_top_link") ?>
-						<?= $member_link->a("Espace membre", "footer_top_link") ?>
+						<h4 class="footer_top_header"><?= __("Je suis tatoueur") ?></h4>
+						<?= $this->link(array(), "subscription-lead")->a(__("Je souhaite m'inscrire"), "footer_top_link") ?>
+						<?= $member_link->a(__("Espace membre"), "footer_top_link") ?>
 					</div>
 					<div class="col-lg-3">
-						<h4 class="footer_top_header">recherche</h4>	
-						<? foreach(App::table("locations")->country("FR")->getCities(5) as $r_city):?>
+						<h4 class="footer_top_header"><?= __("recherche") ?></h4>	
+						<? foreach($this->country->getCities(5) as $r_city):?>
 							<?= $r_city->link()->a(__("Tatoueur à :name:", array("name"=>$r_city->name())),"footer_top_link")?>
 						<? endforeach; ?>
+					 	<? foreach($r_countries as $iso=>$r_country): ?>
+							<?= $r_country->link()->a(__("Tatoueur en :name:", array("name"=>$r_country->name())),"footer_top_link")?>
+            <? endforeach ?>
+
 					</div>
 				</div>
 			</div>
 			<div class="footer_bottom container-default">
-				<?= Link::factory(array("page"=>"contact"), "static")->a("Contact", "footer_bottom_link")?>
-				<?= Link::factory(array("page"=>"legal"), "static")->a("Mentions légales", "footer_bottom_link")?>
-				<?= Link::factory(array("page"=>"legal"), "static")->a("Conditions d'utilisation", "footer_bottom_link")?>
-				<?= Link::factory(array("page"=>"legal"), "static")->a("Conditions de vente", "footer_bottom_link")?>
+				<?= Link::factory(array("page"=>"contact"), "static")->a(__("Contact"), "footer_bottom_link")?>
+				<?= Link::factory(array("page"=>"legal"), "static")->a(__("Mentions légales"), "footer_bottom_link")?>
+				<?= Link::factory(array("page"=>"legal"), "static")->a(__("Conditions d'utilisation"), "footer_bottom_link")?>
+				<?= Link::factory(array("page"=>"legal"), "static")->a(__("Conditions de vente"), "footer_bottom_link")?>
 			</div>
 		</footer>
 		<!-- FIN FOOTER -->

@@ -6,6 +6,14 @@ class IndexController extends Uop_Controller_Index
   public function indexAction()
   {
       // action body
+      $countries = array(
+      	null => "FR",
+      	"espana"=> "ES",
+      	"suisse"=>"CH",
+      	"belgique"=>"BE"
+      );
+      $co = $this->_getParam("country");
+      $this->view->country = App::table("locations")->country($countries[$co]);
   }
   
   public function creationAction()
