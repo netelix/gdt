@@ -147,6 +147,47 @@ class OrganizationController extends Uop_Controller_Organization
     }
   }
   
+  public function editPhotosAction()
+  {
+    $this->view->resource = $r_org = $this->_findResource(array('privilege'=>'edit'));
+    $images = $r_org->getAllImages();
+    if($images->count() == 0){
+      $this->_redirect(Link::url(array("id"=>$r_org->id), "organization-photos"));
+    }
+    $this->view->form = $form = App::form('simple', $r_org);
+    $this->view->sort = $this->_getParam("mode") == "sort";
+    if($this->view->sort == "sort"){
+			if( $this->_isSubmitted($form) && $this->_isValidForm($form)){
+				$image_table = array();
+				foreach($images as $r_image){
+				  $image_table[$r_image->id] = $r_image;
+				}
+				foreach($_POST["sort"] as $sort=>$id){
+					if(isset($image_table[$id])){
+				    $image_table[$id]->sort = $sort;
+				    $image_table[$id]->save();
+					}
+				}
+				$this->_reload();
+			}
+		}
+  }
+  
+  public function editPhotoAction()
+  {
+  	$this->view->resource = $r_org = $this->_findResource(array('privilege'=>'edit'));
+  	$this->view->image = $r_image = App::table("images")->select()->where("id = ?", $this->_getParam("image_id"))->where("org_id = ?", $r_org->id)->fetchRow();
+  	
+  	$entity_select_values["organizations_$r_org->id"] = __("Le studio");
+    foreach($r_org->products() as $r_product){
+      $entity_select_values["products_$r_product->id"] = $r_product->name();
+    }
+    $this->view->form = $form = App::form('PhotoEdit', $r_image, array("references"=>$entity_select_values));
+    if($this->_isSubmittedAndValid($form)){
+	    $r_image->updateFromForm($form);
+    }
+  }
+
 	
   protected function _manageOrganizationDemand($form)
   {

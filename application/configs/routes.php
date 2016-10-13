@@ -98,6 +98,16 @@ return array(
       'action'=>'claim-tattoobox',
     )
   ),
+  'edit-photo'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/edit-org-photo/:id/:image_id',
+      'defaults' => array(
+      'controller'=>'organization',
+      'action'=>'edit-photo',
+    )
+  ),
+
+
   'edit-invoice'=>array(
     'type'   => 'Zend_Controller_Router_Route',
     'route'  => '/:lang/admin/invoice/:user_id/:invoice_id',

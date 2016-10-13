@@ -30,6 +30,11 @@ class Model_DbTable_Row_Image extends Uop_Model_DbTable_Row_Image
   	return parent::save();
 	}
 	
+	public function updateFromForm($form)
+	{
+		return $this->updateAttributesFromForm($form);
+	}
+	
 	public function meta()
 	{
 		$ref = $this->findRef(); 

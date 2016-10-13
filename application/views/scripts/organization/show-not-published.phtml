@@ -1,0 +1,116 @@
+<?
+  $org = $this->org;
+  $this->full_width = true;
+ 	$this->active = "studio";
+  $this->breadcrumb()->setLoc($org->location())->prepend(Link::home()->a(__("Accueil"))); 
+  $form_contact = $this->contact_form;
+  $loc = $org->location();
+  $this->body_class = "organization-show";
+  $images = $org->getAllImages();
+  $products = $org->products();
+  $city = $org->city();
+  $country = $city->ancester(array("country"));
+  $this->belgium = $country->local_id == "BE";
+  $people_names = array();
+  $desc = __("Fiche tatoueur :name: hors ligne", array("name"=>$org->name()));
+  
+	 $this->headScript()
+			->appendFile("/tattoome/js/noframework.waypoints.js")
+			->appendFile("/tattoome/js/utils.js")
+			->appendFile("//maps.google.com/maps/api/js?sensor=false&key=AIzaSyCWZSuZbLvcD3Z84LUjeX_Akh_vRgjeINA");
+								
+
+  
+  $this->doctype(Zend_View_Helper_Doctype::XHTML1_RDFA);
+  $this->headMeta()->appendProperty("og:title", $org->name()." - La galerie du tatouage");
+  $this->headMeta()->appendProperty("og:description", $desc);
+  $this->headMeta()->appendProperty("og:url", $org->link()->option("canonical", true)->assemble());
+
+  $this->headMeta()->appendName("description", $desc);
+  $this->headTitle()->set($org->name());
+  $this->headTitle()->append(__("Tatoueur à :name:", array("name"=>$city->name())));
+
+?>
+		<? $this->partial("shared/_sub-header.phtml", $this) ?>
+		<!-- SERP CONTAINER -->
+		<div class="container-fluid serp">
+			<div class="serp_container center-block" itemscope itemtype="http://schema.org/Organization">
+				<!-- content -->
+				<div class="row studio_header">
+					<div class="studio_content_width studio_content_header">
+						<h1><span itemprop="name"><?= __("Fiche tatoueur :name: hors ligne", array("name"=>$org->name())) ?></span>			<? if($this->user()->admin()): ?>
+							- <small><?= $org->linkEdit()->a(__("Editer")) ?></small>
+							<? endif ?>
+						</h1>
+					</div>
+					<div class="sutdio_sidebar_width studio_sidebar_header">
+						<div class="studio_sidebar_header_like">
+							<div class="fb">
+								<div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+							</div>
+						</div>					
+						<div class="studio_sidebar_header_stars">
+						</div>
+					</div>
+				</div>
+				<div class="row studio_content">
+					<!-- content -->
+					<div class="studio_content_width" style="
+    height: 100%;
+">
+						<div class="studio_description">
+						    <div class="studio_description_texte">
+						        <?= $this->link(array(), "subscription-lead")->a("C'est mon studio !", "a_free-tattoos") ?>
+						        <p class="desc_free-tattoos"><?= $org->description() ?>
+<br />
+						        <?= __("Pour consulter la liste des studios membres près de :place:", array("place"=>$city->name()))?>, <?= $city->link()->a(__("cliquez ici")) ?>.</p>
+						        <?= $city->link()->a(__("Voir la liste des studios membres près de :place:", array("place"=>$city->name())),"a_free-tattoos") ?>
+						    </div>
+						    <div class="row studio_description_tag">
+                                <br>
+                                <p> 
+                                <? foreach($org->attributes("tattoo_style") as $style): ?>
+                                <span class="resultat_content_texte_tag"><?= $style->name() ?></span>
+                                <? endforeach ?>
+                                </p>						        
+						    </div>
+						</div>
+					</div>
+					<!-- fin content -->
+					<!-- sidebar -->
+					<div class="studio_sidebar_width" id="form_fixed">
+					</div>
+
+          <?= $this->linkList()->title(__("Recherches similaires"), "h4")->labelName("tatoueurs :name:")->rs($city->getCousins("adm2", 10)); ?>
+          <?= $this->linkList()->title(__("Recherches populaires"), "h4")->labelName("tatoueurs :name:")->rs($city->getNeighbors(10)); ?>					
+					
+					<!--fin sidebar -->
+				</div>
+				<!-- fin content -->
+			</div>
+		</div>
+		<!-- FIN SERP CONTAINER -->
+										  <script>
+								  //  $(function(){
+									      var map = null;
+									      var myLatlng = new google.maps.LatLng(<?= $loc->lat ?>,<?= $loc->lng ?>);
+												var mapOptions = {
+								          zoom: 10,
+								          center: myLatlng,
+								          mapTypeControl: true,
+								          mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+								          navigationControl: true,
+								          navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+								          mapTypeId: google.maps.MapTypeId.ROADMAP
+												}
+												var map = new google.maps.Map(document.getElementById("org_gmap"), mapOptions);
+												
+												var marker = new google.maps.Marker({
+												    position: myLatlng,
+												});
+												
+												// To add the marker to the map, call setMap();
+												marker.setMap(map);
+									      
+									 //  });
+								  </script>	

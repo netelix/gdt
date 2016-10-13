@@ -1365,18 +1365,13 @@ body .top-wrapper-mask {
   height: 50px;
 }
 #top-menu-fixed .navbar-right > li:first-child {
-  font-size: 14px;
+  font-size: 10px;
   font-family: "GothamBlack";
   color: #a685d6;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 14px;
-  margin-right: 40px;
-}
-@media (max-width: 1300px) {
-  #top-menu-fixed .navbar-right > li:first-child {
-    display: none;
-  }
+  margin-top: 19px;
+  margin-right: 36px;
 }
 @media (max-width: 1000px) {
   #top-menu-fixed {

@@ -1,0 +1,22 @@
+<? $form = $this->form ?>
+<? $r_image = $this->image ?>
+<?= $this->formHeader($form) ?>
+	<div class="row">
+		<div class="col-md-5">
+			<img src="<?= $this->image->url("small") ?>"/>
+		</div>
+		<div class="col-md-7">
+		 <?= $this->translationFields($form->getSubform("names")->getSubforms())
+	         ->renderGroups(array("label"=>"")); ?>
+	   <?= $form->renderGroups(array(
+	                       "ref"
+	                   ))?>
+		</div>
+	  <div class="col-xs-12">
+	     <?=  $form->renderAttributesCheckboxes("tattoo_style", array("label"=>null, "cols"=>3)); //var_dump($x, $r_image->id); if($x > 44) die();?>
+	  </div>
+	</div>
+	<div class="submit-row clearfix">
+	  <button type="submit" class="btn btn-success pull-right">Enregistrer</button>
+	</div>                                  
+</form>
