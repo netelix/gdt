@@ -12,7 +12,6 @@ class Form_PhotoEdit extends Uop_Form_Abstract
       "required"=>true, 
       "multiOptions"=>$opts["references"]
     ));
-    $this->addElement("hidden", "sort");
     $defaults = $r_image->toArray();
     $defaults["ref"] = $r_image->ref_type."_".$r_image->ref_id;
     $this->setDefaults($defaults);
