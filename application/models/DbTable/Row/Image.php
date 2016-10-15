@@ -36,6 +36,7 @@ class Model_DbTable_Row_Image extends Uop_Model_DbTable_Row_Image
 		$this->ref_type = $data["ref_type"];
 		$this->ref_id = $data["ref_id"];
 		$this->save();
+		$this->updateFromTranslationForm($form->getSubForm("names"));
 		return $this->updateAttributesFromForm($form);
 	}
 	
