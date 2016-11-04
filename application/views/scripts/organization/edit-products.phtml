@@ -16,18 +16,49 @@
 			      <button type="button" class="delete-product btn btn-danger navbar-btn navbar-right" style="margin-right:10px"><?= __("Supprimer")?></button>
 				</nav>
 		  		<?= $subform->renderHiddenElements(array("showErrors"=>false)); ?>
+		  	<div class="names">
 		      <?= $this->translationFields($subform->getSubform("names")->getSubforms())
 	      	->renderGroups(array("label"=>__("Nom du tatoueur"))); ?>
+		  	</div>
 	      <?= $this->translationFields($subform->getSubform("descs")->getSubforms())
 	      	->renderGroups(array(
 	          "label"=>__("Présentation du tatoueur"),
 	          "attribs"=>array("rows"=>3))); ?>
+	      <div class="row">
+	      <?= $subform->renderGroups(array(
+	      	"ink"=>array(
+	      		"label"=>__("Encre utilisée"),
+	      		"cols"=>"8"
+	      	),
+	      	"since"=>array(
+	      		"label"=>__("Dans le studio  depuis"),
+	      		"cols"=>"4"
+	      	),
+	      	"conventions"=>array(
+	      		"label"=>__("Conventions"),
+	      		"cols"=>"12"
+	      	),
+	      	"awards"=>array(
+	      		"label"=>__("Prix gagnés"),
+	      		"cols"=>"12"
+	      	),
+	      )) ?>
+	      </div>
+	      <br>
+		     <?=  $subform->renderAttributesCheckboxes("tattoo_style", array("label"=>__("Styles pratiqués"), "cols"=>3)); //var_dump($x, $r_image->id); if($x > 44) die();?>
+
 	      <? if($this->user()->admin()): ?>
-	      	<br/>
 	        <h3><?=__("Admin")?></h3>
+	      	<div class="alert alert-warning">
 		   		<?= $subform->renderGroups(array(
-		  			"interview"=>__("Lien vers l'interview"),
+		  			"interview"=>array(
+		  				"label"=>__("Lien vers l'interview"),
+		      	),
+		  			"certificate"=>array(
+		  				"label"=>__("Certification d'hygiène"),
+		      	)
 		  		)) ?>
+	      	</div>
 	      <? endif ?>
     	</div>
   	<? endforeach ?>

@@ -1191,12 +1191,96 @@ body .top-wrapper-mask {
 
 
 .organization-show {
+	background-color: #FFF;
 	.template-upload {
 		p {
 			font-size:12px;
 			margin-bottom:5px;
 		}
 	}
+	
+	.studio_description{
+	  background: #e8e8e8;
+    padding: 15px;
+    border-bottom:none;
+	}
+	
+	.subnav_studio ul {
+		margin-bottom:0px;
+    height: 100%;
+	}
+	
+		.studio_description_footer {
+			a{
+				margin-left:0px;
+			}
+		}
+	
+	.studio_description_texte{
+		p strong {
+			font-family:arial;
+		}
+	}
+
+	p.description {
+		text-align:justify;
+	}
+
+	.studio_tatoueurs .tab-content {
+		a {
+			color:white;
+		}
+		.row.text-content {
+			padding:15px;
+			p {
+				padding:0px;
+		    strong{
+		     font-family:arial;
+		    }
+		  }
+		}
+  }
+  .studio_photos_carousel .carousel-main{
+  	.carousel-control {
+  		span {
+		    color: #FFF;
+		    font-size: 80px;
+		    opacity: 1;
+		    margin-top: -40px;
+    	}
+  	}
+  	.certif{
+	    position: absolute;
+	    bottom: 40px;
+	    left: 30px;
+	    width: 150px;
+	    height: 150px !important;
+  	}
+  	 .caption.price {
+		    height: 90px;
+		    width: 90px;
+		    position: absolute;
+		    top: 30px;
+		    right: 40px;
+		    background-image: url(/img/badge.png);
+		    background-size: cover;
+		    color: white;
+		    font-size: 20px;
+		    font-weight: bold;
+		    letter-spacing: -2px;
+		    text-align: center;
+		    padding-top: 30px; 
+		  }
+  }  .studio_description_texte.row, #videos .row {
+  	margin-left:-15px;
+  	margin-right:-15px;
+  	iframe {
+  		width:100%;
+  	}
+  }
+  #videos .col-md-6 {
+  	margin-bottom:15px;
+  }
 }
 
 .galery #edit-photo{
@@ -1568,6 +1652,17 @@ body .top-wrapper-mask {
 }      
 /** END MODAL **/
 
+.products {
+	.names .translation-set .dropdown {
+		display:none;
+	}
+	.navbar.navbar-default{
+		margin-bottom:10px;
+	}
+}
+
+
+
 .overlay{
   position: absolute;
   top: 0;
@@ -1610,6 +1705,14 @@ body .top-wrapper-mask {
       height: 100px;
     }
   }
+}
+
+#modal-title{
+	display:none;
+}
+.submit-row {
+	border-top:solid 1px #DDD;
+	padding-top:15px;
 }
 
 @media(max-width: 1024px) {

@@ -1,16 +1,28 @@
-<? $form = $this->form ?>
+<? 
+	$form = $this->form;
+	$form->hideLabels(true);
+?>
 <? $r_image = $this->image ?>
 <?= $this->formHeader($form) ?>
 	<div class="row">
-		<div class="col-md-5">
+		<div class="col-md-4">
 			<img src="<?= $this->image->url("small") ?>"/>
 		</div>
-		<div class="col-md-7">
+		<div class="col-md-8">
 		 <?= $this->translationFields($form->getSubform("names")->getSubforms())
-	         ->renderGroups(array("label"=>"")); ?>
+	         ->renderGroups(array("label"=>__("Légende"))); ?>
+	   <div class="row">
 	   <?= $form->renderGroups(array(
-	                       "ref"
-	                   ))?>
+             "ref"=>array(
+             		"label"=>__("Associée à"),
+             		"cols"=>6
+             ),
+             "price"=>array(
+             		"label"=>__("Prix indicatif"),
+             		"cols"=>6
+             )
+         ))?>
+	   </div>
 		</div>
 	  <div class="col-xs-12">
 	     <?=  $form->renderAttributesCheckboxes("tattoo_style", array("label"=>null, "cols"=>3)); //var_dump($x, $r_image->id); if($x > 44) die();?>

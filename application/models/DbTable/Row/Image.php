@@ -2,7 +2,10 @@
 class Model_DbTable_Row_Image extends Uop_Model_DbTable_Row_Image
 {
   protected $_dependent_attr_map_types = array("tattoo_style");
-  protected $_dependent_attr_map_values = array("shares");
+  protected $_dependent_attr_map_values = array(
+  	"shares",
+  	"price"
+  );
   
   public function __construct($o){
 	  parent::__construct($o);
@@ -75,5 +78,14 @@ class Model_DbTable_Row_Image extends Uop_Model_DbTable_Row_Image
 		
 		$this->shares($shares);
 		return;
+	}
+	
+	public function price($val = null)
+	{
+    if(empty($val)){
+      return $this->findDependentAttrMapValue("price");
+    } else {
+      return $this->setDependentAttrMapValue("price", $val);
+    }		
 	}
 }

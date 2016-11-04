@@ -48,10 +48,42 @@
       <?= $this->form->renderAttributesCheckboxes("piercing_style", "<h3>".__("Pratique de piercings")."</h3>")?>
 
       <?// $this->form->renderAttributesCheckboxes("filter2", __("Filtre 2"))?>
+      <div class="row">
       <?= $this->form->renderGroups(array(
-        //  "filter1"=>__("Filtre 1"),
-          "website"=>__("Site internet"),
+          "website"=>array(
+          	"label"=>__("Site internet"),
+          	"cols"=>"6",
+          ),
+          "facebook"=>array(
+          	"label"=>__("Url de la página facebook"),
+          	"cols"=>"6",
+          ),
+          "size"=>array(
+          	"label"=>__("Surface du studio"),
+          	"cols"=>"4",
+          ),
+          "since"=>array(
+          	"label"=>__("Date d'ouverture du studio"),
+          	"cols"=>"4",
+          ),
+          "founder"=>array(
+          	"label"=>__("Nom du fondateur"),
+          	"cols"=>"4",
+          ),
+          "guest"=>array(
+          	"label"=>__("Prochains guests"),
+          	"cols"=>"12",
+          ),
+          "story"=>array(
+          	"label"=>__("Une anecdote a propos du studio"),
+          	"cols"=>"12",
+          	"attribs"=>array(
+          		"rows"=>3
+          	)
+          ),
+          
       ))?>
+      </div>
       <h3><?=__("Horaires d'ouverture")?></h3>
       <div id="openings">
       	<div>
@@ -71,16 +103,33 @@
 	      <? endforeach; ?>
       	</div>
      	 	<a class="add-opening btn btn-default" style="margin-top:24px" href="javascript:void(0);"><?=__("Ajouter un horaire")?></a>
+     	 	<br>
+     	 	<br>
+     	 	<div class="row">
+     	 	<?= $this->form->renderGroups(array(
+	  			"no_rdv"=>array(
+	  				"label"=>__("Tatouage sans rendez-vous"),
+	  				"cols"=>4
+	  			),
+	  			"arrhes"=>array(
+	  				"label"=>__("Arrhes"),
+	  				"cols"=>4
+	  			)
+	
+	  		)) ?>
+     	 	</div>
       </div>
       <? if($this->user()->admin()): ?>
       	<br/>
-        <h3><?=__("Admin")?></h3>
-      	<div style="width:300px">
-	   		<?= $this->form->renderGroups(array(
-	  			"admin_note"=>__("Handicap"),
-	  			"tattoobox"=>__("Tattoobox"),
-	  			"status"=>__("Gratuit/Payant"),
-	  		)) ?>
+      	<h3><?=__("Admin")?></h3>
+      	<div class="alert alert-warning">
+	      	<div style="width:300px">
+		   		<?= $this->form->renderGroups(array(
+		  			"admin_note"=>__("Handicap"),
+		  			"tattoobox"=>__("Tattoobox"),
+		  			"status"=>__("Gratuit/Payant"),
+		  		)) ?>
+	      	</div>
       	</div>
       <? endif ?>
     <?=$this->formFooter();?>

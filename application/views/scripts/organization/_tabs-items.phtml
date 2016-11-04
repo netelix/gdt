@@ -2,17 +2,19 @@
 	$org = $this->org;
 	$current = $this->current;	
 	$tabs = array(
-		"edit"=> $this->link(array('id'=>$org->id), 'organization-edit')->fragment("title")->a_("Le salon"),
+		"edit"=> $this->link(array('id'=>$org->id), 'organization-edit')->fragment("title")->a_("Le studio"),
 		"products"=>$this->link(array('id'=>$org->id), 'organization-edit-products')->fragment("title")->a_("Les tatoueurs"),
 		"photos"=>$this->link(array('id'=>$org->id), 'organization-photos-edit')->fragment("title")->a_("Photos"),
+		"videos"=>$this->link(array('id'=>$org->id, 'entity'=>'organizations'), 'videos')->fragment("title")->a_("Videos"),
+
 	);
 	if($org->tattoobox){
 		$tabs["tattoobox"] = $this->link(array("id"=>$org->id), "claim-tattoobox")->a(__("TattooBox"), "alert-link");
 	}
 ?>
 <? $current_class = 'class="active"'; ?>
-<?foreach($tabs as $key=>$content):?>
+<? foreach($tabs as $key=>$content): ?>
 	<li <?= $current==$key? $current_class : ''?>>
 		<?= $content ?>
 	</li>
-<?endforeach?>
+<? endforeach ?>

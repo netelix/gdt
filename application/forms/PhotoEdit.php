@@ -4,7 +4,10 @@ class Form_PhotoEdit extends Uop_Form_Abstract
 {
   protected $_image;
   protected $_attributesCheckbox = array("tattoo_style");
-
+  protected $_attributesInputs = array(
+  	"price"=>array("type"=>"text"),
+  );
+  
   function __construct($r_image, $opts){
     $this->_image = $r_image;
 
@@ -12,8 +15,13 @@ class Form_PhotoEdit extends Uop_Form_Abstract
       "required"=>true, 
       "multiOptions"=>$opts["references"]
     ));
-    $defaults = $r_image->toArray();
-    $defaults["ref"] = $r_image->ref_type."_".$r_image->ref_id;
+    foreach($this->_attributesInputs as $name=>$data){
+      $this->addElement($data["type"], $name, $data);
+    }
+    
+    $defaults = $this->entityToDefaults($r_image);
+    $defaults["ref"] = $r_image->ref_type."_".$r_image->ref_id;     
+    
     $this->setDefaults($defaults);
 
     $this->addTranslatableSubForm($r_image, "names", $r_image->id."[names]", array(

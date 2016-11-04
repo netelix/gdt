@@ -1458,6 +1458,7 @@ margin-left: -35%;
 							}
 				.studio_description,
 				.studio_photos,
+				.studio_videos,
 				.studio_localisation,
 				.studio_tatoueurs,
 				.studio_avis{
@@ -1520,6 +1521,7 @@ margin-left: -35%;
 					float:right;
 				}
 					.studio_photos h2,
+					.studio_videos h2,
 					.studio_tatoueurs h2,
 					.studio_localisation h2,
 					.studio_avis h2{

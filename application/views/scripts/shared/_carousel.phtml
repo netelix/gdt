@@ -1,0 +1,68 @@
+<?
+$id = isset($this->id) ? $this->id : uniqid("org");
+$images = $this->images;
+$size = isset($this->size) ? $this->size : "large";
+$num_preview = !empty($this->num_previews) ? $this->num_preview : 5;
+?>
+
+<div id="<?= $id?>" class="carousel slide carousel-main" data-interval="false">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <? foreach($images as $i=>$image): ?>
+      <li data-target="#<?= $id?>" data-slide-to="<?= $i ?>" class="active"></li>
+    <? endforeach ?>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <? foreach($images as $i=>$image): ?>
+      <div class="item <?= ($i==0)? 'active' : '' ?>">
+      	<? if($image instanceOf Uop_Model_DbTable_Row_Image): ?>
+      		<? $url = $image->url($size); ?>
+	        <? $price = $image->price() ?>
+      	<? else: ?>
+      		<? $url = $image ?>
+      		<? $price = null ?>
+      	<? endif ?>
+        <img src="<?= $url ?>" alt="<?php /*echo $image->name();*/ ?>" class="img-responsive">
+        <? if($price): ?>
+	        <div class="caption price"><?= $price ?></div>
+        <? endif ?>
+        <? if($this->certif && $i==0): ?>
+        	<img src="/img/certif.png" class="certif"/>
+        <? endif ?>
+      </div>
+    <? endforeach ?>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#<?= $id?>" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="#<?= $id?>" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
+</div>
+
+<? $num_slides = floor(count($images) / $num_preview); ?>
+<? $i = 0; ?>
+<div class="carousel slide visible-lg carousel_menu" id="carousel_menu_<?= $id?>"  data-interval="false">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="item active row">
+    <? $i=0; foreach($images as $i=>$image): ?>
+    	<div class=" col-md-2">
+      <a href="#x" data-target="#<?= $id?>" data-slide-to="<?=$i?>" class="thumbnail">
+      	<img src="<?=$image->url(Model_DbTable_Row_Image::SMALL);?>" alt="<?php /*echo $image->name();*/ ?>" class="img-responsive">
+      </a>
+    	</div>
+      <? if (($i+1)%6 == 0 && ($i+1)!=count($images) ) : ?>
+    </div><!--item-->
+    <div class="item row">
+      <? endif; ?>
+    <? $i++; endforeach ?>
+    </div><!--item-->
+  </div><!--carousel-inner-->
+  <a class="left carousel-control" href="#carousel_menu_<?= $id?>" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  <a class="right carousel-control" href="#carousel_menu_<?= $id?>" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>

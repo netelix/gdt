@@ -167,5 +167,16 @@ class IndexController extends Uop_Controller_Index
       
   }
 
+	 public function videoEditAction(){
+     $this->resource_table = $this->_getParam("entity");
+     $this->resource_id = "id";
+	   parent::videoEditAction();
+   }
+
+	 public function videosAction(){
+     $this->resource_table = $this->_getParam("entity");
+     $this->resource_id = "id";
+	   parent::videosAction();
+   }
 }
 

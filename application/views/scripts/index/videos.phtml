@@ -1,0 +1,21 @@
+<? $this->content_with_sidebar = true ?>
+<?= $this->partial("organization/_edit-header.phtml", array("org"=>$this->resource, "current"=>"videos")); ?>
+<?= $this->resource->linkAddVideo()->a(__("Ajouter une video"), "btn btn-primary link-modal") ?>
+
+<? foreach($this->videos as $r_video): ?>
+<br>
+<br>
+
+	<div class="row">	
+		<div class="col-md-6">
+			<? if($embed = $r_video->embed()): ?>
+				<?= $embed ?>
+			<? else: ?>
+				<?= $t_videos->youtubeEmbed("0"); ?>
+			<? endif ?>
+		</div>
+		<div class="col-md-6">
+			<?= $r_video->linkEdit()->a(__("Modifier la video"), "link-modal"); ?>
+		</div>
+	</div>
+<? endforeach ?>

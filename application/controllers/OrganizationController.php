@@ -176,7 +176,7 @@ class OrganizationController extends Uop_Controller_Organization
   public function editPhotoAction()
   {
   	$this->view->resource = $r_org = $this->_findResource(array('privilege'=>'edit'));
-  	$this->view->image = $r_image = App::table("images")->select()->where("id = ?", $this->_getParam("image_id"))->where("org_id = ?", $r_org->id)->fetchRow();
+  	$this->view->image = $r_image = App::table("images")->select()->where("id = ?", $this->_getParam("image_id"))->where("org_id = ? OR ref_type = 'organizations' AND ref_id = ?", $r_org->id)->fetchRow();
   	
   	$entity_select_values["organizations_$r_org->id"] = __("Le studio");
     foreach($r_org->products() as $r_product){
@@ -206,6 +206,11 @@ class OrganizationController extends Uop_Controller_Organization
       }
       $this->_reload();
     }
+  }
+  
+  public function videosAction()
+  {
+	  parent::videosAction();
   }
 }
 

@@ -216,7 +216,11 @@ function on_serp_page_loaded(){
 										</div>
 										<div class="resultat_content_texte">
 											<p><?= $org_desc ?></p>
-											<br>
+												<br>
+											<? if($people = $r_ad->meta("people")): ?>
+											<p>TATOUEURS : <?= $people ?></p>
+											<? endif ?>
+												<br>
 											<? if($styles = $r_ad->meta("style")): ?>
 											<p>STYLES : 
 												<? foreach($styles as $style): ?>

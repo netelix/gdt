@@ -1,8 +1,22 @@
 <?php
 class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 {
-  protected $_dependent_attr_map_types = array("tattoo_style");
-  protected $_dependent_attr_map_values = array("opening_days","piercing_style", "admin_note");
+  protected $_dependent_attr_map_types = array(
+  	"tattoo_style",
+  	);
+  protected $_dependent_attr_map_values = array(
+  	"opening_days",
+  	"piercing_style", 
+  	"admin_note",  	
+  	"since",
+  	"founder",
+  	"story",
+  	"size",
+  	"facebook",
+  	"no_rdv",
+  	"arrhes",
+  	"guest"
+  );
   
   public function updateFromEdit($form){
   	$openings = array();
@@ -15,6 +29,7 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
   	$openings = array_unique($openings);
   	sort($openings);
 	  $this->openingDays(json_encode($openings));
+	  $this->story($form->getValue("story"));
 	  parent::updateFromEdit($form);
   }
   
@@ -57,6 +72,21 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 		foreach($this->products() as $r_product){
 			$values["product_names"][] = $r_product->name()->__toString();
 		}
+		
+		$people_names = array();
+		foreach($this->products() as $r_product){
+	  	$people_names[] = $r_product->name()->__toString();
+	  }
+	  if(count($people_names)>1){
+		  $last_people_name = array_pop($people_names);
+		  $people_names = implode(", ", $people_names).__(" et ").$last_people_name;
+	  } else {
+		  $people_names = current($people_names);
+	  }
+
+
+		$values["people"] = $people_names;
+
 		return $values;
   }
   

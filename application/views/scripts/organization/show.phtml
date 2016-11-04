@@ -7,12 +7,13 @@
   $loc = $org->location();
   $this->body_class = "organization-show";
   $ad = $org->ad();
-  $images = $org->getAllImages();
+  $images = $std_images = $org->images();
   $products = $org->products();
   $city = $org->city();
   $country = $city->ancester(array("country"));
   $this->belgium = $country->local_id == "BE";
   $people_names = array();
+  $videos = $org->videos();
   foreach($products as $r_product){
 	  $people_names[] = $r_product->name()->__toString();
   }
@@ -81,8 +82,11 @@
 					    <? if($org->status() != 'free'): ?>
 						<div class="subnav_studio" id="barre-fixe">
 							<ul>
-								<li><a href="#photos"><?= __("Photos") ?></a></li>
 								<li><a href="#products"><?= __("Tatoueurs") ?></a></li>
+								<li><a href="#photos"><?= __("Studio") ?></a></li>
+								<? if($videos->count()): ?>
+								<li><a href="#videos"><span class="hidden-xs"><?= __("Videos") ?></span><span class="visible-xs"><?= __("Videos") ?></span></a></li>
+								<? endif ?>
 								<li><a href="#location"><span class="hidden-xs"><?= __("Horaires / Localisation") ?></span><span class="visible-xs"><?= __("Localisation") ?></span></a></li>
 								<li><a href="#reviews"><?= __("Avis") ?> (<?= $ad->meta("num_review")?>)</a></li>
 							</ul>
@@ -90,28 +94,50 @@
 						<div class="studio_description">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
 							<div class="row">
-								<div class="studio_description_image">
-									<?= $this->imgTag($org->firstImage(), "large-square", array("size"=>"195xauto")) ?>
+								<div class="studio_description_texte row">
+									<? if($since = $org->since()): ?>
+										<p class="col-md-6"><strong><?= __("Date de création :") ?></strong> <?= Zend_Date::now()->set($since)->get("yyy") ?></p>
+									<? endif ?>
+									<? if($founder = $org->founder()): ?>
+										<p class="col-md-6"><strong><?= __("Fondateur :") ?></strong> <?= $founder ?></p>
+									<? endif ?>
+									<p class="col-md-6"><strong><?= __(":num: tatoueurs :", array("num"=>$products->count())) ?></strong> <?= $people_names ?></p>
+									<? if($size = $org->size()): ?>
+										<p class="col-md-6"><strong><?= __("Surface du studio :") ?></strong> <?= $size ?></p>
+									<? endif ?>
+									<p class="col-md-6"><strong><?= __("Avec ou sans rendez-vous :") ?></strong> 
+										<?=  (1 == $org->noRdv()) ? __("sans") : __("avec") ?></p>
+							  	<p class="col-md-6">
+										<strong><?= __("Piercings")?> : </strong>
+									  	<? $piercings = $org->attributes("piercing_style") ?>
+								  		<?= $piercings->count() > 0 ? __("Oui") : __("Non") ?>
+								  </p>
+									<? if($arrhes = $org->arrhes()): ?>
+										<p class="col-md-6">
+											<strong><?= __("Arrhes")?> : </strong>
+											<?= $arrhes ?>
+										</p>
+									<? endif ?>
+									<? if($guest = $org->guest()): ?>
+										<p class="col-md-12">
+											<strong><?= __("Prochains guests")?> : </strong>
+											<?= $guest ?>
+										</p>
+									<? endif ?>
+									<? if($story = $org->story()): ?>
+										<p class="col-md-6"><?= $story ?></p>
+									<? endif ?>
+
+									<div class="row studio_description_tag col-md-12">
+										<p><strong><?= __("Style : ")?></strong>
+									  	<? foreach($org->attributes("tattoo_style") as $style): ?>
+									  	<span class="resultat_content_texte_tag"><?= $style->name() ?></span>
+									  	<? endforeach ?>
+										</p>
+									</div>
+									<p class="col-md-12 description"><?= $org->description(); ?></p>
 								</div>
-								<div class="studio_description_texte">
-							    <?= $org->description() ?>
-								</div>
-							</div>
-							<div class="row studio_description_tag">
-								<br>
-								<p><?= __("STYLES : ")?>
-							  	<? foreach($org->attributes("tattoo_style") as $style): ?>
-							  	<span class="resultat_content_texte_tag"><?= $style->name() ?></span>
-							  	<? endforeach ?>
-								</p>
-						  	<? $piercings = $org->attributes("piercing_style") ?>
-						  	<? if($piercings->count() > 0):?>
-						  	<p><?= __("PIERCING")?></h3>
-							  	<? foreach($piercings as $style): ?>
-							  	<span class="resultat_content_texte_tag"><?= $style->name() ?></span>
-							  	<? endforeach ?>
-						  	</p>
-						  	<? endif ?>
+
 							</div>
 							<div class="row studio_description_footer">
 						  	<? if($org->tattoobox):?>
@@ -141,13 +167,6 @@
 						<? endif ?>
 						
 						<? if($org->status() != 'free'): ?>
-						<div class="studio_photos" id="photos">
-							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?><</a>
-							<h2><?= __("Photos des tatouages") ?></h2>
-							<div class="studio_photos_carousel">
-								<?= $this->partial("shared/_carousel.phtml", array("images"=>$images,	"size"=>"orig")); ?>
-							</div>
-						</div>
 						<div class="studio_tatoueurs" id="products">
 							<a class="btn btn-purple btn-block  visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
 							<h2><?= __("Tatoueurs") ?></h2>
@@ -162,21 +181,76 @@
 						    <div class="tab-content">
  						  		<? foreach($products as $x=>$r_product):?>
 							    <div role="tabpanel" class="tab-pane <?= $x == 0 ? 'active':''?>" id="prod-<?= $r_product->id ?>">
-							    	<p><?= $r_product->description() ?> 	  	
-							    	<? if($interview_url = $r_product->interview()): ?>
-							    		<a target="_blank" href="<?= $interview_url ?>"><?= __("Lisez son Interview sur le blog") ?></a></p>
-							    	<? endif ?>
+							    	<div class="row text-content">
+									    <? if($since = $r_product->since()): ?>
+												<p class="col-md-6"><strong><?= __("Tatoue depuis :") ?></strong> <?= Zend_Date::now()->set($since)->get("yyy") ?></p>
+											<? endif ?>
+									    <? if($ink = $r_product->ink()): ?>
+												<p class="col-md-6"><strong><?= __("Encre utilisée :") ?></strong> <?= $ink ?></p>
+											<? endif ?>
+											<? $prod_styles = $r_product->attributes("tattoo_style") ?>
+											<? if(count($prod_styles)): ?>
+											<p class="col-md-12"><strong><?= __("Styles pratiqués : ")?></strong>
+										  	<? foreach($prod_styles as $style): ?>
+										  	<span class="resultat_content_texte_tag"><?= $style->name() ?></span>
+										  	<? endforeach ?>
+											</p>
+											<? endif ?>
+									    <? if($convention = $r_product->conventions()): ?>
+												<p class="col-md-12"><strong><?= __("Conventions à venir :") ?></strong> <?= $convention ?></p>
+											<? endif ?>
+									    <? if($awards = $r_product->awards()): ?>
+												<p class="col-md-12"><strong><?= __("Prix gagnés :") ?></strong> <?= $awards ?></p>
+											<? endif ?>
+											
+											<p class="col-md-12 description"><?= $r_product->description() ?> 	  	
+								    	<? if($interview_url = $r_product->interview()): ?>
+								    		<a target="_blank" href="<?= $interview_url ?>"><?= __("Lisez son Interview sur le blog") ?></a></p>
+								    	<? endif ?>
+							    	
+							    	</div>
 										<div class="studio_photos_carousel">
 									  	<? $images = $r_product->images(); ?>
 										  <? if($images->count() > 0): ?>
-										    <?= $this->partial("shared/_carousel.phtml", array("images"=>$r_product->images(),	"size"=>"orig")); ?>	  
+										    <?= $this->partial("shared/_carousel.phtml", array("images"=>$r_product->images(),	"size"=>"orig", "certif"=>$r_product->certificate())); ?>	  
 									  	<? endif ?>
 										</div>
 							    </div>
 							    <? endforeach ?>
 						    </div>
 						</div>
+						<div class="studio_photos" id="photos">
+							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?><</a>
+							<h2><?= __("Photos du studio de tatouage") ?></h2>
+							<div class="studio_photos_carousel">
+								<? $imgs = array(); ?>
+								<? 
+									foreach($std_images as $img){
+										$imgs[] = $img;
+									}
+									array_shift($imgs);
+								?>
+								<?= $this->partial("shared/_carousel.phtml", array("images"=>$imgs,	"size"=>"orig")); ?>
+							</div>
+						</div>
+
 						<? endif ?>
+						
+						<div id="videos" class="studio_videos">
+							<h2><?= __("Videos") ?></h2>
+							<div class="row">
+							<? foreach($videos as $r_video): ?>
+								<div class="col-md-6">
+								<? if($embed = $r_video->embed()): ?>
+									<?= $embed ?>
+								<? else: ?>
+									<?= $t_videos->youtubeEmbed("0"); ?>
+								<? endif ?>
+								</div>
+							<? endforeach ?>
+							</div>
+						</div>
+						
 						<div class="studio_localisation" id="location">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
 							<? if($org->status() != 'free'): ?>
@@ -203,7 +277,7 @@
 							  	foreach(json_decode($org->opening_days()) as $data){
 								  	$hours = explode("_", $data);
 								  	$day = explode("-", $hours[0]);
-								  	$days[$day[0]][] = __("de :open: à :close:", array("open"=>$hours[1], "close"=>$hours[2]));
+								  	$days[$day[0]][] = __(":open: à :close:", array("open"=>$hours[1], "close"=>$hours[2]));
 							  	}
 							  	?>
 							  	<? $date = new Zend_Date() ?>
@@ -222,6 +296,10 @@
 						<? if($org->status() != 'free'): ?>
 						<div class="studio_avis" id="reviews">
 							<h2><?= __("Avis") ?> (<?= $ad->meta("num_review")?>)</h2>
+							<? if($facebook = $org->facebook()): ?>
+							<div class="fb-comments" data-numposts="5" data-width="100%" data-href="<?= $facebook ?>"></div>
+							<? endif ?>
+							
 							<div class="row">
 								<div class="studio_avis_global">
 									<div class="row_avis_singleton" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
