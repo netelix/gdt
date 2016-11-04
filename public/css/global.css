@@ -1325,9 +1325,82 @@ body .top-wrapper-mask {
 .autopromo {
   cursor: pointer;
 }
+.organization-show {
+  background-color: #FFF;
+}
 .organization-show .template-upload p {
   font-size: 12px;
   margin-bottom: 5px;
+}
+.organization-show .studio_description {
+  background: #e8e8e8;
+  padding: 15px;
+  border-bottom: none;
+}
+.organization-show .subnav_studio ul {
+  margin-bottom: 0px;
+  height: 100%;
+}
+.organization-show .studio_description_footer a {
+  margin-left: 0px;
+}
+.organization-show .studio_description_texte p strong {
+  font-family: arial;
+}
+.organization-show p.description {
+  text-align: justify;
+}
+.organization-show .studio_tatoueurs .tab-content a {
+  color: white;
+}
+.organization-show .studio_tatoueurs .tab-content .row.text-content {
+  padding: 15px;
+}
+.organization-show .studio_tatoueurs .tab-content .row.text-content p {
+  padding: 0px;
+}
+.organization-show .studio_tatoueurs .tab-content .row.text-content p strong {
+  font-family: arial;
+}
+.organization-show .studio_photos_carousel .carousel-main .carousel-control span {
+  color: #FFF;
+  font-size: 80px;
+  opacity: 1;
+  margin-top: -40px;
+}
+.organization-show .studio_photos_carousel .carousel-main .certif {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  width: 150px;
+  height: 150px !important;
+}
+.organization-show .studio_photos_carousel .carousel-main .caption.price {
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background-image: url(/img/badge.png);
+  background-size: cover;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  text-align: center;
+  padding-top: 30px;
+}
+.organization-show .studio_description_texte.row,
+.organization-show #videos .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.organization-show .studio_description_texte.row iframe,
+.organization-show #videos .row iframe {
+  width: 100%;
+}
+.organization-show #videos .col-md-6 {
+  margin-bottom: 15px;
 }
 .galery #edit-photo .translation-set label,
 .galery #edit-photo .translation-set .dropdown.form-group {
@@ -1633,6 +1706,12 @@ body .top-wrapper-mask {
   }
 }
 /** END MODAL **/
+.products .names .translation-set .dropdown {
+  display: none;
+}
+.products .navbar.navbar-default {
+  margin-bottom: 10px;
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -1670,6 +1749,13 @@ body .top-wrapper-mask {
 }
 .container_conseiller form textarea {
   height: 100px;
+}
+#modal-title {
+  display: none;
+}
+.submit-row {
+  border-top: solid 1px #DDD;
+  padding-top: 15px;
 }
 @media (max-width: 1024px) {
   .container_conseiller {
