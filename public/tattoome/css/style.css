@@ -1853,7 +1853,6 @@ margin-left: -35%;
 			width:100%;
 		}
 	}
-
 /* FIN LAUNCHING */
 .affix{
 	z-index:9999;
@@ -1873,12 +1872,19 @@ margin-left: -35%;
 }
 @media (max-width: 1050px){
 	.affix-nav{
-		width:100%;
 	}
 	.affix{
-		position: relative;
-		margin-top:30px;
+		margin-left: 684px;
 	}
+	
+	.navbar-sousmenu .navbar-nav > li > a {
+		font-size: 14px;
+		padding-right:10px;
+	}
+	
+	.navbar-brand {
+    padding-right: 0px;
+    }
 }
 
 @media (min-width: 1050px){
@@ -1900,7 +1906,16 @@ margin-left: -35%;
 		left:0;
 	}
 	}
-	
+
+@media (max-width: 1024px){
+	.studio_content_width{
+		width:664px;
+	}
+	.sutdio_sidebar_width{
+		width:310px !important;
+	}
+}
+
 #admin-bar {
 	background: #E6E6E6;
 }

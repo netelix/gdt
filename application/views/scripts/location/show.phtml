@@ -89,7 +89,7 @@ function on_serp_page_loaded(){
 				<!-- content -->
 				<div class="row serp_main">
 					<!-- left panel -->
-					<div class="col-lg-3 hidden-xs hidden-sm">
+					<div class="col-md-3 hidden-xs hidden-sm">
 						<h2 class="serp_filtre_header">
 							<?=__(":num: tatoueurs trouvés", array("num"=>$this->num_products))?>
 						</h2>
@@ -121,7 +121,7 @@ function on_serp_page_loaded(){
 					</div>
 					<!-- fin left panel -->
 					<!-- resultat -->
-					<div class="col-lg-9">
+					<div class="col-md-9">
 						<h1 class="h2 serp_content_header"><?= __("Tatoueurs :loc:", array("loc"=>$this->location->inName()))?>
 						<small><span class="serp_content_header_emphase"><?= $page_label ?></span>
 						<? if($this->user()->admin()): ?>

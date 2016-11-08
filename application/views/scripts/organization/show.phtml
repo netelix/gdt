@@ -36,7 +36,7 @@
 
   
   $this->doctype(Zend_View_Helper_Doctype::XHTML1_RDFA);
-  $this->headMeta()->appendProperty("og:title", $org->name()." - La galerie du tatouage");
+  $this->headMeta()->appendProperty("og:title", $org->name()." - Tattoome");
   $this->headMeta()->appendProperty("og:description", $desc);
   if($images->count()){
 	  $this->headMeta()->appendProperty("og:image", "//".App::config()->link->domain.$images->getRow(0)->url("orig"));
@@ -234,23 +234,24 @@
 							</div>
 						</div>
 
-						<? endif ?>
-						
-						<div id="videos" class="studio_videos">
-							<h2><?= __("Videos") ?></h2>
-							<div class="row">
-							<? foreach($videos as $r_video): ?>
-								<div class="col-md-6">
-								<? if($embed = $r_video->embed()): ?>
-									<?= $embed ?>
-								<? else: ?>
-									<?= $t_videos->youtubeEmbed("0"); ?>
-								<? endif ?>
+							<? if($videos->count()): ?>
+								<div id="videos" class="studio_videos">
+									<h2><?= __("Videos") ?></h2>
+									<div class="row">
+									<? foreach($videos as $r_video): ?>
+										<div class="col-md-6">
+										<? if($embed = $r_video->embed()): ?>
+											<?= $embed ?>
+										<? else: ?>
+											<?= $t_videos->youtubeEmbed("0"); ?>
+										<? endif ?>
+										</div>
+									<? endforeach ?>
+									</div>
 								</div>
-							<? endforeach ?>
-							</div>
-						</div>
-						
+							<? endif ?>
+						<? endif ?>
+					
 						<div class="studio_localisation" id="location">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
 							<? if($org->status() != 'free'): ?>

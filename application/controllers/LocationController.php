@@ -20,6 +20,12 @@ class LocationController extends Uop_Controller_Location
     
     $this->view->current_filters = $filters = Uop_Model_DbTable_Row_Location::unserializeFilters($this->_getParam('filters'));
     $this->view->current_sort = $this->_getParam("sort");
+          
+   	if(count(current($filters)) > 1) {
+			$current_filters = array("attr"=>current($filters)[0]);
+			$this->_redirect($r_loc->link(array("filters"=>$current_filters)), array("code"=>301));
+		}
+
             
     $params['filters'] = $filters;
     $params['page'] = $this->_getParam('page');
@@ -97,6 +103,12 @@ class LocationController extends Uop_Controller_Location
 
 		$filters = $this->_loadFilters();
 		$this->view->current_filters = $current_filters = App::table("ads")->unserializeFilters($this->_getParam('filters'));
+
+		if(count(current($current_filters)) > 1) {
+			$current_filters = App::table("ads")->serializeFilters(array("attr"=>current($current_filters)[0]));
+			$this->_redirect(Link::factory(array("filters"=>$current_filters), "galery-with-filters"), array("code"=>301));
+		}
+
 		$current_styles = array();
 		$checkboxes = array();
 		foreach($filters as $key=>$filter_data){
@@ -111,7 +123,7 @@ class LocationController extends Uop_Controller_Location
 					$current_styles[] = $r_attr;
 					$anchor = '<input type="checkbox" checked/> '.$r_attr->name();
 				} else {
-					$filters["attr"][] = $r_attr->id;
+					$filters["attr"] = array($r_attr->id);
 					$anchor = '<input type="checkbox"/> '.$r_attr->name();
 				}
 
