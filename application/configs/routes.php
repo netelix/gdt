@@ -9,6 +9,16 @@ return array(
       'page'=>1
     )
   ),
+  'galery-country'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/@type-de-tatouages/:loc_id/:page',
+      'defaults' => array(
+      'controller'=>'location',
+      'action'=>'galery',
+      'page'=>1,
+      __("type-de-tatouages")
+    )
+  ),
   'conventions'=>array(
     'type'   => 'Zend_Controller_Router_Route',
     'route'  => '/:lang/conventions',
@@ -38,11 +48,12 @@ return array(
   ),
   'conciergerie'=>array(
     'type'   => 'Zend_Controller_Router_Route',
-    'route'  => '/:lang/conseil',
+    'route'  => '/:lang/@conseil',
       'defaults' => array(
       'controller'=>'index',
       'action'=>'conciergerie',
-      'page'=>1
+      'page'=>1,
+       __("conseil"),
     )
   ),
   'conciergerieSend'=>array(
@@ -90,6 +101,16 @@ return array(
       'page'=>1
     )
   ),
+  'galery-country-with-filters'=>array(
+    'type'   => 'Zend_Controller_Router_Route',
+    'route'  => '/:lang/galery-country/:loc_id/f/:filters/:page',
+      'defaults' => array(
+      'controller'=>'location',
+      'action'=>'galery',
+      'page'=>1
+    )
+  ),
+
   'claim-tattoobox'=>array(
     'type'   => 'Zend_Controller_Router_Route',
     'route'  => '/:lang/edit-org-tattoobox/:id',

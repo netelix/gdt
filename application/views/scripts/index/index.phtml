@@ -13,6 +13,9 @@
 			</div>
 			<h1 class="banner_title gothamblack"><?= __("trouvez votre futur tatoueur") ?></h1>
 			<p class="banner_subtitle gothambold"><?= __("La plus grande sélection de tatoueurs prêts à vous accueillir") ?></p>
+			<? $this->search_form->getElement("search_loc_id")->setValue($r_loc->id); ?>
+
+
 			<?= $this->formHeader($this->search_form, array("class"=>"banner_form form-inline")) ?>
 				<?= $this->search_form->renderGroups(array(
 				  "loc_name"=>array(
@@ -27,6 +30,7 @@
 		<!-- END FORMULAIRE TROUVER TATOUEUR -->
 
 		<!-- BANNIERE PROMO -->
+		<? if($r_loc->local_id != "ES"): ?>
 		<div class="container-fluid" id="banner_promo_container">
 			<div class="row" id="banner_promo">
 				<div class="col-lg-4">
@@ -84,6 +88,34 @@
 			</div>
 		</div>
 		<!-- FIN BANNIERE PROMO 2-->
+		<? else: ?>
+		<div class="container-fluid" id="banner_promo_container">
+			<div class="row promo_container_md" id="banner_promo">
+        <div class="col-lg-6 adviser">
+            <div class="promo_container_ld promo_container_right autopromo">
+                <div class="title_promo">
+                    <h2 class="gothamblack"><?= __("Le conseiller") ?> <span style="color:black;">Tattoo</span>Me</h2>
+                    <p class="gothambold"><?= __("Un projet de tatouage") ?> ?</p>
+                    <p class="gotham"><?= __("Notre conseiller sélectionne pour vous les meilleurs tatoueurs") ?></p>
+                </div>
+                <div class="link_promo">
+                    <a href="<?=  $this->link(array(), 'conciergerie')?>" class="btn-link-promo link-promo-lightgreen gothambold"><span class="hidden-xs"><?= __("Je prends contact") ?></span>
+                    <span class="visible-xs"><?= __("Contact") ?></span></a>
+                </div>
+            </div>
+        </div>
+        
+				<div class="col-lg-6 newsletter">
+					<div class="promo_container_md_singleton promo_container_md_singleton_right promo_container_md_singleton_custom">
+						<p class="francoisone label_tag"><?= __("Newsletter") ?></p>								
+						<h2 class="custom_title_text_prom gothamblack"><?= __("News,<br/>Bons plans, Tendances...")?></h2>
+						<p class="custom_text_prom gothambook"><?= __("Recevez le meilleur du tatouage par email") ?></p>
+						<a href="#" class="btn-custom-link-promo link-promo-violet gothambook"><?= __("Je m'inscris") ?></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<? endif; ?>
 		<script>
     		$(document).ready(function(){
     		     $('.promo_container_md_singleton_right').on('click',function(e){
@@ -107,7 +139,7 @@
 				</div>
 				<div class="row section_container" style="margin-left:0px;">
 					<? foreach(App::table("attributes")->tattooStyle() as $r_attr):?>
-					<? $link = $this->link(array("filters"=>"attr:".$r_attr->id),"galery-with-filters"); ?>
+					<? $link = $r_loc->linkGalery("attr:".$r_attr->id, "galery-with-filters"); ?>
 								<div class="sm_img_container">
 									<? 
 										$img = $r_attr->firstImage();
@@ -141,7 +173,7 @@
 							<? endforeach ?>
 							</ul>
 							<ul class="col-md-3">
-								<? foreach($r_loc->getCities(8) as $r_city): ?>
+								<? foreach($r_loc->getCities(8, "population DESC") as $r_city): ?>
 									<li><p><?= $r_city->link()->a(__("Tatoueurs à :name:", array("name"=>$r_city->name())), "text-black")?></p></li>
 								<? endforeach; ?>
 							</ul>
@@ -179,4 +211,4 @@
 		<?	$this->headTitle(__("Galerie du tatouage devient Tattoome"), "SET"); ?>
 
 
-	<?= $this->partial("shared/_mailing-dialog.phtml") ?>	
+	<?= $this->partial("shared/_mailing-dialog.phtml") ?>

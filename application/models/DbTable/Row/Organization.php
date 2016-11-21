@@ -78,8 +78,7 @@ class Model_DbTable_Row_Organization extends Uop_Model_DbTable_Row_Organization
 	  	$people_names[] = $r_product->name()->__toString();
 	  }
 	  if(count($people_names)>1){
-		  $last_people_name = array_pop($people_names);
-		  $people_names = implode(", ", $people_names).__(" et ").$last_people_name;
+		  $people_names = implode(", ", $people_names);
 	  } else {
 		  $people_names = current($people_names);
 	  }

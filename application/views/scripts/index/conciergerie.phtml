@@ -1,17 +1,31 @@
 <?
     $this->full_width = true;
     $bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
-    $bc->append("Le conseiller TattooMe");
-    $this->headTitle("Le conseiller TattooMe");
+    $bc->append(__("Le conseiller TattooMe"));
+    $this->headTitle(__("Le conseiller TattooMe"));
     $this->headMeta()
-        ->appendName("description", "Le conseiller TattooMe");
+        ->appendName("description", __("Le conseiller TattooMe"));
 
 ?>
 
 <? $this->partial("shared/_sub-header.phtml", $this) ?>     <!-- SERP CONTAINER -->
-        <div class="img-conciergerie">
-            <img class="img-conseiller" src="/img/conseiller-tattooMe.jpg" alt="Le conseiller TattooMe" />
-            <a href="#conciergerie"><button style="margin-left:0px" class="btn btn-default"><?= __("Contacter le conseiller") ?></button></a>
+        <div style="position:relative">
+            <div class="img-conciergerie">
+                <img class="img-conseiller" src="/img/conseiller.png" alt="<?=__("Le conseiller TattooMe")?>" />
+                <a href="#conciergerie"><button style="margin-left:0px" class="btn btn-default"><?= __("Contacter le conseiller") ?></button></a>
+            </div>
+            <div style="position:absolute; top:0px;" class="container-fluid">
+                <div class="container_conseiller conseiller-header">
+                    <h1><?= __("le conseiller <span>tattoo</span>me") ?></h1>
+                    <p class="headline"><?= __("Un projet de tatouage ? <br>
+    Notre conseiller vous trouve les meilleurs tatoueurs ") ?></p>
+                    <ul>
+                        <li><?= __("Vous n'avez pas le temps de chercher ?") ?></li>
+                        <li><?= __("Vous ne savez pas à quel studio vous adresser ?") ?></li>
+                    </ul>
+                    <p><?= __("Notre conseiller se retrousse les manches <br>et sélectionne les meilleurs tatoueurs pour votre projet (style, spécialité...)") ?></p>
+                </div>
+            </div>
         </div>
         <div class="container-fluid">
             <div class="container_conseiller">

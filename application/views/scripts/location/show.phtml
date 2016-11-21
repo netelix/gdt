@@ -2,17 +2,19 @@
   $free = array();
   $page = $this->ads->getCurrentPageNumber();
  	$this->active = "studio";
-  $bc = $this->breadcrumb()->setLoc($this->location)->prepend(Link::home()->a(__("Accueil"))); 
+  $bc = $this->breadcrumb()->setLoc($this->location)->prepend(App::table("locations")->linkHomeCountry($this->country)->a(__("Accueil"))); 
   if($page > 1){
     $bc->append(__("Page :num:", array("num"=>$page)));
   }
   $loc_desc = $this->location->description();
   $this->full_width = true;
-  
-  $country = $this->location->isCountry() ? $this->location : $this->location->ancester(array("country"));
-  $this->country = $country;
-  $this->belgium = $country->local_id == "BE";
+  $country = $this->country;
 
+  $this->belgium = $country->local_id == "BE";
+    if(!$this->location->indexed || !in_array(App::lang(), $this->location->langs())){
+        $this->headMeta()
+            ->appendName("robots", "noindex, nofollow");
+    }
 ?>
 
 <? 
@@ -101,7 +103,7 @@ function on_serp_page_loaded(){
 									<? foreach($filter_data["rowset"] as $r_attr):?>
 								    <div class="checkbox">
 								    	<label>
-											<?= $this->linkFilter($this->current_filters, $r_attr); ?>
+											<?= $this->linkFilter($this->current_filters, $r_attr, $country->local_id == "FR"); ?>
 								    	</label>
 								    </div>
 									<? endforeach ?>
@@ -134,10 +136,11 @@ function on_serp_page_loaded(){
 					 	</div>
 					 	<? endif ?>
 						<? foreach($this->ads as $r_ad): ?>
-							<?					
+							<?
 						    $r_image = current($r_ad->firstImage());
-					      $org_name = $r_ad->meta('loc_name');
-						    $org_desc = $r_ad->meta('short_desc'); 
+					     	$org_name = $r_ad->meta('name');
+						    $org_desc = $r_ad->meta('short_desc');
+							$org_desc = !empty($org_desc) ? $org_desc : __("Ce texte n'est pas disponible dans cette langue");
 						    $city_name = $r_ad->meta("city_name");
 						    $city_link = $r_ad->meta("city_link");
 						    $nb_image = $r_ad->meta('num_image');
@@ -218,11 +221,11 @@ function on_serp_page_loaded(){
 											<p><?= $org_desc ?></p>
 												<br>
 											<? if($people = $r_ad->meta("people")): ?>
-											<p>TATOUEURS : <?= $people ?></p>
+											<p><?= __("TATOUEURS :") ?> <?= $people ?></p>
 											<? endif ?>
 												<br>
 											<? if($styles = $r_ad->meta("style")): ?>
-											<p>STYLES : 
+											<p><?= __("STYLES :") ?>
 												<? foreach($styles as $style): ?>
 													<span class="resultat_content_texte_tag"><?=$style?></span>
 												<? endforeach; ?>
@@ -254,7 +257,7 @@ function on_serp_page_loaded(){
                         <? foreach(array() as $r_ad): ?>
                         <?
                         $r_image = current($r_ad->firstImage());
-                        $org_name = $r_ad->meta('loc_name');
+                        $org_name = $r_ad->meta('name');
                         $org_desc = $r_ad->meta('short_desc'); 
                         $city_name = $r_ad->meta("city_name");
                         $city_link = $r_ad->meta("city_link");

@@ -13,7 +13,11 @@ class IndexController extends Uop_Controller_Index
       	"belgique"=>"BE"
       );
       $co = $this->_getParam("country");
-      $this->view->country = App::table("locations")->country($countries[$co]);
+      if(App::lang() == "es"){
+          $co = "espana";
+      }
+      $this->view->country = $r_country = App::table("locations")->country($countries[$co]);
+      $this->view->search_form->getElement("loc_name")->setUrl(Link::url("location-suggest")."?country_loc_id=". $r_country->id ."&query=");
   }
   
   public function creationAction()

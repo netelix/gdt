@@ -933,7 +933,7 @@ body .top-wrapper-mask {
 		  }
 	  }
 	}
-	.col-lg-3 {
+	.promo_container_md_singleton {
 		margin-bottom:15px;
 		float:left;
     padding-right: 0px;
@@ -948,6 +948,37 @@ body .top-wrapper-mask {
     background: #CFCFCF;
     height: 225px;
   }
+}
+
+.lang-es {
+	#banner_promo {
+		.col-lg-6 {
+			width:50%;
+			&.adviser {
+				padding-left:0px;			
+				.promo_container_ld{
+			    background-position: initial;
+			    background-size: cover;
+			    padding-left:165px;
+			    padding-top:15px;
+			    padding-right:15px;
+				}
+			}
+			&.newsletter {
+				padding-right:0px;
+				.promo_container_md_singleton {
+					width:100%;
+					margin-left:0px;
+					min-height: 168px;
+					height: 168px;
+					margin-bottom:0px;
+					a.btn-custom-link-promo {
+						width:140px;
+					}
+				}
+			}
+		}
+	}
 }
 
 #banner_promo_container #banner_promo{
@@ -1447,7 +1478,11 @@ body .top-wrapper-mask {
    /** Apply basic lightbox styling */
    position: fixed;
    z-index: 9999;
+	width:100%;
    color:#333333;
+	 height: 100%;
+	 top: 0px;
+	 background: rgba(0, 0, 0, 0.57);
    }
    
    #lightbox-newsletter {
@@ -1744,4 +1779,50 @@ body .top-wrapper-mask {
     display:none;    
   }
 }  
+}
+
+.description-title {
+	color: #1b1b1b;
+	text-transform: uppercase;
+	font-family: 'Francois One', sans-serif;
+	font-size: 24px;
+}
+
+.studio_description, .studio_photos, .studio_videos, .studio_localisation, .studio_tatoueurs, .studio_avis{
+	float:none;
+
+}
+
+.conseiller-header{
+  color:white;
+  font-size:18px;
+  h1 {
+    text-transform: uppercase;
+    font-family: GothamBold;
+    margin-top: 40px;
+    span {
+      color:black;
+    }
+  }
+  p.headline {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  ul {
+    padding-left:20px;
+  }
+}
+
+.lang-es {
+	.navbar-sousmenu .navbar-brand{
+		padding-top: 20px;
+		color: #73569d;
+		font-size: 30px;
+	}
+
+
+	.hidden-es {
+		display:none;
+	}
 }

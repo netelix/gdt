@@ -1,0 +1,3196 @@
+    msgid ""
+msgstr ""
+"Project-Id-Version: V2 espagne\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-07 15:21+0000\n"
+"PO-Revision-Date: 2016-11-17 09:25+0000\n"
+"Last-Translator: Leire ALONSO\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es-ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz\n"
+"X-Loco-Source-Locale: es-ES\n"
+"X-Loco-Project-Id: 18889\n"
+"X-Loco-Api-Version: 1.0.15 20161109-1"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:13
+#: loco:58209bfd52e1a13c038b4567
+msgid "Le meilleur du tatouage"
+msgstr "Le meilleur du tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:18
+#: loco:58209bfd52e1a13c038b4568
+msgid "Le meilleur du tatouage en :country: | TattooMe"
+msgstr "Le meilleur du tatouage en :country: | TattooMe"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:21
+#: loco:58209bfd52e1a13c038b4569
+msgid ""
+"Retrouvez les meilleurs tatoueurs de :country: ainsi que les plus beaux "
+"modèles de tatouages."
+msgstr ""
+"Retrouvez les meilleurs tatoueurs de :country: ainsi que les plus beaux "
+"modèles de tatouages."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:210
+#: loco:58209bfd52e1a13c038b456a
+msgid "Tattoo<span style=\"color:#73569d;\">Me</span>"
+msgstr "Tattoo<span style=\"color:#73569d;\">Me</span>"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:211
+#: loco:58209bfd52e1a13c038b456b
+msgid "<img src=\"/img/logo_tattoome_guide.png\" alt=\"TattooMe\" />"
+msgstr "<img src=\"/img/logo_tattoome_guide.png\" alt=\"TattooMe\" />"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:217
+#: loco:58209bfd52e1a13c038b456c
+msgid "Le Guide"
+msgstr "Le Guide"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:218
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:312
+#: loco:58209bfd52e1a13c038b456d
+msgid "La Création"
+msgstr "La Création"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:219
+#: loco:58209bfd52e1a13c038b456e
+msgid "Le Shop"
+msgstr "Le Shop"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:220
+#: loco:58209bfd52e1a13c038b456f
+msgid "Le Mag"
+msgstr "Le Mag"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:244
+#: loco:58209bfd52e1a13c038b4570
+msgid "LE GUIDE"
+msgstr "LE GUIDE"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:244
+#: loco:58209bfd52e1a13c038b4571
+msgid ""
+"<br />\n"
+"\t\t\t                             <span class=\"navbar-brand-custom-badge\">"
+"\n"
+"                            Ex Galeriedutatouage\n"
+"                        </span>"
+msgstr ""
+"<br />\n"
+"\t\t\t                             <span class=\"navbar-brand-custom-badge\">"
+"\n"
+"                            Ex Galeriedutatouage\n"
+"                        </span>"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:253
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:162
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:21
+#: loco:58209bfd52e1a13c038b4572
+msgid "Trouver un tatoueur"
+msgstr "Trouver un tatoueur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:253
+#: loco:58209bfd52e1a13c038b4573
+msgid " <span class=\"sr-only\">(current)</span>"
+msgstr " <span class=\"sr-only\">(current)</span>"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:254
+#: loco:58209bfd52e1a13c038b4574
+msgid "Idées tatouage"
+msgstr "Idées tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:255
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:38
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:5
+#: loco:58209bfd52e1a13c038b4575
+msgid "Conventions"
+msgstr "Conventions"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:256
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:4
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:5
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:7
+#: loco:58209bfd52e1a13c038b4576
+msgid "Détatouage"
+msgstr "Détatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:265
+#: loco:58209bfd52e1a13c038b4577
+msgid "espace tatoueur"
+msgstr "espace tatoueur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:268
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/images.phtml:7
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:131
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:85
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:172
+#: loco:58209bfd52e1a13c038b4578
+msgid "Tatoueurs"
+msgstr "Tatoueurs"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:273
+#: loco:58209bfd52e1a13c038b4579
+msgid "<span class=\"flag flag_"
+msgstr "<span class=\"flag flag_"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:311
+#: loco:58209bfd52e1a13c038b457a
+msgid "TATTOOME"
+msgstr "TATTOOME"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:313
+#: loco:58209bfd52e1a13c038b457b
+msgid "tattoobox"
+msgstr "tattoobox"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:314
+#: loco:58209bfd52e1a13c038b457c
+msgid "blog"
+msgstr "blog"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:317
+#: loco:58209bfd52e1a13c038b457d
+msgid "SUIVEZ-nous"
+msgstr "SUIVEZ-nous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:322
+#: loco:58209bfd52e1a13c038b457e
+msgid "Je suis tatoueur"
+msgstr "Je suis tatoueur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:323
+#: loco:58209bfd52e1a13c038b457f
+msgid "Je souhaite m'inscrire"
+msgstr "Je souhaite m'inscrire"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:324
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:183
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:5
+#: loco:58209bfd52e1a13c038b4580
+msgid "Espace membre"
+msgstr "Espace membre"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:327
+#: loco:58209bfd52e1a13c038b4581
+msgid "recherche"
+msgstr "recherche"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:329
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:294
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:34
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:48
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:31
+#: loco:58209bfd52e1a13c038b4582
+msgid "Tatoueur à :name:"
+msgstr "Tatoueur à :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:332
+#: loco:58209bfd52e1a13c038b4583
+msgid "Tatoueur en :name:"
+msgstr "Tatoueur en :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:339
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:280
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:67
+#: loco:58209bfd52e1a13c038b4584
+msgid "Contact"
+msgstr "Contact"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:340
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:281
+#: loco:58209bfd52e1a13c038b4585
+msgid "Mentions légales"
+msgstr "Mentions légales"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:341
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:282
+#: loco:58209bfd52e1a13c038b4586
+msgid "Conditions d'utilisation"
+msgstr "Conditions d'utilisation"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:342
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:283
+#: loco:58209bfd52e1a13c038b4587
+msgid "Conditions de vente"
+msgstr "Conditions de vente"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:101
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:19
+#: loco:58209bfd52e1a13c038b4588
+msgid "Ville, Département..."
+msgstr "Ville, Département..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:146
+#: loco:58209bfd52e1a13c038b4589
+msgid "LA<b>GALERIE</b>DU<b>TATOUAGE</b>"
+msgstr "LA<b>GALERIE</b>DU<b>TATOUAGE</b>"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:160
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:205
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:3
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:3
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:3
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:3
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:4
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:5
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:5
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:20
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:5
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:4
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
+#: loco:58209bfd52e1a13c038b458a
+msgid "Accueil"
+msgstr "Accueil"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:163
+#: loco:58209bfd52e1a13c038b458b
+msgid "Idées tatouages"
+msgstr "Idées tatouages"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:172
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/owner-sidebar.phtml:4
+#: loco:58209bfd52e1a13c038b458c
+msgid "Mon compte"
+msgstr "Mon compte"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:175
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:10
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:10
+#: loco:58209bfd52e1a13c038b458d
+msgid "Infos personnelles"
+msgstr "Infos personnelles"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:177
+#: loco:58209bfd52e1a13c038b458e
+msgid "Mes annonces"
+msgstr "Mes annonces"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:179
+#: loco:58209bfd52e1a13c038b458f
+msgid "Se déconnecter"
+msgstr "Se déconnecter"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:204
+#: loco:58209bfd52e1a13c038b4590
+msgid "Vous êtes ici:"
+msgstr "Vous êtes ici:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_review.phtml:32
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_form.phtml:5
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_form.phtml:5
+#: loco:58209bfd52e1a13c038b4591
+msgid "Votre réponse"
+msgstr "Votre réponse"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_review.phtml:35
+#: loco:58209bfd52e1a13c038b4592
+msgid "Répondre"
+msgstr "Répondre"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_review.phtml:39
+#: loco:58209bfd52e1a13c038b4593
+msgid "Réponse du Studio:"
+msgstr "Réponse du Studio:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_review.phtml:45
+#: loco:58209bfd52e1a13c038b4594
+msgid "Note moyenne"
+msgstr "Note moyenne"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:2
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:35
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:46
+#: loco:58209bfd52e1a13c038b4595
+msgid "Création"
+msgstr "Création"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:3
+#: loco:58209bfd52e1a13c038b4596
+msgid "Créez votre tatouage avec un artise dessinateur"
+msgstr "Créez votre tatouage avec un artise dessinateur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:5
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:40
+#: loco:58209bfd52e1a13c038b4597
+msgid "Je crée mon tatouage"
+msgstr "Je crée mon tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:9
+#: loco:58209bfd52e1a13c038b4598
+msgid "TATTOOBOX"
+msgstr "TATTOOBOX"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:10
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:50
+#: loco:58209bfd52e1a13c038b4599
+msgid "Un cadeau inoubliable : offrez un tatouage"
+msgstr "Un cadeau inoubliable : offrez un tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:11
+#: loco:58209bfd52e1a13c038b459a
+msgid "Je choisis ma TATTOOBOX"
+msgstr "Je choisis ma TATTOOBOX"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:14
+#: loco:58209bfd52e1a13c038b459b
+msgid "newsletter"
+msgstr "newsletter"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:15
+#: loco:58209bfd52e1a13c038b459c
+msgid "news, bons plans, tendances..."
+msgstr "news, bons plans, tendances..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:16
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:81
+#: loco:58209bfd52e1a13c038b459d
+msgid "Recevez le meilleur du tatouage par email"
+msgstr "Recevez le meilleur du tatouage par email"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:17
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:82
+#: loco:58209bfd52e1a13c038b459e
+msgid "Je m'inscris"
+msgstr "Je m'inscris"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/owner-sidebar.phtml:5
+#: loco:58209bfd52e1a13c038b459f
+msgid "Messagerie"
+msgstr "Messagerie"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/owner-sidebar.phtml:6
+#: loco:58209bfd52e1a13c038b45a0
+msgid "Mes studios"
+msgstr "Mes studios"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/owner-sidebar.phtml:11
+#: loco:58209bfd52e1a13c038b45a1
+msgid "Sans nom"
+msgstr "Sans nom"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/owner-sidebar.phtml:29
+#: loco:58209bfd52e1a13c038b45a2
+msgid "Déconnexion"
+msgstr "Déconnexion"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/__sidebar.phtml:2
+#: loco:58209bfd52e1a13c038b45a3
+msgid "Découvrez la Tattoobox"
+msgstr "Découvrez la Tattoobox"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/__sidebar.phtml:7
+#: loco:58209bfd52e1a13c038b45a4
+msgid "Tatoueurs, rejoignez le réseau!"
+msgstr "Tatoueurs, rejoignez le réseau!"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/__sidebar.phtml:8
+#: loco:58209bfd52e1a13c038b45a5
+msgid ""
+"<img src='/img/autopromo.png' class='img-responsive' style='padding-bottom:"
+"15px'/>"
+msgstr ""
+"<img src='/img/autopromo.png' class='img-responsive' style='padding-bottom:"
+"15px'/>"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/__sidebar.phtml:9
+#: loco:58209bfd52e1a13c038b45a6
+msgid "Abonnez-vous a la newsletter"
+msgstr "Abonnez-vous a la newsletter"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/__sidebar.phtml:102
+#: loco:58209bfd52e1a13c038b45a7
+msgid "Suivez-nous sur Facebook"
+msgstr "Suivez-nous sur Facebook"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sub-header.phtml:8
+#: loco:58209bfd52e1a13c038b45a8
+msgid "Trouvez un tatoueur près de chez vous"
+msgstr "Trouvez un tatoueur près de chez vous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/_lead.phtml:3
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:4
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:5
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:7
+#: loco:58209bfd52e1a13c038b45a9
+msgid "Rejoignez-nous"
+msgstr "Rejoignez-nous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/_lead.phtml:6
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:18
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:35
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:49
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:82
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/subscription/lead.phtml:9
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:28
+#: loco:58209bfd52e1a13c038b45aa
+msgid "Prénom"
+msgstr "Prénom"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/_lead.phtml:7
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:19
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:38
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:48
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:15
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:81
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/claim-tattoobox.phtml:51
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/subscription/lead.phtml:10
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:44
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:25
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:14
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:27
+#: loco:58209bfd52e1a13c038b45ab
+msgid "Nom"
+msgstr "Nom"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/_lead.phtml:8
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:20
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:41
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/subscription/lead.phtml:11
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:26
+#: loco:58209bfd52e1a13c038b45ac
+msgid "Email"
+msgstr "Email"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/_lead.phtml:12
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:21
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/subscription/lead.phtml:15
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:34
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:35
+#: loco:58209bfd52e1a13c038b45ad
+msgid "Téléphone"
+msgstr "Téléphone"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:13
+#: loco:58209bfd52e1a13c038b45ae
+msgid "Tatoueurs, Rejoignez-nous !"
+msgstr "Tatoueurs, Rejoignez-nous !"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:23
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:26
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:28
+#: loco:58209bfd52e1a13c038b45af
+msgid "S'inscrire !"
+msgstr "S'inscrire !"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:14
+#: loco:58209bfd52e1a13c038b45b0
+msgid "Contacter le conseiller"
+msgstr "Contacter le conseiller"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:18
+#: loco:58209bfd52e1a13c038b45b1
+msgid "Donnez quelques informations sur votre projet."
+msgstr "Donnez quelques informations sur votre projet."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:23
+#: loco:58209bfd52e1a13c038b45b2
+msgid "Test placeholder"
+msgstr "Test placeholder"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:24
+#: loco:58209bfd52e1a13c038b45b3
+msgid "Description du tatouage souhaité (en quelques mots)"
+msgstr "Description du tatouage souhaité (en quelques mots)"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:29
+#: loco:58209bfd52e1a13c038b45b4
+msgid "(je joins une image qui m'inspire, illustre mon projet)"
+msgstr "(je joins une image qui m'inspire, illustre mon projet)"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:31
+#: loco:58209bfd52e1a13c038b45b5
+msgid "Télécharger"
+msgstr "Télécharger"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:44
+#: loco:58209bfd52e1a13c038b45b6
+msgid "Numéro de téléphone"
+msgstr "Numéro de téléphone"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:47
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:25
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:22
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:24
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:14
+#: loco:58209bfd52e1a13c038b45b7
+msgid "Code postal"
+msgstr "Code postal"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:50
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:28
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:23
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:27
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:15
+#: loco:58209bfd52e1a13c038b45b8
+msgid "Ville"
+msgstr "Ville"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:54
+#: loco:58209bfd52e1a13c038b45b9
+msgid "Envoyer au conseiller tatouage"
+msgstr "Envoyer au conseiller tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:15
+#: loco:58209bfd52e1a13c038b45ba
+msgid ""
+"Le détatouage laser est un acte médical qui nécessite un suivi et un "
+"accompagnement."
+msgstr ""
+"Le détatouage laser est un acte médical qui nécessite un suivi et un "
+"accompagnement."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:16
+#: loco:58209bfd52e1a13c038b45bb
+msgid ""
+"Qu'il s'agisse d'un détatouage partiel, pour vous faire à nouveau tatouer, "
+"ou d'un détatouage total TattooMe vous guide dans vos choix."
+msgstr ""
+"Qu'il s'agisse d'un détatouage partiel, pour vous faire à nouveau tatouer, "
+"ou d'un détatouage total TattooMe vous guide dans vos choix."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:17
+#: loco:58209bfd52e1a13c038b45bc
+msgid ""
+"Envoyez-nous la photo du tatouage que vous souhaitez faire effacer, indiquez "
+"votre département et recevez un accompagnement personnalisé."
+msgstr ""
+"Envoyez-nous la photo du tatouage que vous souhaitez faire effacer, indiquez "
+"votre département et recevez un accompagnement personnalisé."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:24
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:23
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:13
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:25
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/login.phtml:8
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/login.phtml:6
+#: loco:58209bfd52e1a13c038b45bd
+msgid "Adresse email"
+msgstr "Adresse email"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:26
+#: loco:58209bfd52e1a13c038b45be
+msgid "Département"
+msgstr "Département"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:31
+#: loco:58209bfd52e1a13c038b45bf
+msgid "Joindre la photo de votre tatouage"
+msgstr "Joindre la photo de votre tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:33
+#: loco:58209bfd52e1a13c038b45c0
+msgid "Envoyer !"
+msgstr "Envoyer !"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/videos.phtml:3
+#: loco:58209bfd52e1a13c038b45c1
+msgid "Ajouter une video"
+msgstr "Ajouter une video"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/videos.phtml:18
+#: loco:58209bfd52e1a13c038b45c2
+msgid "Modifier la video"
+msgstr "Modifier la video"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:14
+#: loco:58209bfd52e1a13c038b45c3
+msgid "trouvez votre futur tatoueur"
+msgstr "trouvez votre futur tatoueur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:15
+#: loco:58209bfd52e1a13c038b45c4
+msgid "La plus grande sélection de tatoueurs prêts à vous accueillir"
+msgstr "La plus grande sélection de tatoueurs prêts à vous accueillir"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:19
+#: loco:58209bfd52e1a13c038b45c5
+msgid "Région, département, ville..."
+msgstr "Région, département, ville..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:22
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:18
+#: home/alex/alex.dev.galeriedutatouage.com/application/forms/AdsSearch.php:10
+#: loco:58209bfd52e1a13c038b45c6
+msgid "Tous les styles"
+msgstr "Tous les styles"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:24
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:75
+#: loco:58209bfd52e1a13c038b45c7
+msgid "RECHERCHER"
+msgstr "RECHERCHER"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:36
+#: loco:58209bfd52e1a13c038b45c8
+msgid "Créez votre tatouage avec un artiste dessinateur"
+msgstr "Créez votre tatouage avec un artiste dessinateur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:41
+#: loco:58209bfd52e1a13c038b45c9
+msgid "Créer"
+msgstr "Créer"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:49
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:129
+#: loco:58209bfd52e1a13c038b45ca
+msgid "Tattoobox"
+msgstr "Tattoobox"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:53
+#: loco:58209bfd52e1a13c038b45cb
+msgid "Je choisis ma tattoobox"
+msgstr "Je choisis ma tattoobox"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:54
+#: loco:58209bfd52e1a13c038b45cc
+msgid "Choisir"
+msgstr "Choisir"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:61
+#: loco:58209bfd52e1a13c038b45cd
+msgid "Le conseiller"
+msgstr "Le conseiller"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:62
+#: loco:58209bfd52e1a13c038b45ce
+msgid "Un projet de tatouage"
+msgstr "Un projet de tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:63
+#: loco:58209bfd52e1a13c038b45cf
+msgid "Notre conseiller sélectionne pour vous les meilleurs tatoueurs"
+msgstr "Notre conseiller sélectionne pour vous les meilleurs tatoueurs"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:66
+#: loco:58209bfd52e1a13c038b45d0
+msgid "Je prends contact"
+msgstr "Je prends contact"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:79
+#: loco:58209bfd52e1a13c038b45d1
+msgid "Newsletter"
+msgstr "Newsletter"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:80
+#: loco:58209bfd52e1a13c038b45d2
+msgid "News,<br/>Bons plans, Tendances..."
+msgstr "News,<br/>Bons plans, Tendances..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:104
+#: loco:58209bfd52e1a13c038b45d3
+msgid "les styles de tatouage"
+msgstr "les styles de tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:105
+#: loco:58209bfd52e1a13c038b45d4
+msgid "Découvrez les meilleurs tatouages par style"
+msgstr "Découvrez les meilleurs tatouages par style"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:118
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:77
+#: loco:58209bfd52e1a13c038b45d5
+msgid "Tatouage :style:"
+msgstr "Tatouage :style:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:130
+#: loco:58209bfd52e1a13c038b45d6
+msgid "Les Studios de tatouage près de chez vous"
+msgstr "Les Studios de tatouage près de chez vous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:131
+#: loco:58209bfd52e1a13c038b45d7
+msgid "Choisissez votre studio par situation géographique"
+msgstr "Choisissez votre studio par situation géographique"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:139
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:88
+#: loco:58209bfd52e1a13c038b45d8
+msgid "Les tatoueurs en :region:"
+msgstr "Les tatoueurs en :region:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:145
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:94
+#: loco:58209bfd52e1a13c038b45d9
+msgid "Tatoueurs à :name:"
+msgstr "Tatoueurs à :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:158
+#: loco:58209bfd52e1a13c038b45da
+msgid "Ils parlent de nous"
+msgstr "Ils parlent de nous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:179
+#: loco:58209bfd52e1a13c038b45db
+msgid "Galerie du tatouage devient Tattoome"
+msgstr "Galerie du tatouage devient Tattoome"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:8
+#: loco:58209bfd52e1a13c038b45dc
+msgid "Trouve ton studio de tatouage"
+msgstr "Trouve ton studio de tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:14
+#: loco:58209bfd52e1a13c038b45dd
+msgid "Toute la France"
+msgstr "Toute la France"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:28
+#: loco:58209bfd52e1a13c038b45de
+msgid ""
+"Trouvez des idées pour votre prochain tatouage et découvrez notre sélection "
+"des meilleurs studio de tatouage français et belges!"
+msgstr ""
+"Trouvez des idées pour votre prochain tatouage et découvrez notre sélection "
+"des meilleurs studio de tatouage français et belges!"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:38
+#: loco:58209bfd52e1a13c038b45df
+msgid "L'actualité du tatouage"
+msgstr "L'actualité du tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:49
+#: loco:58209bfd52e1a13c038b45e0
+msgid "Les tatouages qui vous ont tapé dans l’oeil"
+msgstr "Les tatouages qui vous ont tapé dans l’oeil"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:62
+#: loco:58209bfd52e1a13c038b45e1
+msgid ""
+"Chaque semaine, la Galerie du Tatouage vous propose un classement des "
+"tatouages les plus populaires."
+msgstr ""
+"Chaque semaine, la Galerie du Tatouage vous propose un classement des "
+"tatouages les plus populaires."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:64
+#: loco:58209bfd52e1a13c038b45e2
+msgid "Voir tous les tatouages"
+msgstr "Voir tous les tatouages"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:66
+#: loco:58209bfd52e1a13c038b45e3
+msgid "Les studios par style"
+msgstr "Les studios par style"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:82
+#: loco:58209bfd52e1a13c038b45e4
+msgid "Les tatoueurs près de chez vous"
+msgstr "Les tatoueurs près de chez vous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:14
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:16
+#: loco:58209bfd52e1a13c038b45e5
+msgid "Ici, Bientôt..."
+msgstr "Ici, Bientôt..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:15
+#: loco:58209bfd52e1a13c038b45e6
+msgid "Vous pourrez créer votre motif avec un artiste."
+msgstr "Vous pourrez créer votre motif avec un artiste."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:16
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:18
+#: loco:58209bfd52e1a13c038b45e7
+msgid "Soyez informé en avant première, laissez votre email :"
+msgstr "Soyez informé en avant première, laissez votre email :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:30
+#: loco:58209bfd52e1a13c038b45e8
+msgid "Vous êtes beta-testeur ?"
+msgstr "Vous êtes beta-testeur ?"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:31
+#: loco:58209bfd52e1a13c038b45e9
+msgid "Entrez votre mot de passe pour accèder à l'espace création."
+msgstr "Entrez votre mot de passe pour accèder à l'espace création."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:34
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:14
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:12
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/login.phtml:9
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/login.phtml:7
+#: loco:58209bfd52e1a13c038b45ea
+msgid "Mot de passe"
+msgstr "Mot de passe"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:37
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:15
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-iban.phtml:11
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:23
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-cheque.phtml:8
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-default.phtml:8
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/login.phtml:10
+#: loco:58209bfd52e1a13c038b45eb
+msgid "Valider"
+msgstr "Valider"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/conciergeries.phtml:50
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/images.phtml:6
+#: loco:58209bfd52e1a13c038b45ec
+msgid "Image"
+msgstr "Image"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/conciergeries.phtml:56
+#: loco:58209bfd52e1a13c038b45ed
+msgid "Traiter"
+msgstr "Traiter"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:13
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:13
+#: loco:58209bfd52e1a13c038b45ee
+msgid "Annonces"
+msgstr "Annonces"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:17
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:17
+#: loco:58209bfd52e1a13c038b45ef
+msgid "Administrateur"
+msgstr "Administrateur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:22
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:25
+#: loco:58209bfd52e1a13c038b45f0
+msgid "Utilisateurs"
+msgstr "Utilisateurs"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:25
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:28
+#: loco:58209bfd52e1a13c038b45f1
+msgid "Organisations"
+msgstr "Organisations"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:28
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:31
+#: loco:58209bfd52e1a13c038b45f2
+msgid "Attributs"
+msgstr "Attributs"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:31
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:40
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:17
+#: loco:58209bfd52e1a13c038b45f3
+msgid "Commentaires"
+msgstr "Commentaires"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:34
+#: loco:58209bfd52e1a13c038b45f4
+msgid "Tattooboxes"
+msgstr "Tattooboxes"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:37
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:43
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:4
+#: loco:58209bfd52e1a13c038b45f5
+msgid "Performances"
+msgstr "Performances"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:40
+#: loco:58209bfd52e1a13c038b45f6
+msgid "Légendes photos"
+msgstr "Légendes photos"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/navbar.phtml:43
+#: loco:58209bfd52e1a13c038b45f7
+msgid "Conciergerie"
+msgstr "Conciergerie"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:3
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:3
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:3
+#: loco:58209bfd52e1a13c038b45f8
+msgid "Tous"
+msgstr "Tous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:4
+#: loco:58209bfd52e1a13c038b45f9
+msgid "Utilisés"
+msgstr "Utilisés"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:5
+#: loco:58209bfd52e1a13c038b45fa
+msgid "Non utilisés"
+msgstr "Non utilisés"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:22
+#: loco:58209bfd52e1a13c038b45fb
+msgid "Nouveau code"
+msgstr "Nouveau code"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:38
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/index.phtml:22
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:33
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:15
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:46
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:35
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:31
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/index.phtml:22
+#: loco:58209bfd52e1a13c038b45fc
+msgid "Filtrer"
+msgstr "Filtrer"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:39
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:34
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:16
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:47
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:36
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:32
+#: loco:58209bfd52e1a13c038b45fd
+msgid "Reset"
+msgstr "Reset"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:40
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:35
+#: loco:58209bfd52e1a13c038b45fe
+msgid "Actualiser"
+msgstr "Actualiser"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:50
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/claim-tattoobox.phtml:52
+#: loco:58209bfd52e1a13c038b45ff
+msgid "Code"
+msgstr "Code"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:51
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:41
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/claim-tattoobox.phtml:53
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/invoices.phtml:9
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/orders.phtml:9
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-price.phtml:6
+#: loco:58209bfd52e1a13c038b4600
+msgid "Prix"
+msgstr "Prix"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:52
+#: loco:58209bfd52e1a13c038b4601
+msgid "Creation"
+msgstr "Creation"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/tattooboxes.phtml:68
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:16
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:48
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:70
+#: loco:58209bfd52e1a13c038b4602
+msgid "Supprimer"
+msgstr "Supprimer"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/images.phtml:8
+#: loco:58209bfd52e1a13c038b4603
+msgid "Légendes"
+msgstr "Légendes"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/_tabs.phtml:7
+#: loco:58209bfd52e1a13c038b4604
+msgid "Espace d'administration de l'utilisateur :name:"
+msgstr "Espace d'administration de l'utilisateur :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/_tabs.phtml:11
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:3
+#: loco:58209bfd52e1a13c038b4605
+msgid "Coordonnees Personelles"
+msgstr "Coordonnees Personelles"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/_tabs.phtml:12
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:3
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:5
+#: loco:58209bfd52e1a13c038b4606
+msgid "Factures/Avoirs"
+msgstr "Factures/Avoirs"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/_tabs.phtml:13
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:6
+#: loco:58209bfd52e1a13c038b4607
+msgid "Messages"
+msgstr "Messages"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/organizations.phtml:22
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/organizations.phtml:21
+#: loco:58209bfd52e1a13c038b4608
+msgid "Gérer l'annonce"
+msgstr "Gérer l'annonce"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/organizations.phtml:24
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/organizations.phtml:23
+#: loco:58209bfd52e1a13c038b4609
+msgid "Dépublier"
+msgstr "Dépublier"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/organizations.phtml:26
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/organizations.phtml:25
+#: loco:58209bfd52e1a13c038b460a
+msgid "Publier"
+msgstr "Publier"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:26
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:73
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:36
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:40
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_payments.phtml:23
+#: loco:58209bfd52e1a13c038b460b
+msgid "Annuler"
+msgstr "Annuler"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:39
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:92
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/posts.phtml:9
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:55
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:44
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:41
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/invoices.phtml:7
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/orders.phtml:7
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:93
+#: loco:58209bfd52e1a13c038b460c
+msgid "Date"
+msgstr "Date"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:40
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/invoices.phtml:8
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/orders.phtml:8
+#: loco:58209bfd52e1a13c038b460d
+msgid "Details"
+msgstr "Details"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:46
+#: loco:58209bfd52e1a13c038b460e
+msgid "Nouveau contrat"
+msgstr "Nouveau contrat"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:76
+#: loco:58209bfd52e1a13c038b460f
+msgid "Contrat"
+msgstr "Contrat"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/invoices.phtml:78
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/claim-tattoobox.phtml:61
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:77
+#: loco:58209bfd52e1a13c038b4610
+msgid "Facture"
+msgstr "Facture"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:9
+#: loco:58209bfd52e1a13c038b4611
+msgid "Identifiez vous pour accèder à votre espace personel"
+msgstr "Identifiez vous pour accèder à votre espace personel"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:16
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/login.phtml:11
+#: loco:58209bfd52e1a13c038b4612
+msgid "J'ai oublié mon mot de passe..."
+msgstr "J'ai oublié mon mot de passe..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:6
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/password-lost.phtml:4
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:5
+#: loco:58209bfd52e1a13c038b4613
+msgid "Adresse e-mail"
+msgstr "Adresse e-mail"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:7
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:6
+#: loco:58209bfd52e1a13c038b4614
+msgid "Société"
+msgstr "Société"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:12
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:11
+#: loco:58209bfd52e1a13c038b4615
+msgid "Prenom"
+msgstr "Prenom"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:19
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:250
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:269
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:20
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:18
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:12
+#: loco:58209bfd52e1a13c038b4616
+msgid "Adresse"
+msgstr "Adresse"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:20
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:21
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:19
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:13
+#: loco:58209bfd52e1a13c038b4617
+msgid "Adresse (suite)"
+msgstr "Adresse (suite)"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:31
+#: loco:58209bfd52e1a13c038b4618
+msgid "Numéro SIRET"
+msgstr "Numéro SIRET"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:70
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:71
+#: loco:58209bfd52e1a13c038b4619
+msgid "Ajouter un numéro"
+msgstr "Ajouter un numéro"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:73
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:86
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:118
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery-focus.phtml:35
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/video-edit.phtml:37
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:34
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:90
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:38
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:98
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:74
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:87
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:119
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:26
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:25
+#: loco:58209bfd52e1a13c038b461a
+msgid "Enregistrer"
+msgstr "Enregistrer"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:78
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:79
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:79
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:80
+#: loco:58209bfd52e1a13c038b461b
+msgid "Mot de passe temporaire"
+msgstr "Mot de passe temporaire"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:83
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:84
+#: loco:58209bfd52e1a13c038b461c
+msgid "Mot de passe actuel"
+msgstr "Mot de passe actuel"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:84
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/reset-password.phtml:4
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:85
+#: loco:58209bfd52e1a13c038b461d
+msgid "Nouveau mot de passe"
+msgstr "Nouveau mot de passe"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:85
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:86
+#: loco:58209bfd52e1a13c038b461e
+msgid "Retapez le mot de passe"
+msgstr "Retapez le mot de passe"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:93
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:57
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:94
+#: loco:58209bfd52e1a13c038b461f
+msgid "Détail"
+msgstr "Détail"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:98
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:99
+#: loco:58209bfd52e1a13c038b4620
+msgid "Aujourd'hui"
+msgstr "Aujourd'hui"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:105
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:106
+#: loco:58209bfd52e1a13c038b4621
+msgid "Interlocuteur"
+msgstr "Interlocuteur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:108
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:109
+#: loco:58209bfd52e1a13c038b4622
+msgid "Sujet"
+msgstr "Sujet"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:116
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:117
+#: loco:58209bfd52e1a13c038b4623
+msgid "Détails"
+msgstr "Détails"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:16
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-photos.phtml:13
+#: loco:58209bfd52e1a13c038b4624
+msgid "Modifier les informations des photos"
+msgstr "Modifier les informations des photos"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:17
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-photos.phtml:14
+#: loco:58209bfd52e1a13c038b4625
+msgid "Modifier l'ordre des photos"
+msgstr "Modifier l'ordre des photos"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:29
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-photos.phtml:23
+#: loco:58209bfd52e1a13c038b4626
+msgid "Faites glisser les photos pour changer l'ordre d'affichage"
+msgstr "Faites glisser les photos pour changer l'ordre d'affichage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:32
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-photos.phtml:27
+#: loco:58209bfd52e1a13c038b4627
+msgid "Ajouter des photos"
+msgstr "Ajouter des photos"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:57
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:8
+#: home/alex/alex.dev.galeriedutatouage.com/application/forms/OrganizationPhotosEdit.php:10
+#: home/alex/alex.dev.galeriedutatouage.com/application/controllers/OrganizationController.php:181
+#: loco:58209bfd52e1a13c038b4628
+msgid "Le studio"
+msgstr "Le studio"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:72
+#: loco:58209bfd52e1a13c038b4629
+msgid "Modifier"
+msgstr "Modifier"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photo.phtml:13
+#: loco:58209bfd52e1a13c038b462a
+msgid "Légende"
+msgstr "Légende"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photo.phtml:17
+#: loco:58209bfd52e1a13c038b462b
+msgid "Associée à"
+msgstr "Associée à"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photo.phtml:21
+#: loco:58209bfd52e1a13c038b462c
+msgid "Prix indicatif"
+msgstr "Prix indicatif"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_tabs-items.phtml:12
+#: loco:58209bfd52e1a13c038b462d
+msgid "TattooBox"
+msgstr "TattooBox"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:15
+#: loco:58209bfd52e1a13c038b462e
+msgid "Tatoueur n°:num:"
+msgstr "Tatoueur n°:num:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:21
+#: home/alex/alex.dev.galeriedutatouage.com/application/models/DbTable/Row/Organization.php:127
+#: loco:58209bfd52e1a13c038b462f
+msgid "Nom du tatoueur"
+msgstr "Nom du tatoueur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:25
+#: loco:58209bfd52e1a13c038b4630
+msgid "Présentation du tatoueur"
+msgstr "Présentation du tatoueur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:30
+#: loco:58209bfd52e1a13c038b4631
+msgid "Encre utilisée"
+msgstr "Encre utilisée"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:34
+#: loco:58209bfd52e1a13c038b4632
+msgid "Dans le studio  depuis"
+msgstr "Dans le studio  depuis"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:42
+#: loco:58209bfd52e1a13c038b4633
+msgid "Prix gagnés"
+msgstr "Prix gagnés"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:48
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:47
+#: loco:58209bfd52e1a13c038b4634
+msgid "Styles pratiqués"
+msgstr "Styles pratiqués"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:51
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:124
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:80
+#: loco:58209bfd52e1a13c038b4635
+msgid "Admin"
+msgstr "Admin"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:55
+#: loco:58209bfd52e1a13c038b4636
+msgid "Lien vers l'interview"
+msgstr "Lien vers l'interview"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:58
+#: loco:58209bfd52e1a13c038b4637
+msgid "Certification d'hygiène"
+msgstr "Certification d'hygiène"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:67
+#: loco:58209bfd52e1a13c038b4638
+msgid "Ajouter un tatoueur"
+msgstr "Ajouter un tatoueur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:17
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:22
+#: home/alex/alex.dev.galeriedutatouage.com/application/models/DbTable/Row/Organization.php:82
+#: loco:58209bfd52e1a13c038b4639
+msgid " et "
+msgstr " et "
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:18
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:23
+#: loco:58209bfd52e1a13c038b463a
+msgid ""
+"Depuis leur studio de :loc_name:, :names: vous montrent les :num: photos de "
+"leurs derniers tatouages"
+msgstr ""
+"Depuis leur studio de :loc_name:, :names: vous montrent les :num: photos de "
+"leurs derniers tatouages"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:22
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:27
+#: loco:58209bfd52e1a13c038b463b
+msgid ""
+"Depuis son studio de :loc_name:, :names: vous montre les :num: photos de ses "
+"derniers tatouages"
+msgstr ""
+"Depuis son studio de :loc_name:, :names: vous montre les :num: photos de ses "
+"derniers tatouages"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:45
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:95
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:171
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:223
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:256
+#: loco:58209bfd52e1a13c038b463c
+msgid "Contacter le studio"
+msgstr "Contacter le studio"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:46
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:387
+#: loco:58209bfd52e1a13c038b463d
+msgid "Par téléphone"
+msgstr "Par téléphone"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:54
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:391
+#: loco:58209bfd52e1a13c038b463e
+msgid "Voir le numéro de téléphone"
+msgstr "Voir le numéro de téléphone"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:67
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:403
+#: loco:58209bfd52e1a13c038b463f
+msgid "Par email"
+msgstr "Par email"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:70
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:406
+#: loco:58209bfd52e1a13c038b4640
+msgid ""
+"Votre message à bien été envoyé à ce studio. Si vous souhaitez envoyer un "
+"autre message, "
+msgstr ""
+"Votre message à bien été envoyé à ce studio. Si vous souhaitez envoyer un "
+"autre message, "
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:72
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:155
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:408
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:66
+#: loco:58209bfd52e1a13c038b4641
+msgid "cliquez ici"
+msgstr "cliquez ici"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:77
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:413
+#: loco:58209bfd52e1a13c038b4642
+msgid "Pour contacter le studio, remplissez le formulaire suivant"
+msgstr "Pour contacter le studio, remplissez le formulaire suivant"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:83
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:29
+#: loco:58209bfd52e1a13c038b4643
+msgid "E-mail"
+msgstr "E-mail"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:87
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:38
+#: loco:58209bfd52e1a13c038b4644
+msgid "Précisez votre demande"
+msgstr "Précisez votre demande"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:90
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:473
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:136
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-demand.phtml:41
+#: loco:58209bfd52e1a13c038b4645
+msgid "Envoyer"
+msgstr "Envoyer"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:117
+#: loco:58209bfd52e1a13c038b4646
+msgid "Studio de tatouage à :city:"
+msgstr "Studio de tatouage à :city:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:119
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:60
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:42
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:83
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:121
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:103
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:128
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/posts.phtml:25
+#: loco:58209bfd52e1a13c038b4647
+msgid "Editer"
+msgstr "Editer"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:129
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:30
+#: loco:58209bfd52e1a13c038b4648
+msgid "Informations générales"
+msgstr "Informations générales"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:130
+#: loco:58209bfd52e1a13c038b4649
+msgid "Photos"
+msgstr "Photos"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:132
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:90
+#: loco:58209bfd52e1a13c038b464a
+msgid "Horaires / Localisation"
+msgstr "Horaires / Localisation"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:133
+#: loco:58209bfd52e1a13c038b464b
+msgid "Avis (:num:)"
+msgstr "Avis (:num:)"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:143
+#: loco:58209bfd52e1a13c038b464c
+msgid "A propos du studio"
+msgstr "A propos du studio"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:148
+#: loco:58209bfd52e1a13c038b464d
+msgid "Voir les autres tatoueurs de :name:"
+msgstr "Voir les autres tatoueurs de :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:153
+#: loco:58209bfd52e1a13c038b464e
+msgid "Spécialités pratiquées"
+msgstr "Spécialités pratiquées"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:161
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:111
+#: loco:58209bfd52e1a13c038b464f
+msgid "Piercings"
+msgstr "Piercings"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:189
+#: loco:58209bfd52e1a13c038b4650
+msgid "Voir l'interview"
+msgstr "Voir l'interview"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:222
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:264
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show-map.phtml:5
+#: loco:58209bfd52e1a13c038b4651
+msgid "Voir la localisation"
+msgstr "Voir la localisation"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:254
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:275
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:87
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:48
+#: loco:58209bfd52e1a13c038b4652
+msgid "Horaires d'ouverture"
+msgstr "Horaires d'ouverture"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:262
+#: loco:58209bfd52e1a13c038b4653
+msgid "de :open: à :close:"
+msgstr "de :open: à :close:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:289
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:311
+#: loco:58209bfd52e1a13c038b4654
+msgid "Note globale, basée sur :num: avis"
+msgstr "Note globale, basée sur :num: avis"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:306
+#: loco:58209bfd52e1a13c038b4655
+msgid "Vous connaissez ce studio ?"
+msgstr "Vous connaissez ce studio ?"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:307
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:332
+#: loco:58209bfd52e1a13c038b4656
+msgid "Partagez votre experience avec les autres internautes"
+msgstr "Partagez votre experience avec les autres internautes"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:308
+#: loco:58209bfd52e1a13c038b4657
+msgid "Laisser un avis"
+msgstr "Laisser un avis"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:319
+#: loco:58209bfd52e1a13c038b4658
+msgid "Donnez votre avis"
+msgstr "Donnez votre avis"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:324
+#: loco:58209bfd52e1a13c038b4659
+msgid "Notes par catégorie"
+msgstr "Notes par catégorie"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:338
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:363
+#: loco:58209bfd52e1a13c038b465a
+msgid "Votre avis en une phrase"
+msgstr "Votre avis en une phrase"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:340
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:365
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:86
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:129
+#: loco:58209bfd52e1a13c038b465b
+msgid "Commentaire"
+msgstr "Commentaire"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:345
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:370
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:131
+#: loco:58209bfd52e1a13c038b465c
+msgid "Votre nom"
+msgstr "Votre nom"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:346
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:371
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:132
+#: loco:58209bfd52e1a13c038b465d
+msgid "Votre prénom"
+msgstr "Votre prénom"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:347
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:372
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:133
+#: loco:58209bfd52e1a13c038b465e
+msgid "Votre adresse email"
+msgstr "Votre adresse email"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:349
+#: loco:58209bfd52e1a13c038b465f
+msgid "Commenter"
+msgstr "Commenter"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:63
+#: loco:58209bfd52e1a13c038b4660
+msgid "Studio de tatouage à :name:"
+msgstr "Studio de tatouage à :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:72
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:194
+#: loco:58209bfd52e1a13c038b4661
+msgid ":num: avis"
+msgstr ":num: avis"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:86
+#: loco:58209bfd52e1a13c038b4662
+msgid "Studio"
+msgstr "Studio"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:88
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:239
+#: loco:58209bfd52e1a13c038b4663
+msgid "Videos"
+msgstr "Videos"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:90
+#: loco:58209bfd52e1a13c038b4664
+msgid "Localisation"
+msgstr "Localisation"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:91
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:299
+#: loco:58209bfd52e1a13c038b4665
+msgid "Avis"
+msgstr "Avis"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:99
+#: loco:58209bfd52e1a13c038b4666
+msgid "Date de création :"
+msgstr "Date de création :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:102
+#: loco:58209bfd52e1a13c038b4667
+msgid "Fondateur :"
+msgstr "Fondateur :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:104
+#: loco:58209bfd52e1a13c038b4668
+msgid ":num: tatoueurs :"
+msgstr ":num: tatoueurs :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:106
+#: loco:58209bfd52e1a13c038b4669
+msgid "Surface du studio :"
+msgstr "Surface du studio :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:108
+#: loco:58209bfd52e1a13c038b466a
+msgid "Avec ou sans rendez-vous :"
+msgstr "Avec ou sans rendez-vous :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:109
+#: loco:58209bfd52e1a13c038b466b
+msgid "sans"
+msgstr "sans"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:109
+#: loco:58209bfd52e1a13c038b466c
+msgid "avec"
+msgstr "avec"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:113
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:187
+#: loco:58209bfd52e1a13c038b466d
+msgid "Oui"
+msgstr "Oui"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:113
+#: loco:58209bfd52e1a13c038b466e
+msgid "Non"
+msgstr "Non"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:117
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:115
+#: loco:58209bfd52e1a13c038b466f
+msgid "Arrhes"
+msgstr "Arrhes"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:123
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:74
+#: loco:58209bfd52e1a13c038b4670
+msgid "Prochains guests"
+msgstr "Prochains guests"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:132
+#: loco:58209bfd52e1a13c038b4671
+msgid "Style : "
+msgstr "Style : "
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:146
+#: loco:58209bfd52e1a13c038b4672
+msgid "CRÉATION : Créez vous-même votre tatouage"
+msgstr "CRÉATION : Créez vous-même votre tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:152
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:63
+#: loco:58209bfd52e1a13c038b4673
+msgid "C'est mon studio !"
+msgstr "C'est mon studio !"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:155
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:66
+#: loco:58209bfd52e1a13c038b4674
+msgid "Pour consulter la liste des studios membres près de :place:"
+msgstr "Pour consulter la liste des studios membres près de :place:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:156
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:67
+#: loco:58209bfd52e1a13c038b4675
+msgid "Voir la liste des studios membres près de :place:"
+msgstr "Voir la liste des studios membres près de :place:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:186
+#: loco:58209bfd52e1a13c038b4676
+msgid "Tatoue depuis :"
+msgstr "Tatoue depuis :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:189
+#: loco:58209bfd52e1a13c038b4677
+msgid "Encre utilisée :"
+msgstr "Encre utilisée :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:193
+#: loco:58209bfd52e1a13c038b4678
+msgid "Styles pratiqués : "
+msgstr "Styles pratiqués : "
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:200
+#: loco:58209bfd52e1a13c038b4679
+msgid "Conventions à venir :"
+msgstr "Conventions à venir :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:203
+#: loco:58209bfd52e1a13c038b467a
+msgid "Prix gagnés :"
+msgstr "Prix gagnés :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:208
+#: loco:58209bfd52e1a13c038b467b
+msgid "Lisez son Interview sur le blog"
+msgstr "Lisez son Interview sur le blog"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:224
+#: loco:58209bfd52e1a13c038b467c
+msgid "Photos du studio de tatouage"
+msgstr "Photos du studio de tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:258
+#: loco:58209bfd52e1a13c038b467d
+msgid "Localisation / Horaires du studio de tatouage"
+msgstr "Localisation / Horaires du studio de tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:260
+#: loco:58209bfd52e1a13c038b467e
+msgid "Localisation du studio de tatouage"
+msgstr "Localisation du studio de tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:281
+#: loco:58209bfd52e1a13c038b467f
+msgid ":open: à :close:"
+msgstr ":open: à :close:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:331
+#: loco:58209bfd52e1a13c038b4680
+msgid "vous connaissez ce studio ?"
+msgstr "vous connaissez ce studio ?"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:333
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:349
+#: loco:58209bfd52e1a13c038b4681
+msgid "Laissez un avis"
+msgstr "Laissez un avis"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:352
+#: loco:58209bfd52e1a13c038b4682
+msgid "Note par critère"
+msgstr "Note par critère"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:374
+#: loco:58209bfd52e1a13c038b4683
+msgid "Envoyez votre avis"
+msgstr "Envoyez votre avis"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:386
+#: loco:58209bfd52e1a13c038b4684
+msgid "Contactez le studio"
+msgstr "Contactez le studio"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:401
+#: loco:58209bfd52e1a13c038b4685
+msgid "Demandez conseil à l'équipe de TattooMe"
+msgstr "Demandez conseil à l'équipe de TattooMe"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:420
+#: loco:58209bfd52e1a13c038b4686
+msgid "Nom*"
+msgstr "Nom*"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:421
+#: loco:58209bfd52e1a13c038b4687
+msgid "Prénom*"
+msgstr "Prénom*"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:422
+#: loco:58209bfd52e1a13c038b4688
+msgid "E-mail*"
+msgstr "E-mail*"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:426
+#: loco:58209bfd52e1a13c038b4689
+msgid "Précisez votre demande*"
+msgstr "Précisez votre demande*"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:429
+#: loco:58209bfd52e1a13c038b468a
+msgid "* champs obligatoires"
+msgstr "* champs obligatoires"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:457
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/jquery-file-upload.phtml:13
+#: loco:58209bfd52e1a13c038b468b
+msgid "Ajouter des images..."
+msgstr "Ajouter des images..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:574
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:84
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:43
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:112
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:4
+#: loco:58209bfd52e1a13c038b468c
+msgid "Recherches similaires"
+msgstr "Recherches similaires"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:575
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:85
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:23
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:113
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:44
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:113
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:5
+#: loco:58209bfd52e1a13c038b468d
+msgid "Recherches populaires"
+msgstr "Recherches populaires"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:7
+#: loco:58209bfd52e1a13c038b468e
+msgid "Les tatoueurs"
+msgstr "Les tatoueurs"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:9
+#: loco:58209bfd52e1a13c038b468f
+msgid "Les photos"
+msgstr "Les photos"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:17
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:47
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:68
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/_edit-header.phtml:7
+#: loco:58209bfd52e1a13c038b4690
+msgid "Mettre hors ligne"
+msgstr "Mettre hors ligne"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:18
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:48
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:12
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/posts.phtml:30
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/_edit-header.phtml:8
+#: loco:58209bfd52e1a13c038b4691
+msgid "Voir"
+msgstr "Voir"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:20
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:50
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:67
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/_edit-header.phtml:10
+#: loco:58209bfd52e1a13c038b4692
+msgid "Mettre en ligne"
+msgstr "Mettre en ligne"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_edit-header.phtml:26
+#: loco:58209bfd52e1a13c038b4693
+msgid ""
+"Pour publier votre annonce, veuillez vérifier les informations suivantes :"
+msgstr ""
+"Pour publier votre annonce, veuillez vérifier les informations suivantes :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:15
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show-not-published.phtml:41
+#: loco:58209bfd52e1a13c038b4694
+msgid "Fiche tatoueur :name: hors ligne"
+msgstr "Fiche tatoueur :name: hors ligne"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:13
+#: loco:58209bfd52e1a13c038b4695
+msgid "Confirmation de mot de passe"
+msgstr "Confirmation de mot de passe"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:16
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:8
+#: loco:58209bfd52e1a13c038b4696
+msgid "Informations de localisation"
+msgstr "Informations de localisation"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:35
+#: loco:58209bfd52e1a13c038b4697
+msgid "A propos du salon"
+msgstr "A propos du salon"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:37
+#: loco:58209bfd52e1a13c038b4698
+msgid "Nom du salon de tatouage"
+msgstr "Nom du salon de tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:40
+#: loco:58209bfd52e1a13c038b4699
+msgid "Description du salon de tatouage"
+msgstr "Description du salon de tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:44
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:40
+#: loco:58209bfd52e1a13c038b469a
+msgid "Description en une phrase, pour les résultats de recherche"
+msgstr "Description en une phrase, pour les résultats de recherche"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:48
+#: loco:58209bfd52e1a13c038b469b
+msgid "Pratique de piercings"
+msgstr "Pratique de piercings"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:54
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:44
+#: loco:58209bfd52e1a13c038b469c
+msgid "Site internet"
+msgstr "Site internet"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:58
+#: loco:58209bfd52e1a13c038b469d
+msgid "Url de la página facebook"
+msgstr "Url de la página facebook"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:62
+#: loco:58209bfd52e1a13c038b469e
+msgid "Surface du studio"
+msgstr "Surface du studio"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:66
+#: loco:58209bfd52e1a13c038b469f
+msgid "Date d'ouverture du studio"
+msgstr "Date d'ouverture du studio"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:70
+#: loco:58209bfd52e1a13c038b46a0
+msgid "Nom du fondateur"
+msgstr "Nom du fondateur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:78
+#: loco:58209bfd52e1a13c038b46a1
+msgid "Une anecdote a propos du studio"
+msgstr "Une anecdote a propos du studio"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:105
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:76
+#: loco:58209bfd52e1a13c038b46a2
+msgid "Ajouter un horaire"
+msgstr "Ajouter un horaire"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:111
+#: loco:58209bfd52e1a13c038b46a3
+msgid "Tatouage sans rendez-vous"
+msgstr "Tatouage sans rendez-vous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:128
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:83
+#: loco:58209bfd52e1a13c038b46a4
+msgid "Handicap"
+msgstr "Handicap"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:130
+#: loco:58209bfd52e1a13c038b46a5
+msgid "Gratuit/Payant"
+msgstr "Gratuit/Payant"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:10
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:29
+#: loco:58209bfd52e1a13c038b46a6
+msgid "Filtrer par styles"
+msgstr "Filtrer par styles"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:33
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:56
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:7
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:14
+#: loco:58209bfd52e1a13c038b46a7
+msgid "Page :num:"
+msgstr "Page :num:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:46
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:34
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:70
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:27
+#: loco:58209bfd52e1a13c038b46a8
+msgid "page :num:"
+msgstr "page :num:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:55
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:45
+#: loco:58209bfd52e1a13c038b46a9
+msgid ""
+"Retrouvez les meilleurs tatouages:style: notés par les internautes. Et "
+"trouvez des idées pour votre prochain tatouage."
+msgstr ""
+"Retrouvez les meilleurs tatouages:style: notés par les internautes. Et "
+"trouvez des idées pour votre prochain tatouage."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:60
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:50
+#: loco:58209bfd52e1a13c038b46aa
+msgid "Les <b>tatouages</b> de la galerie"
+msgstr "Les <b>tatouages</b> de la galerie"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:62
+#: loco:58209bfd52e1a13c038b46ab
+msgid "Les 10 plus beaux tatouages:style:"
+msgstr "Les 10 plus beaux tatouages:style:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:63
+#: loco:58209bfd52e1a13c038b46ac
+msgid "Les 10 plus beaux <b>tatouages:style:</b>"
+msgstr "Les 10 plus beaux <b>tatouages:style:</b>"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:96
+#: loco:58209bfd52e1a13c038b46ad
+msgid "Déambulez parmi les :num: tatouages:style: de la galerie"
+msgstr "Déambulez parmi les :num: tatouages:style: de la galerie"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_galery.phtml:96
+#: loco:58209bfd52e1a13c038b46ae
+msgid "Auncun tatouage:style: trouvé"
+msgstr "Auncun tatouage:style: trouvé"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:21
+#: loco:58209bfd52e1a13c038b46af
+msgid "Idée tatouages"
+msgstr "Idée tatouages"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:52
+#: loco:58209bfd52e1a13c038b46b0
+msgid "Idées tatouages:style:"
+msgstr "Idées tatouages:style:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:53
+#: loco:58209bfd52e1a13c038b46b1
+msgid "Idées <b>tatouages:style:</b>"
+msgstr "Idées <b>tatouages:style:</b>"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:86
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:98
+#: loco:58209bfd52e1a13c038b46b2
+msgid "Filtrer par style"
+msgstr "Filtrer par style"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:104
+#: loco:58209bfd52e1a13c038b46b3
+msgid "Tous les tatouages"
+msgstr "Tous les tatouages"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:113
+#: loco:58209bfd52e1a13c038b46b4
+msgid "tatoueurs :name:"
+msgstr "tatoueurs :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery.phtml:138
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:299
+#: loco:58209bfd52e1a13c038b46b5
+msgid "voir la suite"
+msgstr "voir la suite"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery-focus.phtml:16
+#: loco:58209bfd52e1a13c038b46b6
+msgid "Ce tatouage vous plait, cliquez sur j'aime et partagez-le sur facebook"
+msgstr "Ce tatouage vous plait, cliquez sur j'aime et partagez-le sur facebook"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:12
+#: loco:58209bfd52e1a13c038b46b7
+msgid "Rechercher un tatoueur"
+msgstr "Rechercher un tatoueur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:16
+#: loco:58209bfd52e1a13c038b46b8
+msgid "Lieu (ville, département...)"
+msgstr "Lieu (ville, département...)"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:25
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/index.phtml:20
+#: loco:58209bfd52e1a13c038b46b9
+msgid "Rechercher"
+msgstr "Rechercher"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:45
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:216
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:114
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:6
+#: loco:58209bfd52e1a13c038b46ba
+msgid "Affinez votre recherche"
+msgstr "Affinez votre recherche"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:48
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:117
+#: loco:58209bfd52e1a13c038b46bb
+msgid "Ils viennent de nous rejoindre"
+msgstr "Ils viennent de nous rejoindre"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:49
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:118
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/cities-index.phtml:3
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:8
+#: loco:58209bfd52e1a13c038b46bc
+msgid "Les villes de :name:"
+msgstr "Les villes de :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:76
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:33
+#: loco:58209bfd52e1a13c038b46bd
+msgid " style :style:"
+msgstr " style :style:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:77
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:34
+#: loco:58209bfd52e1a13c038b46be
+msgid ""
+"Retrouvez les meilleurs tatoueurs de :name::style:. Regardez et évaluez leur "
+"travail. Découvrez les évaluations des studios de tatouage faites par les "
+"internautes."
+msgstr ""
+"Retrouvez les meilleurs tatoueurs de :name::style:. Regardez et évaluez leur "
+"travail. Découvrez les évaluations des studios de tatouage faites par les "
+"internautes."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:79
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:36
+#: loco:58209bfd52e1a13c038b46bf
+msgid "Tatoueur:style: :name:"
+msgstr "Tatoueur:style: :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:100
+#: loco:58209bfd52e1a13c038b46c0
+msgid "Tatoueurs <b>:loc:</b>"
+msgstr "Tatoueurs <b>:loc:</b>"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:113
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:94
+#: loco:58209bfd52e1a13c038b46c1
+msgid ":num: tatoueurs trouvés"
+msgstr ":num: tatoueurs trouvés"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:140
+#: loco:58209bfd52e1a13c038b46c2
+msgid "Voir les :num: tatouages <br>réalisés dans ce salon"
+msgstr "Voir les :num: tatouages <br>réalisés dans ce salon"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:147
+#: loco:58209bfd52e1a13c038b46c3
+msgid "Tatoueur à :city:"
+msgstr "Tatoueur à :city:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:162
+#: loco:58209bfd52e1a13c038b46c4
+msgid "(:num: avis)"
+msgstr "(:num: avis)"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:181
+#: loco:58209bfd52e1a13c038b46c5
+msgid "Styles:"
+msgstr "Styles:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:187
+#: loco:58209bfd52e1a13c038b46c6
+msgid "Piercings:"
+msgstr "Piercings:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:193
+#: loco:58209bfd52e1a13c038b46c7
+msgid "Tatoueurs:"
+msgstr "Tatoueurs:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/_show.phtml:206
+#: loco:58209bfd52e1a13c038b46c8
+msgid "En savoir plus"
+msgstr "En savoir plus"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:68
+#: loco:58209bfd52e1a13c038b46c9
+msgid "trouvez un tatoueur près de chez vous"
+msgstr "trouvez un tatoueur près de chez vous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:125
+#: loco:58209bfd52e1a13c038b46ca
+msgid "Tatoueurs :loc:"
+msgstr "Tatoueurs :loc:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:152
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:253
+#: loco:58209bfd52e1a13c038b46cb
+msgid "Tatoueurs non-membres"
+msgstr "Tatoueurs non-membres"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:163
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:203
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:274
+#: loco:58209bfd52e1a13c038b46cc
+msgid "Tatoueur a :city:"
+msgstr "Tatoueur a :city:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:178
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:243
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:289
+#: loco:58209bfd52e1a13c038b46cd
+msgid "en savoir plus"
+msgstr "en savoir plus"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:237
+#: loco:58209bfd52e1a13c038b46ce
+msgid "Voir les :num: tatouages réalisés dans ce studio"
+msgstr "Voir les :num: tatouages réalisés dans ce studio"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:6
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:8
+#: loco:58209bfd52e1a13c038b46cf
+msgid "Conventions de tatouages"
+msgstr "Conventions de tatouages"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:17
+#: loco:58209bfd52e1a13c038b46d0
+msgid ""
+"Nous vous proposerons notre sélection des rendez-vous tatouage à ne pas "
+"manquer: conventions, salons, ateliers..."
+msgstr ""
+"Nous vous proposerons notre sélection des rendez-vous tatouage à ne pas "
+"manquer: conventions, salons, ateliers..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:15
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:15
+#: loco:58209bfd52e1a13c038b46d1
+msgid "Vous"
+msgstr "Vous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:16
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:16
+#: loco:58209bfd52e1a13c038b46d2
+msgid "vous avez écrit"
+msgstr "vous avez écrit"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:19
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:19
+#: loco:58209bfd52e1a13c038b46d3
+msgid " a écrit"
+msgstr " a écrit"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:27
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:27
+#: loco:58209bfd52e1a13c038b46d4
+msgid "Le :date: à :time:, :you_has_wrote:"
+msgstr "Le :date: à :time:, :you_has_wrote:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:33
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_message.phtml:33
+#: loco:58209bfd52e1a13c038b46d5
+msgid "Répondez à ce message :"
+msgstr "Répondez à ce message :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_message.phtml:46
+#: loco:58209bfd52e1a13c038b46d6
+msgid "Voici les photos d'exemples envoyées par cet utilisateur"
+msgstr "Voici les photos d'exemples envoyées par cet utilisateur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:11
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/show.phtml:11
+#: loco:58209bfd52e1a13c038b46d7
+msgid "Conversation avec :other_user_name:"
+msgstr "Conversation avec :other_user_name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:15
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/show.phtml:15
+#: loco:58209bfd52e1a13c038b46d8
+msgid "Demande de réservation"
+msgstr "Demande de réservation"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:18
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/show.phtml:18
+#: loco:58209bfd52e1a13c038b46d9
+msgid "Commentaire de :other_user_name:"
+msgstr "Commentaire de :other_user_name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:39
+#: loco:58209bfd52e1a13c038b46da
+msgid "Commentaire de :user:"
+msgstr "Commentaire de :user:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:47
+#: loco:58209bfd52e1a13c038b46db
+msgid "Ce message a été supprimé et n'apparaitra plus dans l'annonce"
+msgstr "Ce message a été supprimé et n'apparaitra plus dans l'annonce"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:56
+#: loco:58209bfd52e1a13c038b46dc
+msgid "Restaurer"
+msgstr "Restaurer"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/show.phtml:79
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/show.phtml:63
+#: loco:58209bfd52e1a13c038b46dd
+msgid "Retour à la liste des messages"
+msgstr "Retour à la liste des messages"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_demand-summary.phtml:2
+#: loco:58209bfd52e1a13c038b46de
+msgid "Demande #:id: de :name:"
+msgstr "Demande #:id: de :name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/message/_form.phtml:9
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_form.phtml:9
+#: loco:58209bfd52e1a13c038b46df
+msgid "Envoyer le message"
+msgstr "Envoyer le message"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:10
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/auto-tattoobox.html.phtml:4
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:8
+#: loco:58209bfd52e1a13c038b46e0
+msgid "Bonjour :who:"
+msgstr "Bonjour :who:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:14
+#: loco:58209bfd52e1a13c038b46e1
+msgid ""
+"Vous avez reçu un message de :sender_name: à propos de votre studio :"
+"property_name:"
+msgstr ""
+"Vous avez reçu un message de :sender_name: à propos de votre studio :"
+"property_name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:20
+#: loco:58209bfd52e1a13c038b46e2
+msgid ""
+"Vous avez reçu un commentaire de :sender_name:, à propos de votre studio :"
+"org_link:"
+msgstr ""
+"Vous avez reçu un commentaire de :sender_name:, à propos de votre studio :"
+"org_link:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:28
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:24
+#: loco:58209bfd52e1a13c038b46e3
+msgid ""
+"Vous pouvez consulter ce message en cliquant ou en copiant le lien suivant "
+"dans la barre d'adresse de votre navigateur:"
+msgstr ""
+"Vous pouvez consulter ce message en cliquant ou en copiant le lien suivant "
+"dans la barre d'adresse de votre navigateur:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:31
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:27
+#: loco:58209bfd52e1a13c038b46e4
+msgid "Contenu du message :"
+msgstr "Contenu du message :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:35
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:31
+#: loco:58209bfd52e1a13c038b46e5
+msgid ""
+"Pour répondre à cet utilisateur, répondez directement à cet email ou à "
+"l'adresse :sender_email:"
+msgstr ""
+"Pour répondre à cet utilisateur, répondez directement à cet email ou à "
+"l'adresse :sender_email:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:40
+#: loco:58209bfd52e1a13c038b46e6
+msgid ""
+"Toute l'équipe de la galerie du tatouage vous remercie de votre confiance"
+msgstr ""
+"Toute l'équipe de la galerie du tatouage vous remercie de votre confiance"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/controllers/UserController.php:10
+#: loco:58209bfd52e1a13c038b46e7
+msgid "Bienvenue dans la Galerie du Tatouage"
+msgstr "Bienvenue dans la Galerie du Tatouage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/controllers/IndexController.php:51
+#: loco:58209bfd52e1a13c038b46e8
+msgid "Votre département"
+msgstr "Votre département"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/controllers/LocationController.php:66
+#: loco:58209bfd52e1a13c038b46e9
+msgid "Style pratiqu�s"
+msgstr "Style pratiqu�s"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/models/DbTable/Row/Organization.php:128
+#: loco:58209bfd52e1a13c038b46ea
+msgid "Description du tatoueur"
+msgstr "Description du tatoueur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/models/DbTable/Row/Image.php:50
+#: loco:58209bfd52e1a13c038b46eb
+msgid ":name:, Studio :org_link:"
+msgstr ":name:, Studio :org_link:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/application/models/DbTable/Row/Image.php:52
+#: loco:58209bfd52e1a13c038b46ec
+msgid "Studio :org_link:"
+msgstr "Studio :org_link:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
+#: loco:58209bfd52e1a13c038b46ed
+msgid "Voir le site en:lang:"
+msgstr "Voir le site en:lang:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
+#: loco:58209bfd52e1a13c038b46ee
+msgid "Ville, appartement, région"
+msgstr "Ville, appartement, région"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
+#: loco:58209bfd52e1a13c038b46ef
+msgid "Filtre 1"
+msgstr "Filtre 1"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/layouts/scripts/layout.phtml:1
+#: loco:58209bfd52e1a13c038b46f0
+msgid "Filtre 2"
+msgstr "Filtre 2"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/shared/_paginator.phtml:41
+#: loco:58209bfd52e1a13c038b46f1
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/shared/_paginator.phtml:85
+#: loco:58209bfd52e1a13c038b46f2
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-iban.phtml:2
+#: loco:58209bfd52e1a13c038b46f3
+msgid "Réglement par RIB/IBAN"
+msgstr "Réglement par RIB/IBAN"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-iban.phtml:5
+#: loco:58209bfd52e1a13c038b46f4
+msgid "IBAN"
+msgstr "IBAN"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-iban.phtml:8
+#: loco:58209bfd52e1a13c038b46f5
+msgid "SWIFT/BIC"
+msgstr "SWIFT/BIC"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-iban.phtml:12
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:22
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-cheque.phtml:9
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-default.phtml:9
+#: loco:58209bfd52e1a13c038b46f6
+msgid "Choisir un autre moyen de paiement"
+msgstr "Choisir un autre moyen de paiement"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:2
+#: loco:58209bfd52e1a13c038b46f7
+msgid "Réglement par carte de crédit"
+msgstr "Réglement par carte de crédit"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:5
+#: loco:58209bfd52e1a13c038b46f8
+msgid "Numéro de carte"
+msgstr "Numéro de carte"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:10
+#: loco:58209bfd52e1a13c038b46f9
+msgid "Date d'expiration"
+msgstr "Date d'expiration"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-ogone.phtml:18
+#: loco:58209bfd52e1a13c038b46fa
+msgid "Cryptogramme visuel"
+msgstr "Cryptogramme visuel"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-cheque.phtml:2
+#: loco:58209bfd52e1a13c038b46fb
+msgid "Réglement par chèque banquaire"
+msgstr "Réglement par chèque banquaire"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-cheque.phtml:5
+#: loco:58209bfd52e1a13c038b46fc
+msgid "Numéro de chèque"
+msgstr "Numéro de chèque"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-default.phtml:2
+#: loco:58209bfd52e1a13c038b46fd
+msgid "Réglement manuel"
+msgstr "Réglement manuel"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/payment-means/form-default.phtml:5
+#: loco:58209bfd52e1a13c038b46fe
+msgid "Mode / Réference"
+msgstr "Mode / Réference"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/jquery-file-upload.phtml:26
+#: loco:58209bfd52e1a13c038b46ff
+msgid "J'ai terminé, réorganiser mes photos"
+msgstr "J'ai terminé, réorganiser mes photos"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/subscription/lead.phtml:6
+#: loco:58209bfd52e1a13c038b4700
+msgid "Rejoignez nous"
+msgstr "Rejoignez nous"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/video-edit.phtml:5
+#: loco:58209bfd52e1a13c038b4701
+msgid "Modifier le video"
+msgstr "Modifier le video"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/video-edit.phtml:11
+#: loco:58209bfd52e1a13c038b4702
+msgid "Lien youtube ou vimeo"
+msgstr "Lien youtube ou vimeo"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/video-edit.phtml:22
+#: loco:58209bfd52e1a13c038b4703
+msgid ""
+"Le lien de la video n'est pas un lien valide VIMEO ou Youtube. Vérifiez "
+"votre lien et réessayez"
+msgstr ""
+"Le lien de la video n'est pas un lien valide VIMEO ou Youtube. Vérifiez "
+"votre lien et réessayez"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/video-edit.phtml:29
+#: loco:58209bfd52e1a13c038b4704
+msgid "Eliminer cette video"
+msgstr "Eliminer cette video"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/video-edit.phtml:36
+#: loco:58209bfd52e1a13c038b4705
+msgid "Fermer sans enregistrer"
+msgstr "Fermer sans enregistrer"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/index.phtml:10
+#: loco:58209bfd52e1a13c038b4706
+msgid "Example"
+msgstr "Example"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/index.phtml:16
+#: loco:58209bfd52e1a13c038b4707
+msgid "Région, Ville..."
+msgstr "Région, Ville..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/index.phtml:30
+#: loco:58209bfd52e1a13c038b4708
+msgid "Régions"
+msgstr "Régions"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:37
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:41
+#: loco:58209bfd52e1a13c038b4709
+msgid "Créer un nom"
+msgstr "Créer un nom"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:74
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:78
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/post.phtml:39
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit.phtml:36
+#: loco:58209bfd52e1a13c038b470a
+msgid "Description"
+msgstr "Description"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:79
+#: loco:58209bfd52e1a13c038b470b
+msgid "Meta description:"
+msgstr "Meta description:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:83
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:82
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/posts.phtml:8
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:44
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:20
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show.phtml:127
+#: loco:58209bfd52e1a13c038b470c
+msgid "Titre"
+msgstr "Titre"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:84
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:89
+#: loco:58209bfd52e1a13c038b470d
+msgid "Latitude :"
+msgstr "Latitude :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:85
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:90
+#: loco:58209bfd52e1a13c038b470e
+msgid "Longitude :"
+msgstr "Longitude :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:121
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:126
+#: loco:58209bfd52e1a13c038b470f
+msgid "Clef"
+msgstr "Clef"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:122
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:127
+#: loco:58209bfd52e1a13c038b4710
+msgid "Valeur"
+msgstr "Valeur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:142
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:147
+#: loco:58209bfd52e1a13c038b4711
+msgid "Evenements"
+msgstr "Evenements"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:4
+#: loco:58209bfd52e1a13c038b4712
+msgid "Abonnées"
+msgstr "Abonnées"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:5
+#: loco:58209bfd52e1a13c038b4713
+msgid "Expirées"
+msgstr "Expirées"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:45
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:51
+#: loco:58209bfd52e1a13c038b4714
+msgid "Propriétaire"
+msgstr "Propriétaire"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:47
+#: loco:58209bfd52e1a13c038b4715
+msgid "Fin d'abonnement"
+msgstr "Fin d'abonnement"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:54
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entities.phtml:29
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:34
+#: loco:58209bfd52e1a13c038b4716
+msgid "#"
+msgstr "#"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:78
+#: loco:58209bfd52e1a13c038b4717
+msgid "Début"
+msgstr "Début"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:79
+#: loco:58209bfd52e1a13c038b4718
+msgid "Fin"
+msgstr "Fin"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:83
+#: loco:58209bfd52e1a13c038b4719
+msgid "Meta description"
+msgstr "Meta description"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:84
+#: loco:58209bfd52e1a13c038b471a
+msgid "Prix :"
+msgstr "Prix :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:85
+#: loco:58209bfd52e1a13c038b471b
+msgid "Statut :"
+msgstr "Statut :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:86
+#: loco:58209bfd52e1a13c038b471c
+msgid "Type :"
+msgstr "Type :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:87
+#: loco:58209bfd52e1a13c038b471d
+msgid "Actif :"
+msgstr "Actif :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:91
+#: loco:58209bfd52e1a13c038b471e
+msgid "Date de paiement :"
+msgstr "Date de paiement :"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:22
+#: loco:58209bfd52e1a13c038b471f
+msgid "Commandes / Factures"
+msgstr "Commandes / Factures"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:34
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:34
+#: loco:58209bfd52e1a13c038b4720
+msgid "Services"
+msgstr "Services"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/navbar.phtml:37
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:7
+#: loco:58209bfd52e1a13c038b4721
+msgid "Blog"
+msgstr "Blog"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:27
+#: loco:58209bfd52e1a13c038b4722
+msgid "Téléphones"
+msgstr "Téléphones"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:28
+#: loco:58209bfd52e1a13c038b4723
+msgid "Type"
+msgstr "Type"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/users.phtml:29
+#: loco:58209bfd52e1a13c038b4724
+msgid "N°Client"
+msgstr "N°Client"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/posts.phtml:10
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/post.phtml:81
+#: loco:58209bfd52e1a13c038b4725
+msgid "Homepage"
+msgstr "Homepage"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/posts.phtml:11
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:50
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/post.phtml:80
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:12
+#: loco:58209bfd52e1a13c038b4726
+msgid "Statut"
+msgstr "Statut"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:42
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:32
+#: loco:58209bfd52e1a13c038b4727
+msgid "A partir de"
+msgstr "A partir de"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:43
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:33
+#: loco:58209bfd52e1a13c038b4728
+msgid "Jusqu'à"
+msgstr "Jusqu'à"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:56
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:38
+#: loco:58209bfd52e1a13c038b4729
+msgid "Label"
+msgstr "Label"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:58
+#: loco:58209bfd52e1a13c038b472a
+msgid "Entité"
+msgstr "Entité"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/events.phtml:72
+#: loco:58209bfd52e1a13c038b472b
+msgid "org#"
+msgstr "org#"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:4
+#: loco:58209bfd52e1a13c038b472c
+msgid "Commandes"
+msgstr "Commandes"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:5
+#: loco:58209bfd52e1a13c038b472d
+msgid "Paiements manquants"
+msgstr "Paiements manquants"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:6
+#: loco:58209bfd52e1a13c038b472e
+msgid "A prélever"
+msgstr "A prélever"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:45
+#: loco:58209bfd52e1a13c038b472f
+msgid "Prix total"
+msgstr "Prix total"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:47
+#: loco:58209bfd52e1a13c038b4730
+msgid "Payé"
+msgstr "Payé"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:49
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:20
+#: loco:58209bfd52e1a13c038b4731
+msgid "Vendeur"
+msgstr "Vendeur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:85
+#: loco:58209bfd52e1a13c038b4732
+msgid " "
+msgstr " "
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/orders.phtml:92
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:27
+#: loco:58209bfd52e1a13c038b4733
+msgid "Avoir"
+msgstr "Avoir"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:3
+#: loco:58209bfd52e1a13c038b4734
+msgid "En ligne"
+msgstr "En ligne"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:4
+#: loco:58209bfd52e1a13c038b4735
+msgid "Hors ligne"
+msgstr "Hors ligne"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:42
+#: loco:58209bfd52e1a13c038b4736
+msgid "Organisation"
+msgstr "Organisation"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/reviews.phtml:43
+#: loco:58209bfd52e1a13c038b4737
+msgid "Auteur"
+msgstr "Auteur"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/post.phtml:82
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:9
+#: loco:58209bfd52e1a13c038b4738
+msgid "Date de publication"
+msgstr "Date de publication"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_form_add_org.phtml:6
+#: loco:58209bfd52e1a13c038b4739
+msgid "Email de bienvenue"
+msgstr "Email de bienvenue"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_form_add_org.phtml:8
+#: loco:58209bfd52e1a13c038b473a
+msgid "Ajouter une annonce"
+msgstr "Ajouter une annonce"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/_tabs.phtml:4
+#: loco:58209bfd52e1a13c038b473b
+msgid "Commandes en cours"
+msgstr "Commandes en cours"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/invoices.phtml:22
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/orders.phtml:30
+#: loco:58209bfd52e1a13c038b473c
+msgid ":num: paiments"
+msgstr ":num: paiments"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/reset-password.phtml:5
+#: loco:58209bfd52e1a13c038b473d
+msgid "Confirmation du mot de passe"
+msgstr "Confirmation du mot de passe"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/posts.phtml:6
+#: loco:58209bfd52e1a13c038b473e
+msgid "Nouvel article"
+msgstr "Nouvel article"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/index.phtml:8
+#: loco:58209bfd52e1a13c038b473f
+msgid "Page :page:"
+msgstr "Page :page:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/index.phtml:16
+#: loco:58209bfd52e1a13c038b4740
+msgid "Le blog"
+msgstr "Le blog"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/index.phtml:41
+#: loco:58209bfd52e1a13c038b4741
+msgid "Lire la suite →"
+msgstr "Lire la suite →"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/show.phtml:33
+#: loco:58209bfd52e1a13c038b4742
+msgid "Auto-école "
+msgstr "Auto-école "
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:24
+#: loco:58209bfd52e1a13c038b4743
+msgid "Contenu"
+msgstr "Contenu"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:6
+#: loco:58209bfd52e1a13c038b4744
+msgid "Réglement de :price:"
+msgstr "Réglement de :price:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:13
+#: loco:58209bfd52e1a13c038b4745
+msgid "Informations de paiment"
+msgstr "Informations de paiment"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:17
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:20
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:27
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:117
+#: loco:58209bfd52e1a13c038b4746
+msgid "Valider et règler"
+msgstr "Valider et règler"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:23
+#: loco:58209bfd52e1a13c038b4747
+msgid "Référence d'encaissement (:type:)"
+msgstr "Référence d'encaissement (:type:)"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:27
+#: loco:58209bfd52e1a13c038b4748
+msgid "Encaisser plus tard"
+msgstr "Encaisser plus tard"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:30
+#: loco:58209bfd52e1a13c038b4749
+msgid "Creer la facture et encaisser plus tard"
+msgstr "Creer la facture et encaisser plus tard"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:40
+#: loco:58209bfd52e1a13c038b474a
+msgid "Voir la facture"
+msgstr "Voir la facture"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:10
+#: loco:58209bfd52e1a13c038b474b
+msgid "Avoir n°"
+msgstr "Avoir n°"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:10
+#: loco:58209bfd52e1a13c038b474c
+msgid "Facture n°"
+msgstr "Facture n°"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:18
+#: loco:58209bfd52e1a13c038b474d
+msgid "Annuler la facture"
+msgstr "Annuler la facture"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:38
+#: loco:58209bfd52e1a13c038b474e
+msgid "Intitulé"
+msgstr "Intitulé"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:39
+#: loco:58209bfd52e1a13c038b474f
+msgid "Prix HT"
+msgstr "Prix HT"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:50
+#: loco:58209bfd52e1a13c038b4750
+msgid "Remise"
+msgstr "Remise"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:55
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:43
+#: loco:58209bfd52e1a13c038b4751
+msgid "Total HT"
+msgstr "Total HT"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:59
+#: loco:58209bfd52e1a13c038b4752
+msgid "TVA (:rate:%)"
+msgstr "TVA (:rate:%)"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:63
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:47
+#: loco:58209bfd52e1a13c038b4753
+msgid "Total TTC"
+msgstr "Total TTC"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:70
+#: loco:58209bfd52e1a13c038b4754
+msgid "Imprimer"
+msgstr "Imprimer"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:72
+#: loco:58209bfd52e1a13c038b4755
+msgid "Paiements"
+msgstr "Paiements"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:79
+#: loco:58209bfd52e1a13c038b4756
+msgid "Date de paiement"
+msgstr "Date de paiement"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:81
+#: loco:58209bfd52e1a13c038b4757
+msgid "Moyen de paiement"
+msgstr "Moyen de paiement"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/invoice.phtml:82
+#: loco:58209bfd52e1a13c038b4758
+msgid "Ajouter un paiement"
+msgstr "Ajouter un paiement"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:4
+#: loco:58209bfd52e1a13c038b4759
+msgid "Résumé de votre commande"
+msgstr "Résumé de votre commande"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:8
+#: loco:58209bfd52e1a13c038b475a
+msgid "Votre commande est vide"
+msgstr "Votre commande est vide"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:20
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:35
+#: loco:58209bfd52e1a13c038b475b
+msgid "<span></span>"
+msgstr "<span></span>"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_order-summary.phtml:38
+#: loco:58209bfd52e1a13c038b475c
+msgid "Réduction exceptionelle"
+msgstr "Réduction exceptionelle"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:7
+#: loco:58209bfd52e1a13c038b475d
+msgid "Informations de paiement"
+msgstr "Informations de paiement"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:11
+#: loco:58209bfd52e1a13c038b475e
+msgid "Echéance des paiements"
+msgstr "Echéance des paiements"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/create-payments.phtml:16
+#: loco:58209bfd52e1a13c038b475f
+msgid "Mode de paiement"
+msgstr "Mode de paiement"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_payments.phtml:14
+#: loco:58209bfd52e1a13c038b4760
+msgid " #"
+msgstr " #"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_payments.phtml:18
+#: loco:58209bfd52e1a13c038b4761
+msgid "Payer maintenant"
+msgstr "Payer maintenant"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/_payments.phtml:23
+#: loco:58209bfd52e1a13c038b4762
+msgid "Êtes vous sûr(e) ? Cela pourrait avoir des conséquences DRAMATIQUES..."
+msgstr "Êtes vous sûr(e) ? Cela pourrait avoir des conséquences DRAMATIQUES..."
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:12
+#: loco:58209bfd52e1a13c038b4763
+msgid "Informations"
+msgstr "Informations"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:33
+#: loco:58209bfd52e1a13c038b4764
+msgid "Montant"
+msgstr "Montant"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:43
+#: loco:58209bfd52e1a13c038b4765
+msgid "Creer un avoir"
+msgstr "Creer un avoir"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:52
+#: loco:58209bfd52e1a13c038b4766
+msgid "Code de réduction"
+msgstr "Code de réduction"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:58
+#: loco:58209bfd52e1a13c038b4767
+msgid "Montant de la réduction"
+msgstr "Montant de la réduction"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:63
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:104
+#: loco:58209bfd52e1a13c038b4768
+msgid "Ajouter à ma commande"
+msgstr "Ajouter à ma commande"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:72
+#: loco:58209bfd52e1a13c038b4769
+msgid "Services disponibles"
+msgstr "Services disponibles"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:76
+#: loco:58209bfd52e1a13c038b476a
+msgid "Aucune option n'est disponible pour cette commande"
+msgstr "Aucune option n'est disponible pour cette commande"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:93
+#: loco:58209bfd52e1a13c038b476b
+msgid "Appliquer ce service à"
+msgstr "Appliquer ce service à"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/edit.phtml:99
+#: loco:58209bfd52e1a13c038b476c
+msgid "Date de début"
+msgstr "Date de début"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/form-price.phtml:7
+#: loco:58209bfd52e1a13c038b476d
+msgid "Type de prix"
+msgstr "Type de prix"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-products.phtml:16
+#: loco:58209bfd52e1a13c038b476e
+msgid "Service n°:num:"
+msgstr "Service n°:num:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-products.phtml:21
+#: loco:58209bfd52e1a13c038b476f
+msgid "Nom du produit/service"
+msgstr "Nom du produit/service"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-products.phtml:24
+#: loco:58209bfd52e1a13c038b4770
+msgid "Description du produit/service"
+msgstr "Description du produit/service"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-products.phtml:31
+#: loco:58209bfd52e1a13c038b4771
+msgid "Prix de base"
+msgstr "Prix de base"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-products.phtml:42
+#: loco:58209bfd52e1a13c038b4772
+msgid "Ajouter un service"
+msgstr "Ajouter un service"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/show-opening.phtml:7
+#: loco:58209bfd52e1a13c038b4773
+msgid "de :open: a :close:"
+msgstr "de :open: a :close:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/_edit-extra.phtml:2
+#: loco:58209bfd52e1a13c038b4774
+msgid "Animaux pris en charges"
+msgstr "Animaux pris en charges"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:7
+#: loco:58209bfd52e1a13c038b4775
+msgid "Les nouvelles organizations"
+msgstr "Les nouvelles organizations"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:24
+#: loco:58209bfd52e1a13c038b4776
+msgid ":num: résultats"
+msgstr ":num: résultats"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/location/show.phtml:51
+#: loco:58209bfd52e1a13c038b4777
+msgid "Voir l'annonce"
+msgstr "Voir l'annonce"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/message/_demand-summary.phtml:2
+#: loco:58209bfd52e1a13c038b4778
+msgid "Demande :id:"
+msgstr "Demande :id:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:11
+#: loco:58209bfd52e1a13c038b4779
+msgid ""
+"Vous avez reçu un message de :sender_name: à propos d'une demande de "
+"réservation pour la propriété :property_name:"
+msgstr ""
+"Vous avez reçu un message de :sender_name: à propos d'une demande de "
+"réservation pour la propriété :property_name:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/message-notification.html.phtml:17
+#: loco:58209bfd52e1a13c038b477a
+msgid ""
+"Vous avez reçu un commentaire de :sender_name:, à propos de la propriété :"
+"org_link:"
+msgstr ""
+"Vous avez reçu un commentaire de :sender_name:, à propos de la propriété :"
+"org_link:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/reset-password.html.phtml:1
+#: loco:58209bfd52e1a13c038b477b
+msgid ""
+"Cher client,\n"
+"\n"
+"Pour répondre à votre demande du :date:, veuillez trouver\n"
+"ci-dessous l'adresse qui vous permettra de changer le mot de passe de\n"
+"votre identifiant.\n"
+"\n"
+":link:\n"
+"\n"
+"Nous vous remercions de votre confiance.\n"
+"\n"
+"Cordialement"
+msgstr ""
+"Cher client,\n"
+"\n"
+"Pour répondre à votre demande du :date:, veuillez trouver\n"
+"ci-dessous l'adresse qui vous permettra de changer le mot de passe de\n"
+"votre identifiant.\n"
+"\n"
+":link:\n"
+"\n"
+"Nous vous remercions de votre confiance.\n"
+"\n"
+"Cordialement"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/owner-welcome.html.phtml:9
+#: loco:58209bfd52e1a13c038b477c
+msgid "* Indiquez votre email : :customer_id:"
+msgstr "* Indiquez votre email : :customer_id:"
+
+#: home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/mails/owner-welcome.html.phtml:10
+#: loco:58209bfd52e1a13c038b477d
+msgid "* Indiquez votre mot de passe : :password:"
+msgstr "* Indiquez votre mot de passe : :password:"

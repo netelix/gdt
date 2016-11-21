@@ -9,6 +9,7 @@ class Form_ProductsEditProduct extends Uop_Form_ProductsEditProduct
   	"certificate"=>array("type"=>"checkbox"),
   	"since"=>array("type"=>"date"),
   	"awards"=>array("type"=>"text"),
+      "material"=>array("type"=>"text"),
 
   );
   protected $_attributesCheckbox = array("tattoo_style");

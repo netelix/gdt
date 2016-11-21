@@ -10,14 +10,20 @@
   $images = $std_images = $org->images();
   $products = $org->products();
   $city = $org->city();
-  $country = $city->ancester(array("country"));
+  $this->country = $country = $city->ancester(array("country"));
   $this->belgium = $country->local_id == "BE";
   $people_names = array();
   $videos = $org->videos();
   foreach($products as $r_product){
 	  $people_names[] = $r_product->name()->__toString();
   }
-  if(count($people_names)>1){
+
+if(!in_array(App::lang(), $loc->langs())){
+	$this->headMeta()
+		->appendName("robots", "noindex, nofollow");
+}
+
+if(count($people_names)>1){
 	  $last_people_name = array_pop($people_names);
 	  $people_names = implode(", ", $people_names).__(" et ").$last_people_name;
     $desc = __("Depuis leur studio de :loc_name:, :names: vous montrent les :num: photos de leurs derniers tatouages", array("names"=>$people_names, "num"=>$images->count(), "loc_name"=>$city->name()));
@@ -36,12 +42,6 @@
 
   
   $this->doctype(Zend_View_Helper_Doctype::XHTML1_RDFA);
-  $this->headMeta()->appendProperty("og:title", $org->name()." - Tattoome");
-  $this->headMeta()->appendProperty("og:description", $desc);
-  if($images->count()){
-	  $this->headMeta()->appendProperty("og:image", "//".App::config()->link->domain.$images->getRow(0)->url("orig"));
-  }
-  $this->headMeta()->appendProperty("og:url", $org->link()->option("canonical", true)->assemble());
 
   $this->headMeta()->appendName("description", $desc);
   $this->headTitle()->set($org->name());
@@ -91,8 +91,66 @@
 								<li><a href="#reviews"><?= __("Avis") ?> (<?= $ad->meta("num_review")?>)</a></li>
 							</ul>
 						</div>
-						<div class="studio_description">
-							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
+							<br>
+							<div class="studio_tatoueurs" id="products">
+								<a class="btn btn-purple btn-block  visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
+								<!-- Nav tabs -->
+
+								<ul class="nav nav-tabs" role="tablist">
+									<? foreach($products as $x=>$r_product):?>
+										<li role="presentation" class="<?= $x == 0 ? 'active':''?>"><a href="#prod-<?= $r_product->id ?>" data-target="#prod-<?= $r_product->id ?>" aria-controls="home" role="tab" data-toggle="tab"><?= $r_product->name() ?></a></li>
+									<? endforeach?>
+								</ul>
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<? foreach($products as $x=>$r_product):?>
+										<div role="tabpanel" class="tab-pane <?= $x == 0 ? 'active':''?>" id="prod-<?= $r_product->id ?>">
+											<div class="row text-content">
+												<? if($since = $r_product->since()): ?>
+													<p class="col-md-6"><strong><?= __("Tatoue depuis :") ?></strong> <?= Zend_Date::now()->set($since)->get("yyy") ?></p>
+												<? endif ?>
+												<? if($ink = $r_product->ink()): ?>
+													<p class="col-md-6"><strong><?= __("Encre utilisée :") ?></strong> <?= $ink ?></p>
+												<? endif ?>
+												<? if($material = $r_product->material()): ?>
+													<p class="col-md-12"><strong><?= __("Matériel utilisée :") ?></strong> <?= $material ?></p>
+												<? endif ?>												<? $prod_styles = $r_product->attributes("tattoo_style") ?>
+												<? if(count($prod_styles)): ?>
+													<p class="col-md-12"><strong><?= __("Styles pratiqués : ")?></strong>
+														<? foreach($prod_styles as $style): ?>
+															<span class="resultat_content_texte_tag"><?= $style->name() ?></span>
+														<? endforeach ?>
+													</p>
+												<? endif ?>
+												<? if($convention = $r_product->conventions()): ?>
+													<p class="col-md-12"><strong><?= __("Conventions à venir :") ?></strong> <?= $convention ?></p>
+												<? endif ?>
+												<? if($awards = $r_product->awards()): ?>
+													<p class="col-md-12"><strong><?= __("Prix gagnés :") ?></strong> <?= $awards ?></p>
+												<? endif ?>
+
+												<p class="col-md-12 description"><?= $r_product->description(null, array("strict"=>true)) ?>
+													<? if($interview_url = $r_product->interview()): ?>
+													<a target="_blank" href="<?= $interview_url ?>"><?= __("Lisez son Interview sur le blog") ?></a></p>
+											<? endif ?>
+
+											</div>
+											<div class="studio_photos_carousel">
+												<? $images = $r_product->images(); ?>
+												<? if($images->count() > 0): ?>
+													<?= $this->partial("shared/_carousel.phtml", array("images"=>$r_product->images(),	"size"=>"orig", "certif"=>$r_product->certificate())); ?>
+												<? endif ?>
+											</div>
+										</div>
+									<? endforeach ?>
+								</div>
+							</div>
+
+							<h2 class="description-title"><?= __("Le studio") ?></h2>
+
+							<div class="studio_description">
+
+								<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
 							<div class="row">
 								<div class="studio_description_texte row">
 									<? if($since = $org->since()): ?>
@@ -101,11 +159,11 @@
 									<? if($founder = $org->founder()): ?>
 										<p class="col-md-6"><strong><?= __("Fondateur :") ?></strong> <?= $founder ?></p>
 									<? endif ?>
-									<p class="col-md-6"><strong><?= __(":num: tatoueurs :", array("num"=>$products->count())) ?></strong> <?= $people_names ?></p>
+									<p class="col-md-6"><strong><?= __(":num: tatoueur(s) :", array("num"=>$products->count())) ?></strong> <?= $people_names ?></p>
 									<? if($size = $org->size()): ?>
 										<p class="col-md-6"><strong><?= __("Surface du studio :") ?></strong> <?= $size ?></p>
 									<? endif ?>
-									<p class="col-md-6"><strong><?= __("Avec ou sans rendez-vous :") ?></strong> 
+									<p class="col-md-6"><strong><?= __("Avec ou sans rendez-vous :") ?></strong>
 										<?=  (1 == $org->noRdv()) ? __("sans") : __("avec") ?></p>
 							  	<p class="col-md-6">
 										<strong><?= __("Piercings")?> : </strong>
@@ -135,7 +193,7 @@
 									  	<? endforeach ?>
 										</p>
 									</div>
-									<p class="col-md-12 description"><?= $org->description(); ?></p>
+									<p class="col-md-12 description"><?= $org->description(null, array("strict"=>true)); ?></p>
 								</div>
 
 							</div>
@@ -143,14 +201,14 @@
 						  	<? if($org->tattoobox):?>
 									<img src="/tattoome/images/tatoobox.png" alt="">
 								<? endif ?>
-								<a href="https://www.tattoome.com/creation" class="pull-right"><?= __("CRÉATION : Créez vous-même votre tatouage") ?></a>
+								<a href="https://www.tattoome.com/creation" class="pull-right hidden-es"><?= __("CRÉATION : Créez vous-même votre tatouage") ?></a>
 							</div>
 						</div>
 						<? else: ?>
 						<div class="studio_description">
 						    <div class="studio_description_texte">
 						        <?= $this->link(array(), "subscription-lead")->a("C'est mon studio !", "a_free-tattoos") ?>
-						        <p class="desc_free-tattoos"><?= $org->description() ?>
+						        <p class="desc_free-tattoos"><?= $org->description(null, array("strict"=>true)) ?>
 <br />
 						        <?= __("Pour consulter la liste des studios membres près de :place:", array("place"=>$city->name()))?>, <?= $city->link()->a(__("cliquez ici")) ?>.</p>
 						        <?= $city->link()->a(__("Voir la liste des studios membres près de :place:", array("place"=>$city->name())),"a_free-tattoos") ?>
@@ -165,66 +223,14 @@
 						    </div>
 						</div>
 						<? endif ?>
-						
+
 						<? if($org->status() != 'free'): ?>
-						<div class="studio_tatoueurs" id="products">
-							<a class="btn btn-purple btn-block  visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
-							<h2><?= __("Tatoueurs") ?></h2>
-							<!-- Nav tabs -->
-							
-					  	<ul class="nav nav-tabs" role="tablist">
-					  		<? foreach($products as $x=>$r_product):?>
-							    <li role="presentation" class="<?= $x == 0 ? 'active':''?>"><a href="#prod-<?= $r_product->id ?>" data-target="#prod-<?= $r_product->id ?>" aria-controls="home" role="tab" data-toggle="tab"><?= $r_product->name() ?></a></li>
-							 	<? endforeach?>
-					  	</ul>
-						  <!-- Tab panes -->
-						    <div class="tab-content">
- 						  		<? foreach($products as $x=>$r_product):?>
-							    <div role="tabpanel" class="tab-pane <?= $x == 0 ? 'active':''?>" id="prod-<?= $r_product->id ?>">
-							    	<div class="row text-content">
-									    <? if($since = $r_product->since()): ?>
-												<p class="col-md-6"><strong><?= __("Tatoue depuis :") ?></strong> <?= Zend_Date::now()->set($since)->get("yyy") ?></p>
-											<? endif ?>
-									    <? if($ink = $r_product->ink()): ?>
-												<p class="col-md-6"><strong><?= __("Encre utilisée :") ?></strong> <?= $ink ?></p>
-											<? endif ?>
-											<? $prod_styles = $r_product->attributes("tattoo_style") ?>
-											<? if(count($prod_styles)): ?>
-											<p class="col-md-12"><strong><?= __("Styles pratiqués : ")?></strong>
-										  	<? foreach($prod_styles as $style): ?>
-										  	<span class="resultat_content_texte_tag"><?= $style->name() ?></span>
-										  	<? endforeach ?>
-											</p>
-											<? endif ?>
-									    <? if($convention = $r_product->conventions()): ?>
-												<p class="col-md-12"><strong><?= __("Conventions à venir :") ?></strong> <?= $convention ?></p>
-											<? endif ?>
-									    <? if($awards = $r_product->awards()): ?>
-												<p class="col-md-12"><strong><?= __("Prix gagnés :") ?></strong> <?= $awards ?></p>
-											<? endif ?>
-											
-											<p class="col-md-12 description"><?= $r_product->description() ?> 	  	
-								    	<? if($interview_url = $r_product->interview()): ?>
-								    		<a target="_blank" href="<?= $interview_url ?>"><?= __("Lisez son Interview sur le blog") ?></a></p>
-								    	<? endif ?>
-							    	
-							    	</div>
-										<div class="studio_photos_carousel">
-									  	<? $images = $r_product->images(); ?>
-										  <? if($images->count() > 0): ?>
-										    <?= $this->partial("shared/_carousel.phtml", array("images"=>$r_product->images(),	"size"=>"orig", "certif"=>$r_product->certificate())); ?>	  
-									  	<? endif ?>
-										</div>
-							    </div>
-							    <? endforeach ?>
-						    </div>
-						</div>
 						<div class="studio_photos" id="photos">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?><</a>
 							<h2><?= __("Photos du studio de tatouage") ?></h2>
 							<div class="studio_photos_carousel">
 								<? $imgs = array(); ?>
-								<? 
+								<?
 									foreach($std_images as $img){
 										$imgs[] = $img;
 									}
@@ -251,7 +257,7 @@
 								</div>
 							<? endif ?>
 						<? endif ?>
-					
+
 						<div class="studio_localisation" id="location">
 							<a class="btn btn-purple btn-block visible-xs" href="#contact"><?= __("Contacter le studio") ?></a>
 							<? if($org->status() != 'free'): ?>
@@ -281,7 +287,7 @@
 								  	$days[$day[0]][] = __(":open: à :close:", array("open"=>$hours[1], "close"=>$hours[2]));
 							  	}
 							  	?>
-							  	<? $date = new Zend_Date() ?>
+							  	<? $date = new Zend_Date(null, App::lang()) ?>
 							  	<? foreach($days as $day=>$times): ?>
  										<div class="horaire_singleton">										
 								  	  <p class="left_content"><?= ucfirst($date->set($day+1, Zend_Date::WEEKDAY_8601)->get(Zend_Date::WEEKDAY));?></p>
@@ -392,9 +398,9 @@
 					  </a>
 					  <p class="well well-sm collapse phone-number"><span class="glyphicon glyphicon-phone"></span><?= $org->phoneNumber() ?></p>
 				  	 <script>
-						  <?= $this->eventHit($org, "visit");?>
+						  <?= $this->eventHit($org, "visit-".App::lang());?>
 						  $(".phone-number-toggler").click(function(){
-						  <?= $this->eventHit($org, "show-phone");?>
+						  <?= $this->eventHit($org, "show-phone-".App::lang());?>
 						  }); 
 						</script>
                     <? else: ?>

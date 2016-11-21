@@ -8,6 +8,9 @@ class LocationController extends Uop_Controller_Location
   {
     $this->view->location = $r_loc = $this->_findResource(array("privilege"=>"show"));
 		$this->view->baselink = preg_replace("/(\/[0-9]+)$/", "", $this->getRequest()->getRequestUri());
+	  $this->view->country = $r_country = $r_loc->isCountry() ? $r_loc : $r_loc->ancester(array("country"));
+		$this->view->search_form->getElement("loc_name")->setUrl(Link::url("location-suggest")."?country_loc_id=". $r_country->id ."&query=");
+
 
     if($redirect = $r_loc->redirectTo()){
       if(!empty($redirect) 
@@ -66,7 +69,7 @@ class LocationController extends Uop_Controller_Location
 		$this->view->form = $form;
 
   }
-  
+
   protected function _filterTypes()
   {
 	  return array("tattoo_style"=>__("Style pratiqu�s"));
@@ -74,17 +77,22 @@ class LocationController extends Uop_Controller_Location
   	
 	public function galeryAction()
 	{
-		$r_loc = App::table("locations")->country("FR");
-    $this->view->adm2 = $r_loc->getDescendants(null,  array("type"=>Uop_Model_DbTable_Locations::TYPE_ADM2));
 
 		if($img_id = $this->getParam("id")){
 			$this->view->img =  $img = App::table("images")->find($img_id)->current();
-			$pager_link = Link::factory(array(), "galery");
+            $r_loc = $img->organization()->location()->ancester(array("country"));
+			$pager_link = $r_loc->linkGalery();
 			$this->view->baselink = $pager_link->assemble();			
 		} else {
+            $r_loc_id = $this->_getParam("loc_id");
+            $r_loc = isset($r_loc_id) ?
+                App::table("locations")->find($r_loc_id)->current() :
+                App::table("locations")->country("FR");
 			$this->view->baselink = $this->getRequest()->getRequestUri();
 			$pager_link = null;
 		}
+        $this->view->country = $r_loc;
+        $this->view->adm2 = $r_loc->getDescendants(null,  array("type"=>Uop_Model_DbTable_Locations::TYPE_ADM2));
 
 		if($this->_loggedAdmin() && isset($img)){
 			$this->view->form = $form = App::form("AdminPhoto", $img, array($img->ref_type."_".$img->ref_id=>"1"));
@@ -104,7 +112,8 @@ class LocationController extends Uop_Controller_Location
 		$filters = $this->_loadFilters();
 		$this->view->current_filters = $current_filters = App::table("ads")->unserializeFilters($this->_getParam('filters'));
 
-		if(count(current($current_filters)) > 1) {
+		/* FIX SEO: ONLY ONE FILTER */
+        if(count(current($current_filters)) > 1) {
 			$current_filters = App::table("ads")->serializeFilters(array("attr"=>current($current_filters)[0]));
 			$this->_redirect(Link::factory(array("filters"=>$current_filters), "galery-with-filters"), array("code"=>301));
 		}
@@ -128,14 +137,14 @@ class LocationController extends Uop_Controller_Location
 				}
 
 				if(empty($filters["attr"])){
-					$link = Link::factory(array(), "galery");
+					$link = $r_loc->linkGalery();
 				} else {
 					$filters = App::table("ads")->serializeFilters($filters);
-					$link = Link::factory(array("filters"=>$filters), "galery-with-filters");
+					$link =  $r_loc->linkGalery($filters);
 				}
 				$link->anchor($anchor);
 				$checkboxes[] = $link;
-				$filter_select[Link::factory(array("filters"=>"attr:$r_attr->id"), "galery-with-filters")->assemble()] = $r_attr->name()->__toString();
+				$filter_select[$r_loc->linkGalery("attr:$r_attr->id")->assemble()] = $r_attr->name()->__toString();
 			}
 		}
 		$this->view->current_styles = $current_styles;
@@ -143,6 +152,8 @@ class LocationController extends Uop_Controller_Location
 		$this->view->filters_select = $filter_select;
 
 		$select = App::table("images")->selectBestImages();
+		$select->join("locations", "locations.id = ads.loc_id", array())
+			->where("country_loc_id = ?", $r_loc->id);
 		
 		foreach($current_filters as $name=>$value){
       if(!isset($value)){

@@ -352,7 +352,7 @@ margin-left: -35%;
 					min-height:168px;
 					background-position: 10px;
 				}
-				#banner_promo .col-lg-4 .promo_container_right{
+				#banner_promo .promo_container_right{
 					background:url('../images/conciergerie.png') left no-repeat;
 					min-height:168px;
 					background-position: 10px;
@@ -383,55 +383,55 @@ margin-left: -35%;
 					position: absolute;
 					bottom: 20px;
 				}					
-				#banner_promo .col-lg-4	.promo_container_right .link_promo	
+				#banner_promo .promo_container_right .link_promo	
 				{
 					padding-top:33px;
 					position: absolute;
 					bottom: 20px;
 				}
-				#banner_promo .col-lg-4	.promo_container_right .link_promo > a	
+				#banner_promo .promo_container_right .link_promo > a	
 				{
 					/*background-color: #73569d;*/
 					background-color: white;
 					color: #73569d !important;
 				}
 				
-				#banner_promo .col-lg-4 .promo_container_right .title_promo h2{
+				#banner_promo .promo_container_right .title_promo h2{
 					font-size: 20px !important;
 					color: white !important;
 					text-shadow: none !important;
 				}
 				
-				#banner_promo .col-lg-4 .promo_container_right .title_promo .gothambold{
+				#banner_promo .promo_container_right .title_promo .gothambold{
 					font-size: 11px;
 					color: white !important;
 					text-shadow: none !important;
 					margin-top: 5px;
 				}	
 
-				#banner_promo .col-lg-4 .promo_container_right .title_promo .gotham{
+				#banner_promo .promo_container_right .title_promo .gotham{
 					font-size: 9px;
 					color: white !important;
 					text-shadow: none !important;
 					margin-top: 0px;
 				}
 																											
-					#banner_promo .col-lg-4	.promo_container_ld .title_promo h2,
-					#banner_promo .col-lg-4	.promo_container_ld .title_promo p{
+					#banner_promo	.promo_container_ld .title_promo h2,
+					#banner_promo	.promo_container_ld .title_promo p{
 						margin:0;
 						text-transform: uppercase;
 						font-weight:bold;
 						color:#1b1b1b;
 				    text-shadow: #FFF -2px 1px 4px;
 					}
-					#banner_promo .col-lg-4	.promo_container_ld .title_promo h2{
+					#banner_promo .promo_container_ld .title_promo h2{
 						font-size: 25px;
 					}
-					#banner_promo .col-lg-4	.promo_container_ld .title_promo p{
+					#banner_promo .promo_container_ld .title_promo p{
 						margin-top:10px;
 						font-size: 12px;
 					}
-					#banner_promo .col-lg-4	.promo_container_ld .link_promo a.btn-link-promo{
+					#banner_promo .promo_container_ld .link_promo a.btn-link-promo{
 						margin-top:0px;
 						display:block;
 						text-align: center;
@@ -463,7 +463,7 @@ margin-left: -35%;
 		#banner video{
 			display:none;
 		}
-		#banner_promo .col-lg-4	.promo_container_center .link_promo	
+		#banner_promo .promo_container_center .link_promo	
 		{	
 			padding-top:25px;
 		}		
@@ -474,8 +474,8 @@ margin-left: -35%;
 		}
 	}
 	@media (max-width: 530px){
-		#banner_promo .col-lg-4	.promo_container_ld .title_promo,
-		#banner_promo .col-lg-4	.promo_container_ld .link_promo
+		#banner_promo .promo_container_ld .title_promo,
+		#banner_promo .promo_container_ld .link_promo
 		{
 			/*width: 100%;
 			padding-left:10px;
@@ -487,7 +487,7 @@ margin-left: -35%;
 		#banner_promo .col-lg-4	.promo_container_ld h2{
 			font-size:20px;
 		}
-		#banner_promo .col-lg-4 .promo_container_right{
+		#banner_promo .promo_container_right{
 			background-position: left;
 		}
 		#banner_promo{
@@ -496,17 +496,17 @@ margin-left: -35%;
 		}
 	}
 	@media (max-width: 1200px){
-		#banner_promo .col-lg-4	.promo_container_ld .link_promo	
+		#banner_promo .promo_container_ld .link_promo	
 		{
 			padding-left: 170px;	
 		}
-		#banner_promo .col-lg-4	.promo_container_ld{
+		#banner_promo .promo_container_ld{
 			margin-left: auto;
 			margin-right: auto;
 			background-position: 0px;
 		}
 		#banner_promo .col-lg-4 .promo_container_center,
-		#banner_promo .col-lg-4 .promo_container_right
+		#banner_promo .promo_container_right
 		{
 			margin-top:15px;
 		}
@@ -534,7 +534,7 @@ margin-left: -35%;
 /*END BANNER PROMO*/
 
 /*BANNER PROMO 2*/
-	#banner_promo .col-lg-3{
+	#banner_promo {
 		padding:0px;
 	}
 	#banner_promo .promo_container_md_singleton_right {

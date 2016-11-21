@@ -1,4 +1,5 @@
 <? $this->content_with_sidebar = true ?>
+<? $t_videos = App::table("videos"); ?>
 <?= $this->partial("organization/_edit-header.phtml", array("org"=>$this->resource, "current"=>"videos")); ?>
 <?= $this->resource->linkAddVideo()->a(__("Ajouter une video"), "btn btn-primary link-modal") ?>
 

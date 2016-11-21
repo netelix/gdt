@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<? $this->country = empty($this->country) ? App::table("locations")->country("FR") : $this->country; ?>
+<?
+	$default_countries = array(
+		"es"=>"ES",
+		"fr"=>"FR"
+	);
+	$country_iso = $default_countries[App::lang()];
+	$this->country = empty($this->country) ? App::table("locations")->country($country_iso) : $this->country; ?>
 <? 
 	$countries = array("BE", "FR", "CH", "ES"); 
 	foreach($countries as $iso){
 		$r_countries[$iso] = App::table("locations")->country($iso);
 	}
 ?>
-<html lang="<?= App::lang()?>">
+<html lang="<?= App::lang()?>" class="lang-<?= App::lang()?>">
 	<head>
 		<meta charset="UTF-8">
 		<? if($this->body_class != "index"): ?>
@@ -15,10 +21,10 @@
 		<? if($this->body_class != "index"): ?>
 		<?= $this->headTitle() ?>
 		<? else: ?>
-		<?= $this->headTitle(__('Le meilleur du tatouage en :country: | TattooMe',array("country"=>$this->country->name())),'SET') ?>
+		<?= $this->headTitle(__("Le meilleur du tatouage en :country: | TattooMe",array("country"=>$this->country->name())),'SET') ?>
 		<? endif ?>
 		<? if($this->body_class == "index"): ?>
-		<? $this->headMeta()->appendName('description',__('Retrouvez les meilleurs tatoueurs de :country: ainsi que les plus beaux modèles de tatouages.', array("country"=>$this->country->name()))) ?>
+		<? $this->headMeta()->appendName('description',__("Retrouvez les meilleurs tatoueurs de :country: ainsi que les plus beaux modèles de tatouages.", array("country"=>$this->country->name()))) ?>
 		<? endif ?>
 		<?= $this->headMeta()?>
 		<!-- JAVASCRIPTS CALL -->
@@ -30,7 +36,7 @@
 			->appendStylesheet("/tattoome/css/bootstrap-custom.css")
 			->appendStylesheet("//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css")
 
-			->appendStylesheet("/tattoome/css/style.css?".uniqid()); ?>
+			->appendStylesheet("/tattoome/css/style.css"); ?>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
@@ -38,7 +44,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,700italic' rel='stylesheet' type='text/css'>
 					<!-- favicon -->
         <link rel="icon" href="/img/favicon.ico" type="images/x-icon" />
-        <meta property="og:image" content="/img/Tattoome-facebook-cover.jpg">
+        <meta property="og:image" content="/img/fb-cover.jpg">
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 			<!--[if lt IE 9]>
@@ -104,7 +110,7 @@
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
 		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+		  js.src = "//connect.facebook.net/<?= App::lang() ?>_<?= $country_iso ?>/sdk.js#xfbml=1&version=v2.0";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 		<script>
@@ -178,16 +184,16 @@
             <div class="content">
             <!-- Your content here -->
             <div class="lightbox_desc">
-            <p>Rejoignez<br />La communauté <span style="text-transform:none;font-size:24px;">Tattoo<span style="color:#73569d;">Me</span></span></p>
-            <p>et <span style="color:#73569d;">recevez gratuitement</span><br />Le guide du 1er tatouage<br />ainsi que le meilleur de l'actu<br />et des bons plans tattoos</p>
+            <p><?= __("Rejoignez") ?><br /><?= __("La communauté")?> <span style="text-transform:none;font-size:24px;">Tattoo<span style="color:#73569d;">Me</span></span></p>
+            <p><?= __("et")?> <span style="color:#73569d;"><?= __("recevez gratuitement") ?></span><br /><?= __("Le guide du 1er tatouage<br />ainsi que le meilleur de l'actu<br />et des bons plans tattoos") ?></p>
             <div id="join_tattoome_communaute">
                 <input type="text" id="email" name="email" placeholder="   Email" />
                 <br />
-                <input type="checkbox" name="guideFirstTattoo" id="guideFirstTattoo" value="1"><div class="checkbox_desc">Je souhaite recevoir le guide du 1er tatouage</div>
+                <input type="checkbox" name="guideFirstTattoo" id="guideFirstTattoo" value="1"><div class="checkbox_desc"><?= __("Je souhaite recevoir le guide du 1er tatouage") ?></div>
                 <br />
-                <button class="btn btn-purple" id="btn_popin_guide">Je m'inscris</button>
+                <button class="btn btn-purple" id="btn_popin_guide"><?= __("Je m'inscris") ?></button>
             </div>
-            <p>Traitement des données personnelles conformes à la loi française (CNIL)</p>
+            <p><?= __("Traitement des données personnelles conformes à la loi française (CNIL)") ?></p>
             </div>
             </div>
           </div>
@@ -215,12 +221,14 @@
 				    <div class="collapse navbar-collapse" id="menu1">
 				        <ul class="nav navbar-nav">
 				            <li><?= $this->country->linkHome()->a(__("Le Guide")) ?></li>
+							<? if(App::lang() != "es"): ?>
 					        <li><a href="https://www.tattoome.com/creation"><?= __("La Création") ?></a></li>
 					        <li><a href="https://www.tattoome.com/tattoobox"><?= __("Le Shop") ?></a></li>
 					        <li><a href="https://www.tattoome.com/blog"><?= __("Le Mag") ?></a></li>
+							<? endif ?>
 				      	</ul>
 				        <ul class="nav navbar-nav navbar-right">
-					        <li>Rejoignez 300 000 passionnés !</li>
+					        <li><? __("Rejoignez 300 000 passionnés !") ?></li>
 					        <li><a href="https://www.instagram.com/tattoometattoo/" target="_blank" class="instagram_link" style="margin-right:10px;"></a></li>
 					        <li><a href="https://www.facebook.com/tattootattoome" target="_blank" class="facebook_link"></a></li>
 				        </ul>
@@ -242,7 +250,7 @@
 				        <span class="icon-bar"></span>
 			        </button>
 			        <?= $this->country->linkHome()->a(__('LE GUIDE') .'<br />
-			                             <span class="navbar-brand-custom-badge">
+			                             <span class="navbar-brand-custom-badge hidden-es">
                             Ex Galeriedutatouage
                         </span>', "navbar-brand navbar-brand-custom") ?>
 			    </div>
@@ -251,8 +259,8 @@
 			    <div class="collapse navbar-collapse" id="menu2">
 			        <ul class="nav navbar-nav">
 				        <li class="<?= $this->active == 'studio' ? 'active':''?>"><?= $this->country->link()->a(__('Trouver un tatoueur').' <span class="sr-only">(current)</span>')?></li>
-				        <li class="<?= $this->active == 'galery' ? 'active':''?>"><?=  $this->link(array("page"), 'galery')->a(__("Idées tatouage"))?></li>
-				        <li class="<?= $this->active == 'conventions' ? 'active':''?>"><?=  $this->link(array(), 'conventions')->a(__("Conventions"))?></li>
+				        <li class="<?= $this->active == 'galery' ? 'active':''?>"><?= $this->country->linkGalery()->a(__("Idées tatouage"))?></li>
+				        <li class="<?= $this->active == 'conventions' ? 'active':''?> hidden-es"><?=  $this->link(array(), 'conventions')->a(__("Conventions"))?></li>
 				        <!-- <li class="<?= $this->active == 'untattoo' ? 'active':''?>"><?=  $this->link(array(), 'untattoo')->a(__("Détatouage"))?></li> -->
 
 			      	</ul>
@@ -270,7 +278,7 @@
 				            <ul class="dropdown-menu">
 				            	<? foreach($r_countries as $iso=>$r_country): ?>
 				            		<? if($iso != $this->country->local_id): ?>
-				            		<li><?= $r_country->link()->a('<span class="flag flag_'.strtolower($iso).'"></span> '.$r_country->name()) ?></li>
+				            		<li><?= App::table("locations")->linkHomeCountry($r_country)->jslink('<span class="flag flag_'.strtolower($iso).'"></span> '.$r_country->name()) ?></li>
 				            		<? endif ?>
 					            <? endforeach ?>
 				            </ul>
@@ -307,7 +315,7 @@
 		<footer>
 			<div class="footer_top  container-default">
 				<div class="row">
-					<div class="col-lg-3">
+					<div class="col-lg-3 hidden-es">
 						<h4 class="footer_top_header"><?= __("TATTOOME") ?></h4>
 						<a href="https://www.tattoome.com/creation" class="footer_top_link link_uppercase"><?= __("La Création") ?></a>
 						<a href="https://www.tattoome.com/tattoobox" class="footer_top_link link_uppercase"><?= __("tattoobox") ?></a>
@@ -316,7 +324,7 @@
 					<div class="col-lg-3">
 						<h4 class="footer_top_header"><?= __("SUIVEZ-nous") ?></h4>
 				    <a href="https://www.facebook.com/tattootattoome" target="_blank" class="footer_top_link">Facebook</a>
-						<a href="https://www.instagram.com/tattoometattoo/" target="_blank" class="footer_top_link">instagram</a>
+						<a href="https://www.instagram.com/tattoometattoo/" target="_blank" class="footer_top_link">Instagram</a>
 					</div>
 					<div class="col-lg-3">
 						<h4 class="footer_top_header"><?= __("Je suis tatoueur") ?></h4>
@@ -325,11 +333,11 @@
 					</div>
 					<div class="col-lg-3">
 						<h4 class="footer_top_header"><?= __("recherche") ?></h4>	
-						<? foreach($this->country->getCities(5) as $r_city):?>
+						<? foreach($this->country->getCities(5, "population DESC") as $r_city):?>
 							<?= $r_city->link()->a(__("Tatoueur à :name:", array("name"=>$r_city->name())),"footer_top_link")?>
 						<? endforeach; ?>
 					 	<? foreach($r_countries as $iso=>$r_country): ?>
-							<?= $r_country->link()->a(__("Tatoueur en :name:", array("name"=>$r_country->name())),"footer_top_link")?>
+							<?= $r_country->linkHome()->jslink(__("Tatoueur en :name:", array("name"=>$r_country->name())), array("class"=> "footer_top_link"))?>
             <? endforeach ?>
 
 					</div>

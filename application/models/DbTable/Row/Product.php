@@ -8,6 +8,7 @@ class Model_DbTable_Row_Product extends Uop_Model_DbTable_Row_Product
    "ink",
    "conventions",
    "certificate",
+      "material",
    "awards"
    
   );
