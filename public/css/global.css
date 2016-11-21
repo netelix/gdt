@@ -1105,7 +1105,7 @@ body .top-wrapper-mask {
   bottom: 10px;
   text-shadow: #000 2px 1px 15px;
 }
-#banner_promo .col-lg-3 {
+#banner_promo .promo_container_md_singleton {
   margin-bottom: 15px;
   float: left;
   padding-right: 0px;
@@ -1115,14 +1115,40 @@ body .top-wrapper-mask {
   height: 225px;
 }
 @media (min-width: 1200px) {
-  #banner_promo .col-lg-3 {
+  #banner_promo .promo_container_md_singleton {
     width: 22.5%;
   }
 }
 @media (min-width: 563px) {
-  #banner_promo .col-lg-3 {
+  #banner_promo .promo_container_md_singleton {
     margin-left: 17.5px;
   }
+}
+.lang-es #banner_promo .col-lg-6 {
+  width: 50%;
+}
+.lang-es #banner_promo .col-lg-6.adviser {
+  padding-left: 0px;
+}
+.lang-es #banner_promo .col-lg-6.adviser .promo_container_ld {
+  background-position: initial;
+  background-size: cover;
+  padding-left: 165px;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+.lang-es #banner_promo .col-lg-6.newsletter {
+  padding-right: 0px;
+}
+.lang-es #banner_promo .col-lg-6.newsletter .promo_container_md_singleton {
+  width: 100%;
+  margin-left: 0px;
+  min-height: 168px;
+  height: 168px;
+  margin-bottom: 0px;
+}
+.lang-es #banner_promo .col-lg-6.newsletter .promo_container_md_singleton a.btn-custom-link-promo {
+  width: 140px;
 }
 #banner_promo_container #banner_promo {
   padding-bottom: 30px;
@@ -1533,7 +1559,11 @@ body .top-wrapper-mask {
   /** Apply basic lightbox styling */
   position: fixed;
   z-index: 9999;
+  width: 100%;
   color: #333333;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.57);
 }
 #lightbox-newsletter {
   width: 100%;
@@ -1778,4 +1808,45 @@ body .top-wrapper-mask {
   .img-conciergerie button {
     display: none;
   }
+}
+.description-title {
+  color: #1b1b1b;
+  text-transform: uppercase;
+  font-family: 'Francois One', sans-serif;
+  font-size: 24px;
+}
+.studio_description,
+.studio_photos,
+.studio_videos,
+.studio_localisation,
+.studio_tatoueurs,
+.studio_avis {
+  float: none;
+}
+.conseiller-header {
+  color: white;
+  font-size: 18px;
+}
+.conseiller-header h1 {
+  text-transform: uppercase;
+  font-family: GothamBold;
+  margin-top: 40px;
+}
+.conseiller-header h1 span {
+  color: black;
+}
+.conseiller-header p.headline {
+  font-size: 20px;
+  font-weight: bold;
+}
+.conseiller-header ul {
+  padding-left: 20px;
+}
+.lang-es .navbar-sousmenu .navbar-brand {
+  padding-top: 20px;
+  color: #73569d;
+  font-size: 30px;
+}
+.lang-es .hidden-es {
+  display: none;
 }

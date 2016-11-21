@@ -32,7 +32,8 @@ class Form_InvoiceEdit extends Uop_Form_Abstract
     $this->addElement("select","type", array("multioptions"=>array(
     	"year"=>"Facture annuelle",
     	"month"=>"Facture mensuelle")));
-    	
+
+    $orgs = array();
     foreach($this->user->organizations() as $r_org){
     	$txt = (string)$r_org->name();
 	    $orgs[$txt]=$txt;
