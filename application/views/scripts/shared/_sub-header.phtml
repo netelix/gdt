@@ -3,6 +3,11 @@
 		<div class="container-fluid" id="form_trouver_tatoueur_container_idee">
 			<? if(isset($this->search_form)):?>
 				<?= $this->formHeader($this->search_form, array("class"=>'form-inline form_trouver_tatoueur center-block'))?>
+				<p><?= __("Tatoueurs à ")?>
+					<? foreach($this->country->getCities(8, "population DESC") as $r_city): ?>
+						<?= $r_city->link()->a() ?>,
+					<? endforeach ?>...
+				</p>
 						<?= $this->search_form->renderGroups(array(
 						  "loc_name"=>array(
 						    "label"=>__("Trouvez un tatoueur près de chez vous"),

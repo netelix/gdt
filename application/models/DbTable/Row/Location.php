@@ -43,6 +43,11 @@ class Model_DbTable_Row_Location extends Uop_Model_DbTable_Row_Location
 		return $this->getTable()->linkHomeCountry($this);
 	}
 
+	public function lang()
+    {
+        return current($this->langs());
+    }
+
 	public function langs()
     {
         if($this->type != "country"){

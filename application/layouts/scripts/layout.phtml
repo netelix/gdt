@@ -193,7 +193,7 @@
                 <br />
                 <button class="btn btn-purple" id="btn_popin_guide"><?= __("Je m'inscris") ?></button>
             </div>
-            <p><?= __("Traitement des données personnelles conformes à la loi française (CNIL)") ?></p>
+            <p><?= __("Traitement des données personnelles conformes à laf loi française (CNIL)") ?></p>
             </div>
             </div>
           </div>
@@ -222,9 +222,9 @@
 				        <ul class="nav navbar-nav">
 				            <li><?= $this->country->linkHome()->a(__("Le Guide")) ?></li>
 							<? if(App::lang() != "es"): ?>
-					        <li><a href="https://www.tattoome.com/creation"><?= __("La Création") ?></a></li>
 					        <li><a href="https://www.tattoome.com/tattoobox"><?= __("Le Shop") ?></a></li>
 					        <li><a href="https://www.tattoome.com/blog"><?= __("Le Mag") ?></a></li>
+							<li><a href="https://www.tattoome.com/tattoobox/inkbox"><?= __("Tatouages éphémères") ?></a></li>
 							<? endif ?>
 				      	</ul>
 				        <ul class="nav navbar-nav navbar-right">
@@ -278,7 +278,7 @@
 				            <ul class="dropdown-menu">
 				            	<? foreach($r_countries as $iso=>$r_country): ?>
 				            		<? if($iso != $this->country->local_id): ?>
-				            		<li><?= App::table("locations")->linkHomeCountry($r_country)->jslink('<span class="flag flag_'.strtolower($iso).'"></span> '.$r_country->name()) ?></li>
+				            		<li><?= App::table("locations")->linkHomeCountry($r_country)->a('<span class="flag flag_'.strtolower($iso).'"></span> '.$r_country->name()) ?></li>
 				            		<? endif ?>
 					            <? endforeach ?>
 				            </ul>
@@ -337,7 +337,7 @@
 							<?= $r_city->link()->a(__("Tatoueur à :name:", array("name"=>$r_city->name())),"footer_top_link")?>
 						<? endforeach; ?>
 					 	<? foreach($r_countries as $iso=>$r_country): ?>
-							<?= $r_country->linkHome()->jslink(__("Tatoueur en :name:", array("name"=>$r_country->name())), array("class"=> "footer_top_link"))?>
+							<?= $r_country->linkHome()->a(__("Tatoueur en :name:", array("name"=>$r_country->name())), array("class"=> "footer_top_link"))?>
             <? endforeach ?>
 
 					</div>

@@ -17,6 +17,11 @@
 
 
 			<?= $this->formHeader($this->search_form, array("class"=>"banner_form form-inline")) ?>
+				<p><?= __("Tatoueurs à ")?>
+					<? foreach($this->country->getCities(8, "population DESC") as $r_city): ?>
+						<?= $r_city->link()->a() ?>,
+					<? endforeach ?>...
+				</p>
 				<?= $this->search_form->renderGroups(array(
 				  "loc_name"=>array(
 				    "label"=>__("Région, département, ville..."),
