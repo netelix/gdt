@@ -1734,6 +1734,14 @@ body .top-wrapper-mask {
   .lightbox_desc > p:nth-child(4) {
     margin-top: 10px;
   }
+  .studio_content_width {
+    width: 100% !important;
+  }
+  .studio_sidebar_width.affix {
+    position: relative;
+    margin-left: 0px;
+    z-index: 1;
+  }
 }
 /** END MODAL **/
 .products .names .translation-set .dropdown {
@@ -1849,4 +1857,16 @@ body .top-wrapper-mask {
 }
 .lang-es .hidden-es {
   display: none;
+}
+.form_trouver_tatoueur p {
+  font-size: 12px;
+  margin: -10px 0 5px;
+}
+.banner_form p {
+  color: #b5b5b5;
+  margin: -15px 0 5px;
+  font-size: 12px;
+}
+.banner_form p a {
+  color: white;
 }

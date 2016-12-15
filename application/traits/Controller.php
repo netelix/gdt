@@ -9,6 +9,12 @@ trait Trait_Controller
 		if($r_user = $this->_loggedUser(false)){
 		  Uop_Link::setGlobalOption("force_hard_links", true);
 		}
+        $default_countries = array(
+            "es"=>"ES",
+            "fr"=>"FR"
+        );
+        $this->view->country_iso = $country_iso = $default_countries[App::lang()];
+        $this->view->country = empty($this->view->country) ? App::table("locations")->country($country_iso) : $this->view->country;
 	}
 
 	public function manageSearchForm()

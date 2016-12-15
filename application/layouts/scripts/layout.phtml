@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <?
-	$default_countries = array(
-		"es"=>"ES",
-		"fr"=>"FR"
-	);
-	$country_iso = $default_countries[App::lang()];
-	$this->country = empty($this->country) ? App::table("locations")->country($country_iso) : $this->country; ?>
-<? 
+	$country_iso = $this->country_iso;
 	$countries = array("BE", "FR", "CH", "ES"); 
 	foreach($countries as $iso){
 		$r_countries[$iso] = App::table("locations")->country($iso);
