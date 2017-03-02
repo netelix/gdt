@@ -36,36 +36,44 @@
 			<td>38 rue Bellechasse, 75007 Paris</td>
 			<td><?= $invoice->postcode ?> <?= $invoice->city ?></td>
 		</tr>
+		<tr>
+			<td>N°TVA: FR66 802 699 850</td>
+			<td><?= $invoice->num_vat ?></td>
+		</tr>
 	</table>
 	<br>
 	<p>
 		SAS Archibald Rescue<br>
 		N°SIRET: 802 699 850 00011<br>
-		N°TVA: FR66 802 699 850<br>
 	</p>
 	<br>
 	<? if($this->type=="invoice"): ?>
-		<h2>FACTURE #T<?= $invoice->id ?> - TATTOOME, site de la SAS Archibald Rescue</h2>
+		<h2><?= __("FACTURE #T:id: - TATTOOME, site de la SAS Archibald Rescue", array("id"=>$invoice->id))?></h2>
 	<? else: ?>
-		<h2>CONTRAT - TATOOME, site de la SAS Archibald Rescue</h2>
+		<h2><?= __("CONTRAT - TATOOME, site de la SAS Archibald Rescue") ?></h2>
 	<? endif ?>
 	<br>
 
 	<p>Objet: 
 	<? if($this->type=="invoice"): ?>
-		<?= $invoice->label ?><?= $invoice->type=="month" ? " - <b>".ucfirst($this->date($invoice->date_start, "MMM YY"))." </b>":" a partir du ".$this->date($invoice->date_start, Zend_Date::DATES); ?> pour le réferencement de <b><?= $invoice->org_label ?></b> sur TattooMe
+		<?= $invoice->label() ?>
+		<?= $invoice->type!="month" ?
+			__(" a partir du ").$this->date($invoice->date_start, Zend_Date::DATES):""; ?>
+		<?= __("pour le réferencement de <b>:name:</b> sur TattooMe", array("name"=>$invoice->org_label)) ?>
 	<? else: ?>
-		Creation d'un espace dédié sur le site TattooMe (ex Galerie du Tatouage) pour <b><?= $invoice->org_label ?></b> a compter du <?= $this->date($invoice->date_start, Zend_Date::DATES) ?>
+		<?= __("Creation d'un espace dédié sur le site TattooMe (ex Galerie du Tatouage) pour <b>:name:</b> a compter du :date:",
+			array("name"=>$invoice->org_label,
+				"date"=>$this->date($invoice->date_contract, Zend_Date::DATES))) ?>
 	<? endif ?>
 	</p>
 	<table class="table-price">
 		<tr>
-			<td>Montant HT</td>
+			<td><?= __("Montant HT") ?></td>
 			<td class="right"><?= $this->currency($invoice->price_ht) ?></td>
 		</tr>
 		<tr>
-			<td>TVA 20%</td>
-			<td class="right"><?= $this->currency($invoice->price_ht*0.20) ?></td>
+			<td><?= __("TVA :vat:%", array("vat"=>$invoice->vat)) ?></td>
+			<td class="right"><?= $this->currency($invoice->price_ht*$invoice->vat/100) ?></td>
 		</tr>
 		<tr>
 		<td>Montant TTC</td>
@@ -74,8 +82,8 @@
 	</table>
 	
 	<? if($this->type!="invoice" && $invoice->type=="month"): ?>
-	<p>Conditions de résiliation: Sans préavis par email, après 3 mois d'utilisation, à l'adresse: tattoo@tattoome.com</p>
-	<p class="small">Tout autre droit réservé - valeur en votre aimable réglement par prélèvement SEPA</p>
+	<p><?= __("Conditions de résiliation: Sans préavis par email, après 3 mois d'utilisation, à l'adresse: tattoo@tattoome.com")?></p>
+	<p class="small"><?= __("Tout autre droit réservé - valeur en votre aimable réglement par prélèvement SEPA") ?></p>
 	<? endif ?>
 	<br>
 	<br>

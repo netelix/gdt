@@ -1,7 +1,21 @@
 <? 
 	$r_loc = $this->country; 
 	$this->full_width = true;
-	$this->body_class = "index"
+	$this->body_class = "index";
+
+	if(App::lang() == "fr"){
+		$alt_lang = "es";
+		$hreflang = "es_ES";
+	} else {
+		$alt_lang = "fr";
+		$hreflang = "fr";
+	}
+	$link_home = App::table("locations")->country($alt_lang)->linkHome()->option("canonical", true);
+	$this->headLink(array(
+		"rel"=>"alternate",
+		"hreflang"=>$hreflang,
+		"href"=>$link_home
+	));
 ?>
 
 		<div class="container-fluid" id="banner">

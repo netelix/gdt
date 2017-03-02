@@ -12,7 +12,10 @@ class Script_Invoices extends Uop_Script_Abstract {
 				$values = $r_invoice->toArray();
 				$values["id"] = null;
 				$values["date_start"] = $next_date;
-				$values["date_next"] = Zend_Date::now()->set($next_date, Zend_Date::ISO_8601)->addMonth(1)->get(Zend_Date::ISO_8601);
+                $values["label"] = __("Abonnement mensuel")." - ".Zend_Date::now()
+                        ->set($values["date_start"], Zend_Date::ISO_8601)
+                        ->get("MMM YYYY");
+                $values["date_next"] = Zend_Date::now()->set($next_date, Zend_Date::ISO_8601)->addMonth(1)->get(Zend_Date::ISO_8601);
 				$this->info("Creating next invoice for $r_invoice->id starting on {$values['date_start']} until {$values['date_next']}");
 
 				$t_invoices->createRow()->setFromArray($values)->save();

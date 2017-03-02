@@ -37,6 +37,14 @@ return array(
       'page'=>1
     )
   ),
+    'jobs'=>array(
+        'type'   => 'Zend_Controller_Router_Route',
+        'route'  => '/:lang/jobs',
+        'defaults' => array(
+            'controller'=>'index',
+            'action'=>'jobs',
+        )
+    ),
   'untattoo'=>array(
     'type'   => 'Zend_Controller_Router_Route',
     'route'  => '/:lang/detatouage',

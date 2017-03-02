@@ -25,6 +25,7 @@ class Form_InvoiceEdit extends Uop_Form_Abstract
   	// if is new
     $this->addElement("date","date_start");
     $this->addElement("text","price_ttc");
+    $this->addElement("text","num_vat");
     $this->addElement("text","city");
     $this->addElement("text","postcode");
     $this->addElement("text","address");
@@ -33,7 +34,14 @@ class Form_InvoiceEdit extends Uop_Form_Abstract
     	"year"=>"Facture annuelle",
     	"month"=>"Facture mensuelle")));
 
-    $orgs = array();
+    $this->addElement("select","vat", array(
+    "multioptions"=>array(
+      null=>"TVA",
+      0=>"0%",
+      20=>"20%")));
+
+
+      $orgs = array();
     foreach($this->user->organizations() as $r_org){
     	$txt = (string)$r_org->name();
 	    $orgs[$txt]=$txt;
@@ -42,7 +50,7 @@ class Form_InvoiceEdit extends Uop_Form_Abstract
     foreach($this->_attributesInputs as $name){
       $this->addElement('text', $name);
     }    
-    $this->requiresAll();
+    $this->requiresAll(array("num_vat"));
     // DEFAULT VALUES
     //
     $this->setDefaults($this->entityToDefaults($this->invoice) + array("address"=>$this->user->address, "postcode"=>$this->user->postcode, "city"=>$this->user->city));

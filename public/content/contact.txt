@@ -2,5 +2,5 @@ CONTACTEZ-NOUS
 
 Par email : 
 
-<a href="mailto:ben@galeriedutatouage.com">ben@galeriedutatouage.com</a>
-<a href="mailto:basile@galeriedutatouage.com">basile@galeriedutatouage.com</a>
+<a href="mailto:benoit@tattoome.com">benoit@tattoome.com</a>
+<a href="mailto:basile@tattoome.com">basile@tattoome.com</a>

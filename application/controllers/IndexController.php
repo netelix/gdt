@@ -46,7 +46,11 @@ class IndexController extends Uop_Controller_Index
 		}
 		$this->view->form = $form;
   }
-  
+
+  public function jobsAction()
+  {
+  }
+
   public function untattooAction()
   {
 	  $form = App::form("Simple", null);

@@ -172,13 +172,14 @@ class AdminController extends Uop_Controller_Admin
                      }
                      $values = $form->getValues();
                        $r_invoice->setFromArray($values);
-                       $r_invoice->price_ht = $values["price_ttc"] / 1.20;
+                       $r_invoice->price_ht = $values["price_ttc"] / (1+$values["vat"]/100);
+                        $r_invoice->date_contract = $values["date_start"];
                        if($values["type"] == "month"){
                                $date_start = Zend_Date::now()->set($values["date_start"], Zend_Date::ISO_8601);
-                                     $r_invoice->label = "Abonnement mensuel - ".$date_start->get("MMM YYYY");
+                                     $r_invoice->label = __("Abonnement mensuel");
                                      $r_invoice->date_next = $date_start->addMonth(1)->get(Zend_Date::ISO_8601);
                        } else {
-                                     $r_invoice->label = "Abonnement annuel";
+                                     $r_invoice->label = __("Abonnement annuel");
                                      $r_invoice->date_next = NULL;
                        }
                        $r_invoice->save();

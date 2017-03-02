@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-15 11:10+0100\n"
+"POT-Creation-Date: 2017-03-02 11:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,91 +17,91 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:19
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:13
 msgid "Le meilleur du tatouage"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:24
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:18
 msgid "Le meilleur du tatouage en :country: | TattooMe"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:27
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:21
 msgid ""
 "Retrouvez les meilleurs tatoueurs de :country: ainsi que les plus beaux "
 "modèles de tatouages."
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:187
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:181
 msgid "Rejoignez"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:187
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:181
 msgid "La communauté"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:188
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:182
 msgid "et"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:188
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:182
 msgid "recevez gratuitement"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:188
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:182
 msgid ""
 "Le guide du 1er tatouage<br />ainsi que le meilleur de l'actu<br />et des "
 "bons plans tattoos"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:192
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:186
 msgid "Je souhaite recevoir le guide du 1er tatouage"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:194
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:188
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:17
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:91
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:118
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:105
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:132
 msgid "Je m'inscris"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:196
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:190
 msgid ""
 "Traitement des données personnelles conformes à laf loi française (CNIL)"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:216
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:210
 msgid "Tattoo<span style=\"color:#73569d;\">Me</span>"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:217
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:211
 msgid "<img src=\"/img/logo_tattoome_guide.png\" alt=\"TattooMe\" />"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:223
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:217
 msgid "Le Guide"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:225
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:219
 msgid "Le Shop"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:226
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:220
 msgid "Le Mag"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:227
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:221
 msgid "Tatouages éphémères"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:231
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:225
 msgid "Rejoignez 300 000 passionnés !"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:252
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:246
 msgid "LE GUIDE"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:252
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:246
 msgid ""
 "<br />\n"
 "\t\t\t                             <span class=\"navbar-brand-custom-badge "
@@ -110,87 +110,91 @@ msgid ""
 "                        </span>"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:261
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:255
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:162
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:21
 msgid "Trouver un tatoueur"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:261
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:255
 msgid " <span class=\"sr-only\">(current)</span>"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:262
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:256
 msgid "Idées tatouage"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:263
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:257
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-products.phtml:42
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/conventions.phtml:5
 msgid "Conventions"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:264
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:258
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:4
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:5
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:7
 msgid "Détatouage"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:273
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:267
 msgid "espace tatoueur"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:276
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:270
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/images.phtml:7
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:131
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:85
 msgid "Tatoueurs"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:281
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:275
 msgid "<span class=\"flag flag_"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:319
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:313
 msgid "TATTOOME"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:320
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:314
 msgid "La Création"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:321
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:315
 msgid "tattoobox"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:322
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:316
 msgid "blog"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:325
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:317
+msgid "Recrutement"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:321
 msgid "SUIVEZ-nous"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:330
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:326
 msgid "Je suis tatoueur"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:331
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:327
 msgid "Je souhaite m'inscrire"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:332
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:328
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:183
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:5
 msgid "Espace membre"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:335
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:331
 msgid "recherche"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:337
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:333
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:294
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/_show.phtml:34
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/show.phtml:48
@@ -198,18 +202,18 @@ msgstr ""
 msgid "Tatoueur à :name:"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:340
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:336
 msgid "Tatoueur en :name:"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:347
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:343
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:280
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:76
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:108
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:90
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:122
 msgid "Contact"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:348
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:344
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:281
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/../library/Uop/Controller/Index.php:40
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/../library/Uop/Controller/Index.php:41
@@ -217,12 +221,12 @@ msgstr ""
 msgid "Mentions légales"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:349
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:345
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:282
 msgid "Conditions d'utilisation"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:350
+#: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/layout.phtml:346
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:283
 msgid "Conditions de vente"
 msgstr ""
@@ -240,6 +244,7 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/layouts/scripts/_layout.phtml:205
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/subscription/lead.phtml:3
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/conciergerie.phtml:3
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/jobs.phtml:3
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:3
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/creation.phtml:3
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:4
@@ -298,7 +303,7 @@ msgid "Note moyenne"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:2
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:44
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:58
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/organizations.phtml:46
 msgid "Création"
 msgstr ""
@@ -308,7 +313,7 @@ msgid "Créez votre tatouage avec un artise dessinateur"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:5
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:49
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:63
 msgid "Je crée mon tatouage"
 msgstr ""
 
@@ -317,7 +322,7 @@ msgid "TATTOOBOX"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:10
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:59
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:73
 msgid "Un cadeau inoubliable : offrez un tatouage"
 msgstr ""
 
@@ -334,8 +339,8 @@ msgid "news, bons plans, tendances..."
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sidebar-content.phtml:16
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:90
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:117
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:104
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:131
 msgid "Recevez le meilleur du tatouage par email"
 msgstr ""
 
@@ -378,7 +383,7 @@ msgid "Suivez-nous sur Facebook"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sub-header.phtml:6
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:20
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:34
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:73
 msgid "Tatoueurs à "
 msgstr ""
@@ -388,7 +393,7 @@ msgid "Trouvez un tatoueur près de chez vous"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/shared/_sub-header.phtml:16
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:32
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:46
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/show.phtml:82
 msgid "RECHERCHER"
 msgstr ""
@@ -539,6 +544,45 @@ msgstr ""
 msgid "Envoyer au conseiller tatouage"
 msgstr ""
 
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/jobs.phtml:14
+msgid "Recrutement..."
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/jobs.phtml:15
+msgid ""
+"Vous êtes passionnés de tattoos et vous avez envie de mettre une pierre à "
+"l’édifice que nous sommes en train de construire et rejoindre une équipe à "
+"taille humaine."
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/jobs.phtml:16
+msgid "Nous recherchons:"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/jobs.phtml:19
+msgid "Des business developpers multilingue (ou non)"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/jobs.phtml:20
+msgid "Des web-designers // graphistes"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/jobs.phtml:21
+msgid ""
+"Un développeur à l’aise sur les frameworks, Zendesk et Laravel, maitrisant "
+"le Html 5, le CSS.."
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/jobs.phtml:22
+msgid "Des rédacteurs/ pigistes passionnés de tatouages."
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/jobs.phtml:24
+msgid ""
+"L’aventure vous tente? Adressez nous votre demande à\ttattoo@tattoome.com "
+"avec l’objet “Recrutez moi!”"
+msgstr ""
+
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/untattoo.phtml:15
 msgid ""
 "Le détatouage laser est un acte médical qui nécessite un suivi et un "
@@ -586,111 +630,111 @@ msgstr ""
 msgid "Modifier la video"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:14
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:28
 msgid "trouvez votre futur tatoueur"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:15
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:29
 msgid "La plus grande sélection de tatoueurs prêts à vous accueillir"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:27
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:41
 msgid "Région, département, ville..."
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:30
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:44
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:18
 #: /home/alex/alex.dev.galeriedutatouage.com/application/forms/AdsSearch.php:10
 msgid "Tous les styles"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:45
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:59
 msgid "Créez votre tatouage avec un artiste dessinateur"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:50
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:64
 msgid "Créer"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:58
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:72
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit.phtml:129
 msgid "Tattoobox"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:62
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:76
 msgid "Je choisis ma tattoobox"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:63
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:77
 msgid "Choisir"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:70
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:102
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:84
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:116
 msgid "Le conseiller"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:71
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:103
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:85
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:117
 msgid "Un projet de tatouage"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:72
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:104
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:86
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:118
 msgid "Notre conseiller sélectionne pour vous les meilleurs tatoueurs"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:75
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:107
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:89
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:121
 msgid "Je prends contact"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:88
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:115
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:102
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:129
 msgid "Newsletter"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:89
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:116
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:103
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:130
 msgid "News,<br/>Bons plans, Tendances..."
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:141
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:155
 msgid "les styles de tatouage"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:142
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:156
 msgid "Découvrez les meilleurs tatouages par style"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:155
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:169
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:77
 msgid "Tatouage :style:"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:167
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:181
 msgid "Les Studios de tatouage près de chez vous"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:168
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:182
 msgid "Choisissez votre studio par situation géographique"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:176
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:190
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:88
 msgid "Les tatoueurs en :region:"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:182
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:196
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/_index.phtml:94
 msgid "Tatoueurs à :name:"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:195
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:209
 msgid "Ils parlent de nous"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:216
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/index/index.phtml:230
 msgid "Galerie du tatouage devient Tattoome"
 msgstr ""
 
@@ -903,6 +947,26 @@ msgstr ""
 msgid "Supprimer"
 msgstr ""
 
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/edit-invoice.phtml:20
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:73
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:86
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:118
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:80
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery-focus.phtml:35
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/video-edit.phtml:37
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:34
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:90
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:38
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:98
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:74
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:87
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:119
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:26
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:25
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/../library/Uop/View/Helper/FormFooter.php:19
+msgid "Enregistrer"
+msgstr ""
+
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/admin/images.phtml:8
 msgid "Légendes"
 msgstr ""
@@ -982,6 +1046,48 @@ msgstr ""
 msgid "Facture"
 msgstr ""
 
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/show-invoice.phtml:51
+msgid "FACTURE #T:id: - TATTOOME, site de la SAS Archibald Rescue"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/show-invoice.phtml:53
+msgid "CONTRAT - TATOOME, site de la SAS Archibald Rescue"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/show-invoice.phtml:61
+msgid " a partir du "
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/show-invoice.phtml:62
+msgid "pour le réferencement de <b>:name:</b> sur TattooMe"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/show-invoice.phtml:64
+msgid ""
+"Creation d'un espace dédié sur le site TattooMe (ex Galerie du Tatouage) "
+"pour <b>:name:</b> a compter du :date:"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/show-invoice.phtml:71
+msgid "Montant HT"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/show-invoice.phtml:75
+msgid "TVA :vat:%"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/show-invoice.phtml:85
+msgid ""
+"Conditions de résiliation: Sans préavis par email, après 3 mois "
+"d'utilisation, à l'adresse: tattoo@tattoome.com"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/show-invoice.phtml:86
+msgid ""
+"Tout autre droit réservé - valeur en votre aimable réglement par prélèvement "
+"SEPA"
+msgstr ""
+
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/login.phtml:9
 msgid "Identifiez vous pour accèder à votre espace personel"
 msgstr ""
@@ -1030,24 +1136,6 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:70
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:71
 msgid "Ajouter un numéro"
-msgstr ""
-
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:73
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:86
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:118
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/location/galery-focus.phtml:35
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/index/video-edit.phtml:37
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:34
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/location.phtml:90
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:38
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/admin/entity.phtml:98
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:74
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:87
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/user/edit.phtml:119
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/post/edit.phtml:26
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/order/pay-order.phtml:25
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/../library/Uop/View/Helper/FormFooter.php:19
-msgid "Enregistrer"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/user/edit.phtml:78
@@ -1117,6 +1205,10 @@ msgstr ""
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:32
 #: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/views/scripts/organization/edit-photos.phtml:27
 msgid "Ajouter des photos"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:38
+msgid "Enregistrer l'ordre"
 msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/organization/edit-photos.phtml:57
@@ -2030,11 +2122,11 @@ msgstr ""
 
 #: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:14
 msgid ""
-"Vous avez reçu un message de :sender_name: à propos de votre studio :"
-"property_name:"
+"Vous avez reçu un message de :sender_name: (:sender_email:) à propos de "
+"votre studio :property_name:"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:20
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:21
 msgid ""
 "Vous avez reçu un commentaire de :sender_name:, à propos de votre studio :"
 "org_link:"
@@ -2059,7 +2151,7 @@ msgid ""
 "l'adresse :sender_email:"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:40
+#: /home/alex/alex.dev.galeriedutatouage.com/application/views/scripts/mails/message-notification.html.phtml:39
 msgid ""
 "Toute l'équipe de la galerie du tatouage vous remercie de votre confiance"
 msgstr ""
@@ -2068,7 +2160,17 @@ msgstr ""
 msgid "Bienvenue dans la Galerie du Tatouage"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/controllers/IndexController.php:55
+#: /home/alex/alex.dev.galeriedutatouage.com/application/controllers/AdminController.php:179
+#: /home/alex/alex.dev.galeriedutatouage.com/application/models/DbTable/Row/Invoice.php:8
+msgid "Abonnement mensuel"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/controllers/AdminController.php:182
+#: /home/alex/alex.dev.galeriedutatouage.com/application/models/DbTable/Row/Invoice.php:10
+msgid "Abonnement annuel"
+msgstr ""
+
+#: /home/alex/alex.dev.galeriedutatouage.com/application/controllers/IndexController.php:59
 msgid "Votre département"
 msgstr ""
 
@@ -2080,7 +2182,7 @@ msgstr ""
 msgid "type-de-tatouages"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/application/configs/routes.php:56
+#: /home/alex/alex.dev.galeriedutatouage.com/application/configs/routes.php:64
 msgid "conseil"
 msgstr ""
 
@@ -3109,7 +3211,7 @@ msgstr ""
 msgid "en :name:"
 msgstr ""
 
-#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/../library/Uop/Model/DbTable/Row/Message.php:43
+#: /home/alex/alex.dev.galeriedutatouage.com/vendor/uop/application/../library/Uop/Model/DbTable/Row/Message.php:59
 msgid "Message de :fname: :lname: à propos de :org_name:"
 msgstr ""
 

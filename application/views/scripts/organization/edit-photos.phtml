@@ -13,7 +13,7 @@ foreach($products as $r_prod){
 $class=array("class"=>"btn btn-warning navbar-btn");	
 
 $link_edit = $this->sort ? 
-       $r_org->linkEditPhotos(array("mode"=>"default"))->a(__("Modifier les informations des photos"), $class):
+		   $r_org->linkEditPhotos(array("mode"=>"default"))->a(__("Modifier les informations des photos"), $class):
        $r_org->linkEditPhotos(array("mode"=>"sort"))->a(__("Modifier l'ordre des photos"), $class);
 
 
@@ -35,7 +35,7 @@ $link_edit = $this->sort ?
 		<?= $link_edit ?>
 		<? if($this->sort): ?>
 		<div class="navbar-right">
-    	<button type="submit" class="btn btn-success navbar-btn">Enregistrer l'ordre</button>
+    	<button type="submit" class="btn btn-success navbar-btn"><?= __("Enregistrer l'ordre") ?></button>
     </div>
     <? endif ?>
 	</div>
@@ -69,7 +69,7 @@ $link_edit = $this->sort ?
 			        	data-id="<?=$r_image->id?>"
 			        	type="button" 
 			        	class="btn btn-danger pull-right btn-xs delete">x</button>
-			      <?= $this->link(array("image_id"=>$r_image->id, "id"=>$r_org->id), "edit-photo")->a("Modifier", "btn btn-xs btn-default link-modal") ?>
+			      <?= $this->link(array("image_id"=>$r_image->id, "id"=>$r_org->id), "edit-photo")->a(__("Modifier"), "btn btn-xs btn-default link-modal") ?>
 			    </div>
 		      <? endif ?>
 				</div>
@@ -77,7 +77,7 @@ $link_edit = $this->sort ?
 		<? endforeach?>
 	</ul>
   <div class="clearfix">
-      <button type="submit" class="btn btn-success pull-right">Enregistrer</button>
+      <button type="submit" class="btn btn-success pull-right"><?= __("Enregistrer") ?></button>
   </div>
 </form>
 <script>
