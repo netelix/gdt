@@ -53,17 +53,22 @@
 		<div class="container-fluid" id="banner_promo_container">
 			<div class="row" id="banner_promo">
 				<div class="col-lg-4">
-					<div class="promo_container_ld promo_container_left autopromo">
-						<div class="title_promo">
-							<h2 class="gothamblack"><?= __("Création") ?></h2>
-							<p class="gothambold"><?= __("Créez votre tatouage avec un artiste dessinateur") ?></p>
+					<div class="promo_container_ld promo_container_left autopromo uriage uriage-square" data-value="uriage-square">
+						<div class="row">
+							<div class="col-xs-4 cream">
+								<img class="img-responsive" src="/img/uriage-cream.png"/>
+							</div>
+							<div class="col-xs-8">
+								<div class="title_promo">
+									<img class="img-responsive" src="/img/uriage-title.png" />
+									<h5><?= __("Bariéderm cica-crème") ?></h5>
+
+									<p class="gothambold"><a href="https://www.tattoome.com/blog/uriage/"><?= __("Comment entretenir son tatouage avec Uriage") ?></a></p>
+								</div>
+
+							</div>
 						</div>
-						<div class="link_promo">
-							<a href="https://www.tattoome.com/creation" class="btn-link-promo link-promo-red gothambold">
-								<span class="hidden-xs"><?= __("Je crée mon tatouage") ?></span>
-								<span class="visible-xs"><?= __("Créer") ?></span>
-							</a>
-						</div>
+
 					</div>
 				</div>
 				<div class="col-lg-4">
@@ -94,6 +99,12 @@
 			</div>
 		</div>
 		<!-- FIN BANNIERE PROMO -->
+		<a href="http://www.uriage.com/FR/fr
+" target="_blank" style="max-width: 999px;
+    padding-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;" class="uriage-banner" data-value="uriage-banner"><img class="img-responsive" src="/img/uriage-banner.png" /></a>
 		<!-- BANNIERE PROMO 2-->
 		<div class="container-fluid" id="banner_promo_container">
 			<div class="row promo_container_md blog-banner-promo" id="banner_promo">
@@ -231,3 +242,14 @@
 
 
 	<?= $this->partial("shared/_mailing-dialog.phtml") ?>
+<script>
+	$(function(){
+		$(".uriage-banner").click(function(){
+			<?= $this->eventHit(App::table("organizations")->find(1)->current(), "uriage-banner");?>
+		});
+		$(".uriage-square").click(function(){
+			<?= $this->eventHit(App::table("organizations")->find(1)->current(), "uriage-square");?>
+		});
+	});
+
+</script>
