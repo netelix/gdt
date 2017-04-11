@@ -1351,6 +1351,37 @@ body .top-wrapper-mask {
 .autopromo {
   cursor: pointer;
 }
+.autopromo.uriage.promo_container_left {
+  background: #1692c0 !important;
+}
+.autopromo.uriage.promo_container_left .cream img {
+  margin-left: auto;
+  max-height: 168px;
+}
+.autopromo.uriage.promo_container_left .title_promo {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-right: 15px !important;
+  text-align: center;
+}
+.autopromo.uriage.promo_container_left .title_promo h5 {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.autopromo.uriage.promo_container_left .title_promo img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.autopromo.uriage.promo_container_left .title_promo p.gothambold,
+.autopromo.uriage.promo_container_left .title_promo p.gothambold a {
+  color: white !important;
+  text-shadow: rgba(0, 0, 0, 0.65) 1px 1px 10px !important;
+  text-align: center;
+  font-size: 13px !important;
+}
 .organization-show {
   background-color: #FFF;
 }
@@ -1880,4 +1911,11 @@ body .top-wrapper-mask {
 }
 .launching_container p {
   text-shadow: #000 1px 1px 10px;
+}
+@media (max-width: 530px) {
+  #banner_promo .promo_container_ld .title_promo {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-right: 15px !important;
+  }
 }
