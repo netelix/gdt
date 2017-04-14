@@ -54,7 +54,7 @@
 	<? endif ?>
 	<br>
 
-	<p>Objet: 
+	<p><?= __("Objet:")?> 
 	<? if($this->type=="invoice"): ?>
 		<?= $invoice->label() ?>
 		<?= $invoice->type!="month" ?
@@ -76,7 +76,7 @@
 			<td class="right"><?= $this->currency($invoice->price_ht*$invoice->vat/100) ?></td>
 		</tr>
 		<tr>
-		<td>Montant TTC</td>
+		<td><?= __("Montant TTC") ?></td>
 			<td class="right"><?= $this->currency($invoice->price_ttc) ?></td>
 		</tr>
 	</table>

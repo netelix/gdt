@@ -218,11 +218,13 @@
 							<? if(App::lang() != "es"): ?>
 					        <li><a href="https://www.tattoome.com/tattoobox"><?= __("Le Shop") ?></a></li>
 					        <li><a href="https://www.tattoome.com/blog"><?= __("Le Mag") ?></a></li>
-							<li><a href="https://www.tattoome.com/tattoobox/inkbox"><?= __("Tatouages éphémères") ?></a></li>
 							<? endif ?>
 				      	</ul>
 				        <ul class="nav navbar-nav navbar-right">
-					        <li><? __("Rejoignez 300 000 passionnés !") ?></li>
+					        <li>
+       							<? if(App::lang() == "es"): ?>
+						        	655 147 300<img src="/img/whatsapp.png"></li>
+					        	<? endif ?>
 					        <li><a href="https://www.instagram.com/tattoometattoo/" target="_blank" class="instagram_link" style="margin-right:10px;"></a></li>
 					        <li><a href="https://www.facebook.com/tattootattoome" target="_blank" class="facebook_link"></a></li>
 				        </ul>

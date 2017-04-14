@@ -9,6 +9,8 @@ class Script_AutoMails extends Uop_Script_Abstract {
 			->from("users")
 			->where("mail_tattoobox = 0")
 			->join("messages", "ref_type = 'demands' AND messages.user_id = users.id", array())
+			->join("organizations", "org_id = organizations.id", array())
+			->join("locations", "organizations.loc_id = locations.id AND country_loc_id != 98964", array())
 			->join("events", "events.id = messages.sent_event_id", array("time"))
 			->where("DATE(events.time) < DATE_SUB(CURDATE(),INTERVAL 21 DAY)")
 			->group("users.id")
