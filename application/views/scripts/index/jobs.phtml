@@ -1,0 +1,28 @@
+<?
+	$this->full_width = true;
+	$bc = $this->breadcrumb()->prepend(Link::home()->a(__("Accueil"))); 
+	$bc->append("Recrutement");
+	$this->headTitle("Recrutement");
+	$this->headMeta()
+		->appendName("description", "Recrutement");
+
+?>
+
+<? $this->partial("shared/_sub-header.phtml", $this) ?>		<!-- SERP CONTAINER -->
+		<div class="container-fluid launching">
+			<div class="launching_container center-block">
+				<h1><?= __("Recrutement...") ?></h1>
+				<p><?= __("Vous êtes passionnés de tattoos et vous avez envie de mettre une pierre à l’édifice que nous sommes en train de construire et rejoindre une équipe à taille humaine.") ?></p>
+				<p><?= __("Nous recherchons:") ?>
+
+				<ul>
+					<li><?= __("Des business developpers multilingue (ou non)") ?></li>
+					<li><?= __("Des web-designers // graphistes") ?></li>
+					<li><?= __("Un développeur à l’aise sur les frameworks, Zendesk et Laravel, maitrisant le Html 5, le CSS..") ?></li>
+					<li><?= __("Des rédacteurs/ pigistes passionnés de tatouages.") ?></li>
+				</ul>
+				<p><?= __("L’aventure vous tente? Adressez nous votre demande à	tattoo@tattoome.com avec l’objet “Recrutez moi!”") ?></p>
+			</div>
+		</div>
+		<!-- FIN SERP CONTAINER -->
+		
