@@ -54,9 +54,15 @@
 			<div class="row" id="banner_promo">
 				<div class="col-lg-4">
 					<div class="promo_container_ld">
+						<? if(!$this->user()->loggedUser()): ?>
 						<a href="https://www.tattoome.com/blog/uriage/" target="_blank">
 							<img src="/img/uriage2.png" class="img-responsive">
 						</a>
+						<? else: ?>
+						<a href="http://devilish-tattoo.fr/" target="_blank">
+							<img src="/img/promo/devilish_home.jpg" class="img-responsive">
+						</a>
+						<? endif ?>
 					<!--div class="promo_container_ld promo_container_left autopromo uriage uriage-square" data-value="uriage-square">
 						<div class="row">
 							<div class="col-xs-4 cream">
@@ -110,6 +116,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;" class="uriage-banner" data-value="uriage-banner"><img class="img-responsive" src="/img/_uriage-banner.png" /></a>
+
 		<!-- BANNIERE PROMO 2-->
 		<div class="container-fluid" id="banner_promo_container">
 			<div class="row promo_container_md blog-banner-promo" id="banner_promo">

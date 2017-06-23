@@ -11,20 +11,32 @@
 <div class="container-fluid launching">
 	<div class="launching_container center-block">
 		<h1><?= __("Tatoueurs, Rejoignez-nous !") ?></h1>
-		<?= $this->formHeader($this->form) ?>
-		<? if(!$this->contacted): ?>
-		<?= $this->form->hideLabels(true)
-			->renderGroups(array(
-				"fname"=>__("Prénom"),
-				"lname"=>__("Nom"),
-				"email"=>__("Email"),
-				"number"=>__("Téléphone"),
-				"facebook"=>__("Page facebook"),
-				"studio"=>__("Nom du studio"),
-			)); ?>
-			<button type="submit" class="btn btn-default" style="margin-left:0;"><?= __("S'inscrire !") ?></button>
-			<? endif ?>
-		</form>
+			<div class="row">
+			<?= $this->formHeader($this->form, array("class"=>"col-md-4")) ?>
+			<? if(!$this->contacted): ?>
+			<?= $this->form->hideLabels(true)
+				->renderGroups(array(
+					"fname"=>__("Prénom"),
+					"lname"=>__("Nom"),
+					"email"=>__("Email"),
+					"number"=>__("Téléphone"),
+					"facebook"=>__("Page facebook"),
+					"studio"=>__("Nom du studio"),
+				)); ?>
+				<button type="submit" class="btn btn-default" style="margin-left:0;"><?= __("S'inscrire !") ?></button>
+				<? endif ?>
+			</form>
+			<div class="col-md-6">
+				<br><br>
+					<div class="hidden-es">
+
+						<a href="http://devilish-tattoo.fr/" target="_blank">
+							<img src="/img/promo/devilish_login.jpg" class="img-responsive"/>
+						</a>
+						<br>
+					</div>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- FIN SERP CONTAINER -->

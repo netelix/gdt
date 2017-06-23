@@ -1,10 +1,20 @@
-<div class="serp_promo autopromo hidden-es" id="serp_promo_1">
+	<? if($this->user()->loggedUser()): ?>
+	<div class="hidden-es">
+
+	<a href="http://devilish-tattoo.fr/" target="_blank">
+			<img src="/img/promo/devilish_sidebar.jpg" class="img-responsive"/>
+		</a>
+		<br>
+		</div>
+	<? else :?>
+	<div class="serp_promo autopromo hidden-es" id="serp_promo_1">
 	<h2><?= __("Création") ?></h2>
 	<p><?= __("Créez votre tatouage avec un artise dessinateur") ?></p>
 	<a href="https://www.tattoome.com/creation" class="link-promo-red">
 		<?= __("Je crée mon tatouage") ?>
 	</a>
 	</div>
+	<? endif ?>
 <div class="serp_promo autopromo hidden-es" id="serp_promo_2">
 	<h2><?= __("TATTOOBOX") ?></h2>
 	<p><?= __("Un cadeau inoubliable : offrez un tatouage") ?></p>
