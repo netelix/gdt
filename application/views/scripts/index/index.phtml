@@ -55,9 +55,10 @@
 				<div class="col-lg-4">
 					<div class="promo_container_ld">
 						<? if(!$this->user()->loggedUser()): ?>
-						<a href="https://www.tattoome.com/blog/uriage/" target="_blank">
 							<img src="/img/uriage2.png" class="img-responsive">
-						</a>
+							<a href="https://www.tattoome.com/blog/uriage/" target="_blank" class="btn-uriage btn btn-link-promo gothambold"><span class="hidden-xs"><?= __("C'est par ici") ?></span>
+								<span class="visible-xs"><?= __("Contact") ?></span></a>
+
 						<? else: ?>
 						<a href="http://devilish-tattoo.fr/" target="_blank">
 							<img src="/img/promo/devilish_home.jpg" class="img-responsive">
